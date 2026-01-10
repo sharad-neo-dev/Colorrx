@@ -1,0 +1,2464 @@
+{
+  "time": "2025-11-19T02:04:44.924Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763517883898"
+  }
+}
+{
+  "time": "2025-11-19T02:04:44.927Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763517883898"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763517884927",
+    "userId": "3397087",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T05:10:29.422Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763529028493"
+  }
+}
+{
+  "time": "2025-11-19T05:10:29.425Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763529028493"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763529029424",
+    "userId": "15936",
+    "balance": 689.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T05:11:03.156Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529062167"
+  }
+}
+{
+  "time": "2025-11-19T05:11:03.157Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529062167"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763529063157",
+    "userId": "15936",
+    "balance": 689.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T05:12:43.199Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529162165"
+  }
+}
+{
+  "time": "2025-11-19T05:12:43.200Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529162165"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763529163199",
+    "userId": "15936",
+    "balance": 689.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T05:12:48.332Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529167436"
+  }
+}
+{
+  "time": "2025-11-19T05:12:48.333Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763529167436"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763529168333",
+    "userId": "15936",
+    "balance": 689.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T07:41:23.011Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763538081897"
+  }
+}
+{
+  "time": "2025-11-19T07:41:23.014Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763538081897"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763538083014",
+    "userId": "3397087",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T07:58:25.821Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539104825"
+  }
+}
+{
+  "time": "2025-11-19T07:58:25.822Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539104825"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539105822",
+    "userId": "3397087",
+    "balance": 200,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T07:58:59.551Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539138652"
+  }
+}
+{
+  "time": "2025-11-19T07:58:59.552Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539138652"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539139552",
+    "userId": "3397087",
+    "balance": 200,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:03:52.504Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539431566"
+  }
+}
+{
+  "time": "2025-11-19T08:03:52.505Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539431566"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539432505",
+    "userId": "3397087",
+    "balance": 210,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:05:19.114Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539518116"
+  }
+}
+{
+  "time": "2025-11-19T08:05:19.115Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539518116"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539519115",
+    "userId": "3397087",
+    "balance": 180,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:06:06.647Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539565649"
+  }
+}
+{
+  "time": "2025-11-19T08:06:06.648Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539565649"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539566648",
+    "userId": "3397087",
+    "balance": 230,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:06:52.579Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539611688"
+  }
+}
+{
+  "time": "2025-11-19T08:06:52.580Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539611688"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539612580",
+    "userId": "3397087",
+    "balance": 210,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:07:41.591Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539660722"
+  }
+}
+{
+  "time": "2025-11-19T08:07:41.592Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539660722"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539661592",
+    "userId": "3397087",
+    "balance": 180,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:08:29.485Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539708504"
+  }
+}
+{
+  "time": "2025-11-19T08:08:29.486Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539708504"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539709486",
+    "userId": "3397087",
+    "balance": 180,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:13:09.588Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539988594"
+  }
+}
+{
+  "time": "2025-11-19T08:13:09.589Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763539988594"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763539989589",
+    "userId": "3397087",
+    "balance": 170,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:13:54.038Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540033057"
+  }
+}
+{
+  "time": "2025-11-19T08:13:54.038Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540033057"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763540034038",
+    "userId": "3397087",
+    "balance": 150,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:26:58.378Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540817341"
+  }
+}
+{
+  "time": "2025-11-19T08:26:58.378Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540817341"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763540818378",
+    "userId": "3397087",
+    "balance": 130,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:28:24.748Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540903798"
+  }
+}
+{
+  "time": "2025-11-19T08:28:24.749Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540903798"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763540904749",
+    "userId": "3397087",
+    "balance": 110,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:29:09.118Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540948133"
+  }
+}
+{
+  "time": "2025-11-19T08:29:09.119Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540948133"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763540949119",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:29:54.106Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540993075"
+  }
+}
+{
+  "time": "2025-11-19T08:29:54.106Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763540993075"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763540994106",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:30:40.724Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541039609"
+  }
+}
+{
+  "time": "2025-11-19T08:30:40.725Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541039609"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763541040725",
+    "userId": "3397087",
+    "balance": 840,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:31:27.669Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541086261"
+  }
+}
+{
+  "time": "2025-11-19T08:31:27.670Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541086261"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763541087670",
+    "userId": "3397087",
+    "balance": 810,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:32:09.639Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541128604"
+  }
+}
+{
+  "time": "2025-11-19T08:32:09.640Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763541128604"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763541129640",
+    "userId": "3397087",
+    "balance": 880,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T08:46:49.284Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763542008334"
+  }
+}
+{
+  "time": "2025-11-19T08:46:49.286Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763542008334"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763542009285",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:07:41.946Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763543260912"
+  }
+}
+{
+  "time": "2025-11-19T09:07:41.947Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763543260912"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763543261947",
+    "userId": "6337761",
+    "balance": 255,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:09:08.581Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763543347544"
+  }
+}
+{
+  "time": "2025-11-19T09:09:08.582Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763543347544"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763543348582",
+    "userId": "6337761",
+    "balance": 155,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:11:43.912Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763543502893"
+  }
+}
+{
+  "time": "2025-11-19T09:11:43.913Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763543502893"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763543503913",
+    "userId": "15936",
+    "balance": 689.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:14:10.140Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763543649027"
+  }
+}
+{
+  "time": "2025-11-19T09:14:10.141Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763543649027"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763543650141",
+    "userId": "15936",
+    "balance": 693.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:33:46.271Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763544825216"
+  }
+}
+{
+  "time": "2025-11-19T09:33:46.272Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763544825216"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763544826272",
+    "userId": "4575450",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:38:36.987Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545115954"
+  }
+}
+{
+  "time": "2025-11-19T09:38:36.988Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545115954"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763545116988",
+    "userId": "4575450",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:38:57.212Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545136176"
+  }
+}
+{
+  "time": "2025-11-19T09:38:57.212Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545136176"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763545137212",
+    "userId": "4575450",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:39:35.048Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545174019"
+  }
+}
+{
+  "time": "2025-11-19T09:39:35.048Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "4575450",
+    "timestamp": "1763545174019"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763545175048",
+    "userId": "4575450",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:47:45.329Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763545664270"
+  }
+}
+{
+  "time": "2025-11-19T09:47:45.330Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763545664270"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763545665330",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:52:15.938Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763545934910"
+  }
+}
+{
+  "time": "2025-11-19T09:52:15.939Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763545934910"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763545935939",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T09:55:10.074Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763546109011"
+  }
+}
+{
+  "time": "2025-11-19T09:55:10.075Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763546109011"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763546110075",
+    "userId": "3397087",
+    "balance": 860,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:13:07.867Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763547186834"
+  }
+}
+{
+  "time": "2025-11-19T10:13:07.868Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763547186834"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763547187868",
+    "userId": "3397087",
+    "balance": 160,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:31:27.185Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548286116"
+  }
+}
+{
+  "time": "2025-11-19T10:31:27.185Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548286116"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548287185",
+    "userId": "3397087",
+    "balance": 160,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:34:30.768Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548469743"
+  }
+}
+{
+  "time": "2025-11-19T10:34:30.768Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548469743"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548470768",
+    "userId": "3397087",
+    "balance": 160,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:37:28.459Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548647391"
+  }
+}
+{
+  "time": "2025-11-19T10:37:28.459Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548647391"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548648459",
+    "userId": "3397087",
+    "balance": 160,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:39:26.101Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548765090"
+  }
+}
+{
+  "time": "2025-11-19T10:39:26.102Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548765090"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548766102",
+    "userId": "3397087",
+    "balance": 160,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:40:06.167Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548805258"
+  }
+}
+{
+  "time": "2025-11-19T10:40:06.168Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548805258"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548806168",
+    "userId": "3397087",
+    "balance": 140,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:40:52.681Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548851778"
+  }
+}
+{
+  "time": "2025-11-19T10:40:52.681Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548851778"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548852681",
+    "userId": "3397087",
+    "balance": 110,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:41:37.253Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548896258"
+  }
+}
+{
+  "time": "2025-11-19T10:41:37.254Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763548896258"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763548897253",
+    "userId": "3397087",
+    "balance": 80,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:47:26.189Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549245243"
+  }
+}
+{
+  "time": "2025-11-19T10:47:26.190Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549245243"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763549246190",
+    "userId": "3397087",
+    "balance": 70,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:55:30.252Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549729277"
+  }
+}
+{
+  "time": "2025-11-19T10:55:30.253Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549729277"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763549730253",
+    "userId": "3397087",
+    "balance": 65,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:56:13.932Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549773031"
+  }
+}
+{
+  "time": "2025-11-19T10:56:13.933Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549773031"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763549773933",
+    "userId": "3397087",
+    "balance": 65,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T10:58:56.958Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549936065"
+  }
+}
+{
+  "time": "2025-11-19T10:58:56.959Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763549936065"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763549936959",
+    "userId": "3397087",
+    "balance": 65,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:04:24.174Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550263266"
+  }
+}
+{
+  "time": "2025-11-19T11:04:24.175Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550263266"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550264175",
+    "userId": "3397087",
+    "balance": 65,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:05:08.366Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550307384"
+  }
+}
+{
+  "time": "2025-11-19T11:05:08.367Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550307384"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550308367",
+    "userId": "3397087",
+    "balance": 65,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:08:00.368Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550479375"
+  }
+}
+{
+  "time": "2025-11-19T11:08:00.371Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550479375"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550480371",
+    "userId": "3397087",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:13:29.435Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550808279"
+  }
+}
+{
+  "time": "2025-11-19T11:13:29.436Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550808279"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550809436",
+    "userId": "3397087",
+    "balance": 165,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:14:14.897Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550853911"
+  }
+}
+{
+  "time": "2025-11-19T11:14:14.898Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550853911"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550854898",
+    "userId": "3397087",
+    "balance": 135,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:14:55.542Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550894619"
+  }
+}
+{
+  "time": "2025-11-19T11:14:55.543Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763550894619"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763550895543",
+    "userId": "3397087",
+    "balance": 105,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:16:48.573Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763551007596"
+  }
+}
+{
+  "time": "2025-11-19T11:16:48.574Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763551007596"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763551008574",
+    "userId": "3397087",
+    "balance": 85,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:18:28.809Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763551107926"
+  }
+}
+{
+  "time": "2025-11-19T11:18:28.810Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763551107926"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763551108810",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:31:49.046Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763551907997"
+  }
+}
+{
+  "time": "2025-11-19T11:31:49.047Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763551907997"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763551909047",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:43:17.429Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763552596376"
+  }
+}
+{
+  "time": "2025-11-19T11:43:17.430Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763552596376"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763552597430",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T11:43:46.225Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763552625240"
+  }
+}
+{
+  "time": "2025-11-19T11:43:46.226Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763552625240"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763552626226",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:37:55.524Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555874408"
+  }
+}
+{
+  "time": "2025-11-19T12:37:55.526Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555874408"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555875526",
+    "userId": "6337761",
+    "balance": 55,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:38:19.462Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555898376"
+  }
+}
+{
+  "time": "2025-11-19T12:38:19.463Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555898376"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555899463",
+    "userId": "6337761",
+    "balance": 55,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:38:44.532Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555923480"
+  }
+}
+{
+  "time": "2025-11-19T12:38:44.532Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555923480"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555924532",
+    "userId": "6337761",
+    "balance": 55,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:39:04.046Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555942997"
+  }
+}
+{
+  "time": "2025-11-19T12:39:04.047Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555942997"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555944047",
+    "userId": "6337761",
+    "balance": 55,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:39:30.611Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555969614"
+  }
+}
+{
+  "time": "2025-11-19T12:39:30.612Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555969614"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555970612",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:39:35.218Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555974273"
+  }
+}
+{
+  "time": "2025-11-19T12:39:35.219Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555974273"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555975219",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:39:37.198Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555976181"
+  }
+}
+{
+  "time": "2025-11-19T12:39:37.199Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555976181"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555977199",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:39:37.471Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555976393"
+  }
+}
+{
+  "time": "2025-11-19T12:39:37.471Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763555976393"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763555977471",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:40:09.151Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556008118"
+  }
+}
+{
+  "time": "2025-11-19T12:40:09.152Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556008118"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556009152",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:41:36.050Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556095050"
+  }
+}
+{
+  "time": "2025-11-19T12:41:36.051Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556095050"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556096051",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:41:38.336Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556097430"
+  }
+}
+{
+  "time": "2025-11-19T12:41:38.337Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "6337761",
+    "timestamp": "1763556097430"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556098337",
+    "userId": "6337761",
+    "balance": 45,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:50:40.162Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556639172"
+  }
+}
+{
+  "time": "2025-11-19T12:50:40.163Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556639172"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556640163",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:51:19.993Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556679099"
+  }
+}
+{
+  "time": "2025-11-19T12:51:19.994Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556679099"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556679994",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:52:58.303Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763556777248"
+  }
+}
+{
+  "time": "2025-11-19T12:52:58.304Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "15936",
+    "timestamp": "1763556777248"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763556778304",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:53:15.168Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556794268"
+  }
+}
+{
+  "time": "2025-11-19T12:53:15.168Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556794268"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556795168",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:53:19.988Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556798945"
+  }
+}
+{
+  "time": "2025-11-19T12:53:19.989Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556798945"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556799989",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:53:22.420Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556801375"
+  }
+}
+{
+  "time": "2025-11-19T12:53:22.420Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556801375"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556802420",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:53:40.472Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556819412"
+  }
+}
+{
+  "time": "2025-11-19T12:53:40.473Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556819412"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556820472",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:54:00.451Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556839408"
+  }
+}
+{
+  "time": "2025-11-19T12:54:00.452Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556839408"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556840452",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:54:27.785Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556866710"
+  }
+}
+{
+  "time": "2025-11-19T12:54:27.786Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1763556866710"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556867786",
+    "userId": "15936",
+    "balance": 797.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T12:56:13.207Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763556972152"
+  }
+}
+{
+  "time": "2025-11-19T12:56:13.208Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763556972152"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763556973208",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T13:11:49.356Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763557908261"
+  }
+}
+{
+  "time": "2025-11-19T13:11:49.357Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763557908261"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763557909357",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T13:12:24.988Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763557943949"
+  }
+}
+{
+  "time": "2025-11-19T13:12:24.988Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763557943949"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763557944988",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T13:30:54.136Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763559052893"
+  }
+}
+{
+  "time": "2025-11-19T13:30:54.136Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763559052893"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763559054136",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T13:31:21.631Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763559080623"
+  }
+}
+{
+  "time": "2025-11-19T13:31:21.632Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763559080623"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763559081632",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T14:51:12.614Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763563871541"
+  }
+}
+{
+  "time": "2025-11-19T14:51:12.616Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763563871541"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763563872616",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T16:56:19.136Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763571378028"
+  }
+}
+{
+  "time": "2025-11-19T16:56:19.138Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763571378028"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763571379137",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T17:13:36.524Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763572415522"
+  }
+}
+{
+  "time": "2025-11-19T17:13:36.525Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763572415522"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763572416525",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T17:14:14.410Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763572453325"
+  }
+}
+{
+  "time": "2025-11-19T17:14:14.410Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763572453325"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763572454410",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-19T17:43:55.099Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763574233951"
+  }
+}
+{
+  "time": "2025-11-19T17:43:55.100Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3397087",
+    "timestamp": "1763574233951"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763574235100",
+    "userId": "3397087",
+    "balance": 5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

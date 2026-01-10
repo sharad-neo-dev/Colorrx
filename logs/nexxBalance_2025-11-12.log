@@ -1,0 +1,224 @@
+{
+  "time": "2025-11-12T12:03:03.634Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1762948981831"
+  }
+}
+{
+  "time": "2025-11-12T12:03:03.635Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "15936",
+    "timestamp": "1762948981831"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762948983635",
+    "userId": "15936",
+    "balance": 2196.4,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T12:12:41.880Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3335856",
+    "timestamp": "1762949559974"
+  }
+}
+{
+  "time": "2025-11-12T12:12:41.881Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3335856",
+    "timestamp": "1762949559974"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1762949561881",
+    "userId": "3335856",
+    "balance": 2398.38,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T14:37:43.674Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3829433",
+    "timestamp": "1762958261886"
+  }
+}
+{
+  "time": "2025-11-12T14:37:43.676Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "3829433",
+    "timestamp": "1762958261886"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762958263676",
+    "userId": "3829433",
+    "balance": 219.2,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T14:47:54.546Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3829433",
+    "timestamp": "1762958872629"
+  }
+}
+{
+  "time": "2025-11-12T14:47:54.547Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3829433",
+    "timestamp": "1762958872629"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1762958874547",
+    "userId": "3829433",
+    "balance": 219.2,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T14:48:00.808Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3829433",
+    "timestamp": "1762958878961"
+  }
+}
+{
+  "time": "2025-11-12T14:48:00.810Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "userId": "3829433",
+    "timestamp": "1762958878961"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1762958880809",
+    "userId": "3829433",
+    "balance": 219.2,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T15:35:55.494Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961754699"
+  }
+}
+{
+  "time": "2025-11-12T15:35:55.495Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961754699"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762961755495",
+    "userId": "2182474",
+    "balance": 50,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T15:37:40.709Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961859868"
+  }
+}
+{
+  "time": "2025-11-12T15:37:40.710Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961859868"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762961860710",
+    "userId": "2182474",
+    "balance": 50,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T15:38:29.729Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961908948"
+  }
+}
+{
+  "time": "2025-11-12T15:38:29.729Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "userId": "2182474",
+    "timestamp": "1762961908948"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762961909729",
+    "userId": "2182474",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

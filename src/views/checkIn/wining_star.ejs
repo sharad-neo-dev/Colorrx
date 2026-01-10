@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winning Star | colorrx</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+    
+                        'app-bg': '#101114',
+                        'card-bg': '#1e1f29', 
+                        'header-purple': '#3e1474', 
+                        'text-light': '#F3E8FF',
+                        'text-secondary': '#A9A9A9', 
+                        'accent-orange': '#FF7043',
+                        'row-light-bg': '#292b3a',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+     
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+      
+        .winner-detail-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0.5rem 1rem;
+            align-items: center;
+        }
+
+        .header-bg {
+             background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+        }
+    </style>
+</head>
+
+
+<body class="font-sans bg-app-bg min-h-screen w-full md:max-w-[500px] mx-auto text-text-light">
+
+   
+    <div class="sticky top-0 z-10 flex items-center h-14 px-4 header-bg shadow-lg">
+        <button onclick="history.back()" aria-label="Back" class="text-text-light pr-4 text-lg hover:text-white transition-colors">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-xl tracking-wide">Winning star</h2>
+        <span class="w-6"></span>
+    </div>
+
+
+    <div class="app-container p-2 space-y-3 pb-[7rem]">
+
+   
+        <div id="winners-list" class="space-y-3">
+         
+        </div>
+
+    </div>
+
+    <%- include('../layout/footer.ejs') %>
+
+    <script>
+
+        const winnersData = [
+            { id: '918***877', game: 'Dragons Gate', wins: '83.75X', bonus: '₹50.00', time: '2024-05-23 23:21:02' },
+            { id: '919***680', game: 'Goal', wins: '62.08X', bonus: '₹50.00', time: '2024-05-23 23:21:02' },
+            { id: '917***615', game: 'Wildfire Wins', wins: '46.3X', bonus: '₹10.00', time: '2024-05-23 23:21:02' },
+            { id: '919***537', game: '10000 Wishes', wins: '20X', bonus: '₹5.00', time: '2024-05-23 23:21:02' },
+            { id: '918***775', game: 'Wildfire Wins', wins: '37.4X', bonus: '₹10.00', time: '2024-05-23 23:21:02' },
+            { id: '917***372', game: 'Money Coming', wins: '22X', bonus: '₹5.00', time: '2024-05-23 23:21:02' },
+            { id: '918***096', game: 'Money Coming', wins: '21X', bonus: '₹5.00', time: '2024-05-23 23:21:02' },
+        ];
+
+        const winnersList = document.getElementById('winners-list');
+
+        function createWinnerCard(winner) {
+           
+            const card = document.createElement('div');
+   
+            card.className = 'bg-card-bg rounded-xl shadow-lg overflow-hidden border border-card-bg/50';
+
+      
+            const header = `
+                <div class="flex items-center p-3 text-lg font-semibold border-b border-gray-700 bg-card-bg">
+                    <div class="w-8 h-8 rounded-full border border-gray-600 mr-3 flex items-center justify-center text-sm bg-row-light-bg text-text-secondary">
+                        <i class="fa-solid fa-user-slash"></i> <!-- Placeholder icon for avatar -->
+                    </div>
+                    <span class="text-white">${winner.id}</span>
+                </div>
+            `;
+            
+ 
+            const details = `
+                <div class="text-sm">
+                    <!-- Game Name Row -->
+                    <div class="winner-detail-row bg-card-bg">
+                        <span class="text-text-secondary font-medium">Game name</span>
+                        <span class="text-right text-text-light font-semibold">${winner.game}</span>
+                    </div>
+
+                    <!-- Number of Wins Row -->
+                    <div class="winner-detail-row bg-row-light-bg">
+                        <span class="text-text-secondary font-medium">Number of wins</span>
+                        <span class="text-right text-accent-orange font-bold">${winner.wins}</span>
+                    </div>
+
+                    <!-- Bonus Row -->
+                    <div class="winner-detail-row bg-card-bg">
+                        <span class="text-text-secondary font-medium">Bonus</span>
+                        <span class="text-right text-accent-orange font-bold">${winner.bonus}</span>
+                    </div>
+
+                    <!-- Winning Time Row -->
+                    <div class="winner-detail-row bg-row-light-bg">
+                        <span class="text-text-secondary font-medium">Winning time</span>
+                        <span class="text-right text-text-light">${winner.time}</span>
+                    </div>
+                </div>
+            `;
+
+            card.innerHTML = header + details;
+            return card;
+        }
+
+        winnersData.forEach(winner => {
+            winnersList.appendChild(createWinnerCard(winner));
+        });
+
+   
+      
+    </script>
+
+</body>
+
+</html>

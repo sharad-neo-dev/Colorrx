@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose a bank | colorrx</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <style>
+        .bg-gradient-header {
+            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+        }
+        
+        /* Utility for separating list items */
+        .bank-item-separator {
+            border-bottom: 1px solid #3e3c66; /* A subtle border matching the background style */
+        }
+    </style>
+</head>
+
+<body class="bg-[#0e0d2a] text-white min-h-screen font-sans w-full md:max-w-[500px] mx-auto">
+
+    <header class="flex items-center h-14 px-4 bg-gradient-header sticky -top-1 z-10">
+        <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-bold text-lg">Choose a bank</h2>
+        <div class="w-8"></div> </header>
+
+    <div class="p-4 sticky top-14 z-10 bg-[#0e0d2a]">
+        <div class="relative flex items-center bg-[#292757] rounded-xl px-4 py-2 shadow-inner">
+            <i class="ri-search-line text-xl mr-3 text-gray-400"></i>
+            <input id="search_input" type="text" placeholder="Search bank"
+                class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-sm" />
+        </div>
+    </div>
+
+    <div id="bank_list_main" class="px-4 pb-[10rem]">
+        <div class="text-center text-gray-500 py-10" id="loading_message">Loading banks...</div>
+    </div>
+  <%- include('../layout/footer.ejs') %>
+    <script>
+        // Use Toastify for alerts (replacing the previous alertMessage function)
+        function showToast(message, type = "info") {
+            Toastify({
+                text: message,
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: type === "success"
+                    ? "linear-gradient(to right, #00b09b, #96c93d)"
+                    : "linear-gradient(to right, #ff416c, #ff4b2b)",
+            }).showToast();
+        }
+
+        /**
+         * Selects a bank card, stores it in localStorage, and attempts to update/save 
+         * the bank information on the server before redirecting.
+         * @param {string} bankName - The name of the selected bank.
+         */
+        async function selectBankCard(bankName) {
+            try {
+                // 1. Store the selected bank name
+                localStorage.setItem("bankName", bankName);
+
+                // 2. Fetch any previously saved account details
+                const responseInfo = await axios({
+                    method: "GET",
+                    url: "/api/webapi/withdraw/bank_card",
+                });
+
+                const account = responseInfo?.data?.account;
+
+                // 3. If account data exists, update it with the new bank name
+                if (account?.isAvailable) {
+                    const response = await axios({
+                        method: "POST",
+                        url: "/api/webapi/withdraw/add_bank_card",
+                        data: {
+                            bankName, // New bank name
+                            recipientName: account.recipientName,
+                            bankAccountNumber: account.bankAccountNumber,
+                            phoneNumber: account.phoneNumber,
+                            IFSC: account.IFSC,
+                            upiId: "--",
+                        },
+                    });
+                    showToast(response.data.message || "Bank updated successfully!", "success");
+                } 
+                
+                // 4. Redirect back to the Add Bank page
+                setTimeout(() => {
+                    window.location.href = "/wallet/addBank";
+                }, 300);
+
+            } catch (error) {
+                console.error("Error selecting bank:", error);
+                const message = error?.response?.data?.message || "Something went wrong while selecting the bank.";
+                showToast(message, "error");
+            }
+        }
+
+        /**
+         * Initializes or filters the list of banks displayed on the UI.
+         * @param {string} [name=''] - The search query to filter banks.
+         */
+        const initBankList = async (name = '') => {
+            const bankListContainer = $("#bank_list_main");
+            bankListContainer.html('<div class="text-center text-gray-500 py-10">Loading banks...</div>');
+
+            try {
+                // Assuming 'bank_list.json' is a publicly accessible endpoint
+                const response = await axios.get("/bank_list.json");
+
+                const filteredBanks = response.data.data.banklist
+                    .filter(item => (name ? item.bankName.toLowerCase().includes(name.toLowerCase()) : true));
+
+                if (filteredBanks.length === 0) {
+                     bankListContainer.html('<div class="text-center text-gray-500 py-10">No banks found matching your search.</div>');
+                     return;
+                }
+
+                const bankListHtml = filteredBanks.map(bank => {
+                    // Use Tailwind classes for the new UI style
+                    return `
+                        <div class="bank-item-separator py-3 px-2 cursor-pointer hover:bg-[#1a173e] transition" 
+                             onclick="selectBankCard('${bank.bankName.replace(/'/g, "\\'")}')">
+                            <div class="flex items-center text-sm font-medium">
+                                <span class="text-white">${bank.bankName}</span>
+                            </div>
+                        </div>`;
+                }).join('');
+
+                bankListContainer.html(bankListHtml);
+
+            } catch (error) {
+                console.error("Error fetching bank list:", error);
+                bankListContainer.html('<div class="text-center text-red-400 py-10">Failed to load bank list.</div>');
+            }
+        }
+
+        // --- Event Listeners and Initial Load ---
+        
+        // Initial load of the bank list
+        initBankList();
+
+        // Handle search input filtering
+        $("#search_input").on("input", function () {
+            // Debounce or slight delay could be added here for performance if the list is huge
+            initBankList($(this).val());
+        });
+    </script>
+</body>
+
+</html>

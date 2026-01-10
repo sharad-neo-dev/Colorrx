@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift | colorrx</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        // Tailwind Configuration for custom colors based on the dark theme image
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main-dark': '#1c1c2b',
+                        /* Main dark background (from image_9c91ec.png) */
+                        'card-dark': '#29293f',
+                        /* Card/Container background */
+                        'header-purple-dark': '#3e1474',
+                        /* Dark Purple start color for header */
+                        'header-purple-light': '#4e288a',
+                        /* Slightly lighter purple for gradient/active */
+                        'active-red': '#fe485c',
+                        /* Primary active color (Red/Pink) */
+                        'text-primary': '#f0f0f0',
+                        /* Light text for main content */
+                        'text-secondary': '#a0a0a0',
+                        /* Grey text for labels/subtitles */
+                        'input-dark': '#3a3a50',
+                        /* Dark input background */
+                        'card-border': '#3a3a50',
+                        /* Subtle card border/divider */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base styles */
+        
+        body {
+            background-color: #0b0c1a;
+            /* Dark outer background */
+            font-family: 'Inter', sans-serif;
+        }
+        /* Main Container Styling: Dark app container */
+        
+        .app-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #1c1c2b;
+            /* Main Dark Background */
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: var(--tw-colors-text-primary);
+            /* Default text color to light */
+        }
+        /* Header Gradient (Matching the dark theme image: Dark Purple to Main Dark Background) */
+        
+        .bg-gradient-header-dark {
+            /* Purple gradient from top, blending seamlessly into the main dark background */
+            background: linear-gradient(180deg, #3e1474, #1c1c2b 90%);
+            height: 140px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
+        /* The actual header bar remains sticky and visible */
+        
+        .header-bar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            height: 56px;
+            /* h-14 */
+            padding-left: 1rem;
+            /* px-4 */
+            padding-right: 1rem;
+            /* px-4 */
+        }
+        /* Button Gradient (Using the primary active red/pink color) */
+        
+        .btn-gradient-receive {
+            background: linear-gradient(90deg, #fe485c, #ff7989);
+            /* Still using red/pink for the button */
+            transition: transform 0.1s;
+        }
+        
+        .btn-gradient-receive:active {
+            transform: scale(0.98);
+        }
+        /* Card Styling for input area and history */
+        
+        .theme-card {
+            background-color: #29293f;
+            /* Dark card background */
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid #3a3a50;
+            /* Subtle border */
+        }
+        /* Custom Alert Message Styling */
+        
+        .message_alert_root {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        .message_alert_text {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Lighter background for better contrast in dark theme */
+            color: #1c1c2b;
+            /* Dark text */
+            padding: 10px 20px;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .message_alert_root .v-enter-active,
+        .message_alert_root .v-enter-to {
+            opacity: 1;
+        }
+        
+        .message_alert_root .v-leave-active,
+        .message_alert_root .v-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="text-sm w-full md:max-w-[500px] mx-auto" >
+ <header class="flex items-center h-14 px-4 sticky  z-10" style=" background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+            <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-bold text-lg">Gift </h2>
+            <span class="w-6"></span>
+        </header>
+
+    <div class="app-container">
+        <!-- Background Gradient for the Top Section (Dark Theme) -->
+    
+
+
+   
+
+
+        <!-- Main Content Area -->
+        <div class="p-4 bg-main-dark min-h-[calc(100vh-56px)] relative z-20">
+
+            <!-- Gift Code Input Card -->
+            <div class="theme-card mb-6">
+                <!-- Text colors adjusted for dark theme -->
+                <p class="text-text-primary font-bold text-lg mb-1">Hi</p>
+                <p class="text-text-secondary text-base mb-4">We have a gift for you</p>
+
+                <p class="text-text-primary font-medium text-sm mb-2">Please enter the gift code below</p>
+
+                <!-- Input field (Dark background, light text) -->
+                <input id="gift_code_input" type="text" placeholder="Please enter gift code" class="w-full p-3 rounded-lg bg-input-dark text-text-primary border border-transparent focus:border-active-red focus:ring-0 outline-none transition duration-150 text-base mb-4"
+                />
+
+                <!-- Receive Button (Kept Red/Pink for visibility) -->
+                <button id="receive_button" class="w-full h-12 rounded-lg text-white font-bold text-lg btn-gradient-receive shadow-lg">
+                    Receive
+                </button>
+            </div>
+
+            <!-- History Card -->
+            <div class="theme-card">
+                <!-- Header (History) -->
+                <div class="flex items-center text-text-primary font-semibold text-base mb-4">
+                    <!-- Icon color adjusted for better visibility on dark background -->
+                    <i class="ri-history-line text-active-red text-lg mr-2"></i>
+                    <span>History</span>
+                </div>
+
+                <!-- History Content/Placeholder -->
+                <div id="history_content" class="flex flex-col items-center justify-center text-center py-10">
+                    <div class="w-32 h-24 border border-card-border bg-card-dark rounded-lg flex items-center justify-center mb-2">
+                        <!-- Placeholder icon adjusted -->
+                        <i class="ri-gift-line text-4xl text-text-secondary"></i>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-2">No data</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <%- include('../layout/footer.ejs') %>
+
+        <script>
+            // Use a global variable for the alert container
+            const ALERT_ROOT_ID = 'custom-alert-root';
+
+            /**
+             * Shows a custom message alert instead of the native alert().
+             * @param {string} text - The message to display.
+             * @param {number} duration - Duration in milliseconds (default 1500).
+             */
+            const alertMessage = (text, duration = 1500) => {
+                let $root = $(`#${ALERT_ROOT_ID}`);
+
+                // Check if alert container already exists
+                if ($root.length === 0) {
+                    $root = $('<div>')
+                        .attr('id', ALERT_ROOT_ID)
+                        .addClass('message_alert_root');
+                    $('body').append($root);
+                }
+
+                const $msgContent = $('<div>')
+                    .addClass('message_alert_text v-enter-active v-enter-to')
+                    .text(text);
+
+                $root.html($msgContent); // Replace previous message if any
+
+                setTimeout(() => {
+                    // Trigger the transition out
+                    $msgContent.removeClass('v-enter-active v-enter-to').addClass('v-leave-active v-leave-to');
+
+                    setTimeout(() => {
+                        $root.empty();
+                    }, 300); // Wait for transition out duration
+                }, duration);
+            }
+
+            // --- Event Listener and AJAX Call ---
+            $(document).ready(function() {
+                const $receiveButton = $('#receive_button');
+                const $input = $('#gift_code_input');
+
+                // Handle back button click
+                $('#back_button').on('click', function() {
+                    history.back();
+                });
+
+                $receiveButton.on('click', function(e) {
+                    e.preventDefault();
+                    const value = $input.val().trim();
+
+                    // Prevent multiple clicks while processing
+                    if ($receiveButton.hasClass('opacity-50')) {
+                        return;
+                    }
+                    $receiveButton.addClass('opacity-50 pointer-events-none');
+
+                    if (value) {
+                        // Start Exponential Backoff Attempt (for robustness)
+                        let attempts = 0;
+                        const maxAttempts = 5;
+
+                        const makeApiCall = () => {
+                            $.ajax({
+                                type: "POST",
+                                url: "/api/webapi/use/redenvelope",
+                                data: {
+                                    code: value,
+                                },
+                                dataType: "json",
+                                success: function(response) {
+                                    alertMessage(response.message || 'Gift received successfully!');
+                                },
+                                error: function(xhr, status, error) {
+                                    if (attempts < maxAttempts) {
+                                        attempts++;
+                                        const delay = Math.pow(2, attempts) * 1000; // 2s, 4s, 8s...
+                                        setTimeout(makeApiCall, delay);
+                                        // Do not log retries
+                                        return; // Stop here if retrying
+                                    }
+
+                                    // Final error handling after max attempts
+                                    alertMessage('Error: Failed to use gift code after multiple attempts.');
+                                    console.error("AJAX Final Error:", status, error);
+                                },
+                                complete: function() {
+                                    // Re-enable button ONLY if the request was successful or max attempts reached
+                                    if (attempts === 0 || attempts === maxAttempts) {
+                                        $receiveButton.removeClass('opacity-50 pointer-events-none');
+                                    }
+                                }
+                            });
+                        };
+
+                        makeApiCall();
+
+                    } else {
+                        alertMessage('Please enter the gift code');
+                        $receiveButton.removeClass('opacity-50 pointer-events-none'); // Re-enable immediately for input error
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>

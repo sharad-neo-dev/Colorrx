@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Avatar | colorrx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#0b0c1a',
+                        'app-purple': '#3e1474',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .avatar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding: 16px;
+        }
+        
+        .van-grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .van-grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid transparent;
+            transition: 0.2s;
+        }
+        
+        .van-grid-item img.active {
+            border: 3px solid #3e1474;
+        }
+        
+        .checkbox_root {
+            display: none;
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: #3e1474;
+            color: white;
+            padding: 4px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            display: none;
+            z-index: 50;
+        }
+        
+        #successTost {
+            background: green;
+        }
+        
+        #failedTost {
+            background: red;
+        }
+    </style>
+</head>
+
+<body class="bg-app-bg min-h-screen w-full md:max-w-[500px] mx-auto pb-24">
+
+    <!-- Header -->
+    <div class="sticky top-0 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+            <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">Change Avatar</h2>
+        <span class="w-6"></span>
+    </div>
+
+    <!-- Avatar Grid -->
+    <div class="avatar-grid">
+        <div class="van-grid-item"><img src="/assets/png/1-a6662edb.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/2-58c8a9bc.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/3-abfcc056.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/4-12a0d0c5.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/5-ab77b716.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/6-7c7f5203.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/7-00479cfa.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/8-ea087ede.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/9-6d772f2c.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/10-29a6603e.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/11-925c456e.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/12-ae12c679.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/13-5676d43f.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/15-80f41fc6.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/16-cf8e1441.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/17-bedde42f.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/18-52955242.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/19-2ac9fd83.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+        <div class="van-grid-item"><img src="/assets/png/20-a58f23bf.png" alt="avatar">
+            <div class="checkbox_root"><i class="ri-check-line"></i></div>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div id="successTost" class="toast"><span class="van-toast__text">Avatar changed successfully!</span></div>
+    <div id="failedTost" class="toast"><span class="van-toast__text">Failed to change avatar!</span></div>
+    <%- include('../layout/footer.ejs') %>
+        <script>
+            // Click handler to change avatar
+            $(".van-grid-item").click(async function() {
+                try {
+                    const avatar = $(this).find("img").attr("src").split("/").pop();
+                    $(".active").removeClass("active");
+                    $(".van-grid-item > .checkbox_root").hide();
+                    $(this).find("img").addClass("active");
+                    $(this).find(".checkbox_root").show();
+
+                    const response = await axios.patch("/api/webapi/change/avatar", {
+                        avatar
+                    });
+
+                    if (response.data.status === true) {
+                        $(".van-toast__text").text(response.data.message);
+                        $("#successTost").fadeIn(220);
+                    } else {
+                        $(".van-toast__text").text(response.data.message);
+                        $("#failedTost").fadeIn(220);
+                    }
+
+                    setTimeout(() => {
+                        $("#failedTost").fadeOut();
+                        $("#successTost").fadeOut();
+                    }, 3000);
+                } catch (error) {
+                    $(".van-toast__text").text(
+                        error && error.response && error.response.data && error.response.data.message ?
+                        error.response.data.message :
+                        "Error"
+                    );
+                    $("#failedTost").fadeIn(220);
+
+                    setTimeout(() => {
+                        $("#failedTost").fadeOut();
+                        $("#successTost").fadeOut();
+                    }, 1600);
+                }
+            });
+
+            // Fetch user info and mark their avatar active on load
+            const fetchUser = async() => {
+                try {
+                    const response = await axios.get("/api/webapi/GetUserInfo");
+                    let userData;
+                    if (response && response.data && response.data.data) {
+                        userData = response.data.data;
+                    } else {
+                        userData = {};
+                    }
+                    $(".van-grid-item img").each(function() {
+                        if ($(this).attr("src").split("/").pop() === userData.avatar) {
+                            $(this).addClass("active");
+                            $(this).parent().find(".checkbox_root").show();
+                        }
+                    });
+                } catch (error) {
+                    // Silent error handling
+                }
+            };
+
+            fetchUser();
+        </script>
+
+</body>
+
+</html>

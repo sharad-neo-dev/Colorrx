@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Withdrawal List</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <%- include('nav') %>
+
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <h2>Withdrawal List</h2>
+          </div>
+        </section>
+
+        <!-- FILTERS -->
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 15px;
+          "
+        >
+          <input
+            type="text"
+            id="search"
+            class="form-control"
+            placeholder="Search phone/order"
+            style="width: 250px"
+          />
+
+          <select id="statusFilter" class="form-control" style="width: 140px">
+            <option value="">All Status</option>
+            <option value="0">Pending</option>
+            <option value="1">Success</option>
+            <option value="2">Rejected</option>
+          </select>
+
+          <select id="dateFilter" class="form-control" style="width: 140px">
+            <option value="all">All Dates</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="custom">Custom</option>
+          </select>
+
+          <input
+            type="date"
+            id="fromDate"
+            class="form-control"
+            style="width: 130px; display: none"
+          />
+          <input
+            type="date"
+            id="toDate"
+            class="form-control"
+            style="width: 130px; display: none"
+          />
+        </div>
+
+        <!-- TABLE -->
+        <section class="content">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">All Withdrawals</h3>
+            </div>
+
+            <div class="card-body p-0">
+              <table class="table table-striped">
+                <thead>
+                  <tr class="text-center">
+                    <th>ID</th>
+                    <th>Account</th>
+                    <th>Bank</th>
+                    <th>Amount</th>
+                    <th>Order ID</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <!-- PAGINATION -->
+            <nav style="display: flex; justify-content: center; margin: 20px">
+              <ul class="pagination">
+                <li class="page-item previous disabled">
+                  <a class="page-link" href="#">Prev</a>
+                </li>
+                <div id="numbers" style="display: flex"></div>
+                <li class="page-item next">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script>
+      let allData = [];
+      let filteredData = [];
+      let currentPage = 1;
+      const limit = 10;
+      let totalPages = 1;
+
+      const STATUS_MAP = {
+        0: { text: "Pending", class: "warning" },
+        1: { text: "Success", class: "success" },
+        2: { text: "Rejected", class: "danger" },
+      };
+
+      function normalizeDate(str) {
+        if (!str) return new Date(NaN);
+        const [ymd, time, ampm] = str.split(" ");
+        const [y, m, d] = ymd.split("-");
+        let [hh, mm, ss] = time.split(":");
+        hh = parseInt(hh);
+        if (ampm === "PM" && hh < 12) hh += 12;
+        if (ampm === "AM" && hh === 12) hh = 0;
+        return new Date(y, m - 1, d, hh, mm, ss || 0);
+      }
+
+      function onlyDate(str) {
+        const d = normalizeDate(str);
+        return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      }
+
+      function formatTime(str) {
+        const d = normalizeDate(str);
+        return `${onlyDate(str)} ${d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
+      }
+
+      function renderTable(list) {
+        let html = "";
+
+        list.forEach((item) => {
+          const s = STATUS_MAP[item.status];
+
+          const actions =
+            item.status === 0
+              ? `
+              <button class="btn btn-success btn-sm approve" data-id="${item.id}">
+                <i class="fa fa-check"></i>
+              </button>
+              <button class="btn btn-danger btn-sm reject" data-id="${item.id}">
+                <i class="fa fa-times"></i>
+              </button>
+            `
+              : `<span class="text-muted">No Action</span>`;
+
+          html += `
+          <tr class="text-center">
+            <td>${item.id}</td>
+            <td>${item.phoneNumber}</td>
+            <td>${item.bankName}</td>
+            <td>${item.amount}</td>
+            <td>${item.orderId}</td>
+            <td>${formatTime(item.today)}</td>
+            <td><span class="badge badge-${s.class}">${s.text}</span></td>
+            <td>${actions}</td>
+          </tr>`;
+        });
+
+        $("tbody").html(html);
+        bindEvents();
+      }
+
+      function bindEvents() {
+        // ✅ APPROVE BUTTON LOGIC (Old Modal Style)
+        $(".approve").click(function () {
+          const id = $(this).data("id");
+
+          Swal.fire({
+            title: "Approve Withdrawal?",
+            showCancelButton: true,
+            confirmButtonText: "Approve",
+            cancelButtonText: "Cancel",
+          }).then(async (result) => {
+            if (!result.isConfirmed) return;
+
+            $.post(
+              "/api/webapi/admin/withdraw/status",
+              { id, status: 1, remarks: "Approved Manually" },
+              () => {
+                Swal.fire(
+                  "Approved!",
+                  "Withdrawal marked as successful.",
+                  "success",
+                );
+                loadData();
+              },
+            );
+          });
+        });
+        $(".reject").click(function () {
+          const id = $(this).data("id");
+
+          Swal.fire({
+            title: "Reject Withdrawal?",
+            input: "text",
+            inputPlaceholder: "Enter rejection reason",
+            showCancelButton: true,
+            confirmButtonText: "Reject",
+            confirmButtonColor: "#d33",
+          }).then((res) => {
+            if (!res.isConfirmed) return;
+
+            $.post(
+              "/api/webapi/admin/withdraw/status",
+              { id, status: 2, remarks: res.value },
+              () => {
+                Swal.fire("Rejected", "Withdraw rejected", "success");
+                loadData();
+              },
+            );
+          });
+        });
+      }
+
+      function applyFilters() {
+        const search = $("#search").val().toLowerCase();
+        const status = $("#statusFilter").val();
+        const date = $("#dateFilter").val();
+
+        filteredData = [...allData];
+
+        const today = new Date();
+        const todayStr = onlyDate(
+          `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} 1:00:00 PM`,
+        );
+
+        if (search) {
+          filteredData = filteredData.filter((x) =>
+            `${x.phoneNumber}${x.orderId}`.toLowerCase().includes(search),
+          );
+        }
+
+        if (status !== "") {
+          filteredData = filteredData.filter((x) => x.status == status);
+        }
+
+        if (date === "today") {
+          filteredData = filteredData.filter(
+            (x) => onlyDate(x.today) === todayStr,
+          );
+        }
+
+        if (date === "week") {
+          const weekAgo = new Date();
+          weekAgo.setDate(weekAgo.getDate() - 7);
+          filteredData = filteredData.filter(
+            (x) => normalizeDate(x.today) >= weekAgo,
+          );
+        }
+
+        if (date === "month") {
+          filteredData = filteredData.filter((x) => {
+            const d = normalizeDate(x.today);
+            return (
+              d.getMonth() === today.getMonth() &&
+              d.getFullYear() === today.getFullYear()
+            );
+          });
+        }
+
+        if (date === "custom") {
+          const f = $("#fromDate").val();
+          const t = $("#toDate").val();
+          if (f && t) {
+            filteredData = filteredData.filter((x) => {
+              const d = onlyDate(x.today);
+              return d >= f && d <= t;
+            });
+          }
+        }
+
+        currentPage = 1;
+        updatePagination();
+        paginate();
+      }
+
+      function updatePagination() {
+        totalPages = Math.ceil(filteredData.length / limit) || 1;
+
+        let html = "";
+        for (let i = 1; i <= totalPages; i++) {
+          html += `<li class="page-item ${i === currentPage ? "active" : ""}">
+                     <a class="page-link" href="#" data-p="${i}">${i}</a>
+                   </li>`;
+        }
+
+        $("#numbers").html(html);
+
+        $(".page-link[data-p]").click(function (e) {
+          e.preventDefault();
+          currentPage = parseInt($(this).attr("data-p"));
+          paginate();
+          updatePagination();
+        });
+
+        $(".previous").toggleClass("disabled", currentPage === 1);
+        $(".next").toggleClass("disabled", currentPage === totalPages);
+      }
+
+      function paginate() {
+        const start = (currentPage - 1) * limit;
+        renderTable(filteredData.slice(start, start + limit));
+      }
+
+      $("#search,#statusFilter,#fromDate,#toDate").on(
+        "input change",
+        applyFilters,
+      );
+
+      $("#dateFilter").change(() => {
+        const c = $("#dateFilter").val() === "custom";
+        $("#fromDate,#toDate").toggle(c);
+        applyFilters();
+      });
+
+      $(".previous").click(() => {
+        if (currentPage > 1) {
+          currentPage--;
+          paginate();
+          updatePagination();
+        }
+      });
+      $(".next").click(() => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          paginate();
+          updatePagination();
+        }
+      });
+
+      function loadData() {
+        $.get("/api/webapi/withdraw/history", (res) => {
+          if (res.status) {
+            allData = res.withdrawList;
+            applyFilters();
+          }
+        });
+      }
+
+      loadData();
+    </script>
+  </body>
+</html>

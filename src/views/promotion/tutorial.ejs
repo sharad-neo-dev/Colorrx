@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promotion Rules | colorrx</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#0b0c1a',
+                        'app-purple': '#3e1474', // Primary dark purple/blue color for border
+                        'header-gradient-start': '#3e1474',
+                        'header-gradient-end': '#101114',
+                        'rule-header-bg': '#ff6f61', // Reddish color for rule numbers
+                        'table-header': '#f1f5f9', // Light gray for table header
+                        'crown-gold': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Remix Icon CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* Custom style to create the arrow/banner effect on rule headers */
+        
+        .rule-header-shape {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            padding: 4px 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 8px;
+            background-color: #ff6f61;
+            /* Using a specific hex that matches the red color */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            /* Small shadow for lift */
+        }
+        
+        .rule-header-shape::before,
+        .rule-header-shape::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: inherit;
+            border-radius: 4px;
+        }
+        
+        .rule-header-shape::before {
+            left: -6px;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        .rule-header-shape::after {
+            right: -6px;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        /* Responsive Table styling for better mobile view */
+        
+        .responsive-table th,
+        .responsive-table td {
+            padding: 8px 4px;
+            text-align: center;
+            border-right: 1px solid #e2e8f0;
+        }
+        
+        .responsive-table th:last-child,
+        .responsive-table td:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+
+<body class="bg-app-bg min-h-screen pb-20  w-full md:max-w-[500px] mx-auto font-sans">
+
+    <div class="sticky -top-1 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+            <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">Rebate Ratio</h2>
+        <span class="w-6"></span>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="space-y-6 p-4">
+
+        <!-- Rule 01 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">01</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                There are **6 subordinate levels** in inviting friends, if A invites B, then B is a level 1 subordinate of A. If B invites C, then C is a level 1 subordinate of B and also a **level 2 subordinate of A**. If C invites D, then D is a level 1 subordinate
+                of C, at the same time a level 2 subordinate of B and also a **level 3 subordinate of A**.
+            </p>
+        </div>
+
+        <!-- Rule 02 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">02</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                When inviting friends to register, you must send the invitation link provided or enter the invitation code manually so that your friends become your **level 1 subordinates**.
+            </p>
+        </div>
+
+        <!-- Rule 03 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">03</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                The invitee registers via the inviter's invitation code and completes the deposit, shortly after that the **commission will be received immediately**.
+            </p>
+        </div>
+
+        <!-- Rule 04 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">04</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                The calculation of yesterday's commission starts every morning at **01:00**. After the commission calculation is completed, the commission is rewarded to the wallet and can be viewed through the commission collection record.
+            </p>
+        </div>
+
+        <!-- Rule 05 & Rebate Table Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">05</div>
+            <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Commission rates vary depending on your **agency level** on that day.<br> **Number of Teams:** How many downline deposits you have to date.<br> **Team Betting:** The total number of deposits made by your downline in one day.<br> **Team
+                Deposit:** Your downline deposits within one day.
+            </p>
+
+            <!-- Rebate Level Table - ADDED border-2 border-[#3e1474] (app-purple) -->
+            <div class="overflow-x-auto border-2 border-[#3e1474] rounded-lg">
+                <table class="w-full text-xs text-left text-gray-600 responsive-table min-w-[300px]">
+                    <thead class="text-xs text-gray-700 uppercase bg-table-header">
+                        <tr>
+                            <th scope="col" class="py-2 border-r border-gray-300">Rebate level</th>
+                            <th scope="col" class="py-2 border-r border-gray-300">Team Number</th>
+                            <th scope="col" class="py-2 border-r border-gray-300">Team Betting</th>
+                            <th scope="col" class="py-2">Team Deposit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data rows L0-L10 from image_1f0c5a.png & image_1f0f21.png -->
+                        <!-- L0 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L0</span>
+                            </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <!-- L1 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L1</span>
+                            </td>
+                            <td>5</td>
+                            <td>500K</td>
+                            <td>100K</td>
+                        </tr>
+                        <!-- L2 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L2</span>
+                            </td>
+                            <td>10</td>
+                            <td>1,000K</td>
+                            <td>200K</td>
+                        </tr>
+                        <!-- L3 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L3</span>
+                            </td>
+                            <td>15</td>
+                            <td>2.50M</td>
+                            <td>500K</td>
+                        </tr>
+                        <!-- L4 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L4</span>
+                            </td>
+                            <td>20</td>
+                            <td>3.50M</td>
+                            <td>700K</td>
+                        </tr>
+                        <!-- L5 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L5</span>
+                            </td>
+                            <td>25</td>
+                            <td>5M</td>
+                            <td>1,000K</td>
+                        </tr>
+                        <!-- L6 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L6</span>
+                            </td>
+                            <td>30</td>
+                            <td>10M</td>
+                            <td>2M</td>
+                        </tr>
+                        <!-- L7 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L7</span>
+                            </td>
+                            <td>100</td>
+                            <td>50M</td>
+                            <td>10M</td>
+                        </tr>
+                        <!-- L8 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L8</span>
+                            </td>
+                            <td>250</td>
+                            <td>250M</td>
+                            <td>50M</td>
+                        </tr>
+                        <!-- L9 -->
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L9</span>
+                            </td>
+                            <td>500</td>
+                            <td>500M</td>
+                            <td>100M</td>
+                        </tr>
+                        <!-- L10 -->
+                        <tr class="bg-white">
+                            <td class="font-bold text-red-600 flex items-center justify-center space-x-1">
+                                <i class="ri-vip-crown-fill text-lg" style="color:var(--crown-gold);"></i><span>L10</span>
+                            </td>
+                            <td>2500</td>
+                            <td>1,000M</td>
+                            <td>200M</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rule 06 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">06</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                The **commission percentage** depends on the membership level. The higher the membership level, the higher the bonus percentage. Different game types also have **different payout percentages**.
+                <br> The commission rate is specifically explained as follows
+                <a href="#" class="text-blue-600 font-semibold mt-1 inline-block">View rebate ratio >></a>
+            </p>
+        </div>
+
+        <!-- Rule 07 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">07</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                **TOP20 commission rankings** will be randomly awarded with a separate bonus.
+            </p>
+        </div>
+
+        <!-- Rule 08 Card - ADDED border-4 border-[#3e1474] (app-purple) -->
+        <div class="relative bg-white rounded-xl shadow-lg p-5 pt-10 border-4 border-[#3e1474]">
+            <div class="rule-header-shape">08</div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+                The final interpretation of this activity belongs to **Daman**.
+            </p>
+        </div>
+
+        <!-- Add space for the fixed footer -->
+        <div class="h-4"></div>
+    </div>
+
+    <%- include('../layout/footer.ejs') %>
+
+</body>
+
+</html>

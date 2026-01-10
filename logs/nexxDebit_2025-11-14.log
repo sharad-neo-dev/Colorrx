@@ -1,0 +1,58 @@
+{
+  "time": "2025-11-14T06:19:56.733Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "6337761",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "3979a91e-5e38-4a2d-b794-1a8223546ac6",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "e6d1ba4b-8d53-46ca-89d8-5d2814f83dc1"
+    },
+    "transactionData": {
+      "id": "992806808",
+      "amount": 100,
+      "referenceId": ""
+    },
+    "timestamp": "1763101195595"
+  }
+}
+{
+  "time": "2025-11-14T06:19:56.736Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "6337761",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "3979a91e-5e38-4a2d-b794-1a8223546ac6",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "e6d1ba4b-8d53-46ca-89d8-5d2814f83dc1"
+    },
+    "transactionData": {
+      "id": "992806808",
+      "amount": 100,
+      "referenceId": ""
+    },
+    "timestamp": "1763101195595"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763101196736",
+    "userId": "6337761",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

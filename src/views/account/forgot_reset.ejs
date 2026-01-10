@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password | colorrx </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: #161822;
+        }
+        
+        .auth-bg {
+            background: url('img/Home/auth-bg.2558cc21.png') top center repeat-x, linear-gradient(to bottom, #44107a 55%, #161822 100%);
+            background-size: cover;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.5);
+            min-height: 700px;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+    <div class="auth-bg w-full h-full max-w-md">
+        <!-- Header -->
+        <div class="flex items-center h-14 mb-6 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+            <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+                <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-semibold text-lg">Forget Password</h2>
+            <span class="w-6"></span>
+        </div>
+
+        <!-- Form -->
+        <div class="px-6 pb-6">
+            <form id="forgetForm" class="border-b border-white border-opacity-20 pb-4">
+                <!-- Phone -->
+                <div class="mb-4">
+                    <input id="phone" type="tel" maxlength="10" placeholder="Enter your 10-digit mobile number" class="w-full px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <p id="phoneError" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <!-- OTP -->
+                <div class="mb-4 flex items-center gap-2">
+                    <input id="otp" type="text" maxlength="6" placeholder="Enter OTP" class="flex-1 px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <button type="button" id="sendOtp" class="px-4 py-3 bg-[#8b00ff] text-white rounded hover:bg-purple-700 transition">Send OTP</button>
+                </div>
+                <p id="otpError" class="text-red-500 text-sm mt-1 hidden"></p>
+
+                <!-- New Password -->
+                <div class="mb-4 relative">
+                    <input id="newPassword" type="password" placeholder="Enter new password" class="w-full px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <span id="toggleNewPassword" class="absolute right-4 top-3 text-white cursor-pointer">
+                        <i class="ri-eye-line"></i>
+                    </span>
+                    <p id="newPasswordError" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-4 relative">
+                    <input id="confirmPassword" type="password" placeholder="Confirm new password" class="w-full px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <span id="toggleConfirmPassword" class="absolute right-4 top-3 text-white cursor-pointer">
+                        <i class="ri-eye-line"></i>
+                    </span>
+                    <p id="confirmPasswordError" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <!-- Agreement -->
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="agreement" class="mr-2">
+                    <label for="agreement" class="text-white text-sm">I have read and agree 【Privacy Agreement】</label>
+                </div>
+                <p id="agreementError" class="text-red-500 text-sm mt-1 hidden"></p>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full py-3 text-lg bg-[#8b00ff] hover:bg-purple-700 text-white font-bold rounded transition">
+                    Reset Password
+                </button>
+                <p id="submitError" class="text-green-500 text-sm mt-2 hidden"></p>
+            </form>
+
+            <div class="text-center mt-4">
+                <p class="text-sm text-white">
+                    Remember password?
+                    <a href="/login" class="text-purple-400 hover:text-purple-300 underline font-medium">Login</a>
+                </p>
+            </div>
+            <div class="flex justify-center mt-6 mb-4">
+                <img src="img/Home/daman-red.png" alt="Logo" class="h-24" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Only allow numbers in phone input
+        document.getElementById('phone').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '');
+        });
+
+        // Toggle password visibility
+        function togglePasswordVisibility(toggleId, inputId) {
+            const toggleEl = document.getElementById(toggleId);
+            const inputEl = document.getElementById(inputId);
+            toggleEl.addEventListener('click', () => {
+                const type = inputEl.type === 'password' ? 'text' : 'password';
+                inputEl.type = type;
+                toggleEl.innerHTML = type === 'password' ? '<i class="ri-eye-line"></i>' : '<i class="ri-eye-off-line"></i>';
+            });
+        }
+        togglePasswordVisibility('toggleNewPassword', 'newPassword');
+        togglePasswordVisibility('toggleConfirmPassword', 'confirmPassword');
+
+        // Show/Hide errors
+        function showError(fieldId, message) {
+            const el = document.getElementById(fieldId + 'Error');
+            el.textContent = message;
+            el.classList.remove('hidden');
+        }
+
+        function clearError(fieldId) {
+            const el = document.getElementById(fieldId + 'Error');
+            el.textContent = '';
+            el.classList.add('hidden');
+        }
+
+        // Send OTP
+        const sendOtpBtn = document.getElementById('sendOtp');
+        sendOtpBtn.addEventListener('click', () => {
+            const phone = document.getElementById('phone').value.trim();
+            clearError('phone');
+            if (!phone || phone.length !== 10) {
+                showError('phone', 'Enter a valid 10-digit phone number');
+                return;
+            }
+
+            sendOtpBtn.disabled = true;
+            sendOtpBtn.textContent = 'Sending...';
+
+            fetch('/api/send_otp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        phone
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    sendOtpBtn.disabled = false;
+                    sendOtpBtn.textContent = 'Send OTP';
+                    if (!data.success) showError('otp', data.message || 'Failed to send OTP');
+                    else clearError('otp');
+                })
+                .catch(err => {
+                    sendOtpBtn.disabled = false;
+                    sendOtpBtn.textContent = 'Send OTP';
+                    showError('otp', 'Error sending OTP');
+                    console.error(err);
+                });
+        });
+
+        // Form submission
+        document.getElementById('forgetForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const phone = document.getElementById('phone').value.trim();
+            const otp = document.getElementById('otp').value.trim();
+            const password = document.getElementById('newPassword').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+            const agreement = document.getElementById('agreement').checked;
+
+            ['phone', 'otp', 'newPassword', 'confirmPassword', 'agreement', 'submit'].forEach(clearError);
+
+            let hasError = false;
+            if (!phone || phone.length !== 10) {
+                showError('phone', 'Enter valid phone number');
+                hasError = true;
+            }
+            if (!otp) {
+                showError('otp', 'Enter OTP');
+                hasError = true;
+            }
+            if (!password) {
+                showError('newPassword', 'Enter new password');
+                hasError = true;
+            }
+            if (!confirmPassword) {
+                showError('confirmPassword', 'Confirm password');
+                hasError = true;
+            }
+            if (password && confirmPassword && password !== confirmPassword) {
+                showError('confirmPassword', 'Passwords do not match');
+                hasError = true;
+            }
+            if (!agreement) {
+                showError('agreement', 'You must agree to Privacy Agreement');
+                hasError = true;
+            }
+            if (hasError) return;
+
+            fetch('/api/reset_password', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        phone,
+                        otp,
+                        password
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        const submitMsg = document.getElementById('submitError');
+                        submitMsg.textContent = 'Password reset successfully. Redirecting to login...';
+                        submitMsg.classList.remove('hidden');
+                        setTimeout(() => window.location.href = '/login', 2000);
+                    } else {
+                        showError('submit', data.message || 'Failed to reset password');
+                    }
+                })
+                .catch(err => {
+                    showError('submit', 'Error resetting password');
+                    console.error(err);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

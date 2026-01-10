@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <style>
+      body {
+        background-color: #343a40 !important;
+        color: #222;
+      }
+
+      h1,
+      h3 {
+        color: #2b0057;
+      }
+
+      .content-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Card General */
+      .card {
+        border: none;
+        border-radius: 18px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .card-header-main {
+        background: #007bff;
+        color: #fff;
+        border-bottom: none;
+        padding: 4%;
+      }
+
+      .card-header-main h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+      }
+
+      .card-header-main i {
+        font-size: 1rem;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      /* Profile Image */
+      .profile-user-img {
+        width: 120px;
+        height: 120px;
+        border: 3px solid #4b0082;
+        margin-bottom: 10px;
+      }
+
+      .profile-username {
+        font-weight: 600;
+        color: #2b0057;
+        font-size: 1.1rem;
+      }
+
+      /* List Styling */
+      .list-group-item {
+        border: none;
+        padding: 10px 0;
+        font-size: 0.9rem;
+      }
+
+      .list-group-item b {
+      }
+
+      .list-group-item a {
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        background: #4b0082;
+        border: none;
+        border-radius: 25px;
+        padding: 8px 20px;
+        transition: 0.3s;
+      }
+
+      .btn-primary:hover {
+        background: #5c00b8;
+      }
+
+      /* Table Section */
+      .table thead {
+        background: #f0ecff;
+        color: #2b0057;
+        font-weight: 600;
+      }
+
+      .table th,
+      .table td {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .profile-user-img {
+          width: 90px;
+          height: 90px;
+        }
+        .card-body {
+          padding: 15px;
+        }
+      }
+
+      .profile-image-wrapper {
+        position: relative;
+        width: 120px; /* same as image size */
+        margin: 0 auto; /* center */
+      }
+
+      .edit-avatar-icon {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        background: #ffffff;
+        padding: 6px;
+        border-radius: 50%;
+        font-size: 14px;
+        color: #4b0082;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <%- include('nav') %>
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header text-center">
+          <!-- <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>User Information</h1>
+                            </div>
+                        </div>
+                    </div> -->
+          <!-- /.container-fluid -->
+          <h1><i class="fa-solid fa-user-circle"></i> User Profile</h1>
+          <p class="text-muted">
+            Detailed information, activity, and transactions
+          </p>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3">
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                  <div class="card-body box-profile">
+                    <!-- <div class="text-center">
+                                            <img class="profile-user-img img-fluid img-circle" src="/images/avatar.svg"
+                                                alt="User profile picture">
+                                        </div>
+                                         -->
+                    <div class="profile-image-wrapper">
+                      <img
+                        id="profileAvatar"
+                        class="profile-user-fimg img-fluid img-circle"
+                        src="/images/avatar.svg"
+                        alt="User profile picture"
+                      />
+
+                      <i
+                        class="fa fa-pencil edit-avatar-icon"
+                        data-field="avatar"
+                        id="openAvatarModal"
+                        style="cursor: pointer"
+                      ></i>
+                    </div>
+
+                    <h3 class="name_user text-center">Member...</h3>
+
+                    <p class="text-center" id="id_user">ID: 0</p>
+
+                    <ul class="list-group list-group-unbordered mb-3">
+                      <li class="list-group-item">
+                        <b>Name</b>
+
+                        <div class="float-right d-flex align-items-center">
+                          <span class="name_user">Hello World</span>
+                          <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="name_user"
+                            style="cursor: pointer"
+                          ></i>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Wallet Balance</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="money">0</span>
+                          <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="money"
+                            style="cursor: pointer"
+                          ></i>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Password</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="plain_password">Hello World</span>
+                          <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="plain_password"
+                            style="cursor: pointer"
+                          ></i>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Total Recharge</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="total_money">0</span>
+                          <!-- <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="total_money"
+                            style="cursor: pointer"
+                          ></i> -->
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Total Withdraw</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="total_withdraw">0</span>
+                          <!-- <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="total_withdraw"
+                            style="cursor: pointer"
+                          ></i> -->
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Total Refers</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="total_refers">0</span>
+                          <!-- <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="total_refers"
+                            style="cursor: pointer"
+                          ></i> -->
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <b>Total Inviters</b>
+                        <div class="float-right d-flex align-items-center">
+                          <span id="total_inviters">0</span>
+                          <!-- <i
+                            class="fa fa-pencil text-primary edit-field ml-2"
+                            data-field="total_inviters"
+                            style="cursor: pointer"
+                          ></i> -->
+                        </div>
+                      </li>
+                    </ul>
+
+                    <a
+                      href="/admin/manager/members"
+                      class="btn btn-primary btn-block"
+                      style="background-color: #8c1f94"
+                    >
+                      <b
+                        id="level"
+                        style="
+                          text-transform: uppercase;
+                          background-color: #8c1f94;
+                          color: #ffffff;
+                          padding: 3px 8px;
+                          border-radius: 4px;
+                        "
+                      >
+                        USERS
+                      </b>
+                    </a>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+                <!-- About Me Box -->
+                <div class="card card-primary">
+                  <div class="card-header-main">
+                    <h3 class="card-title">Bank information</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <div class="mb-2">
+                      <!-- Label -->
+                      <strong class="d-flex align-items-center mb-1">
+                        <i class="fa-solid fa-building-columns mr-1"></i>
+                        <span>Bank name</span>
+                      </strong>
+
+                      <!-- Value + pencil -->
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="tag tag-danger" id="name_bank"
+                          >No banks added yet</span
+                        >
+                        <i
+                          class="fa fa-pencil text-primary edit-field"
+                          data-field="name_bank"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="mb-2">
+                      <!-- Label -->
+                      <strong class="d-flex align-items-center mb-1">
+                        <i class="fa-solid fa-user mr-1"></i>
+                        <span>Recipient Name</span>
+                      </strong>
+
+                      <!-- Value + pencil -->
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="tag tag-danger" id="recipient_name"
+                          >Recipient Name not added yet</span
+                        >
+                        <i
+                          class="fa fa-pencil text-primary edit-field"
+                          data-field="recipient_name"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="mb-2">
+                      <!-- Label -->
+                      <strong class="d-flex align-items-center mb-1">
+                        <i class="fa-solid fa-credit-card mr-1"></i>
+                        <span>Account Number</span>
+                      </strong>
+
+                      <!-- Value + pencil -->
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="tag tag-danger" id="stk"
+                          >No Account Number added yet</span
+                        >
+                        <i
+                          class="fa fa-pencil text-primary edit-field"
+                          data-field="stk"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="mb-2">
+                      <!-- Label -->
+                      <strong class="d-flex align-items-center mb-1">
+                        <i class="fa-solid fa-phone mr-1"></i>
+                        <span>Phone Number</span>
+                      </strong>
+
+                      <!-- Value + pencil -->
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="tag tag-danger" id="tinh"
+                          >Phone number not added yet</span
+                        >
+                        <i
+                          class="fa fa-pencil text-primary edit-field"
+                          data-field="tinh"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <hr />
+                    <div class="mb-2">
+                      <!-- Label -->
+                      <strong class="d-flex align-items-center mb-1">
+                        <i class="fa-solid fa-hashtag mr-1"></i>
+                        <span>IFSC Code</span>
+                      </strong>
+
+                      <!-- Value + pencil -->
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <span class="tag tag-danger" id="chi_nhanh"
+                          >IFSC not added yet</span
+                        >
+                        <i
+                          class="fa fa-pencil text-primary edit-field"
+                          data-field="chi_nhanh"
+                          style="cursor: pointer"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9" style="overflow: auto">
+                <!-- Table Recharge -->
+                <%- include('table/listRecharge.ejs') %>
+                <!-- END TABLE -->
+                <!-- Table Withdraw -->
+                <%- include('table/listWithdraw.ejs') %>
+                <!-- END TABLE -->
+                <!-- Table Withdraw -->
+                <%- include('table/listRedenvelope.ejs') %>
+                <!-- END TABLE -->
+                <!-- Table Withdraw -->
+                <%- include('table/listBet.ejs') %>
+                <!-- END TABLE -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="modal fade" id="editModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Field</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <label id="modalLabel"></label>
+            <input type="text" id="modalInput" class="form-control" />
+            <input type="hidden" id="modalField" />
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-primary" id="saveEdit">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar Upload Modal -->
+    <div class="modal fade" id="avatarModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update Avatar</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <input
+              type="file"
+              id="avatarInput"
+              class="form-control"
+              accept="image/*"
+            />
+            <input type="hidden" id="avatarField" value="avatar" />
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-primary" id="saveAvatar">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="/js/admin/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+    <script>
+      function formateT(params) {
+        let result = params < 10 ? "0" + params : params;
+        return result;
+      }
+
+      function timerJoin(params = "", addHours = 0) {
+        let date = "";
+        if (params) {
+          date = new Date(Number(params));
+        } else {
+          date = new Date();
+        }
+
+        date.setHours(date.getHours() + addHours);
+
+        let years = formateT(date.getFullYear());
+        let months = formateT(date.getMonth() + 1);
+        let days = formateT(date.getDate());
+
+        let hours = date.getHours() % 12;
+        hours = hours === 0 ? 12 : hours;
+        let ampm = date.getHours() < 12 ? "AM" : "PM";
+
+        let minutes = formateT(date.getMinutes());
+        let seconds = formateT(date.getSeconds());
+
+        return (
+          years +
+          "-" +
+          months +
+          "-" +
+          days +
+          " " +
+          hours +
+          ":" +
+          minutes +
+          ":" +
+          seconds +
+          " " +
+          ampm
+        );
+      }
+    </script>
+    <script>
+      let url = window.location.pathname;
+      let phones = url.split("/");
+      let phone = phones[phones.length - 1];
+      $.ajax({
+        type: "POST",
+        url: "/api/webapi/admin/member/info",
+        data: {
+          phone: phone,
+        },
+        dataType: "json",
+        success: function (response) {
+          if (response.status === false) return false;
+          let user = response.datas[0];
+          // user
+          if (user.avatar) {
+            $("#profileAvatar").attr(
+              "src",
+              "/uploads/" + user.avatar + "?t=" + Date.now(),
+            );
+          } else {
+            $("#profileAvatar").attr("src", "/images/avatar.svg");
+          }
+
+          $(".profile-username").text(user.name_user);
+          $(".name_user").text(user.name_user);
+          $("#plain_password").text(user.plain_password);
+          $("#money").text(user.money);
+          $("#account_name").text(user.account_name);
+          $("#account_number").text(user.account_number);
+          $("#id_user").text("ID: " + user.id_user);
+          $("#address").text(user.address);
+          $("#total_inviters").text(user.total_inviters);
+          $("#total_refers").text(user.total_refers);
+          $("#extra_time").text(
+            dayjs(user.extra_time).format("DD-MM-YYYY HH:mm"),
+          );
+
+          $("#total_money").text(
+            response.total_r[0].total
+              ? response.total_r[0].total + ".0"
+              : "0.0",
+          );
+          $("#total_withdraw").text(
+            response.total_w[0].total
+              ? response.total_w[0].total + ".0"
+              : "0.0",
+          );
+
+          // bank
+          if (response.bank_user[0]) {
+            $("#name_bank").text(response.bank_user[0].name_bank);
+            $("#recipient_name").text(response.bank_user[0].name_user);
+            $("#stk").text(response.bank_user[0].stk);
+            $("#tinh").text(response.bank_user[0].tinh);
+            $("#chi_nhanh").text(response.bank_user[0].chi_nhanh);
+            $("#location").text(
+              response.bank_user[0].tinh + " - " + response.bank_user[0].tp,
+            );
+            $("#timeAddBank").text(timerJoin(response.bank_user[0].time));
+          }
+        },
+      });
+    </script>
+
+    <!--Withdraw-->
+    <script>
+      const RenderWithdraw = (datas) => {
+        if (datas.length == 0) {
+          $("#list-withdraw").html(`
+                    <tr class="text-center">
+                    <td colspan="7">no data...</td>
+                    </tr>
+                `);
+          return;
+        }
+        let html = "";
+        datas.map((data) => {
+          html += `
+                <tr class="text-center"  >
+                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.id_order}</td>
+                    <td><b style="color: #3498db">${data.money}</b></td>
+                    <td style="min-width: 210px;"><b>${data.name_bank}</b></td>
+                    <td class="project-state"><span class="badge badge-${data.status == "1" ? "success" : "danger"}">${data.status == "1" ? "success" : "closed"}</span></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
+                </tr>
+                `;
+        });
+        $("#list-withdraw").html(html);
+      };
+
+      var pageno = 0;
+      var limit = 15;
+      var page = 1;
+      $.ajax({
+        type: "POST",
+        url: "/admin/member/listWithdraw/<%=phone%>",
+        data: {
+          typeid: "1",
+          pageno: pageno,
+          limit: limit,
+          language: "vi",
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#text-withdraw").text(page + " / " + response.page_total);
+          if (response.status === true) return RenderWithdraw(response.datas);
+        },
+      });
+
+      $("#nextWithdraw").click(function (e) {
+        pageno += limit;
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/listWithdraw/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno,
+            limit: limit,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            if (response.datas.length == 0) {
+              $("#nextRecharge").addClass("block-click");
+              return (pageno -= limit);
+            }
+            $("#text-withdraw").text(++page + " / " + response.page_total);
+            if (response.status === true) return RenderWithdraw(response.datas);
+          },
+        });
+      });
+
+      $("#previousWithdraw").click(function (e) {
+        e.preventDefault();
+        $("#nextWithdraw").removeClass("block-click");
+        pageno -= limit;
+        if (pageno < 0) return (pageno = 0);
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/listWithdraw/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno,
+            limit: limit,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            $("#text-withdraw").text(--page + " / " + response.page_total);
+            if (response.status === true) return RenderWithdraw(response.datas);
+          },
+        });
+      });
+    </script>
+    <!--Withdraw-->
+
+    <!--Recharge-->
+    <script>
+      const RenderRecharge = (datas) => {
+        if (datas.length == 0) {
+          $("#list-recharge").html(`
+                    <tr class="text-center">
+                    <td colspan="7">no data...</td>
+                    </tr>
+                `);
+          return;
+        }
+        let html = "";
+        datas.map((data) => {
+          html += `
+                <tr class="text-center"  >
+                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.transaction_id}</td>
+                    <td><b style="color: #3498db">${data.money}</b></td>
+                    <td style="min-width: 210px;"><b>${data.type == "bank" ? "BANK" : "UPI"}</b></td>
+                    <td class="project-state"><span class="badge badge-${data.status == "1" ? "success" : "warning"}">${data.status == "1" ? "success" : "closed"}</span></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
+                </tr>
+                `;
+        });
+        $("#list-recharge").html(html);
+      };
+
+      var pageno1 = 0;
+      var limit1 = 15;
+      var page1 = 1;
+      $.ajax({
+        type: "POST",
+        url: "/admin/member/listRecharge/<%=phone%>",
+        data: {
+          typeid: "1",
+          pageno: pageno1,
+          limit: limit1,
+          language: "vi",
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#text-recharge").text(page1 + " / " + response.page_total);
+          if (response.status === true) return RenderRecharge(response.datas);
+        },
+      });
+
+      $("#nextRecharge").click(function (e) {
+        pageno1 += limit1;
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/listRecharge/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno1,
+            limit: limit1,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            if (response.datas.length == 0) {
+              $("#nextRecharge").addClass("block-click");
+              return (pageno1 -= limit1);
+            }
+            $("#text-recharge").text(++page1 + " / " + response.page_total);
+            if (response.status === true) return RenderRecharge(response.datas);
+          },
+        });
+      });
+
+      $("#previousRecharge").click(function (e) {
+        e.preventDefault();
+        $("#nextRecharge").removeClass("block-click");
+        pageno1 -= limit1;
+        if (pageno1 < 0) return (pageno1 = 0);
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/listRecharge/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno1,
+            limit: limit1,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            $("#text-recharge").text(--page1 + " / " + response.page_total);
+            if (response.status === true) return RenderRecharge(response.datas);
+          },
+        });
+      });
+    </script>
+    <!--Recharge-->
+
+    <!--Redenvelope-->
+    <script>
+      const RenderRedenvelopes = (datas) => {
+        if (datas.length == 0) {
+          $("#list-redenvelope").html(`
+                    <tr class="text-center">
+                    <td colspan="7">no data...</td>
+                    </tr>
+                `);
+          return;
+        }
+        let html = "";
+        datas.map((data) => {
+          html += ` 
+                <tr class="text-center"  >
+                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.phone}</td>
+                    <td><b style="color: #3498db">${data.money}</b></td>
+                    <td style="min-width: 210px;"><b>${data.id_redenvelops}</b></td>
+                    <td class="project-state"><span class="badge badge-success">success</span></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
+                </tr>
+                `;
+        });
+        $("#list-redenvelope").html(html);
+      };
+
+      var pageno2 = 0;
+      var limit2 = 15;
+      var page2 = 1;
+      $.ajax({
+        type: "POST",
+        url: "/admin/member/redenvelope/<%=phone%>",
+        data: {
+          typeid: "1",
+          pageno: pageno2,
+          limit: limit2,
+          language: "vi",
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#text-redenvelope").text(page2 + " / " + response.page_total);
+          let total = 0;
+          let amount = 0;
+          for (let i = 0; i < response.datas.length; i++) {
+            total += response.datas[i].money;
+            amount += 1;
+          }
+          $("#totlaide").text(" ₹ " + total + " / " + amount + " Lixi");
+          if (response.status === true)
+            return RenderRedenvelopes(response.datas);
+        },
+      });
+
+      $("#nextRedenvelope").click(function (e) {
+        pageno2 += limit2;
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/redenvelope/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno2,
+            limit: limit2,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            if (response.datas.length == 0) {
+              $("#nextRedenvelope").addClass("block-click");
+              return (pageno2 -= limit2);
+            }
+            $("#text-redenvelope").text(++page2 + " / " + response.page_total);
+            if (response.status === true)
+              return RenderRedenvelopes(response.datas);
+          },
+        });
+      });
+
+      $("#previousRedenvelope").click(function (e) {
+        e.preventDefault();
+        $("#nextRedenvelope").removeClass("block-click");
+        pageno2 -= limit2;
+        if (pageno2 < 0) return (pageno2 = 0);
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/redenvelope/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno2,
+            limit: limit2,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            $("#text-redenvelope").text(--page2 + " / " + response.page_total);
+            if (response.status === true)
+              return RenderRedenvelopes(response.datas);
+          },
+        });
+      });
+    </script>
+    <!--Redenvelope-->
+
+    <!-- BET-->
+    <script>
+      const RenderBet = (datas) => {
+        if (datas.length == 0) {
+          $("#list-bet").html(`
+                    <tr class="text-center">
+                    <td colspan="7">no data...</td>
+                    </tr>
+                `);
+          return;
+        }
+        let html = "";
+        datas.map((data) => {
+          html += `
+                <tr class="text-center"  >
+                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.stage}</td>
+                    <td><b style="color: #3498db">${data.status == 1 ? "+" : "-"} ${data.money}</b></td>
+                    <td style="min-width: 210px;"><b>${data.game.toUpperCase()}</b></td>
+                    <td class="project-state"><span class="badge badge-${data.status == "1" ? "success" : "danger"}">${data.status == "1" ? "win" : "loss"}</span></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
+                </tr>
+                `;
+        });
+        $("#list-bet").html(html);
+      };
+
+      var pageno3 = 0;
+      var limit3 = 30;
+      var page3 = 1;
+      $.ajax({
+        type: "POST",
+        url: "/admin/member/bet/<%=phone%>",
+        data: {
+          typeid: "1",
+          pageno: pageno3,
+          limit: limit3,
+          language: "vi",
+        },
+        dataType: "json",
+        success: function (response) {
+          $("#text-bet").text(page3 + " / " + response.page_total);
+          if (response.status === true) return RenderBet(response.datas);
+        },
+      });
+
+      $("#nextBet").click(function (e) {
+        pageno3 += limit3;
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/bet/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno3,
+            limit: limit3,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            if (response.datas.length == 0) {
+              $("#nextBet").addClass("block-click");
+              return (pageno3 -= limit3);
+            }
+            $("#text-bet").text(++page3 + " / " + response.page_total);
+            if (response.status === true) return RenderBet(response.datas);
+          },
+        });
+      });
+
+      $("#previousBet").click(function (e) {
+        e.preventDefault();
+        $("#nextBet").removeClass("block-click");
+        pageno3 -= limit3;
+        if (pageno3 < 0) return (pageno3 = 0);
+        $.ajax({
+          type: "POST",
+          url: "/admin/member/bet/<%=phone%>",
+          data: {
+            typeid: "1",
+            pageno: pageno3,
+            limit: limit3,
+            language: "vi",
+          },
+          dataType: "json",
+          success: function (response) {
+            $("#text-bet").text(--page3 + " / " + response.page_total);
+            if (response.status === true) return RenderBet(response.datas);
+          },
+        });
+      });
+    </script>
+    <!-- BET-->
+
+    <!-- Update data-field  working but separate modal for image and text file-->
+    <script>
+      let webUrl = window.location.pathname;
+      let phoneFromWebUrl = webUrl.split("/");
+      let phoneNumber = phoneFromWebUrl[phoneFromWebUrl.length - 1];
+      /* -----------------------------
+     OPEN TEXT EDIT MODAL (ALL FIELDS EXCEPT AVATAR)
+  ----------------------------- */
+      document.querySelectorAll(".edit-field").forEach((icon) => {
+        icon.addEventListener("click", () => {
+          const field = icon.dataset.field;
+
+          // avatar handled separately
+          if (field === "avatar") return;
+
+          // Get value (ID or class)
+          let currentValue = "";
+          const elById = document.getElementById(field);
+          currentValue = elById
+            ? elById.textContent.trim()
+            : document.querySelector(`.${field}`)?.textContent.trim() || "";
+
+          // Fill modal
+          document.getElementById("modalLabel").textContent = "Edit";
+          document.getElementById("modalInput").value = currentValue;
+          document.getElementById("modalField").value = field;
+
+          // Show modal
+          $("#editModal").modal("show");
+        });
+      });
+
+      /* -----------------------------
+     SAVE NORMAL TEXT FIELD
+  ----------------------------- */
+      document
+        .getElementById("saveEdit")
+        .addEventListener("click", async () => {
+          const field = document.getElementById("modalField").value;
+          const newValue = document.getElementById("modalInput").value.trim();
+
+          if (field === "avatar") return; // safety check
+          if (!newValue) return alert("Value cannot be empty");
+
+          try {
+            const res = await fetch("/api/update-admin-fields", {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                field,
+                value: newValue,
+                phone: phoneNumber,
+              }),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+              // Update ID
+              const elById = document.getElementById(field);
+              if (elById) elById.textContent = newValue;
+
+              // Update class
+              document.querySelectorAll(`.${field}`).forEach((el) => {
+                el.textContent = newValue;
+              });
+
+              $("#editModal").modal("hide");
+              alert("Updated successfully!");
+            } else {
+              alert(data.message || "Failed to update");
+            }
+          } catch (err) {
+            console.error(err);
+            alert("Server error!");
+          }
+        });
+
+      /* -----------------------------
+     AVATAR: OPEN MODAL
+  ----------------------------- */
+      document
+        .getElementById("openAvatarModal")
+        .addEventListener("click", () => {
+          $("#avatarModal").modal("show");
+        });
+
+      /* -----------------------------
+     AVATAR: UPLOAD IMAGE
+  ----------------------------- */
+      document
+        .getElementById("saveAvatar")
+        .addEventListener("click", async () => {
+          const file = document.getElementById("avatarInput").files[0];
+          if (!file) return alert("Please select an image");
+
+          const formData = new FormData();
+          formData.append("field", "avatar");
+          formData.append("avatar", file);
+          formData.append("phone", phoneNumber);
+
+          try {
+            const res = await fetch("/api/update-admin-fields", {
+              method: "PATCH",
+              body: formData,
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+              document.getElementById("profileAvatar").src =
+                `/uploads/${data.filename}?t=${Date.now()}`;
+
+              $("#avatarModal").modal("hide");
+              alert("Avatar updated!");
+            } else {
+              alert(data.message);
+            }
+          } catch (err) {
+            console.error(err);
+            alert("Upload failed");
+          }
+        });
+    </script>
+  </body>
+</html>

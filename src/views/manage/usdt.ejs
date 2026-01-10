@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USDT Settings</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=fallback" />
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <%- include('nav') %>
+
+    <div class="content-wrapper">
+      <!-- Header -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <h1>Manage USDT Settings</h1>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section class="content">
+        <div class="card card-dark">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="card-title"><i class="fas fa-coins mr-2"></i>USDT Configuration</h3>
+          </div>
+
+          <div class="card-body">
+            <form id="usdtForm" enctype="multipart/form-data">
+              <div class="row">
+                <!-- QR Code Upload -->
+                <div class="col-md-6 mb-3">
+                  <label for="usdt_qr_code">USDT QR Code</label>
+                  <input type="file" class="form-control" id="usdt_qr_code" name="usdt_qr_code" accept="image/*">
+                  <div id="qrPreview" class="mt-2"></div>
+
+                </div>
+
+                <!-- UPI ID -->
+                <div class="col-md-6 mb-3">
+                  <label for="usdt_upi">USDT UPI ID</label>
+                  <input type="text" class="form-control" id="usdt_upi" name="usdt_upi" placeholder="example@upi" required>
+                </div>
+
+                <!-- Conversion Rate -->
+                <div class="col-md-6 mb-3">
+                  <label for="usdt_conversion_rate">Conversion Rate (1 USDT = ₹)</label>
+                  <input type="number" class="form-control" id="usdt_conversion_rate" name="usdt_conversion_rate" step="0.01" required>
+                </div>
+
+                <!-- Active Toggles -->
+                <div class="col-md-6 mb-3">
+                  <label>Active Methods</label>
+                  <div class="d-flex mt-2">
+                    <div class="form-check mr-3">
+                      <input class="form-check-input" type="checkbox" id="usdt_qr_is_active" name="usdt_qr_is_active" value="1">
+                      <label class="form-check-label" for="usdt_qr_is_active">QR Active</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="usdt_upi_is_active" name="usdt_upi_is_active" value="1">
+                      <label class="form-check-label" for="usdt_upi_is_active">UPI Active</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                
+<div class="col-md-6 mb-3">
+  <label for="NetworkType">Network Type</label>
+  <input
+    type="text"
+    class="form-control"
+    id="NetworkType"
+    name="NetworkType"
+    required
+  >
+</div>
+
+
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4"><i class="fas fa-save mr-2"></i>Save Settings</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/dist/js/adminlte.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+
+   <script>
+  $(document).ready(function () {
+
+    // ✅ Load USDT Settings
+    function loadSettings() {
+      $.get("/api/webapi/usdt/getUsdtSettings", function (res) {
+        if (res.status && res.data) {
+          const s = res.data;
+
+          $('#usdt_upi').val(s.usdt_upi);
+          $('#usdt_conversion_rate').val(s.usdt_conversion_rate);
+          $('#NetworkType').val(s.NetworkType || ''); // ✅ Load Network Type
+          $('#usdt_qr_is_active').prop('checked', s.usdt_qr_is_active == 1);
+          $('#usdt_upi_is_active').prop('checked', s.usdt_upi_is_active == 1);
+
+          if (s.usdt_qr_code) {
+            $('#qrPreview').html(`<img src="${s.usdt_qr_code}" class="img-thumbnail" width="120">`);
+          }
+        } else {
+          Swal.fire('Info', 'No USDT settings found.', 'info');
+        }
+      }).fail(() => Swal.fire('Error', 'Unable to load settings.', 'error'));
+    }
+
+    loadSettings();
+
+    // ✅ Preview new QR image
+    $('#usdt_qr_code').change(function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => $('#qrPreview').html(`<img src="${e.target.result}" class="img-thumbnail" width="120">`);
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // ✅ Save Settings
+    $('#usdtForm').submit(function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      formData.set('usdt_qr_is_active', $('#usdt_qr_is_active').is(':checked') ? 1 : 0);
+      formData.set('usdt_upi_is_active', $('#usdt_upi_is_active').is(':checked') ? 1 : 0);
+      formData.set('NetworkType', $('#NetworkType').val()); // ✅ Pass Network Type
+
+      $.ajax({
+        url: "/manager/usdt/update",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (res) {
+          if (res.status) {
+            Swal.fire('Success!', res.message, 'success');
+            loadSettings();
+          } else {
+            Swal.fire('Error!', res.message, 'error');
+          }
+        },
+        error: function () {
+          Swal.fire('Error!', 'Something went wrong while saving.', 'error');
+        }
+      });
+    });
+  });
+
+
+  </script>
+</body>
+</html>

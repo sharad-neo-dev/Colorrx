@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallet | colorrx</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-[#0b0c1a] min-h-screen flex flex-col w-full md:max-w-[500px] mx-auto">
+
+  <!-- Fixed Header -->
+  <%- include('../layout/header.ejs') %>
+
+  <!-- Main Content Wrapper -->
+  <div class="pt-4 flex flex-col flex-1 ">
+
+    <!-- Wallet Balance Card -->
+    <div class="p-4 flex justify-center items-center">
+      <div class="bg-[#3e1474] rounded-2xl shadow-lg w-full max-w-[500px] text-center text-white p-6">
+        <div class="flex justify-center mb-4">
+          <i class="ri-wallet-3-fill text-5xl text-gray-300"></i>
+        </div>
+        <h2 id="money_amount_display" class="text-3xl font-semibold">₹0.00</h2>
+        <p class="text-sm text-gray-300 mt-2">Total balance</p>
+      </div>
+    </div>
+
+    <!-- Withdraw & Deposit Section -->
+    <div class="flex-1 flex justify-center items-start p-4">
+      <div class="bg-[#3e1474] p-6 rounded-2xl shadow-lg w-full max-w-[500px] text-white">
+        <div class="flex justify-between items-center mb-6">
+
+          <!-- Withdraw -->
+          <div class="flex flex-col items-center">
+            <div class="relative w-20 h-20 flex items-center justify-center">
+              <svg class="absolute top-0 left-0" viewBox="0 0 36 36" width="80" height="80">
+                <path class="text-gray-500" stroke="currentColor" stroke-width="3" fill="none"
+                  d="M18 2.0845
+                     a 15.9155 15.9155 0 0 1 0 31.831
+                     a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="total_withdraw_amount_pie" class="text-blue-400" stroke="currentColor" stroke-width="3"
+                  fill="none" stroke-dasharray="0,100"
+                  d="M18 2.0845
+                     a 15.9155 15.9155 0 0 1 0 31.831
+                     a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <span id="total_withdraw_amount_per" class="text-sm font-bold">0%</span>
+            </div>
+            <p id="total_withdraw_amount_display" class="mt-2 font-medium">₹ 0.00</p>
+            <p class="text-xs text-gray-300">Total withdraw amount</p>
+          </div>
+
+          <!-- Deposit -->
+          <div class="flex flex-col items-center">
+            <div class="relative w-20 h-20 flex items-center justify-center">
+              <svg class="absolute top-0 left-0" viewBox="0 0 36 36" width="80" height="80">
+                <path class="text-gray-500" stroke="currentColor" stroke-width="3" fill="none"
+                  d="M18 2.0845
+                     a 15.9155 15.9155 0 0 1 0 31.831
+                     a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="total_deposit_amount_pie" class="text-green-400" stroke="currentColor" stroke-width="3"
+                  fill="none" stroke-dasharray="0,100"
+                  d="M18 2.0845
+                     a 15.9155 15.9155 0 0 1 0 31.831
+                     a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <span id="total_deposit_amount_per" class="text-sm font-bold">0%</span>
+            </div>
+            <p id="total_deposit_amount_display" class="mt-2 font-medium">₹ 0.00</p>
+            <p class="text-xs text-gray-300">Total deposit amount</p>
+          </div>
+        </div>
+
+        <!-- Wallet Transfer -->
+        <button class="w-full py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold shadow-md mb-6"
+          onclick="location.href='/#'">
+          Main wallet transfer
+        </button>
+
+        <!-- Action Buttons -->
+        <div class="grid grid-cols-4 gap-4 text-center">
+          <a href="/wallet/recharge" class="flex flex-col items-center">
+            <img src="/assets/png/rechargeIcon-efb79f43.png" class="w-10 h-10 mb-2" alt="Deposit">
+            <p class="text-xs font-medium">Deposit</p>
+          </a>
+          <a href="/wallet/withdrawal" class="flex flex-col items-center">
+            <img src="/assets/png/widthdrawBlue-5fcf62bd.png" class="w-10 h-10 mb-2" alt="Withdraw">
+            <p class="text-xs font-medium">Withdraw</p>
+          </a>
+          <a href="/wallet/rechargerecord" class="flex flex-col items-center">
+            <img src="/assets/png/rechargeHistory-28b45ebe.png" class="w-10 h-10 mb-2" alt="Deposit History">
+            <p class="text-xs font-medium">Deposit history</p>
+          </a>
+          <a href="/wallet/withdrawalrecord" class="flex flex-col items-center">
+            <img src="/assets/png/withdrawHistory-033a34f8.png" class="w-10 h-10 mb-2" alt="Withdrawal History">
+            <p class="text-xs font-medium">Withdrawal history</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Wallets -->
+    <div class="flex-1 flex justify-center items-start p-4 mb-16">
+      <div class="bg-[#3e1474] p-6 rounded-2xl wallet-card shadow-lg w-full max-w-[800px] text-white">
+        <h3 class="text-lg font-semibold mb-4">Game Wallets</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4" id="game-wallets">
+          <!-- Example Wallet -->
+          <div class="wallet-card bg-gradient-to-b from-red-500 to-pink-500 text-white p-3 rounded-lg shadow-md text-center cursor-pointer" data-wallet="lottery">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">Lottery</p>
+          </div>
+          <!-- Other Game Wallets -->
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="jili">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">JILI</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="evo_video">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">EVO_Video</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="tb_chess">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">TB_Chess</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="wickets9">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">Wickets9</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="jdb">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">JDB</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="dg">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">DG</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="cmd">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">CMD</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="cq9">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">CQ9</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="mg">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">MG</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="saba">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">SaBa</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="tb">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">TB</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="pg">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">PG</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="ag_video">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">AG_Video</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="card365">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">Card365</p>
+          </div>
+          <div class="wallet-card bg-white/10 text-white p-3 rounded-lg shadow-md text-center cursor-pointer hover:bg-white/20" data-wallet="v8card">
+            <p class="amount text-sm font-semibold">₹ 0.00</p>
+            <p class="mt-1 text-xs font-medium">V8Card</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../layout/footer.ejs') %>
+
+  </div>
+
+  <!-- JS Section -->
+  <script>
+    function formatIndianNumber(num) {
+      return new Intl.NumberFormat("en-IN", {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2,
+      }).format(Number(num) || 0);
+    }
+
+    let userData = null;
+
+    async function fetchUser() {
+      try {
+        const response = await axios.get("/api/webapi/GetUserInfo");
+        userData = response?.data?.data || {
+          money_user: 0,
+          total_withdraw: 0,
+          total_recharge: 0,
+        };
+      } catch (err) {
+        console.error("User fetch failed:", err);
+        userData = { money_user: 0, total_withdraw: 0, total_recharge: 0 };
+      }
+    }
+
+    function updateUI() {
+      if (!userData) return;
+
+      const money = Number(userData.money_user) || 0;
+      const withdrawVal = Number(userData.total_withdraw) || 0;
+      const depositVal = Number(userData.total_recharge) || 0;
+
+      document.getElementById("money_amount_display").textContent = `₹ ${formatIndianNumber(money)}`;
+
+      const circumference = 314;
+      const withdrawPer = money > 0 ? Math.min((withdrawVal / money) * 100, 100) : 0;
+      const depositPer = money > 0 ? Math.min((depositVal / money) * 100, 100) : 0;
+      const withdrawStroke = ((withdrawPer / 100) * circumference).toFixed(2);
+      const depositStroke = ((depositPer / 100) * circumference).toFixed(2);
+
+      $("#total_withdraw_amount_display").text(`₹ ${formatIndianNumber(withdrawVal)}`);
+      $("#total_withdraw_amount_per").text(`${Math.round(withdrawPer)}%`);
+      $("#total_withdraw_amount_pie").css("stroke-dasharray", `${withdrawStroke},314`);
+
+      $("#total_deposit_amount_display").text(`₹ ${formatIndianNumber(depositVal)}`);
+      $("#total_deposit_amount_per").text(`${Math.round(depositPer)}%`);
+      $("#total_deposit_amount_pie").css("stroke-dasharray", `${depositStroke},314`);
+
+      document.querySelectorAll(".wallet-card .amount").forEach(el => {
+        el.textContent = `₹ ${formatIndianNumber(money)}`;
+      });
+    }
+
+    fetchUser().then(updateUI);
+  </script>
+
+</body>
+</html>

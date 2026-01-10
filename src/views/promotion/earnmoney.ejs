@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Weekly | colorrx</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  
+    <style>
+  
+  
+*{
+  padding:0;
+  margin: 0;
+}
+body {
+    background-color: #121212;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    color: #fff;
+  }
+
+  .container {
+    max-width:400px !important;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    padding: 0 10px;
+    background: linear-gradient(180deg, rgb(22 0 51), rgb(0 3 22));
+  }
+
+  .sys-tab-menu {
+    display: flex;
+    gap: 5px;
+    background: transparent;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .sys-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60px;
+    background: #2b2b2b;
+    color: #aaa;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .sys-tab-item i {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .sys-tab-item:hover {
+    background: #3a3a3a;
+    color: #fff;
+  }
+
+  .sys-tab-item.active {
+    background: #7b5cff;
+    color: #fff;
+  }
+
+  .sys-tab-content {
+    display: none;
+    width:100%;
+    max-width: 500px;
+    margin: 0 auto;
+    /* background: #1d1d1d;
+    padding: 20px; */
+    border-radius: 12px;
+  }
+
+  .sys-tab-content.active {
+    display: block;
+  }
+  
+
+  .sys-rebate-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px;
+  }
+
+  /* Tabs */
+  .sys-rebate-tabs {
+    display: flex;
+    background: #141419;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+  }
+
+  .sys-tab-btn {
+    flex: 1;
+    background: transparent;
+    color: #aaa;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .sys-tab-btn.active {
+    background: linear-gradient(90deg, #7367f0, #8e2de2);
+    color: #fff;
+    /* font-weight: 600; */
+  }
+
+  /* Stat Box */
+  .sys-stat-box {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    border-radius: 12px;
+    padding: 20px 11px;
+    margin-bottom: 20px;
+  }
+  .sys-stat-box p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .sys-stat-box h3 {
+    color: #00e0ff;
+    margin: 4px 0 16px;
+    font-size: 22px;
+  }
+
+  /* Filter Box */
+  .sys-filter-box {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .sys-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .sys-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: rgb(8 10 39 / 62%);
+    border-radius: 8px;
+    padding:  12px;
+    color: #ccc;
+  }
+  .sys-input i {
+    margin-right: 6px;
+    color: #aaa;
+  }
+  .sys-input input, 
+  .sys-input select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  /* Table */
+  .sys-rebate-section table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .sys-rebate-section th, .sys-rebate-section td {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .sys-rebate-section th {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    color: #bbb;
+    font-weight: 500;
+  }
+  .sys-rebate-section td {
+    background: rgb(8 10 39);
+    color: #aaa;
+  }
+  .sys-rebate-section td[colspan] {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Hide inactive content */
+  .sys-tab-content, .sys-rebate-section{
+    display: none;
+  }
+  .sys-tab-content.active, .sys-rebate-section.active{
+    display: block;
+  }
+   .agency-policy-title[data-v-cacbc52e] {
+    background-image: url("data:image/png;base64,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");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    margin: 1px -16px;
+    text-align: center;
+}
+.agency-policy .agency-policy-separator[data-v-cacbc52e]{
+    background: radial-gradient(50% 75% at 50% 50%, #5c46e700 0, #5c46e7 .01%, #5c46e700 100%);
+    height: 2px;
+}
+.sys-table-head{
+  font-size:13px;
+}
+.sys-tab-content th, .sys-tab-content td {
+    font-size: 12px;
+    color: #ffff;
+    text-align: center;
+}
+.rebate-example-table[data-v-cacbc52e] {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: calc(100% - 5px);
+}
+.rebate-example-table td[data-v-cacbc52e] {
+    border: 1px solid #fff;
+    font-size: 16px;
+    padding: 4px 6px;
+}
+  @media (max-width:425px){
+    .sys-rebate-container {
+      padding: 7px;
+  }
+  
+  }
+
+  
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+
+    <%- include('../layout/header.ejs') %>
+  <div class="container">
+  <div class="max-w-7xl mx-auto ">
+          <div class="mb-2 -mx-[10px]">
+            <img src="https://files.conjlnuljy.com/promo/5/331a257e-453a-4f90-bfaf-0f53f31c2f09.jpg" alt="Image" class="w-full h-auto shadow-lg">
+        </div>
+        <div class="text-[25px] text-yellow-400 text-start">Earn Money</div>
+        <div class="text-white rounded-lg mt-5 mb-5 text-start">
+            <div class="mt-5 space-y-4 text-sm text-gray-300">
+                <p>Earn Money <br>
+                  Cashback up to 1.5% of bet amount <br>
+                  Invite more friends and you will earn more money. Every member who joins 55 ACE is both a player and an agent. <br>
+                  - We advocate benefits and bonuses for everyone. <br>
+                  - Active Members: Daily bet amount reaches 2000. <br>
+                  -Your cashback will be calculated based on the total bet amount of your active members. Cashback can be withdrawn or used for further betting.<br>
+                  - Earn lifetime revenue with your referred players.<br>
+                  - Refer as many friends as possible to get a higher percentage discount. <br>
+                  For more detailed &amp; rules, please click Here 
+                  </p>
+            </div>
+        </div>
+        <div class="bg-[#3b2e95] p-3 flex items-center justify-between -mx-[10px]">
+          <div class="text-white flex items-center space-x-2 justify-start flex-col">
+           
+            <span>Promotion Ends</span>
+            <div class="flex items-center justify-start w-full">
+             <span class="">
+              <img data-v-719877c1="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNCAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9Ikdyb3VwIj4KPGcgaWQ9Ikdyb3VwXzIiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNMTMuMTYxMiAxNi45OTk5QzEzLjQ2MjkgMTYuOTk5OSAxMy43MDk2IDE2Ljc1MzEgMTMuNzA5NiAxNi40NTE1QzEzLjcwOTYgMTYuMTQ5OSAxMy40NjI5IDE1LjkwMzEgMTMuMTYxMiAxNS45MDMxSDEyLjA2NDVWMTIuOTYzOEMxMi4wNjQ1IDEyLjQwNzIgMTEuODIzMiAxMS44NzggMTEuNDA2NCAxMS41MTMzTDguNjc1NDkgOS4xMjUwOEM4LjQ5MTc4IDguOTY2MDIgOC4zOTMxIDguNzQzOTUgOC4zOTMxIDguNDk5OTFDOC4zOTMxIDguMjU1ODcgOC40OTQ1NyA4LjAzMzggOC42NzU0OSA3Ljg3NDc1TDExLjQwNjQgNS40ODY1MkMxMS44MjYgNS4xMjE4MyAxMi4wNjQ1IDQuNTkyNjYgMTIuMDY0NSA0LjAzNjA0VjEuMDk2NzFIMTMuMTYxMkMxMy40NjI5IDEuMDk2NzEgMTMuNzA5NiAwLjg0OTkzNCAxMy43MDk2IDAuNTQ4MzExQzEzLjcwOTYgMC4yNDY2ODkgMTMuNDYyOCAwIDEzLjE2MTIgMEgxMi4wNjQ1SDEuNjQ1MTZIMC41NDg0QzAuMjQ2Nzc4IDAgMCAwLjI0Njc3OCAwIDAuNTQ4NEMwIDAuODUwMDIyIDAuMjQ2Nzc4IDEuMDk2OCAwLjU0ODQgMS4wOTY4SDEuNjQ1MTZWNC4zMDQ4N0MxLjY0NTE2IDQuODY0MjMgMS44ODY0NSA1LjM5NjE0IDIuMzExNDYgNS43NjA4M0w0Ljc0NjI3IDcuODcyMUM0LjkyOTk5IDguMDMxMTUgNS4wMzQyIDguMjU1OTYgNS4wMzQyIDguNUM1LjAzNDIgOC43NDQwNCA0LjkzMjczIDguOTY4ODUgNC43NDYyNyA5LjEyNzlMMi4zMTE0NiAxMS4yMzY0QzEuODg2NDUgMTEuNjAzOSAxLjY0NTE2IDEyLjEzNTggMS42NDUxNiAxMi42OTUxVjE1LjkwMzJIMC41NDg0QzAuMjQ2Nzc4IDE1LjkwMzIgMCAxNi4xNSAwIDE2LjQ1MTZDMCAxNi43NTMyIDAuMjQ2Nzc4IDE3IDAuNTQ4NCAxN0gxLjY0NTE2SDEyLjA2NDRIMTMuMTYxMlYxNi45OTk5Wk0xMC45Njc3IDE1LjkwMzJIMi43NDE5MVYxMi42OTUxQzIuNzQxOTEgMTIuNDUzOCAyLjg0NjEyIDEyLjIyNjIgMy4wMjcwOSAxMi4wNjcyTDUuNDYxOSA5Ljk1ODY2QzUuODg0MTcgOS41OTEyMyA2LjEyODIxIDkuMDYyMDYgNi4xMjgyMSA4LjUwMjdDNi4xMjgyMSA3Ljk0MzM0IDUuODg2OTEgNy40MTE0MiA1LjQ2MTkgNy4wNDY3M0wzLjAyNzA5IDQuOTM1NDdDMi44NDYxMiA0Ljc3NjQxIDIuNzQxOTEgNC41NDYxMiAyLjc0MTkxIDQuMzA0ODJWMS4wOTY3NkgxMC45Njc3VjQuMDM2MDhDMTAuOTY3NyA0LjI3NDY0IDEwLjg2MzUgNC41MDIxOSAxMC42ODI1IDQuNjYxMjRMNy45NTE1NiA3LjA0OTQ3QzcuNTM0NzcgNy40MTQxNiA3LjI5MzUxIDcuOTQzMzQgNy4yOTM1MSA4LjQ5OTk2QzcuMjkzNTEgOS4wNTY1OCA3LjUzNDgxIDkuNTg1NzUgNy45NTE1NiA5Ljk1MDQ0TDEwLjY4NTIgMTIuMzM4N0MxMC44NjYyIDEyLjQ5NzcgMTAuOTY3NiAxMi43MjUzIDEwLjk2NzYgMTIuOTYzOEwxMC45Njc3IDE1LjkwMzJaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPHBhdGggaWQ9IlZlY3Rvcl8yIiBkPSJNNy41NDMyNSAxMC4xOTQ2QzcuMjQ5ODQgOS45MzY5IDcuMDA4NTkgOS42MTg4NCA2Ljg3Njk0IDkuMjUxNDJDNi43OTE5NSA5LjAxNTYgNi43NTYyOSA4Ljc3NzA4IDYuNzUwODEgOC41NDEyN0M2Ljc1MDgxIDguNTI3NTcgNi43NTA4MSA4LjUwMDEyIDYuNzUwODEgOC41MDAxMkg2LjY3MTNWOC41Mzg1M0M2LjY2MDM0IDkuMTYzNjkgNi4zODg5MSA5Ljc1MzE5IDUuOTE3MjcgMTAuMTY0NUwzLjQ4MjQ2IDEyLjI3NThDMy4zNjE4MSAxMi4zODI3IDMuMjkwNTMgMTIuNTMzNSAzLjI5MDUzIDEyLjY5NTNWMTUuMTEwOUMzLjI5MDUzIDE1LjI0NTMgMy40MDAyMiAxNS4zNTUgMy41MzQ1NiAxNS4zNTVIMTAuMTc1NUMxMC4zMDk5IDE1LjM1NSAxMC40MTk1IDE1LjI0NTMgMTAuNDE5NSAxNS4xMTA5VjEyLjk2NEMxMC40MTk1IDEyLjgwMjIgMTAuMzUxIDEyLjY1MTQgMTAuMjMwNCAxMi41NDQ1TDcuNTQzMjUgMTAuMTk0NloiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8L2c+CjwvZz4KPC9zdmc+Cg==" alt="">
+            </span>
+            <span class="text-[20px] text-orange-400">∞</span>
+           </div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button class="bg-[linear-gradient(180deg,#d6b335,#fff96b_50%,#f2ae01)] text-black py-1 px-4 rounded-full font-semibold text-[12px]">Join Now</button>
+          </div>
+        </div>
+
+      
+</div>
+    </div>
+          <%- include('../layout/footer.ejs') %> 
+</body>
+</html>

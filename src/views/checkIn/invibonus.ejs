@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Bonus Tracker | colorrx</title>
+    
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'header-purple': '#3e1474',
+                        'dark-bg': '#101114',
+                        'dark-card': '#1f2024',
+                        'secondary-text': '#a0a0a0',
+                        'progress-green': '#34d399', /* Tailwind green-400 */
+                        'bonus-yellow': '#facc15', /* Tailwind yellow-400 */
+                        'header-red': '#ee5552', /* New color derived from the image */
+                        'header-red-dark': '#dd3330', /* Darker shade for gradient start */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Load jQuery and Axios -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <style>
+        /* Keep the gradient and toast styles as they are complex/structural CSS */
+        body {
+            /* Set font here if not loading globally */
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .header-gradient {
+            /* Custom gradient for the top bar (original purple/dark) */
+            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .invitation-header-gradient {
+            /* New gradient for the Invitation Bonus main banner */
+            background: linear-gradient(180deg, theme('colors.header-red'), theme('colors.header-red-dark'));
+        }
+
+        /* Toast Message Styling (Simple van-toast mock) */
+        .van-toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 12px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 8px;
+            z-index: 1000;
+            display: none; /* Hide by default */
+        }
+        .van-toast__text {
+            font-size: 1rem;
+        }
+
+        /* Styling for the icon placeholder in the reward rules */
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background-color: white; /* Placeholder color, actual images use gradients */
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white w-full md:max-w-[500px] mx-auto" >
+
+
+   <div  class="mb-[8rem]">
+    <!-- Top Header (Kept for continuity) -->
+    <div class="header-gradient p-4">
+        <!-- Using a placeholder for the back arrow -->
+        <div class="flex items-center justify-center relative">
+            <span class="absolute left-0 text-xl cursor-pointer">
+                &#10094; <!-- Simple left arrow icon -->
+            </span>
+            <h1 class="text-2xl font-bold text-center text-white">Invitation Bonus</h1>
+        </div>
+    </div>
+
+    <!-- New Invitation Bonus Banner Content -->
+    <div class="invitation-header-gradient text-white p-4 pb-0 pt-6">
+        <div class="max-w-lg mx-auto">
+            <div class="flex mb-4">
+                <!-- Icon/Image Placeholder for Invite Box -->
+                <div class="w-20 h-20 bg-white/20 rounded-xl mr-4 flex-shrink-0">
+                    <!-- Placeholder for the invite box image/icon -->
+                    <img src="https://placehold.co/80x80/ffffff/ee5552?text=%F0%9F%8E%81" alt="Invite Box" class="w-full h-full rounded-xl object-cover" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>🎁</text></svg>';">
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold mb-1">Invite friends and deposit</h2>
+                    <p class="text-sm opacity-80 mb-2">Both parties can receive rewards</p>
+                    <p class="text-xs opacity-70">Invite friends to register and recharge to receive rewards</p>
+                </div>
+            </div>
+
+            <!-- Activity Date -->
+            <div class="text-sm font-medium mb-4">
+                <p>activity date</p>
+                <p class="font-semibold">2024-05-01 - 2024-05-31</p>
+            </div>
+
+            <!-- Navigation Links (Invitation Reward Rules and Record) -->
+            <div class="flex justify-around bg-white/10 p-3 rounded-t-lg shadow-inner">
+                
+                <!-- Invitation Reward Rules Link -->
+                <a href="/invitation_rules" class="text-center flex-1 mx-2">
+                    <div class="icon-box mx-auto bg-blue-100 mb-1 flex items-center justify-center">
+                         <!-- Placeholder Icon for Rules -->
+                        <span class="text-blue-500 text-2xl">&#x1F4DC;</span>
+                    </div>
+                    <div class="text-xs text-white opacity-90 font-medium">Invitation reward rules</div>
+                </a>
+
+                <!-- Invitation Record Link -->
+                <a href="/invibonus/record" class="text-center flex-1 mx-2">
+                    <div class="icon-box mx-auto bg-green-100 mb-1 flex items-center justify-center">
+                        <!-- Placeholder Icon for Record -->
+                        <span class="text-green-500 text-2xl">&#x1F4C4;</span>
+                    </div>
+                    <div class="text-xs text-white opacity-90 font-medium">Invitation record</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of New Invitation Bonus Banner Content -->
+
+
+    <div class="p-4 max-w-lg mx-auto">
+        <!-- The bonus items will be rendered here -->
+        <div class="bonus-container">
+            <div class="text-center text-gray-400 p-8">Loading tasks...</div>
+        </div>
+    </div>
+
+    <!-- Mock Toast Messages -->
+    <div id="successTost" class="van-toast">
+        <div class="van-toast__text">Success!</div>
+    </div>
+    <div id="failedTost" class="van-toast">
+        <div class="van-toast__text">Failed!</div>
+    </div>
+    </div>
+ <%- include('../layout/footer.ejs') %>
+    <script>
+        // --- Mock Data and API Simulation ---
+
+        // Mock data based on user input, modified slightly for demo purposes
+        // ID 1 is finished and unclaimed, ID 2 has partial progress
+        let mockInvitationBonusData = {
+            "data": [
+                {
+                    "id": 1,
+                    "isFinished": true,
+                    "isClaimed": false,
+                    "required": { "numberOfInvitedMembers": 3, "numberOfDeposits": 3, "amountOfRechargePerPerson": 555 },
+                    "current": { "numberOfInvitedMembers": 3, "numberOfDeposits": 3, "amountOfRechargePerPerson": 555 },
+                    "bonusAmount": 199
+                },
+                {
+                    "id": 2,
+                    "isFinished": false,
+                    "isClaimed": false,
+                    "required": { "numberOfInvitedMembers": 5, "numberOfDeposits": 5, "amountOfRechargePerPerson": 555 },
+                    "current": { "numberOfInvitedMembers": 3, "numberOfDeposits": 3, "amountOfRechargePerPerson": 0 },
+                    "bonusAmount": 299
+                },
+                {
+                    "id": 3,
+                    "isFinished": false,
+                    "isClaimed": false,
+                    "required": { "numberOfInvitedMembers": 10, "numberOfDeposits": 10, "amountOfRechargePerPerson": 1111 },
+                    "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 },
+                    "bonusAmount": 599
+                },
+                // ... remaining original data for demo
+                { "id": 4, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 30, "numberOfDeposits": 30, "amountOfRechargePerPerson": 1111 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 1799 },
+                { "id": 5, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 50, "numberOfDeposits": 50, "amountOfRechargePerPerson": 1111 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 2799 },
+                { "id": 6, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 75, "numberOfDeposits": 75, "amountOfRechargePerPerson": 1555 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 4799 },
+                { "id": 7, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 100, "numberOfDeposits": 100, "amountOfRechargePerPerson": 1555 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 6799 },
+                { "id": 8, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 200, "numberOfDeposits": 200, "amountOfRechargePerPerson": 1555 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 12229 },
+                { "id": 9, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 500, "numberOfDeposits": 500, "amountOfRechargePerPerson": 1777 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 33339 },
+                { "id": 10, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 1000, "numberOfDeposits": 1000, "amountOfRechargePerPerson": 1777 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 64449 },
+                { "id": 11, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 2000, "numberOfDeposits": 2000, "amountOfRechargePerPerson": 1777 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 122229 },
+                { "id": 12, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 5000, "numberOfDeposits": 5000, "amountOfRechargePerPerson": 2111 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 299999 },
+                { "id": 13, "isFinished": false, "isClaimed": false, "required": { "numberOfInvitedMembers": 10000, "numberOfDeposits": 10000, "amountOfRechargePerPerson": 2555 }, "current": { "numberOfInvitedMembers": 0, "numberOfDeposits": 0, "amountOfRechargePerPerson": 0 }, "bonusAmount": 999999 }
+            ],
+            "status": true,
+            "message": "Successfully fetched invitation bonus data"
+        };
+
+        // Custom axios mock to intercept calls and manage local data
+        const mockAxios = {
+            get: (url) => new Promise((resolve) => {
+                console.log(`[Mock API] GET ${url}`);
+                // Simulate network delay
+                setTimeout(() => {
+                    if (url.includes("/api/activity/invitation_bonus")) {
+                        resolve({ data: mockInvitationBonusData });
+                    } else {
+                        resolve({ data: { status: false, message: "Mock API endpoint not found" } });
+                    }
+                }, 300);
+            }),
+            post: (url, data) => new Promise((resolve) => {
+                console.log(`[Mock API] POST ${url} with ID: ${data.id}`);
+                // Simulate network delay
+                setTimeout(() => {
+                    if (url.includes("/api/activity/invitation_bonus/claim")) {
+                        const itemId = data.id;
+                        const item = mockInvitationBonusData.data.find(i => i.id === itemId);
+
+                        if (!item) {
+                            return resolve({ data: { status: false, message: "Invalid Bonus ID." } });
+                        }
+
+                        if (!item.isFinished) {
+                            return resolve({ data: { status: false, message: "Task not yet finished." } });
+                        }
+
+                        if (item.isClaimed) {
+                            return resolve({ data: { status: false, message: "Bonus already claimed." } });
+                        }
+
+                        // Simulate successful claim
+                        item.isClaimed = true;
+                        resolve({ data: { status: true, message: `Successfully claimed Bonus ${itemId} (₹${item.bonusAmount}).` } });
+                    } else {
+                        resolve({ data: { status: false, message: "Mock API endpoint not found" } });
+                    }
+                }, 500);
+            })
+        };
+
+        // Overwrite the global axios object with the mock for the script
+        const axios = mockAxios;
+
+        // --- User's Provided JavaScript Functions ---
+
+        function formatIndianNumber(num) {
+             // Ensure num is treated as a number before formatting
+             num = Number(num);
+             let formattedNum = new Intl.NumberFormat("en-IN", {
+                 maximumFractionDigits: 2,
+                 minimumFractionDigits: 2,
+             }).format(num);
+             return formattedNum;
+        }
+
+        const initInvitationBonusData = async () => {
+            try {
+                // Using mock axios
+                const response = await axios.get("/api/activity/invitation_bonus");
+                
+                if (response.data.status === true) {
+                    const invitationBonusList = response.data.data;
+
+                    const invitationBonusHTML = invitationBonusList
+                        .map(item => {
+                            // Determine button state classes and text
+                            let btnClasses = "w-full p-2.5 rounded-lg text-center font-bold transition-all duration-200 ";
+                            let btnText = "Unfinished";
+                            
+                            if (item.isClaimed) {
+                                btnText = "Claimed";
+                                // bg-header-purple text-white cursor-default opacity-80
+                                btnClasses += "bg-header-purple text-white cursor-default opacity-80";
+                            } else if (item.isFinished) {
+                                btnText = "Claim";
+                                // bg-progress-green text-dark-bg cursor-pointer opacity-100 hover:bg-green-300
+                                btnClasses += "bg-progress-green text-dark-bg cursor-pointer opacity-100 hover:bg-progress-green/80";
+                            } else {
+                                // Default Gray/Unfinished: bg-gray-600 text-white cursor-not-allowed opacity-60
+                                btnClasses += "cursor-not-allowed opacity-60 bg-gray-600 text-white";
+                            }
+
+                            // Applying Tailwind classes directly to the structure
+                            // Note: Added a custom class to mimic the bonus number/tab effect
+                            const bonusTabClass = item.isClaimed ? 'bg-header-purple' : (item.isFinished ? 'bg-progress-green' : 'bg-gray-600');
+
+                            return `
+                                <div data-v-144c92c3="" class="bg-dark-card rounded-xl p-4 mb-3 shadow-lg relative overflow-hidden">
+                                    
+                                    <!-- Bonus Tab Label -->
+                                    <div class="absolute top-0 left-0 text-xs font-semibold px-4 py-1 rounded-br-lg ${bonusTabClass}">
+                                        Bonus
+                                    </div>
+
+                                    <div data-v-144c92c3="" class="flex justify-between items-center pt-8 pb-3 mb-3 border-b border-white/10">
+                                        <div data-v-144c92c3="" class="text-lg font-semibold text-progress-green flex items-center">
+                                            Bonus Level ${item.id}
+                                        </div>
+                                        <div data-v-144c92c3="" class="text-xl font-bold text-bonus-yellow">₹${formatIndianNumber(item.bonusAmount)}</div>
+                                    </div>
+                                    <div data-v-144c92c3="" class="flex justify-between mb-2">
+                                        <div data-v-144c92c3="" class="text-secondary-text text-sm">Number of invitees</div>
+                                        <div data-v-144c92c3="" class="font-semibold">${item.required.numberOfInvitedMembers}</div>
+                                    </div>
+                                    <div data-v-144c92c3="" class="flex justify-between mb-2">
+                                        <div data-v-144c92c3="" class="text-secondary-text text-sm">Recharge per people</div>
+                                        <div data-v-144c92c3="" class="font-semibold">₹${formatIndianNumber(item.required.amountOfRechargePerPerson)}</div>
+                                    </div>
+                                    <div data-v-144c92c3="" class="h-px bg-white/10 my-3"></div>
+                                    <div data-v-144c92c3="" class="flex justify-between text-center mb-4">
+                                        <div data-v-144c92c3="" class="flex-1">
+                                            <div data-v-144c92c3="" class="text-lg font-semibold mb-1">${item.current.numberOfInvitedMembers} / ${item.required.numberOfInvitedMembers}</div>
+                                            <div data-v-144c92c3="" class="text-secondary-text text-xs">Number of invitees</div>
+                                        </div>
+                                        <div data-v-144c92c3="" class="flex-1">
+                                            <div data-v-144c92c3="" class="text-lg font-semibold mb-1">${item.current.numberOfDeposits} / ${item.required.numberOfDeposits}</div>
+                                            <div data-v-144c92c3="" class="text-secondary-text text-xs">Deposit number</div>
+                                        </div>
+                                    </div>
+                                    <div data-v-144c92c3="" onclick="claimBonus(${item.id})" class="${btnClasses}">${btnText}</div>
+                                </div>`;
+                        })
+                        .join("");
+
+                    $(".bonus-container").html(invitationBonusHTML);
+                }
+            } catch (error) {
+                console.error("Error initializing bonus data:", error);
+                $(".bonus-container").html("<div class='text-center text-red-400 p-8'>Failed to load data. See console for details.</div>");
+            }
+        };
+
+        // Making the function global so it can be called from the inline onclick attribute
+        window.claimBonus = async (id) => {
+            try {
+                // Only allow claiming if the item is finished and not yet claimed (client-side check for better UX)
+                const item = mockInvitationBonusData.data.find(i => i.id === id);
+                if (!item || !item.isFinished || item.isClaimed) {
+                    console.warn(`Attempted to claim ID ${id}, but it is not eligible.`);
+                    // Display a warning toast if the button was clicked but ineligible
+                    const message = item ? (item.isClaimed ? "Bonus already claimed." : "Task not yet finished.") : "Invalid task.";
+                    $(".van-toast__text").text(message);
+                    $("#failedTost").fadeIn(220);
+                    setTimeout(() => { $("#failedTost").fadeOut(); }, 1600);
+                    return;
+                }
+
+                const response = await axios.post("/api/activity/invitation_bonus/claim", { id });
+
+                if (response.data.status === true) {
+                    // Update UI and re-render
+                    await initInvitationBonusData();
+                    $(".van-toast__text").text(response.data.message);
+                    $("#successTost").fadeIn(220);
+                } else {
+                    $(".van-toast__text").text(response.data.message);
+                    $("#failedTost").fadeIn(220);
+                }
+
+                setTimeout(() => {
+                    $("#failedTost").fadeOut();
+                    $("#successTost").fadeOut();
+                }, 3000);
+
+            } catch (error) {
+                if (error.response && error.response.data.status === false) {
+                    $(".van-toast__text").text(error.response.data.message);
+                    $("#failedTost").fadeIn(220);
+
+                    setTimeout(() => {
+                        $("#failedTost").fadeOut();
+                        $("#successTost").fadeOut();
+                    }, 1600);
+                }
+                else {
+                    console.error("Error claiming bonus:", error);
+                    $(".van-toast__text").text("An unknown error occurred.");
+                    $("#failedTost").fadeIn(220);
+                    setTimeout(() => { $("#failedTost").fadeOut(); }, 1600);
+                }
+            }
+        };
+
+        // Initialize data on page load
+        $(document).ready(() => {
+            initInvitationBonusData();
+        });
+
+    </script>
+</body>
+</html>

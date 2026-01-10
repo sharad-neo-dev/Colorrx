@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Reward Rules | colorrx</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New primary colors based on user's gradient request
+                        'primary-purple': '#3e1474',
+                        'dark-bg': '#101114',
+                        
+                        // Kept light background/text colors for the main card content
+                        'light-bg': '#f4f4f4', 
+                        'card-bg': '#ffffff', 
+                        'header-bg-light': '#ffffff', // Base for light header if needed
+                        'text-primary': '#333333',
+                        'text-secondary': '#666666',
+                        
+                        // New table/rule colors
+                        'rule-bullet': '#3e1474', // Match primary purple for bullets
+                        'table-header-color': '#3e1474', // Use the dark purple for table header
+                        'table-header-text': '#ffffff',
+
+                        // New accent color for borders
+                        'border-blue': '#4299e1', // A standard blue-500
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles to achieve the specific gradients/shadows */
+        body {
+            background-color: #f4f4f4; /* Light gray background */
+            font-family: 'Inter', sans-serif;
+        }
+
+        .dark-header-gradient {
+            /* User's requested gradient for the top banner */
+            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-row-striped:nth-child(even) {
+            background-color: #f8f8f8; /* Light gray stripe for table */
+        }
+
+        .custom-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .rule-card {
+            /* Applying shadow and rounded corners to the main content cards */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Custom style for the list bullets, mimicking the red diamond */
+        .rule-list > li {
+            list-style: none;
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .rule-list > li:before {
+            content: '⬥'; /* Unicode diamond shape */
+            color: theme('colors.rule-bullet'); 
+            font-size: 1.25rem; /* Larger diamond */
+            line-height: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Simple button styling for the example */
+        .back-button {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .back-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="  bg-[#11131f] text-text-primary w-full md:max-w-[500px] mx-auto">
+
+    <!-- Header Section (Fixed at top) - Now using the dark gradient -->
+    <header class="w-full dark-header-gradient py-3 px-4 custom-shadow sticky top-0 z-10">
+        <div class="max-w-xl mx-auto flex items-center justify-between">
+            <!-- Back Button -->
+            <div class="back-button text-2xl text-white" onclick="history.back()">
+                &#10094; <!-- Simple left arrow icon -->
+            </div>
+            <!-- Title -->
+            <h1 class="text-lg font-bold text-center flex-grow text-white">Invitation reward rules</h1>
+            <!-- Placeholder for right-side icon (empty space) -->
+            <div class="w-6"></div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-xl mx-auto pb-8">
+        <!-- Introduction Card (Added blue border, rounded corners, and mx-4 for alignment) -->
+        <div class="p-4 bg-white rule-card mb-4 border-4 border-[#3e1474] rounded-xl mx-4">
+            <p class="text-sm text-text-secondary mb-3">
+                Invite friends and recharge to get additional platform rewards!
+                After being claimed, the rewards will be directly distributed to the
+                wallet within 10 minutes.
+            </p>
+
+            <!-- Reward Table -->
+            <div class="overflow-x-auto rounded-lg border border-gray-200">
+                <table class="min-w-full text-sm">
+                    <thead>
+                        <tr>
+                            <!-- Updated background color to dark purple -->
+                            <th class="py-2 px-1 text-center bg-table-header-color text-table-header-text font-semibold rounded-tl-lg">Invite account</th>
+                            <th class="py-2 px-1 text-center bg-table-header-color text-table-header-text font-semibold">Deposit amount</th>
+                            <th class="py-2 px-1 text-center bg-table-header-color text-table-header-text font-semibold rounded-tr-lg">Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 bg-white">
+                        <!-- Data rows: updated red text accents to primary-purple -->
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">10000People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹2,555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹999,999.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">5000People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹2,111.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹299,999.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">2000People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,777.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹122,229.00</td>
+                        </tr>
+                         <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">1000People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,777.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹64,449.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">500People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,777.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹33,339.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">200People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹12,229.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">100People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹6,799.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">75People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹4,799.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">50People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,111.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹2,799.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">30People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,111.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹1,799.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">10People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹1,111.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹599.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">5People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹299.00</td>
+                        </tr>
+                        <tr class="table-row-striped">
+                            <td class="py-2 px-1 text-center font-medium text-primary-purple">3People</td>
+                            <td class="py-2 px-1 text-center font-medium text-text-primary">₹555.00</td>
+                            <td class="py-2 px-1 text-center font-bold text-primary-purple">₹199.00</td>
+                        </tr>
+                        <!-- End of data rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rules Card (Added blue border) -->
+        <div class="p-4 bg-white rule-card rounded-xl mx-4 border-4  mb-[8rem] border-[#3e1474]">
+            <!-- Updated line color to primary-purple -->
+            <div class="h-0.5 w-10 bg-primary-purple mb-4"></div>
+            <ul class="rule-list text-sm text-text-secondary">
+                <li>
+                    Only when the **number of invited accounts is reached** and each account can meet the **recharge amount** can you receive the bonus.
+                </li>
+                <li>
+                    The invitation account meets the requirements, but the **recharge amount of the account does not meet the requirements**, and the bonus cannot be claimed.
+                </li>
+                <li>
+                    Please **claim the event bonus within the event period**. Bonuses will be cleared after the event expires.
+                </li>
+                <li>
+                    Please complete the task within the event period. After the event expires, the **invitation record will be cleared**.
+                </li>
+            </ul>
+        </div>
+    </main>
+
+     <%- include('../layout/footer.ejs') %>
+</body>
+</html>

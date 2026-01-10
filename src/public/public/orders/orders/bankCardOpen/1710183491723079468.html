@@ -1,0 +1,311 @@
+<html lang="en">
+
+<!-- Mirrored from pay.sbinpay.com/orders/orders/bankCardOpen/1710183491723079468 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 18:59:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt</title>
+<!--  <link rel="stylesheet" href="/upi/css/style-1.css">-->
+  <link rel="stylesheet" href="../../../upi/css/newStyle.css">
+</head>
+<style>
+  .copy-tip {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: .34rem;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.1rem;
+    z-index: 10;
+  }
+</style>
+<body>
+<div class="container">
+  <form id="form" action="#">
+    <!-- 顶部标题 -->
+    <header id="fuck_orderNo">123456</header>
+    <!-- Bank and QR -->
+    <div class="form-content">
+      <div>
+        <p class="f-timer">
+          <span id='datetime'></span>
+          <span id="ten-countdown" class="countdown"></span>
+        </p>
+        <p class="f-money">
+          <b>₹</b>
+          <b id="fuck_mount">500</b>
+        </p>
+        <div class="segmentation"></div>
+        <div class="bank-div">
+          <div class="bank-div-cont">
+            <!-- Bank -->
+            <ul class="bank-div-list">
+              <li onclick="handlePaytm()" class="yes"><img src="../../../upi/img/new_tu1.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+              <li onclick="handlePayPe()"><img src="../../../upi/img/new_tu2.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+              <li onclick="handlePayGp()"><img src="../../../upi/img/new_tu3.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+              <li onclick="handlePayMo()"><img src="../../../upi/img/new_tu4.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+              <li onclick="handlePayUpi()"><img src="../../../upi/img/new_tu5.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+              <li onclick="handlePayOther()"><img src="../../../upi/img/new_tu6.png" alt=""/><span></span><i><img src="../../../upi/img/queren.png" alt=""/></i></li>
+            </ul>
+            <!-- 分割线 -->
+            <h2 class="bk-qr"><span>QR</span></h2>
+            <p class="code-p">Scan Code To Pay</p>
+            <!-- 二维码 -->
+            <div class="qr-style"><div id="qrcode"></div></div>
+            <p class="code-txt">Do not use same QR code to pay multiple times</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- UTR Submit -->
+    <div class="utr-div">
+      <div>
+        <div>
+          <b>UTR</b>
+          <input id="fuck_utr" type="text" placeholder="input 12-digit here" name="utr-input"/>
+          <button onclick="uploadUTR()">Submit</button>
+        </div>
+        <p>if chip isn't added，input
+          the UTR and click submit.</p>
+      </div>
+    </div>
+    <!-- Footer Content -->
+    <footer>
+      <a href="mailto:onlinehelpdesk24hr@gmail.com" class="mailTo" id="mailTo">Contact us</a>
+      <p>onlinehelpdesk24hr@gmail.com</p>
+    </footer>
+  </form>
+</div>
+</form>
+<div class="copy-tip" style="display: none;">
+  copy sucessfully
+</div>
+</div>
+
+
+<script type="text/javascript" src="../../../upi/js/qrcode.min.js"></script>
+<script type="text/javascript" src="../../../upi/js/jquery.min.js.js"></script>
+</body>
+
+<script>
+
+  var dt = new Date();
+  document.getElementById("datetime").innerHTML = (dt.getFullYear()) + "-" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (("0" + dt.getDate()).slice(-2)) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+
+  function setCardSelectClass(type) {
+    let _li = 1;
+    switch (type) {
+      case 'paytm':
+        _li = 1;
+        break;
+      case 'phonePe':
+        _li = 2;
+        break;
+      case 'Googlepay':
+        _li = 3;
+        break;
+      case 'Mo':
+        _li = 4;
+        break;
+      case 'Upi':
+        _li = 5;
+        break;
+      case 'otherPay':
+        _li = 6;
+        break;
+      default:
+        break;
+    }
+    $(`.bank-div-list li:nth-child(${_li})`).addClass('yes').siblings().removeClass('yes')
+  }
+
+  function handlePaytm() {
+    clickPay('paytm')
+    setTimeout(function () {
+      location.href = "paytmmp://" + link;
+    }, 500)
+    setCardSelectClass('paytm')
+  }
+
+  function handlePayPe() {
+    clickPay('phonePe')
+    setTimeout(function () {
+      location.href = "phonepe://" + link;
+    }, 500)
+    setCardSelectClass('phonePe')
+  }
+
+  function handlePayGp() {
+    clickPay('Googlepay')
+    setTimeout(function () {
+      location.href = "upi://" + link;
+    }, 500)
+    setCardSelectClass('Googlepay')
+  }
+
+  function handlePayMo() {
+    clickPay('Mo')
+    setTimeout(function () {
+      location.href = "upi://" + link;
+    }, 500)
+    setCardSelectClass('Mo')
+  }
+
+  function handlePayUpi() {
+    clickPay('Upi')
+    setTimeout(function () {
+      location.href = "upi://" + link;
+    }, 500)
+    setCardSelectClass('Upi')
+  }
+
+  function handlePayOther() {
+    clickPay('otherPay')
+    setTimeout(function () {
+      location.href = "upi://" + link;
+    }, 500)
+    setCardSelectClass('otherPay')
+  }
+
+  function handleOtherPay(pay) {
+    clickPay('otherPay')
+    setTimeout(function () {
+      location.href = pay + "://" + link;
+    }, 500)
+  }
+
+  function clickPay(appName) {
+    $.ajax({
+      url: "/orders/orders/upClickData/" + orderNo,
+      type: "POST",
+      dataType: "json",
+      data: {appName: appName, hesitationTime: Date.now() - loadSuccessTime}
+      // success: function (data) {
+      //     switch (data.code) {
+      //         case 0:
+      //             alert("Submit success is correct")
+      //             break;
+      //         default:
+      //             alert("Fail " + data.msg)
+      //             break;
+      //     }
+      // },
+      // error: function (e) {
+      //     showError("network connection error");
+      // },
+    });
+  }
+
+  function uploadUTR() {
+    let copyStr = document.getElementById("fuck_utr").value
+    $.ajax({
+      url: "/orders/orders/upUtr/" + orderNo,
+      type: "POST",
+      dataType: "json",
+      data: {utr: copyStr},
+      success: function (data) {
+        switch (data.code) {
+          case 0:
+            alert("Submit success is correct")
+            break;
+          default:
+            alert("Fail " + data.msg)
+            break;
+        }
+      },
+      error: function (e) {
+        showError("network connection error");
+      },
+    });
+  }
+
+  var amount = "100";
+  var orderNo = "1710183491723079468";
+  var name = "Bhadoriya gaurav";
+  var account = "00000042641650447";
+  var ifsc = "SBIN0003043";
+  var link = "pay?pa=bgkb2854@sbi&tn=A095804&am=100.00&cu=INR&pn=pay";
+  var orderStamp = parseInt((orderNo + '').substring(0, 13))
+  var timeInterval;
+  var loadSuccessTime;
+  var endMinute = 5
+  // if (ifsc.includes('ICIC')
+  //   || ifsc.includes('AUBL')
+  //   || ifsc.includes('HDFC')
+  //   || ifsc.includes('UTIB')
+  //   || ifsc.includes('SBIN')
+  //   || ifsc.includes('BARB')
+  //   || ifsc.includes('INDB')
+  //   || ifsc.includes('IDFB')) {
+  //   endMinute = 20
+  // }
+
+  function countdown(elementName, minutes, seconds) {
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits(n) {
+      return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer() {
+      msLeft = endTime - (+new Date);
+      if (msLeft < 1000) {
+        element.innerHTML = "Time is up!";
+      } else {
+        time = new Date(msLeft);
+        hours = time.getUTCHours();
+        mins = time.getUTCMinutes();
+        element.innerHTML = (hours ? hours + ':' + twoDigits(mins) : mins) + ':' + twoDigits(time.getUTCSeconds());
+        setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
+      }
+    }
+
+    element = document.getElementById(elementName);
+    endTime = (+new Date(orderStamp)) + 1000 * (60 * minutes + seconds) + 500;
+    updateTimer();
+  }
+
+  countdown("ten-countdown", endMinute, 0);
+
+  $(function () {
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "upi://" + link,
+      width: 128,
+      height: 128,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+    document.getElementById("fuck_mount").textContent = amount
+    document.getElementById("fuck_orderNo").textContent = orderNo
+    document.getElementById("mailTo").setAttribute('href', `mailto:onlinehelpdesk24hr@gmail.com?subject=Ask Help,OrderID: ${orderNo}`)
+    var dt = new Date(orderStamp);
+    document.getElementById("datetime").innerHTML = (dt.getFullYear()) + "-" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (("0" + dt.getDate()).slice(-2)) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+
+    clearInterval(timeInterval);
+
+    timeInterval = setInterval(() => {
+      timeInterval = setInterval(() => {
+        let stamp = new Date().getTime()
+        if (stamp > orderStamp + endMinute * 60 * 1000) {
+          clearInterval(timeInterval);
+          // ------ 本地测试关闭
+          location.replace(location.href);
+        }
+      }, 1000 * 3)
+    })
+    $(".as").css({'display': 'block'})
+    loadSuccessTime = Date.now()
+    clickPay('open')
+  })
+</script>
+
+<!-- Mirrored from pay.sbinpay.com/orders/orders/bankCardOpen/1710183491723079468 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Mar 2024 18:59:27 GMT -->
+</html>

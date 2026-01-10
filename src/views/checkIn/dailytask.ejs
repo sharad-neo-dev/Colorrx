@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Award | colorrx</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Axios for API calls -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Purple Night Theme Colors
+                        'app-bg': '#101114',
+                        'card-bg': '#1e1f29',
+                        'header-purple': '#3e1474',
+                        'header-red': '#cc3366',
+                        'text-light': '#F3E8FF',
+                        'text-secondary': '#A9A9A9',
+                        'mission-green': '#19B45C', // Green tag for Daily Mission
+                        'award-yellow': '#FFD700', // Gold/Yellow for award amount
+                        'button-pink': '#FF4D6D', // Reddish button color
+                        'progress-light': '#36384a', // Light background for progress bar
+                        'progress-fill': '#FF5722', // Orange fill for progress bar (Recharge)
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* General body reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Header Gradient applied using CSS (for the fixed top bar) */
+        .header-bg {
+             /* Applying the specific gradient requested by the user */
+             background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+        }
+        
+        /* Top Banner Gradient (Reddish/Coral color from the image) */
+        .banner-bg {
+             background: linear-gradient(180deg, #cc3366 0%, #a02046 100%);
+             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); /* Subtle shadow for lift */
+        }
+
+        /* Mission Card styling */
+        .mission-card {
+            border: 1px solid #3e1474; /* Light border from the purple theme */
+            border-radius: 0.5rem; /* Ensure rounded corners */
+        }
+        
+        /* Custom progress bar styles */
+        .progress-bar-container {
+            height: 8px;
+            background-color: theme('colors.progress-light');
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: theme('colors.progress-fill');
+            transition: width 0.3s ease;
+        }
+        
+        /* Ensure button text is readable when using yellow background */
+        .bg-award-yellow.text-gray-900:hover {
+            background-color: #fdd835; /* Slightly darker yellow on hover */
+        }
+    </style>
+</head>
+
+
+<body class="font-sans bg-app-bg min-h-screen w-full md:max-w-[500px] mx-auto text-text-light">
+
+    <!-- Header (Fixed at Top) -->
+    <div class="sticky top-0 z-10 flex items-center h-14 px-4 header-bg shadow-lg">
+        <button onclick="history.back()" aria-label="Back" class="text-text-light pr-4 text-lg hover:text-white transition-colors">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-xl tracking-wide">Activity Award</h2>
+        
+        <!-- Collection Record Icon -->
+        <button aria-label="Collection record" class="text-text-light text-lg p-2 rounded-full hover:bg-white/10 transition-colors">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+        </button>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="app-container p-0 pb-[8rem]">
+
+        <!-- Top Banner: Activity Award Details -->
+        <div class="banner-bg p-4 flex items-start text-white rounded-b-xl shadow-lg">
+            <!-- Placeholder Image/Icon Area -->
+            <div class="w-20 h-20 rounded-lg mr-4 flex items-center justify-center bg-white/10 flex-shrink-0">
+                <i class="fa-solid fa-ribbon text-4xl"></i>
+            </div>
+            
+            <!-- Text Content -->
+            <div>
+                <h3 class="font-bold text-lg mb-1">Activity Award</h3>
+                <p class="text-sm leading-snug">
+                    Complete weekly/daily tasks to receive rich rewards. Weekly rewards cannot be accumulated to the next week, and daily rewards cannot be accumulated to the next day.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mission Cards List -->
+        <div id="mission-list" class="p-4 space-y-4">
+            <!-- Missions will be injected here dynamically -->
+        </div>
+    </div>
+    
+    <!-- Toast Message Container (Custom implementation for success/error messages) -->
+    <div id="toast-container" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div id="toast-message" class="px-4 py-3 bg-gray-800 text-white text-sm rounded-full shadow-2xl flex items-center space-x-2">
+            <i id="toast-icon" class="fa-solid"></i>
+            <span id="toast-text"></span>
+        </div>
+    </div>
+ <%- include('../layout/footer.ejs') %>
+
+    <script>
+        /**
+         * Shows a custom toast message at the bottom of the screen.
+         * @param {string} message - The message to display.
+         * @param {('success'|'error')} type - The type of message (determines icon color).
+         */
+        function showToast(message, type = 'success') {
+            const toastContainer = document.getElementById('toast-container');
+            const toastMessage = document.getElementById('toast-text');
+            const toastIcon = document.getElementById('toast-icon');
+
+            const isSuccess = type === 'success';
+
+            // Update message and icon
+            toastMessage.textContent = message;
+            toastIcon.className = isSuccess 
+                ? 'fa-solid fa-check-circle text-mission-green' 
+                : 'fa-solid fa-circle-exclamation text-red-500';
+            
+            // Show toast
+            toastContainer.classList.remove('opacity-0', 'pointer-events-none');
+            toastContainer.classList.add('opacity-100');
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toastContainer.classList.remove('opacity-100');
+                toastContainer.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        /**
+         * Formats a number to Indian currency standard (e.g., 1,00,000.00).
+         * @param {number} num - The number to format.
+         * @returns {string} The formatted number string.
+         */
+        function formatIndianNumber(num) {
+            if (typeof num !== 'number' && typeof num !== 'string') return '0.00';
+            const parsedNum = parseFloat(num);
+            if (isNaN(parsedNum)) return '0.00';
+            
+            let formattedNum = new Intl.NumberFormat("en-IN", {
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2,
+            }).format(parsedNum)
+            return formattedNum
+        }
+
+        /**
+         * Creates an HTML mission card element from mission data.
+         * @param {Object} mission - Mission data object from API.
+         * @returns {HTMLElement} The mission card div element.
+         */
+        function createMissionCard(mission) {
+            // Adopt new API field names for clarity
+            const current = mission.rechargeAmount || 0;
+            const target = mission.requiredRechargeAmount || 0;
+            const award = mission.bonusAmount || 0;
+            const isFinished = mission.isFinished === true; // Ensure boolean
+            const isClaimed = mission.isClaimed === true;   // Ensure boolean
+
+            const progress = target > 0 ? (current / target) * 100 : 0;
+            const progressClamped = Math.min(100, progress);
+
+            let buttonText;
+            let buttonClass;
+            let buttonDisabled = false;
+            let buttonAction = '';
+
+            if (isClaimed) {
+                buttonText = 'Already Claimed';
+                buttonClass = 'bg-gray-700 text-gray-400 font-medium cursor-not-allowed';
+                buttonDisabled = true;
+            } else if (isFinished) {
+                buttonText = 'Claim';
+                buttonClass = 'bg-award-yellow text-gray-900 font-bold hover:bg-yellow-400';
+                buttonAction = `claimBonus(${mission.id})`;
+            } else {
+                buttonText = 'to complete';
+                buttonClass = 'bg-button-pink text-white font-medium hover:bg-pink-500';
+                // Assuming 'to complete' button does nothing or navigates elsewhere, so no action here.
+            }
+
+            const currentAmountText = `${formatIndianNumber(current)}/${formatIndianNumber(target)}`;
+            const missionType = 'Daily mission';
+            const statusText = isClaimed ? 'Claimed' : (isFinished ? 'Finished' : 'Unfinished');
+
+            const card = document.createElement('div');
+            // Card background and padding
+            card.className = 'mission-card bg-card-bg rounded-lg shadow-xl overflow-hidden p-4 space-y-3';
+
+            // Mission Header 
+            const header = `
+                <div class="flex justify-between items-center text-sm">
+                    <span class="px-3 py-1 bg-mission-green rounded-full font-bold text-white uppercase">${missionType}</span>
+                    <span class="text-text-secondary">${statusText}</span>
+                </div>
+            `;
+            
+            // Mission Details 
+            const details = `
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-sack-dollar text-xl text-award-yellow flex-shrink-0"></i>
+                    <span class="text-lg font-semibold text-text-light">Recharge Bonus</span>
+                    <span class="text-lg font-bold text-award-yellow ml-auto">${currentAmountText}</span>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: ${progressClamped}%;"></div>
+                </div>
+
+                <!-- Description -->
+                <p class="text-sm text-text-secondary leading-snug p-2 bg-gray-800/50 rounded-lg">
+                    If your cumulative deposit reaches the required amount on that day, you can claim the entire bonus.
+                </p>
+            `;
+            
+            // Award and Button
+            const footer = `
+                <div class="flex justify-between items-center pt-2 border-t border-gray-700/50">
+                    <!-- Award Amount -->
+                    <div class="text-sm">
+                        <span class="text-text-secondary">Award amount</span>
+                        <div class="flex items-center text-lg font-bold mt-1">
+                            <i class="fa-solid fa-trophy text-award-yellow mr-2"></i>
+                            <span class="text-award-yellow">₹${formatIndianNumber(award)}</span>
+                        </div>
+                    </div>
+                    
+                    <!-- To Complete Button -->
+                    <button 
+                        class="px-8 py-2 rounded-full shadow-lg transition-colors ${buttonClass}"
+                        ${buttonDisabled ? 'disabled' : ''}
+                        onclick="${buttonAction}"
+                    >
+                        ${buttonText}
+                    </button>
+                </div>
+            `;
+
+            card.innerHTML = header + details + footer;
+            return card;
+        }
+
+        /**
+         * Fetches and renders the daily recharge bonus missions.
+         */
+        const initDailyRechargeBonus = async () => {
+            const missionList = document.getElementById('mission-list');
+            
+            // Show a temporary loading state
+            missionList.innerHTML = `
+                <div class="text-center py-10 text-text-secondary">
+                    <i class="fa-solid fa-spinner fa-spin-pulse text-2xl mb-2 text-award-yellow"></i>
+                    <p class="mt-2">Loading missions...</p>
+                </div>
+            `;
+
+            try {
+                // Using axios for the API call as per the user's non-integrated code
+                const response = await axios.get("/api/activity/daily_recharge_bonus");
+
+                if (response.data.status === true && Array.isArray(response.data.data)) {
+                    const missions = response.data.data;
+                    missionList.innerHTML = ''; // Clear loading state/old list
+                    
+                    missions.forEach(mission => {
+                        // Validate essential fields before rendering
+                        if (mission.id !== undefined) {
+                            missionList.appendChild(createMissionCard(mission));
+                        }
+                    });
+
+                    if (missions.length === 0) {
+                         missionList.innerHTML = `<div class="text-center py-10 text-text-secondary">No daily recharge missions available today.</div>`;
+                    }
+
+                } else {
+                    // Handle non-successful status from API
+                     missionList.innerHTML = `<div class="text-center py-10 text-red-400">Error: Invalid data format received or API status failed.</div>`;
+                     console.error("API response status is false or data is not an array:", response.data);
+                }
+            } catch (error) {
+                // Handle network or request error
+                console.error("API call failed:", error);
+                missionList.innerHTML = `<div class="text-center py-10 text-red-400">Failed to load missions. Please check console for API error.</div>`;
+            }
+        };
+
+        /**
+         * Attempts to claim the bonus for a specific mission ID.
+         * @param {number} id - The mission ID to claim.
+         */
+        const claimBonus = async (id) => {
+            try {
+                const response = await axios.post("/api/activity/daily_recharge_bonus/claim", { id });
+                
+                if (response.data.status === true) {
+                    await initDailyRechargeBonus(); // Re-render to show 'Claimed' status
+                    showToast(response.data.message || "Bonus claimed successfully!", 'success');
+                } else {
+                    showToast(response.data.message || "Failed to claim bonus.", 'error');
+                }
+            } catch (error) {
+                console.error("Claim failed:", error);
+                const message = error.response?.data?.message || "An unknown error occurred during claim.";
+                showToast(message, 'error');
+            }
+        };
+
+        // Start the application by initializing the data when the window loads
+        window.onload = initDailyRechargeBonus;
+
+    </script>
+
+</body>
+
+</html>

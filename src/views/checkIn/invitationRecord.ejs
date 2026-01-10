@@ -1,0 +1,214 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation record | colorrx</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <style>
+        /* Base styles for the dark theme */
+        
+        body {
+            background-color: #101114;
+            /* Ensure full dark background */
+        }
+        
+        .bg-gradient-header {
+            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+        }
+        
+        .width-scrren {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #101114;
+        }
+        
+        @media (max-width: 768px) {
+            .width-scrren {
+                max-width: 100%;
+            }
+        }
+        /* --- Styles for Invitation Record List --- */
+        
+        .item {
+            background-color: #1a1a2e;
+            /* Darker card background */
+            border: 1px solid #3e1474;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            transition: transform 0.2s;
+        }
+        
+        .item:hover {
+            transform: translateY(-2px);
+            border-color: #9333ea;
+        }
+        
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #2d2d4d;
+        }
+        
+        .name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d8b4fe;
+            /* Purple-300 */
+        }
+        
+        .uid {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            /* Gray-400 */
+        }
+        
+        .line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: #d1d5db;
+            /* Gray-200 */
+            margin-top: 0.5rem;
+        }
+        
+        .time,
+        .amount {
+            font-weight: 500;
+            color: #f3f4f6;
+            /* White */
+        }
+        
+        .amount {
+            color: #34d399;
+            /* Green for deposit */
+            font-weight: 700;
+        }
+        /* Flatpickr styles from original code (omitted for brevity) */
+        /* ... */
+    </style>
+</head>
+
+<body class="bg-black text-gray-300">
+
+    <div class="width-scrren">
+        <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
+            <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-bold text-lg">Invitation record</h2>
+            <span class="w-6"></span>
+        </header>
+
+
+        <main class="flex-1 p-4 overflow-y-auto">
+            <div class="van-list">
+                </div>
+            <div id="loading-state" class="text-center p-4 text-gray-500 hidden">Loading...</div>
+            <div id="empty-state" class="text-center p-8 text-gray-500 hidden">No invitation records found.</div>
+        </main>
+
+        <div id="pagination" class="flex justify-center gap-2 mt-4 p-4">
+        </div>
+
+        <%- include('../layout/footer.ejs') %>
+    </div>
+
+    <script>
+        // Formats a number into Indian Rupees format (e.g., 1,23,456.78)
+        function formatIndianNumber(num) {
+            let formattedNum = new Intl.NumberFormat("en-IN", {
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2,
+            }).format(num);
+            return formattedNum;
+        }
+
+        const initInvitationRecord = async () => {
+            const listContainer = $(".van-list");
+            const loadingState = $("#loading-state");
+            const emptyState = $("#empty-state");
+
+            listContainer.empty();
+            loadingState.removeClass('hidden');
+            emptyState.addClass('hidden');
+
+            try {
+                // NOTE: This API endpoint is assumed to exist on the server
+                const response = await axios.get("/api/activity/invitation/record");
+
+                loadingState.addClass('hidden');
+
+                if (response.data.status === true) {
+                    const list = response.data.data;
+
+                    if (list && list.length > 0) {
+                        const html = list
+                            .map(item => {
+                                // Fallback to an empty string if item.create_time is not available
+                                const formattedTime = item.create_time || 'N/A'; 
+                                
+                                // Ensure item.amount is a number for formatting
+                                const amount = parseFloat(item.amount) || 0;
+                                const formattedAmount = formatIndianNumber(amount);
+
+                                return `
+                                <div data-v-67e25db3="" class="item">
+                                    <div data-v-67e25db3="" class="head">
+                                        <span data-v-67e25db3="" class="name">${item.username || 'Unknown User'}</span>
+                                        <span data-v-67e25db3="" class="uid">UID:${item.uid || 'N/A'}</span>
+                                    </div>
+                                    <div data-v-67e25db3="" class="line">Registration time
+                                        <span data-v-67e25db3="" class="time">${formattedTime}</span>
+                                    </div>
+                                    <div data-v-67e25db3="" class="line">Deposit amount
+                                        <span data-v-67e25db3="" class="amount">₹${formattedAmount}</span>
+                                    </div>
+                                </div>`;
+                            })
+                            .join("");
+
+                        listContainer.html(html);
+                    } else {
+                        emptyState.removeClass('hidden');
+                    }
+                } else {
+                    // Handle API status false case
+                    emptyState.text(response.data.message || 'Error fetching records.').removeClass('hidden');
+                }
+            } catch (error) {
+                loadingState.addClass('hidden');
+                console.error("Error fetching invitation record:", error);
+                emptyState.text("A network error occurred. Please try again.").removeClass('hidden');
+            }
+        };
+
+        // Initialize the function when the script loads
+        $(document).ready(() => {
+            initInvitationRecord();
+        });
+    </script>
+
+</body>
+
+</html>

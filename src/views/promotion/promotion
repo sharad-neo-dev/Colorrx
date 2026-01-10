@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Weekly | colorrx</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  
+  
+  
+    <%- include('../layout/header.ejs') %>
+  <div class="max-w-7xl mx-auto w-full md:max-w-[500px] mx-auto " style="
+    margin-top: 100px;
+">
+          <div class="mb-2 -mx-[10px]">
+            <img src="https://files.conjlnuljy.com/promo/5/76a5668f-051c-4bb7-93e7-b42719b97c91.jpg" alt="Image" class="w-full h-auto shadow-lg">
+        </div>
+        <div class="text-[25px] text-yellow-400 text-start">VIP rewards</div>
+        <div class="text-white rounded-lg mt-5 mb-5 text-start">
+            <div class="mt-5 space-y-4 text-sm text-gray-300">
+                <p>Generous VIP rewards <br>
+                  Become our VIP, get great prizes and generous
+                  rewards! <br>
+                  VIP level up rewards from 20 Rs to 30000 Rs!<br>
+                  Monthly VIP rewards from 38 Rs to 88888 Rs!<br>
+                 Details & Rules<br>
+                  </p>
+            </div>
+        </div>
+        <div class="bg-[#3b2e95] p-3 flex items-center justify-between -mx-[10px]">
+          <div class="text-white flex items-center space-x-2 justify-start flex-col">
+           
+            <span>Promotion Ends</span>
+            <div class="flex items-center justify-start w-full">
+             <span class="">
+              <img data-v-719877c1="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNCAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9Ikdyb3VwIj4KPGcgaWQ9Ikdyb3VwXzIiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNMTMuMTYxMiAxNi45OTk5QzEzLjQ2MjkgMTYuOTk5OSAxMy43MDk2IDE2Ljc1MzEgMTMuNzA5NiAxNi40NTE1QzEzLjcwOTYgMTYuMTQ5OSAxMy40NjI5IDE1LjkwMzEgMTMuMTYxMiAxNS45MDMxSDEyLjA2NDVWMTIuOTYzOEMxMi4wNjQ1IDEyLjQwNzIgMTEuODIzMiAxMS44NzggMTEuNDA2NCAxMS41MTMzTDguNjc1NDkgOS4xMjUwOEM4LjQ5MTc4IDguOTY2MDIgOC4zOTMxIDguNzQzOTUgOC4zOTMxIDguNDk5OTFDOC4zOTMxIDguMjU1ODcgOC40OTQ1NyA4LjAzMzggOC42NzU0OSA3Ljg3NDc1TDExLjQwNjQgNS40ODY1MkMxMS44MjYgNS4xMjE4MyAxMi4wNjQ1IDQuNTkyNjYgMTIuMDY0NSA0LjAzNjA0VjEuMDk2NzFIMTMuMTYxMkMxMy40NjI5IDEuMDk2NzEgMTMuNzA5NiAwLjg0OTkzNCAxMy43MDk2IDAuNTQ4MzExQzEzLjcwOTYgMC4yNDY2ODkgMTMuNDYyOCAwIDEzLjE2MTIgMEgxMi4wNjQ1SDEuNjQ1MTZIMC41NDg0QzAuMjQ2Nzc4IDAgMCAwLjI0Njc3OCAwIDAuNTQ4NEMwIDAuODUwMDIyIDAuMjQ2Nzc4IDEuMDk2OCAwLjU0ODQgMS4wOTY4SDEuNjQ1MTZWNC4zMDQ4N0MxLjY0NTE2IDQuODY0MjMgMS44ODY0NSA1LjM5NjE0IDIuMzExNDYgNS43NjA4M0w0Ljc0NjI3IDcuODcyMUM0LjkyOTk5IDguMDMxMTUgNS4wMzQyIDguMjU1OTYgNS4wMzQyIDguNUM1LjAzNDIgOC43NDQwNCA0LjkzMjczIDguOTY4ODUgNC43NDYyNyA5LjEyNzlMMi4zMTE0NiAxMS4yMzY0QzEuODg2NDUgMTEuNjAzOSAxLjY0NTE2IDEyLjEzNTggMS42NDUxNiAxMi42OTUxVjE1LjkwMzJIMC41NDg0QzAuMjQ2Nzc4IDE1LjkwMzIgMCAxNi4xNSAwIDE2LjQ1MTZDMCAxNi43NTMyIDAuMjQ2Nzc4IDE3IDAuNTQ4NCAxN0gxLjY0NTE2SDEyLjA2NDRIMTMuMTYxMlYxNi45OTk5Wk0xMC45Njc3IDE1LjkwMzJIMi43NDE5MVYxMi42OTUxQzIuNzQxOTEgMTIuNDUzOCAyLjg0NjEyIDEyLjIyNjIgMy4wMjcwOSAxMi4wNjcyTDUuNDYxOSA5Ljk1ODY2QzUuODg0MTcgOS41OTEyMyA2LjEyODIxIDkuMDYyMDYgNi4xMjgyMSA4LjUwMjdDNi4xMjgyMSA3Ljk0MzM0IDUuODg2OTEgNy40MTE0MiA1LjQ2MTkgNy4wNDY3M0wzLjAyNzA5IDQuOTM1NDdDMi44NDYxMiA0Ljc3NjQxIDIuNzQxOTEgNC41NDYxMiAyLjc0MTkxIDQuMzA0ODJWMS4wOTY3NkgxMC45Njc3VjQuMDM2MDhDMTAuOTY3NyA0LjI3NDY0IDEwLjg2MzUgNC41MDIxOSAxMC42ODI1IDQuNjYxMjRMNy45NTE1NiA3LjA0OTQ3QzcuNTM0NzcgNy40MTQxNiA3LjI5MzUxIDcuOTQzMzQgNy4yOTM1MSA4LjQ5OTk2QzcuMjkzNTEgOS4wNTY1OCA3LjUzNDgxIDkuNTg1NzUgNy45NTE1NiA5Ljk1MDQ0TDEwLjY4NTIgMTIuMzM4N0MxMC44NjYyIDEyLjQ5NzcgMTAuOTY3NiAxMi43MjUzIDEwLjk2NzYgMTIuOTYzOEwxMC45Njc3IDE1LjkwMzJaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz4KPHBhdGggaWQ9IlZlY3Rvcl8yIiBkPSJNNy41NDMyNSAxMC4xOTQ2QzcuMjQ5ODQgOS45MzY5IDcuMDA4NTkgOS42MTg4NCA2Ljg3Njk0IDkuMjUxNDJDNi43OTE5NSA5LjAxNTYgNi43NTYyOSA4Ljc3NzA4IDYuNzUwODEgOC41NDEyN0M2Ljc1MDgxIDguNTI3NTcgNi43NTA4MSA4LjUwMDEyIDYuNzUwODEgOC41MDAxMkg2LjY3MTNWOC41Mzg1M0M2LjY2MDM0IDkuMTYzNjkgNi4zODg5MSA5Ljc1MzE5IDUuOTE3MjcgMTAuMTY0NUwzLjQ4MjQ2IDEyLjI3NThDMy4zNjE4MSAxMi4zODI3IDMuMjkwNTMgMTIuNTMzNSAzLjI5MDUzIDEyLjY5NTNWMTUuMTEwOUMzLjI5MDUzIDE1LjI0NTMgMy40MDAyMiAxNS4zNTUgMy41MzQ1NiAxNS4zNTVIMTAuMTc1NUMxMC4zMDk5IDE1LjM1NSAxMC40MTk1IDE1LjI0NTMgMTAuNDE5NSAxNS4xMTA5VjEyLjk2NEMxMC40MTk1IDEyLjgwMjIgMTAuMzUxIDEyLjY1MTQgMTAuMjMwNCAxMi41NDQ1TDcuNTQzMjUgMTAuMTk0NloiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8L2c+CjwvZz4KPC9zdmc+Cg==" alt="">
+            </span>
+            <span class="text-[20px] text-orange-400">∞</span>
+           </div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button class="bg-[linear-gradient(180deg,#d6b335,#fff96b_50%,#f2ae01)] text-black py-1 px-4 rounded-full font-semibold text-[12px]">Join Now</button>
+          </div>
+        </div>
+    
+</div>
+
+    </div>
+       <%- include('../layout/footer.ejs') %> 
+</body>
+</html>

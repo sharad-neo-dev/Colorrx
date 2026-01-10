@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subordinate Data Report | colorrx</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load required libraries -->       <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Load Swiper CSS and JS for the vertical picker -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Styles for the dark theme and picker */
+        :root {
+            --primary-bg: #1c0f2a; /* Dark Purple Background */
+            --secondary-bg: #30164c; /* Darker Element Background */
+            --accent-red: #a5181c; /* Red highlight */
+            --text-light: #ffffff;
+            --text-subtle: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        /* Loading View Styles */
+        .ar-loading-view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; /* Controlled by JS */
+            place-items: center;
+            z-index: 100;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid var(--accent-red); /* Red */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Swiper Custom Styles */
+        .van-picker-column {
+            height: 200px;
+            overflow: hidden;
+            background-color: white; /* Picker background */
+        }
+
+        .van-picker-column .swiper-slide {
+            height: 40px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #a0a0a0; /* text-subtle for picker */
+            transition: all 0.3s ease;
+        }
+
+        .van-picker-column .swiper-slide-active {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c0f2a; /* Dark color for active text */
+            transform: scale(1.1);
+        }
+        
+        /* List Item Styles */
+        .TeamReport__C-body-item {
+            background-color: var(--secondary-bg); /* Darker Element Background */
+            padding: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .TeamReport__C-body-item-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px dashed #4a2d69;
+        }
+        .TeamReport__C-body-item-head .title {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        .TeamReport__C-body-item-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+        .TeamReport__C-body-item-detail span {
+            font-weight: 600;
+            color: #fca5a5; /* Light red/pink for values */
+            margin-left: 0.5rem;
+        }
+        .TeamReport__C-body-item-head img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            /* The image source is base64, so it should display fine */
+        }
+        
+        /* Pagination Styles */
+        .page-btn {
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 0.5rem;
+            background-color: var(--secondary-bg);
+            color: var(--text-light);
+            border: 1px solid #4a2d69;
+            transition: background-color 0.2s;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            background-color: #552d87;
+        }
+
+        .page-btn.active {
+            background-color: var(--accent-red);
+            font-weight: bold;
+            border-color: var(--accent-red);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Utility for OverFlow hidden on body for modal */
+        .van-overflow-hidden {
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body class="antialiased  w-full md:max-w-[500px] mx-auto">
+
+    <!-- Loading Overlay -->
+    <div class="ar-loading-view" style="display: grid;">
+        <div class="loader"></div>
+    </div>
+<header>
+         <div class="sticky -top-1 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">Subordinate Data</h2>
+        <span class="w-6"></span>
+    </div>
+  </header>
+    <!-- Tier Picker Modal Overlay -->
+    <div id="bottom_slider_tier_picker_overlay" class="fixed inset-0 bg-black bg-opacity-70 hidden z-40"></div>
+
+    <!-- Tier Picker Modal -->
+    <div id="bottom_slider_tier_picker" class="fixed inset-x-0 bottom-0 bg-white rounded-t-xl shadow-2xl hidden z-50 transition-all duration-300">
+        <div class="p-4 flex justify-between items-center border-b border-gray-200">
+            <button class="cancel text-gray-500 font-medium">Cancel</button>
+            <span class="text-lg font-semibold text-gray-800">Select Tier</span>
+            <button class="confirm text-red-600 font-medium">Confirm</button>
+        </div>
+        
+        <!-- Swiper Container -->
+        <div class="van-picker-column py-4">
+            <div class="swiper-wrapper">
+                <!-- Swiper items are dynamically generated or listed here -->
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">All</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 1</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 2</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 3</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 4</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 5</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 6</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 7</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 8</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 9</div></div>
+                <div class="swiper-slide van-picker-column__item"><div class="van-ellipsis">Tier 10</div></div>
+            </div>
+            <!-- Swiper Mask/Highlight for the center item -->
+            <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-10 border-y border-gray-300 pointer-events-none"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-xl mx-auto p-4">
+        
+        <!-- Header -->
+       
+
+        
+
+        <!-- Filters Section -->
+        <div class="mb-4 space-y-3">
+            <!-- Search & Search Icon -->
+            <div class="flex items-center bg-transparent border-b border-purple-500/50 pb-2">
+                <input id="search" type="text" placeholder="Search subordinate UID" class="bg-transparent w-full text-white placeholder-gray-400 focus:outline-none p-1 text-sm">
+                <button class="searchIcon bg-red-700 p-2 rounded-full shadow-lg hover:bg-red-600 transition">
+                    <i data-lucide="search" class="w-4 h-4 text-white"></i>
+                </button>
+            </div>
+            
+            <!-- Tier & Date Pickers -->
+            <div class="flex justify-between space-x-2 text-sm text-gray-300">
+                <!-- Tier Picker Button -->
+                <div id="tier_picker_btn" class="flex items-center justify-center p-2 bg-secondary-bg rounded-lg cursor-pointer flex-1">
+                    <span class="default font-medium">All</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                </div>
+                
+                <!-- Date Picker Button/Input -->
+                <div id="date_picker_root" class="flex items-center justify-center p-2 bg-secondary-bg rounded-lg cursor-pointer flex-1">
+                    <span class="date-display font-medium" id="date_display_text">--/--/----</span>
+                    <i data-lucide="calendar" class="w-4 h-4 ml-1"></i>
+                    <!-- Hidden native date input -->
+                    <input type="date" id="date_picker" class="absolute opacity-0 w-0 h-0" style="pointer-events: none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Statistics (Red Box) -->
+        <div class="header-container bg-accent-red rounded-xl p-4 grid grid-cols-2 gap-4 text-white text-center shadow-2xl mb-6">
+            
+            <!-- Left Column -->
+            <div class="border-r border-red-800 pr-2">
+                <div class="text-2xl font-bold num">0</div>
+                <div class="text-xs mt-1">Deposit number</div>
+                
+                <div class="text-2xl font-bold mt-4 num">0</div>
+                <div class="text-xs mt-1">Number of bettors</div>
+
+                <div class="text-2xl font-bold mt-4 num">0</div>
+                <div class="text-xs mt-1">First deposit users</div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="pl-2">
+                <div class="text-2xl font-bold num">0.00</div>
+                <div class="text-xs mt-1">Deposit amount</div>
+
+                <div class="text-2xl font-bold mt-4 num">0.00</div>
+                <div class="text-xs mt-1">Total bet</div>
+
+                <div class="text-2xl font-bold mt-4 num">0.00</div>
+                <div class="text-xs mt-1">First deposit amount</div>
+            </div>
+        </div>
+
+        <!-- Subordinate List -->
+        <div class="infiniteScroll space-y-4">
+            <!-- List items will be injected here by JS -->
+        </div>
+        
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center items-center space-x-2 mt-6 p-4 hidden">
+            <!-- Pagination buttons will be injected here by JS -->
+        </div>
+
+        <!-- No Data Message -->
+        <div id="no-data-message" class="text-center text-gray-500 mt-10 hidden">
+            No subordinate data found for the selected criteria.
+        </div>
+    </div>
+  <%- include('../layout/footer.ejs') %>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // --- Utility Functions ---
+
+        /**
+         * Simple debounce function to limit the rate of function calls.
+         * @param {function} func - The function to debounce.
+         * @param {number} wait - The delay in milliseconds.
+         */
+        const debounce = (func, wait) => {
+            let timeout;
+            return function (...args) {
+                const context = this;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        };
+
+        // --- Global State Variables ---
+        let currentTierText = $("#tier_picker_btn .default").text();
+        let searchMember = "";
+        
+        // Initializing date to start of yesterday's timestamp (value in milliseconds)
+        let startDate = moment().subtract(1, "days").startOf("day").valueOf();
+        
+        let level = "All";
+        let page = 1;
+        const limit = 6;
+        let totalPages = 0; 
+
+        // Helper to format timestamp to D/M/YYYY for display/input
+        const formatDateDisplay = (timestamp) => {
+            return moment(timestamp).format("DD/MM/YYYY");
+        };
+
+        // --- Initialization ---
+
+        $(document).ready(function () {
+            // The date input needs 'YYYY-MM-DD' format for native HTML date picker
+            $("#date_picker").val(moment(startDate).format("YYYY-MM-DD"));
+            // Update the display text for the user
+            $("#date_picker_root .date-display").text(formatDateDisplay(startDate));
+            
+            // Set up Swiper
+            window.swiper = new Swiper(".van-picker-column", {
+                slidesPerView: 5,
+                direction: "vertical",
+                centeredSlides: true,
+                clickable: true,
+            });
+            
+            // Initial data fetch
+            fetchAttendanceBonus(1);
+        });
+
+        // --- Core Data Fetching Logic ---
+
+        // Centralized function to trigger data fetching with new filters/page
+        const fetchAttendanceBonus = (newPage = 1) => {
+            page = newPage; // Set the global page variable
+            $(".ar-loading-view").fadeIn();
+            // Pass the current state of filters
+            initAttendanceBonus(startDate, searchMember, level, page);
+        };
+
+        // Main function to fetch and render data
+        const initAttendanceBonus = async (
+            startDate,
+            search,
+            level,
+            currentPage = 1,
+        ) => {
+            
+            // Mock data provided by the user (simulating an empty result)
+            const mockResponse = {
+                data: {
+                    "status": true,
+                    "meta": {
+                        "totalPages": 0,
+                        "currentPage": 1
+                    },
+                    "data": {
+                        "usersByLevels": [],
+                        "subordinatesRechargeQuantity": 0,
+                        "subordinatesRechargeAmount": 0,
+                        "subordinatesWithBettingCount": 0,
+                        "subordinatesBettingAmount": "0",
+                        "subordinatesWithFirstDepositCount": 0,
+                        "subordinatesWithFirstDepositAmount": 0
+                    },
+                    "message": "Successfully fetched subordinates data"
+                }
+            };
+
+            try {
+                // Simulate API call delay (500ms)
+                await new Promise(resolve => setTimeout(resolve, 500)); 
+                
+                // --- MOCK API RESPONSE ---
+                // In a real application, you would use:
+                // const response = await axios.get(...)
+                const response = mockResponse;
+                // -------------------------
+
+                if (response.data.status === true) {
+                    const data = response.data.data;
+                    const meta = response.data.meta || { currentPage: 1, totalPages: 1 };
+                    
+                    // Update global totalPages
+                    totalPages = meta.totalPages;
+
+                    const hasData = data.usersByLevels && data.usersByLevels.length > 0;
+                    $("#no-data-message").toggle(!hasData);
+                    $(".infiniteScroll").empty();
+
+                    if (hasData) {
+                        updatePaginationUI(meta.currentPage, meta.totalPages);
+                    } else {
+                        $("#pagination").hide();
+                    }
+
+                    // Update header statistics, ensuring numbers are parsed/formatted correctly
+                    $(".header-container .num").eq(0).text(data.subordinatesRechargeQuantity || 0);
+                    $(".header-container .num").eq(1).text((parseFloat(data.subordinatesRechargeAmount) || 0).toFixed(2));
+                    $(".header-container .num").eq(2).text(data.subordinatesWithBettingCount || 0);
+                    $(".header-container .num").eq(3).text((parseFloat(data.subordinatesBettingAmount) || 0).toFixed(2));
+                    $(".header-container .num").eq(4).text(data.subordinatesWithFirstDepositCount || 0);
+                    $(".header-container .num").eq(5).text((parseFloat(data.subordinatesWithFirstDepositAmount) || 0).toFixed(2));
+
+                    // Render the list items (will be empty in this mock)
+                    const listHtml = (data.usersByLevels || [])
+                        .map((item) => {
+                            // Using the report filter date as the item time, as per original logic
+                            const itemTime = formatDateDisplay(startDate); 
+                            return `
+                                <div data-v-10d1559c="" class="TeamReport__C-body-item">
+                                    <div data-v-10d1559c="" class="TeamReport__C-body-item-head">
+                                        <div data-v-10d1559c="" class="title">UID:${item.id_user || 'N/A'}</div>
+                                        <img data-v-10d1559c="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAANlBMVEUAAABlZWVnZ2dlZWVmZmZgYGBlZWVkZGRgYGBmZmZoaGhmZmZmZmZlZWVkZGRmZmZwcHBmZmYn3H9lAAAAEXRSTlMAYJ/v3xC/QCCAIK+QcFDPEFwncHAAAADVSURBVFjD7dY7EsMgDEVRia//ydv/ZhOlyYxHChq7SaHTAhdsGiio6sEjvZJpanDIs7k+w+dhHKLASz8Dy1BLA6tsk9UjbAASDVX50E6KBIBJoc2LwGnesSVRft0iT2ZgKvDIux6Q9U67HljhlasWmGQo8cie5QhaoMufo7FZ9tEC/BkY4whEIAIRiMB/BhqAfinQWCS8LZcCXyvdC5TlVkDWXwuUJLaDxNVbEBE46crb23ocbubbu6xpoMF8hc7wKqSqD/jkhQxzhkNbyPTsPHI8KWheb7c1z9Bcc9kAAAAASUVORK5CYII=" />
+                                    </div>
+                                    <div data-v-10d1559c="" class="TeamReport__C-body-item-detail">
+                                        <div data-v-10d1559c="" class="TeamReport__C-body-item-detail-lv">Level<span data-v-10d1559c="">${item.user_level || '-'}</span></div>
+                                        <div data-v-10d1559c="" class="TeamReport__C-body-item-detail-commission">Deposit amount<span data-v-10d1559c="">${(item.total_deposit_amount || 0).toFixed(2)}</span></div>
+                                        <div data-v-10d1559c="" class="TeamReport__C-body-item-detail-commission">Bet amount<span data-v-10d1559c="">${(item.total_bet_amount || 0).toFixed(2)}</span></div>
+                                        <div data-v-10d1559c="" class="TeamReport__C-body-item-detail-commission">Commission<span data-v-10d1559c="">${(item.total_commission || 0).toFixed(2)}</span></div>
+                                        <div data-v-10d1559c="" class="TeamReport__C-body-item-detail-time">Time<span data-v-10d1559c="">${itemTime}</span></div>
+                                    </div>
+                                </div>`;
+                        })
+                        .join("");
+
+                    $(".infiniteScroll").html(listHtml);
+                }
+            } catch (error) {
+                console.error("Error fetching attendance bonus data:", error);
+                $(".infiniteScroll").html("<div class='text-center p-4 text-red-400'>Failed to load data. Please check the console.</div>");
+                $("#pagination").hide();
+                $("#no-data-message").hide();
+            }
+
+            $(".ar-loading-view").fadeOut();
+        };
+
+        // --- UI Event Handlers ---
+
+        // Date Picker Handlers
+        $("#date_picker").on("change", function () {
+            // Get the moment timestamp from the YYYY-MM-DD input value
+            startDate = moment(this.value, "YYYY-MM-DD").valueOf();
+            // Update the display text 
+            $("#date_picker_root .date-display").text(formatDateDisplay(startDate));
+            fetchAttendanceBonus(1); // Reset to page 1 on date change
+        });
+
+        $("#date_picker_root").click(function () {
+            // Programmatically click the hidden date input
+            $("#date_picker").click();
+        });
+
+        // Tier Picker Handlers
+        $("#tier_picker_btn").click(function () {
+            $("body").addClass("van-overflow-hidden");
+            $("#bottom_slider_tier_picker_overlay").fadeIn();
+            $("#bottom_slider_tier_picker").fadeIn();
+
+            currentTierText = $("#tier_picker_btn .default").text();
+
+            // Find index and slide to current selection
+            const index = $(
+                "#bottom_slider_tier_picker .van-picker-column__item .van-ellipsis",
+            )
+                .toArray()
+                .findIndex((item) => {
+                    return $(item).text() === currentTierText;
+                });
+            // Use window.swiper as it's initialized inside document.ready
+            window.swiper.slideTo(index, 0);
+        });
+
+        // Swiper click handler for smooth scrolling
+        $("#bottom_slider_tier_picker .van-picker-column__item").click(
+            function () {
+                const itemText = $(this).find(".van-ellipsis").text();
+                const index = $(
+                    "#bottom_slider_tier_picker .van-picker-column__item .van-ellipsis"
+                )
+                    .toArray()
+                    .findIndex((item) => $(item).text() === itemText);
+                window.swiper.slideTo(index, 300, true);
+            },
+        );
+
+        $(".cancel").click(function () {
+            $("body").removeClass("van-overflow-hidden");
+            $("#bottom_slider_tier_picker_overlay").fadeOut();
+            $("#bottom_slider_tier_picker").fadeOut();
+        });
+
+        $(".confirm").click(function () {
+            const selectedTierText = $(".swiper-slide-active .van-ellipsis").text();
+            $("#tier_picker_btn .default").text(selectedTierText);
+            currentTierText = selectedTierText;
+
+            // Set the level variable based on the selection
+            level = currentTierText !== "All" ? currentTierText.replace("Tier ", "") : "All";
+            
+            fetchAttendanceBonus(1); // Reset to page 1 on level change
+            
+            $("body").removeClass("van-overflow-hidden");
+            $("#bottom_slider_tier_picker_overlay").fadeOut();
+            $("#bottom_slider_tier_picker").fadeOut();
+        });
+
+        // Search Handlers
+        function handleSearchAndFetch() {
+            searchMember = $("#search").val().toLowerCase().trim();
+            fetchAttendanceBonus(1); // Always reset to page 1 on new search
+        }
+
+        // Apply the debounce utility to the keyup event for performance
+        $("#search").on("keyup", debounce(handleSearchAndFetch, 500)); 
+
+        // Click handler for the search icon
+        $(".searchIcon").on("click", function () {
+            handleSearchAndFetch();
+        });
+
+        // --- Pagination Logic ---
+        function updatePaginationUI(currentPage, totalPages) {
+            const paginationContainer = $("#pagination");
+            paginationContainer.empty();
+
+            if (totalPages <= 1) {
+                paginationContainer.hide();
+                return;
+            }
+
+            paginationContainer.show();
+
+            function createPageButton(pageNumber, label = pageNumber, disabled = false) {
+                const button = $("<button>")
+                    .text(label)
+                    .attr("data-page", pageNumber)
+                    .addClass("page-btn")
+                    .toggleClass("active", pageNumber === currentPage)
+                    .prop("disabled", disabled);
+                return button;
+            }
+
+            // First and Previous
+            paginationContainer.append(
+                createPageButton(1, "First", currentPage === 1),
+            );
+            paginationContainer.append(
+                createPageButton(currentPage - 1, "Previous", currentPage === 1),
+            );
+            
+            // Current page display (Styled for dark theme)
+            const statusText = $("<span class='p-2 mx-2 text-sm text-gray-400'>")
+                            .text(`Page ${currentPage} of ${totalPages}`);
+            paginationContainer.append(statusText);
+
+            // Next and Last
+            paginationContainer.append(
+                createPageButton(currentPage + 1, "Next", currentPage === totalPages),
+            );
+            paginationContainer.append(
+                createPageButton(totalPages, "Last", currentPage === totalPages),
+            );
+
+            $(".page-btn").on("click", function () {
+                const newPage = parseInt($(this).attr("data-page"), 10);
+                if (newPage !== currentPage) {
+                    fetchAttendanceBonus(newPage); // Use the centralized fetch function
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

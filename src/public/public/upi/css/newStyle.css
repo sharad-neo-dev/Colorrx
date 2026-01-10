@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: 0;
+  font-style: normal;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  list-style: none;
+}
+
+html {
+  /* 基于750宽度的设计稿，1rem = 100px */
+  font-size: 13.333vw;
+}
+
+body {
+  background-color: #fffefa;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+#form {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+header {
+  width: 100%;
+  overflow: hidden;
+  line-height: .68rem;
+  background-color: #5ac18a;
+  font-size: 0.32rem;
+  text-align: center;
+  margin-bottom: .1rem;
+  font-weight: bold;
+}
+.form-content {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: .38rem;
+}
+.form-content::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2.6rem;
+  /*background-color: #5ac18a;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-content > div {
+  position: relative;
+  z-index: 1;
+}
+.f-timer {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 .3rem;
+  font-size: .28rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-timer > .countdown {
+  font-weight: bold;
+}
+.f-money {
+  padding: 0 .3rem;
+  margin: .24rem 0 .24rem;
+  font-size: .6rem;
+}
+.bank-div {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 .3rem;
+}
+.bank-div-cont {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: .3rem;
+}
+.bank-div-list {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.bank-div-list > li {
+  width: 100%;
+  height: 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e7e8e3;
+  border-radius: .1rem;
+  margin-top: .15rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .2rem 0 .15rem;
+}
+
+.bank-div-list > li img {
+  width: 1.87rem;
+}
+.bank-div-list > li span {
+  width: .4rem;
+  height: .4rem;
+  border: 1px solid #999;
+  border-radius: 50%;
+}
+.bank-div-list > li i {
+  width: .44rem;
+  height: .44rem;
+  border-radius: 50%;
+  display: none;
+}
+.bank-div-list > li i img {
+  width: 100%;
+}
+.bank-div-list > li.yes span {
+  display: none;
+}
+.bank-div-list > li.yes i {
+  display: block;
+}
+.bk-qr {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin: .5rem 0 .4rem;
+}
+.bk-qr > span {
+  position: relative;
+  color: #242424;
+  line-height: .3rem;
+  font-size: .3rem;
+}
+.bk-qr > span::after, .bk-qr > span::before {
+  content: '';
+  display: inline-block;
+  width: 3.8rem;
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.bk-qr > span::after {
+  left: -3.9rem
+}
+.bk-qr > span::before {
+  right: -3.9rem;
+}
+.code-p {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  color: #f61010;
+  font-size: .24rem;
+  font-weight: bold;
+}
+.qr-style {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #999;
+  margin: .2rem auto;
+  padding: 2px;
+}
+#qrcode {
+  width: fit-content;
+  height: fit-content;
+}
+.code-txt {
+  text-align: center;
+  font-size: .24rem;
+  color: #6e6e6e;
+  margin-bottom: .34rem;
+}
+.utr-div {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 .3rem;
+}
+.utr-div > div {
+  width: 100%;
+  overflow: hidden;
+  background-color: #eafef3;
+  border-radius: 8px;
+  padding: .16rem .46rem .2rem .2rem;
+  color: #313131;
+}
+.utr-div > div > div {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .14rem;
+}
+.utr-div > div > div > b {
+  font-size: .34rem;
+  margin-right: .1rem;
+}
+.utr-div > div > div > input {
+  font-size: .28rem;
+  padding: .1rem .2rem;
+  border-radius: 5px;
+  flex: 1;
+}
+.utr-div > div > div > button {
+  width: 1.15rem;
+  height: .55rem;
+  line-height: .44rem;
+  background-color: #59c379;
+  font-size: .26rem;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: .1rem;
+  cursor: pointer;
+}
+.utr-div > div > p {
+  font-size: .26rem;
+}
+footer {
+  width: 100%;
+  overflow: hidden;
+  margin: .32rem 0 .2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+footer .mailTo {
+  font-size: .3rem;
+  font-weight: bold;
+  color: #0f4fb1;
+}
+footer > p {
+  font-size: .26rem;
+  line-height: .26rem;
+  color: #1e1e1e;
+  margin-top: .14rem;
+}
+
+@media screen and (min-width: 750px) {
+  html, body {
+    font-size: 72px;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}

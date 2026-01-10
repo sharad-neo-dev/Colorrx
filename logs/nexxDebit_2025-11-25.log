@@ -1,0 +1,116 @@
+{
+  "time": "2025-11-25T14:12:16.785Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130230328196",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4060051"
+    },
+    "transactionData": {
+      "id": "1002718773",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764079934879"
+  }
+}
+{
+  "time": "2025-11-25T14:12:16.788Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130230328196",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4060051"
+    },
+    "transactionData": {
+      "id": "1002718773",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764079934879"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764079936788",
+    "userId": "8505701",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-25T14:12:17.016Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130230328536",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4060051"
+    },
+    "transactionData": {
+      "id": "1002718778",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764079934911"
+  }
+}
+{
+  "time": "2025-11-25T14:12:17.018Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130230328536",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4060051"
+    },
+    "transactionData": {
+      "id": "1002718778",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764079934911"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764079937018",
+    "userId": "8505701",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

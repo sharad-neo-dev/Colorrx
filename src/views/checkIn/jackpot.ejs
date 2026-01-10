@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Jackpot | Purple & Gold Theme | colorrx</title>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'app-bg': '#11131f',              
+            'header-gradient-start': '#3e1474', 
+            'header-gradient-end': '#101114',   
+            'card-bg': '#1d1f2b',             
+            'accent-purple': '#8b5cf6',       
+            'accent-gold': '#FFD700',         
+            'text-primary': '#ffffff',        
+            'text-muted': '#a0a0b0',          
+            'button-bg': '#2b0d59',           
+            'button-hover': '#3e1474',        
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+
+<body class="bg-app-bg text-text-primary flex justify-center min-h-screen">
+
+  <div class="app-container w-full max-w-md shadow-lg flex flex-col">
+
+    <!-- Header -->
+    <div class="sticky -top-1 z-10 flex items-center h-14 px-2"
+         style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+      <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <h2 class="flex-1 text-center text-white font-semibold text-lg">Super Jackpot</h2>
+      <span class="w-6"></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="p-4 flex flex-col space-y-4">
+
+      <!-- Info Section -->
+      <section>
+        <h2 class="text-3xl font-bold mb-2">Super Jackpot</h2>
+        <p class="text-sm mb-1 text-text-muted">
+          When you get the Super Jackpot in <span class="text-accent-gold font-semibold">$1000</span>,
+          you can get <span class="text-accent-gold font-semibold">1 additional bonus</span>.
+        </p>
+        <p class="text-sm text-text-muted">The reward is valid for 30 days. Claim it before it expires.</p>
+      </section>
+
+      <!-- Receive Button -->
+      <button class="flex items-center justify-center w-full py-3 bg-card-bg border border-gray-700 rounded-full shadow-sm text-text-primary font-semibold transition duration-150 hover:bg-[#26283a]">
+        <i class="fas fa-th-large mr-2 text-xl text-accent-gold"></i>
+        Receive in batches
+      </button>
+
+      <!-- Tabs with Links -->
+      <div class="flex bg-[#1a1b26] p-1 rounded-xl shadow-inner gap-2">
+        <a href="/jackpot/rules" class="flex-1 flex items-center justify-center py-2 px-4 bg-button-hover rounded-lg shadow-md text-text-primary font-bold text-sm border-2 border-transparent transition duration-150">
+          <i class="fas fa-file-alt mr-2 text-accent-gold"></i>
+          Rule
+        </a>
+        <a href="/jackpot/wining_star" class="flex-1 flex items-center justify-center py-2 px-4 bg-button-hover rounded-lg shadow-md text-text-primary font-bold text-sm border-2 border-transparent transition duration-150">
+          <i class="fas fa-crown mr-2 text-accent-gold"></i>
+          Winning star
+        </a>
+      </div>
+
+      <!-- Empty Jackpot Message -->
+      <div class="text-center py-8 px-4 bg-[#1a1b26] rounded-xl border border-dashed border-gray-700">
+        <p class="text-base font-semibold text-text-muted">You don't have a big jackpot yet — let's bet!</p>
+      </div>
+
+      <!-- Go Bet Button -->
+      <button class="flex items-center justify-center w-full py-3 text-white text-lg font-bold rounded-full shadow-lg mt-8 transition duration-200 transform hover:scale-[1.01] hover:shadow-xl bg-button-bg hover:bg-button-hover">
+        Go bet
+      </button>
+
+      <div class="h-24"></div>
+    </div>
+  </div>
+
+  <!-- Footer Include (EJS) -->
+  <%- include('../layout/footer.ejs') %>
+
+</body>
+</html>

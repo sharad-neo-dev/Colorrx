@@ -1,0 +1,174 @@
+{
+  "time": "2025-11-28T12:03:13.653Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "6337761",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W6855e7cf-433b-44ac-a691-e9711b4197a5",
+      "gameCode": "151165",
+      "description": "win",
+      "providerRoundId": "a1960f67-8769-40b8-929a-e478d5ce0947"
+    },
+    "transactionData": {
+      "id": "1005173933",
+      "amount": 32.7,
+      "referenceId": "1005173741"
+    },
+    "timestamp": "1764331392217"
+  }
+}
+{
+  "time": "2025-11-28T12:03:13.656Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "6337761",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W6855e7cf-433b-44ac-a691-e9711b4197a5",
+      "gameCode": "151165",
+      "description": "win",
+      "providerRoundId": "a1960f67-8769-40b8-929a-e478d5ce0947"
+    },
+    "transactionData": {
+      "id": "1005173933",
+      "amount": 32.7,
+      "referenceId": "1005173741"
+    },
+    "timestamp": "1764331392217"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764331393656",
+    "userId": "6337761",
+    "balance": 67.02000000000001,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-28T14:27:57.351Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "0954609",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV131172596467",
+      "gameCode": "aviator",
+      "description": "lose",
+      "providerRoundId": "4070902"
+    },
+    "transactionData": {
+      "id": "1005277503",
+      "amount": 0,
+      "referenceId": "1005277255"
+    },
+    "timestamp": "1764340074742"
+  }
+}
+{
+  "time": "2025-11-28T14:27:57.352Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "0954609",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV131172596467",
+      "gameCode": "aviator",
+      "description": "lose",
+      "providerRoundId": "4070902"
+    },
+    "transactionData": {
+      "id": "1005277503",
+      "amount": 0,
+      "referenceId": "1005277255"
+    },
+    "timestamp": "1764340074742"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764340077352",
+    "userId": "0954609",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-28T14:28:16.835Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "0954609",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV131172708087",
+      "gameCode": "aviator",
+      "description": "lose",
+      "providerRoundId": "4070903"
+    },
+    "transactionData": {
+      "id": "1005277748",
+      "amount": 0,
+      "referenceId": "1005277544"
+    },
+    "timestamp": "1764340094244"
+  }
+}
+{
+  "time": "2025-11-28T14:28:16.836Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "0954609",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV131172708087",
+      "gameCode": "aviator",
+      "description": "lose",
+      "providerRoundId": "4070903"
+    },
+    "transactionData": {
+      "id": "1005277748",
+      "amount": 0,
+      "referenceId": "1005277544"
+    },
+    "timestamp": "1764340094244"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764340096836",
+    "userId": "0954609",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

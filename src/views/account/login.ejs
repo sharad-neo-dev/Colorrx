@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | colorrx</title>
+    
+    
+    
+      <!-- ✅ Open Graph (Facebook, LinkedIn, Discord, etc.) -->
+  <meta property="og:title" content="Login | colorrx" />
+  <meta property="og:description" content="Access your colorrx account and enjoy exciting online gaming experiences across Lottery, Casino, and more." />
+  <meta property="og:image" content="https://www.colorrx.com/favicon.ico" />
+  <meta property="og:url" content="https://www.colorrx.com/login" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="colorrx" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Login | colorrx" />
+  <meta name="twitter:description" content="Sign in to your colorrx account and start playing your favorite games instantly." />
+  <meta name="twitter:image" content="https://www.colorrx.com/favicon.ico" />
+  <meta name="twitter:site" content="@colorrx" />
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background: #161822;
+        }
+        
+        .auth-bg {
+            background: url('img/Home/auth-bg.2558cc21.png') top center repeat-x, linear-gradient(to bottom, #44107a 55%, #161822 100%);
+            background-size: cover;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.5);
+            min-height: 500px;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+    <div class="auth-bg w-full h-full max-w-md">
+        <!-- Header -->
+        <div class="flex items-center h-14 mb-6 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+            <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+                <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-semibold text-lg">Login</h2>
+            <span class="w-6"></span>
+        </div>
+
+        <!-- Form -->
+        <div class="px-6 pb-6">
+            <form id="loginForm" class="border-b border-white border-opacity-20 pb-4">
+                <!-- Mobile -->
+                <div class="mb-4">
+                    <input id="username" type="tel" maxlength="10" pattern="[0-9]{10}" placeholder="Enter your 10-digit mobile number" class="w-full px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <p id="usernameError" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4 relative">
+                    <input id="password" type="password" placeholder="Enter Password" class="w-full px-4 py-3 text-lg bg-[#23222b] text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-600" />
+                    <span id="togglePassword" class="absolute right-4 top-3 text-white cursor-pointer">
+                        <i class="ri-eye-line"></i>
+                    </span>
+                    <p id="passwordError" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <p id="SubmitError" class="text-red-500 text-sm mt-1 hidden"></p>
+
+                <!-- Forgot password -->
+                <div class="text-right mt-2 mb-2">
+                    <a href="/forgot_reset" class="text-white hover:text-purple-300 text-sm underline">Forgot Password?</a>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full py-3 text-lg bg-[#a020f0] hover:bg-purple-700 text-white font-bold rounded transition">
+                    Login
+                </button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p class="text-sm text-white">
+                    Not a member?
+                    <a href="/register" class="text-purple-400 hover:text-purple-300 underline font-medium">Create account</a>
+                </p>
+            </div>
+
+            <div class="flex justify-center mt-6 mb-4">
+                <img src="img/Home/daman-red.png" alt="Logo" class="h-24" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Only allow numbers in mobile input
+        document.getElementById('username').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '');
+        });
+
+        // Toggle password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            togglePassword.innerHTML = type === 'password' ? '<i class="ri-eye-line"></i>' : '<i class="ri-eye-off-line"></i>';
+        });
+
+        // Error handling
+        function showFieldError(fieldId, message) {
+            const errorEl = document.getElementById(fieldId + 'Error');
+            errorEl.textContent = message;
+            errorEl.classList.remove('hidden');
+        }
+
+        function clearFieldError(fieldId) {
+            const errorEl = document.getElementById(fieldId + 'Error');
+            errorEl.textContent = '';
+            errorEl.classList.add('hidden');
+        }
+
+        // Cookie helper
+      //  function setCookie(name, value, days) {
+     //       const d = new Date();
+      //      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      //      document.cookie = name + "=" + value + ";path=/;expires=" + d.toUTCString();
+       // }
+function setCookie(name, value, days = 30) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); // Keep cookie for N days
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Lax`;
+}
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', async(e) => {
+            e.preventDefault();
+
+            // Clear previous errors
+            ['username', 'password', 'Submit'].forEach(clearFieldError);
+
+            const usernameVal = document.getElementById('username').value.trim();
+            const passwordVal = document.getElementById('password').value.trim();
+
+            let hasError = false;
+
+            if (!usernameVal) {
+                showFieldError('username', 'Mobile number is required');
+                hasError = true;
+            } else if (!/^[0-9]{10}$/.test(usernameVal)) {
+                showFieldError('username', 'Enter a valid 10-digit mobile number');
+                hasError = true;
+            }
+
+            if (!passwordVal) {
+                showFieldError('password', 'Password is required');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // API call
+          
+                const response = await fetch('/api/webapi/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: usernameVal,
+                        pwd: passwordVal
+                    })
+                });
+
+ 
+
+                const data = await response.json();
+
+                if (data.status === true) {
+                deleteCookie("token");
+                deleteCookie("auth");
+                    setCookie("token", data.token, 30);
+                    setCookie("auth", data.value, 30);
+                    showFieldError('Submit', data.message || "Login successful!");
+                    setTimeout(() => window.location.href = '/', 500);
+                } else {
+                    showFieldError('Submit', data.message || "Login failed");
+                }
+
+
+        });
+        
+        function deleteCookie(name) {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax`;
+}
+
+    </script>
+
+</body>
+
+</html>

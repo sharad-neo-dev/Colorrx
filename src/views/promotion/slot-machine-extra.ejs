@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Weekly | colorrx</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <style>
+  
+  
+*{
+  padding:0;
+  margin: 0;
+}
+body {
+    background-color: #121212;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    color: #fff;
+  }
+
+  .container {
+    max-width:400px !important;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    padding: 0 10px;
+    background: linear-gradient(180deg, rgb(22 0 51), rgb(0 3 22));
+  }
+
+  .sys-tab-menu {
+    display: flex;
+    gap: 5px;
+    background: transparent;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .sys-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60px;
+    background: #2b2b2b;
+    color: #aaa;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .sys-tab-item i {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .sys-tab-item:hover {
+    background: #3a3a3a;
+    color: #fff;
+  }
+
+  .sys-tab-item.active {
+    background: #7b5cff;
+    color: #fff;
+  }
+
+  .sys-tab-content {
+    display: none;
+    width:100%;
+    max-width: 500px;
+    margin: 0 auto;
+    /* background: #1d1d1d;
+    padding: 20px; */
+    border-radius: 12px;
+  }
+
+  .sys-tab-content.active {
+    display: block;
+  }
+  
+
+  .sys-rebate-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px;
+  }
+
+  /* Tabs */
+  .sys-rebate-tabs {
+    display: flex;
+    background: #141419;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+  }
+
+  .sys-tab-btn {
+    flex: 1;
+    background: transparent;
+    color: #aaa;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .sys-tab-btn.active {
+    background: linear-gradient(90deg, #7367f0, #8e2de2);
+    color: #fff;
+    /* font-weight: 600; */
+  }
+
+  /* Stat Box */
+  .sys-stat-box {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    border-radius: 12px;
+    padding: 20px 11px;
+    margin-bottom: 20px;
+  }
+  .sys-stat-box p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .sys-stat-box h3 {
+    color: #00e0ff;
+    margin: 4px 0 16px;
+    font-size: 22px;
+  }
+
+  /* Filter Box */
+  .sys-filter-box {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .sys-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .sys-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: rgb(8 10 39 / 62%);
+    border-radius: 8px;
+    padding:  12px;
+    color: #ccc;
+  }
+  .sys-input i {
+    margin-right: 6px;
+    color: #aaa;
+  }
+  .sys-input input, 
+  .sys-input select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  /* Table */
+  .sys-rebate-section table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .sys-rebate-section th, .sys-rebate-section td {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .sys-rebate-section th {
+    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
+    color: #bbb;
+    font-weight: 500;
+  }
+  .sys-rebate-section td {
+    background: rgb(8 10 39);
+    color: #aaa;
+  }
+  .sys-rebate-section td[colspan] {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Hide inactive content */
+  .sys-tab-content, .sys-rebate-section{
+    display: none;
+  }
+  .sys-tab-content.active, .sys-rebate-section.active{
+    display: block;
+  }
+   .agency-policy-title[data-v-cacbc52e] {
+    background-image: url("data:image/png;base64,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");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    margin: 1px -16px;
+    text-align: center;
+}
+.agency-policy .agency-policy-separator[data-v-cacbc52e]{
+    background: radial-gradient(50% 75% at 50% 50%, #5c46e700 0, #5c46e7 .01%, #5c46e700 100%);
+    height: 2px;
+}
+.sys-table-head{
+  font-size:13px;
+}
+.sys-tab-content th, .sys-tab-content td {
+    font-size: 12px;
+    color: #ffff;
+    text-align: center;
+}
+.rebate-example-table[data-v-cacbc52e] {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: calc(100% - 5px);
+}
+.rebate-example-table td[data-v-cacbc52e] {
+    border: 1px solid #fff;
+    font-size: 16px;
+    padding: 4px 6px;
+}
+  @media (max-width:425px){
+    .sys-rebate-container {
+      padding: 7px;
+  }
+  
+  }
+
+  
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+    <%- include('../layout/header.ejs') %>
+  <div class="container"style="
+    margin-top: 75px;
+">
+  <div class="max-w-7xl mx-auto ">
+          <div class="mb-2 -mx-[10px]">
+            <img src="https://files.conjlnuljy.com/promo/5/f562aecd-aaa1-463e-a992-d7454cc60911.png" alt="Image" class="w-full h-auto shadow-lg">
+        </div>
+        <div class="text-[25px] text-yellow-400 text-start">Slot Machine Extra Rebate</div>
+        <div class="mt-3 mb-3 bg-gray-300/10 rounded-lg p-2">
+        <div class="flex items-center gap-2 text-[12px] text-start text-center">
+          <span class=""><img class="h-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAMAAABhTZc9AAABzlBMVEUAAAD7g0r+3tf/0cD/vX7/toD/uXv9klr/1rz/ybL/v4j/sIj+pW3/2NH/z5P/zLz+tYT9nmf/m137mnj7nnX9m27/yIH+29b93dX7jmX5fEn+18j/4cP91MD+yrf9rHT6g0/+18j+z8L+qW//zZX/wov/wG7/vG//s3j/27D+28v/zLX/0Lj/4sX+07v/z5f/zIn+tHj7nYD/0av/0LX9vJP/zqH9mVL4gE7/xKT/vpv90rr5jlz/yYD/1qj/x6H/zpj/mFD/pnn/5tb/z4v/sIL/2LL/xpP/wn7/tY3/1rj/rnT/yYz/jUL/pGT/z5X0gFX/sYD/i0j/r4r/j0D/vXv/oYb/v3D/v0D/+/z/9vf/+vr/9/j/+Pn/9fX/8/X//v7/8vP//P3/7u//8PH/+fr+5uf+18/+6+z/7ev+4uT9297+39r+3tj+5OP+3uD92tz9zML/unL/8vD+7Oj+6ef+497+4N392Nb92s3+08z/2MH+0rz/zrn/0Z77r5n/t4v+sn76mX7/p2r95eD90Mf+y7j7w7j7xLX/1a7/1qH/xZ//yZn/uZT/x43+u4z8sYT/qoT/yYP/wXv9q3j/r3X8qHX/sXD/tGv/rGZ+Fbx0AAAAWXRSTlMA/fzeQDn+/ODBsHFuIyD+/v7+/fz8+vf08/Hw7+/v7+/s5uXf39/c2dPPz8e/v7+4sq6ro6Cbm5qUlI2If3BkY2NfXVpaVlBPTERCPjo4NTAuLiMgHxMQBL4QruoAAAGASURBVCjPxcllUysxFIDhtLT45bob7u7u7g5Zy2Z96y3u7u7wb+kytA39zvBMcmbOecHbmqjL+pPX8rwMtFomyTiW4TtdPViKAxVNIKFg9fAyvZOosZEPdx++/IpvzCyy1t5G+u59x93BOLK+9Wnj4/Wy06W45v6em6K2bo6ig9V6EWXaWHIhyEu8wCkrZ+tfT1beBer4z8SUBRHyPG/2f0Yy/zd9fh+sYNC6IAqOaUHQBQF6BfzDUlkMQqIVCIVpaJjiINTyAaHDwWgwZBs7LUQtsdG6SvtBY8w6aaWGqNmaLMv+O7e2xtEGMYeov0Vd1WWZ1Tc3MctOeRelCKImaQzFGmYd7JMXNUJhGMyEyFoMUUvd1PwiFaDuM2IVUXvmJYriAo+CvLMfEHLtiMM7nMExQ/M4BpCGVBuam0FIFRHag5R5FLwQr7oxQsgrIYSV710gTOyyxyZKGIs2z25DeEz4llad7Lbb7Z5/ZVfl4bU3tR2Avra45mEACuvBq3sEGECA6pE4qVgAAAAASUVORK5CYII=" style="flex: 1"></span>
+          <span>Rebate issuance time: <span class="text-yellow-300">00:30 AM the next day</span></span>
+        </div>
+        
+      </div>
+      <div class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3">
+        <table class="min-w-full table-auto">
+            <thead>
+                <tr class="text-left bg-purple-800 text-lg">
+                    <th class="px-3 py-1 font-medium sys-table-head text-center"><img style="width: 29px;height: auto;margin: 0 auto;padding: 0px 0px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAMAAABBJv+bAAACEFBMVEUAAABYZoNnc5bw+/+wxN/D1uq7xdT1/v/G1erO4O3O3uv2///c4+qnu9i0w+L////T4fOpudijqryUqbvN0+bA1+zR5vbw+//I2e1+iLK70OfK0OTw+//FytaTp8ju+v+rv9q5zua2yuPq7vTx/P/V5O+5xNbF2+7x+/+kuNDk6/bw+//u7/W+zuOEibHf6fSFi6G/0ea0vMrF2e27z+aCkqtMV3v2+fxNWYHL3PBwgpiyxtmtwc6+1Om5wdy2yO3x+//T6PjF1Ouwv9vc7/3U6vnH3fDK2e6zw92sttiqu9fm9f/3+v3Y7fzQ5fbM4vS5yeK3xt+qtNamt9Ocqszz+//p8v3b7fvR5/fR4/TG0/DI1+zI0+e+zuW9zOO7y+Orwt2tvdmotNSosdSis9GUpMPv9vvl8PnW6fnO4vTF2vC/ze7D2e3D0ui1z+jAz+ewzOWjtdKlr9KesdGhrs6ktM2dp8yUqciOncF3jLt1hrRugLBqfbD////0/f/r9v/7/P7f8v7g8v3u8/rj7PXX4fTS3PTc5/PI4PPI2fPJ3/Ld4/HR4fHM3fDK1vDW5O29yuzX3eu/1uvB1OqyxOq7yOi3zubP1eWqu+TBzuO7zuCbstynudiwvtaltNWksdOfr9Cjq86hqc6cssugr8mWpcSGnsGVqL6Job5+lrx9jrp/ibN3gKx0g6RqeptTX5ShKSlhAAAAQHRSTlMAXln97NtnVjUkHx0SDQgF/f37+/jz7+7t6eTa2c/Gv7q2rKelo6GWko2MhoSCfXZ1b2pmZV5bWllYVFA+Ox0OZpPgIgAAAYBJREFUKM9ioBPg1LfDI8shmsXKi1OWhzXHzU0dp7ThpJwufz9LHLK8Um5u/hGuYhwMRrJsDAzm0nrIsvy6/o5+fo6+vhJqE7unG2iJLJREktUREmhq9HV09XWJzJ0ZExPj7Lmogg8hrdzi7e3t4uqYkdHr5Jzi4e7hWVZsj5Bmd0jzaXdxDW/ti8pNBEo7e5axIBnOzezgUxvpmh6V7R7rlRLonugZoojsMpm6MB+f9LYJndFxXoWB7p5BC4yRXQ6YSqh3WENz9hTH6HigdHRQ0BwuZGlth3qXsKgZWX5OAV7BAU5JyRCrEW5jDnecOts/EiQdn59cpIQize3gEB6RV9CR6RSfGBwblzTfBDVQxUNdgNJumU6xzsH5gUHzbFGl5UN7EpatLC8OCUlNdU5KFuRElVaN8/BISJg2OcA5pKJk9Ro5PlRpjbT+WYtXlJeWLlmaOrekSAEtQtmE162vqayqXFVdU121drkmRmqxsWJkZGJisjBjNLXmYhgEAAC3JGlY6TfxFAAAAABJRU5ErkJggg==">  </th>
+                    <th class="px-3 py-1 font-semibold sys-table-head text-center">Rebate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-purple-600 text-sm">
+                    <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">1%</td>
+                </tr>
+                <tr class="bg-purple-800 border-t border-purple-500 text-sm">
+                  <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">1%</td>
+                </tr>
+                <tr class="border-t border-purple-600 text-sm">
+                   <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">1%</td>
+                </tr>
+                <tr class="bg-purple-800 border-t border-purple-500 text-sm">
+                   <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">2%</td>
+                </tr>
+                <tr class="border-t border-purple-600 text-sm">
+                   <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">3%</td>
+                </tr>
+                <tr class="bg-purple-800 border-t border-purple-500 text-sm">
+                   <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">3%</td>
+                </tr>
+                <tr class="border-t border-purple-600 text-sm">
+                    <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">3%</td>
+                </tr>
+                <tr class="bg-purple-800 border-t border-purple-500 text-sm">
+                    <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">4%</td>
+                </tr>
+                <tr class="border-t border-purple-600 text-sm">
+                    <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">1%</td>
+                </tr>
+                <tr class="bg-purple-800 border-t border-purple-500 text-sm">
+                    <td class="px-3 py-1">VIP 0</td>
+                    <td class="px-3 py-1">4%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <div class="agency-policy">
+          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
+            <div class="agency-policy-title" data-v-cacbc52e="">Event Rules</div>
+            <div class="agency-policy-separator" data-v-cacbc52e=""></div>
+        </div>
+
+        <div class="text-white rounded-lg mt-5 mb-5 text-start">
+            <div class="mt-5 space-y-4 text-sm text-gray-300">
+                <ol class="list-decimal pl-5 space-y-3">
+                  <li>
+                    Receive extra rebate bonuses based on VIP level. Example: VIP1 original rebate is 0.2%.
+                </li>
+                <li>
+                 Only applies to slot machine bets.
+               </li>
+               <li>
+                 Withdrawal requirement: To withdraw the bonus, you must complete a 1x turnover. For example, if you receive a bonus of 1000rs, you need to bet 1000 RS to be eligible for withdrawal.(Only slot count towards the wager,except two side betting slot games)
+               </li>
+                <li>
+                If any user or organization engages in arbitrage through improper methods, the platform reserves the right to freeze the relevant account without notice and no refunds. The player will be blacklisted.  
+               </li>
+               <li>
+                 55ACE reserves the final right of interpretation for this event and may modify the event details or terminate the event without further notice.
+               </li>
+              </ol>
+            </div>
+        </div>
+      
+</div>
+    </div>
+         <%- include('../layout/footer.ejs') %> 
+</body>
+</html>

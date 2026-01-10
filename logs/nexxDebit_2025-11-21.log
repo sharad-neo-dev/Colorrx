@@ -1,0 +1,4350 @@
+{
+  "time": "2025-11-21T11:06:25.295Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949174364",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044988"
+    },
+    "transactionData": {
+      "id": "999234341",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723182883"
+  }
+}
+{
+  "time": "2025-11-21T11:06:25.297Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949174364",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044988"
+    },
+    "transactionData": {
+      "id": "999234341",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723182883"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763723185297",
+    "userId": "8528055",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T11:08:25.400Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949668182",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044994"
+    },
+    "transactionData": {
+      "id": "999235650",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723303050"
+  }
+}
+{
+  "time": "2025-11-21T11:08:25.402Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949668182",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044994"
+    },
+    "transactionData": {
+      "id": "999235650",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723303050"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763723305402",
+    "userId": "8528055",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T11:08:51.271Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949759797",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044995"
+    },
+    "transactionData": {
+      "id": "999235885",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723328800"
+  }
+}
+{
+  "time": "2025-11-21T11:08:51.274Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949759797",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044995"
+    },
+    "transactionData": {
+      "id": "999235885",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1763723328800"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763723331274",
+    "userId": "8528055",
+    "balance": 13.600000000000001,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T11:09:09.354Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949836283",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044996"
+    },
+    "transactionData": {
+      "id": "999236105",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763723346884"
+  }
+}
+{
+  "time": "2025-11-21T11:09:09.356Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949836283",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044996"
+    },
+    "transactionData": {
+      "id": "999236105",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763723346884"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763723349356",
+    "userId": "8528055",
+    "balance": 3.5999999999999996,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T11:09:34.796Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949931988",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044997"
+    },
+    "transactionData": {
+      "id": "999236359",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763723372438"
+  }
+}
+{
+  "time": "2025-11-21T11:09:34.797Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8528055",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV128949931988",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4044997"
+    },
+    "transactionData": {
+      "id": "999236359",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763723372438"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763723374797",
+    "userId": "8528055",
+    "balance": 8.100000000000001,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:16:54.442Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV129000258635",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4045462"
+    },
+    "transactionData": {
+      "id": "999369583",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763734612054"
+  }
+}
+{
+  "time": "2025-11-21T14:16:54.445Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV129000258635",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4045462"
+    },
+    "transactionData": {
+      "id": "999369583",
+      "amount": 10,
+      "referenceId": ""
+    },
+    "timestamp": "1763734612054"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734614445",
+    "userId": "4057118",
+    "balance": 40,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:21:21.570Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d0b3529c-c066-49f2-b056-0b102f4ccec8",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b1af18a1-01be-4444-8183-ef935b6bebd7"
+    },
+    "transactionData": {
+      "id": "999372778",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734880191"
+  }
+}
+{
+  "time": "2025-11-21T14:21:21.572Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d0b3529c-c066-49f2-b056-0b102f4ccec8",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b1af18a1-01be-4444-8183-ef935b6bebd7"
+    },
+    "transactionData": {
+      "id": "999372778",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734880191"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734881572",
+    "userId": "4057118",
+    "balance": 52.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:21:28.895Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "40c17f93-2a2c-4be7-a253-018c888eab09",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "0b5365a5-0240-4769-b8b8-34a0ee97e24e"
+    },
+    "transactionData": {
+      "id": "999372856",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734887476"
+  }
+}
+{
+  "time": "2025-11-21T14:21:28.897Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "40c17f93-2a2c-4be7-a253-018c888eab09",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "0b5365a5-0240-4769-b8b8-34a0ee97e24e"
+    },
+    "transactionData": {
+      "id": "999372856",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734887476"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734888897",
+    "userId": "4057118",
+    "balance": 50.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:21:43.005Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "275a99fc-211b-4818-861e-374a21094c17",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "33f5f257-c5b8-4aa8-a129-8ee9090fb682"
+    },
+    "transactionData": {
+      "id": "999373041",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734901692"
+  }
+}
+{
+  "time": "2025-11-21T14:21:43.008Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "275a99fc-211b-4818-861e-374a21094c17",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "33f5f257-c5b8-4aa8-a129-8ee9090fb682"
+    },
+    "transactionData": {
+      "id": "999373041",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734901692"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734903008",
+    "userId": "4057118",
+    "balance": 68.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:21:55.581Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c881439e-568c-425f-b1f4-1263def2471a",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "3cf6f917-e049-42f4-94ab-30d7db12c0ab"
+    },
+    "transactionData": {
+      "id": "999373172",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734914215"
+  }
+}
+{
+  "time": "2025-11-21T14:21:55.583Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c881439e-568c-425f-b1f4-1263def2471a",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "3cf6f917-e049-42f4-94ab-30d7db12c0ab"
+    },
+    "transactionData": {
+      "id": "999373172",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734914215"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734915583",
+    "userId": "4057118",
+    "balance": 78.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:02.263Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d6748ff7-6018-49fd-b912-0e125f94313c",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7821fd13-b5e2-4533-8514-977ffe3b9462"
+    },
+    "transactionData": {
+      "id": "999373248",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734920878"
+  }
+}
+{
+  "time": "2025-11-21T14:22:02.266Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d6748ff7-6018-49fd-b912-0e125f94313c",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7821fd13-b5e2-4533-8514-977ffe3b9462"
+    },
+    "transactionData": {
+      "id": "999373248",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734920878"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734922266",
+    "userId": "4057118",
+    "balance": 76.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:08.248Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "794365a7-1c7a-440b-b4f4-9c8623db5a3d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "72da1eb5-6ed7-47bc-bd32-892c05d7a93f"
+    },
+    "transactionData": {
+      "id": "999373395",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734926924"
+  }
+}
+{
+  "time": "2025-11-21T14:22:08.252Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "794365a7-1c7a-440b-b4f4-9c8623db5a3d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "72da1eb5-6ed7-47bc-bd32-892c05d7a93f"
+    },
+    "transactionData": {
+      "id": "999373395",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734926924"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734928252",
+    "userId": "4057118",
+    "balance": 74.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:15.128Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8163cf4d-d922-4123-897f-a7d6c81ffa55",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "ae6bfa34-409e-4c05-afab-a70982fba488"
+    },
+    "transactionData": {
+      "id": "999373451",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734933778"
+  }
+}
+{
+  "time": "2025-11-21T14:22:15.131Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8163cf4d-d922-4123-897f-a7d6c81ffa55",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "ae6bfa34-409e-4c05-afab-a70982fba488"
+    },
+    "transactionData": {
+      "id": "999373451",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734933778"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734935131",
+    "userId": "4057118",
+    "balance": 72.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:20.838Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8dfdb139-d1a7-4ea2-b082-b9459faf9fb8",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7498e82b-874b-42ac-bef4-7b06b2c95a54"
+    },
+    "transactionData": {
+      "id": "999373523",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734939546"
+  }
+}
+{
+  "time": "2025-11-21T14:22:20.840Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8dfdb139-d1a7-4ea2-b082-b9459faf9fb8",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7498e82b-874b-42ac-bef4-7b06b2c95a54"
+    },
+    "transactionData": {
+      "id": "999373523",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734939546"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734940840",
+    "userId": "4057118",
+    "balance": 70.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:28.285Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "7d8b408d-b99c-4946-9083-fd449e8ea795",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "cc7b926b-5d71-4917-ab45-aba3d2f69b51"
+    },
+    "transactionData": {
+      "id": "999373633",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734947006"
+  }
+}
+{
+  "time": "2025-11-21T14:22:28.287Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "7d8b408d-b99c-4946-9083-fd449e8ea795",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "cc7b926b-5d71-4917-ab45-aba3d2f69b51"
+    },
+    "transactionData": {
+      "id": "999373633",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734947006"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734948287",
+    "userId": "4057118",
+    "balance": 68.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:44.993Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "548bd766-f60b-4aa1-aa90-b7c0d37c12ad",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d38e7a82-7ca5-45e3-9241-fa1d2c1b695e"
+    },
+    "transactionData": {
+      "id": "999373798",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734963573"
+  }
+}
+{
+  "time": "2025-11-21T14:22:44.996Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "548bd766-f60b-4aa1-aa90-b7c0d37c12ad",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d38e7a82-7ca5-45e3-9241-fa1d2c1b695e"
+    },
+    "transactionData": {
+      "id": "999373798",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734963573"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734964996",
+    "userId": "4057118",
+    "balance": 98.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:51.152Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5ecfe8d3-b758-4436-b92e-23999a445d74",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1f919435-61c6-4755-9bfd-1cbff1d4c76a"
+    },
+    "transactionData": {
+      "id": "999373895",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734969770"
+  }
+}
+{
+  "time": "2025-11-21T14:22:51.154Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5ecfe8d3-b758-4436-b92e-23999a445d74",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1f919435-61c6-4755-9bfd-1cbff1d4c76a"
+    },
+    "transactionData": {
+      "id": "999373895",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734969770"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734971154",
+    "userId": "4057118",
+    "balance": 96.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:22:57.725Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "1bd5dfc5-8d4e-4df4-a31d-b3ac0018ec4b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "2dfd6ff0-9225-4f58-bdd8-631581c816c4"
+    },
+    "transactionData": {
+      "id": "999373966",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734976444"
+  }
+}
+{
+  "time": "2025-11-21T14:22:57.726Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "1bd5dfc5-8d4e-4df4-a31d-b3ac0018ec4b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "2dfd6ff0-9225-4f58-bdd8-631581c816c4"
+    },
+    "transactionData": {
+      "id": "999373966",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734976444"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734977726",
+    "userId": "4057118",
+    "balance": 94.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:04.131Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e466eec4-d3e2-4949-abe0-25f2b64fc7b7",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b838f256-d2c3-4f1a-8554-a4b0ea9ebb6e"
+    },
+    "transactionData": {
+      "id": "999374014",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734982871"
+  }
+}
+{
+  "time": "2025-11-21T14:23:04.134Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e466eec4-d3e2-4949-abe0-25f2b64fc7b7",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b838f256-d2c3-4f1a-8554-a4b0ea9ebb6e"
+    },
+    "transactionData": {
+      "id": "999374014",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734982871"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734984134",
+    "userId": "4057118",
+    "balance": 92.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:10.566Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "2fb568ab-03cd-4ac2-b58c-043bd81e89ee",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "c5dd226d-bc75-4249-8876-a9abcdec5e07"
+    },
+    "transactionData": {
+      "id": "999374095",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734989149"
+  }
+}
+{
+  "time": "2025-11-21T14:23:10.568Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "2fb568ab-03cd-4ac2-b58c-043bd81e89ee",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "c5dd226d-bc75-4249-8876-a9abcdec5e07"
+    },
+    "transactionData": {
+      "id": "999374095",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734989149"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734990568",
+    "userId": "4057118",
+    "balance": 90.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:16.089Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8d738086-17cf-4890-a1f0-d62c7c4b3b33",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "549f3136-0f1b-47d0-a680-86732476eb7f"
+    },
+    "transactionData": {
+      "id": "999374161",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734994732"
+  }
+}
+{
+  "time": "2025-11-21T14:23:16.092Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8d738086-17cf-4890-a1f0-d62c7c4b3b33",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "549f3136-0f1b-47d0-a680-86732476eb7f"
+    },
+    "transactionData": {
+      "id": "999374161",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763734994732"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763734996092",
+    "userId": "4057118",
+    "balance": 88.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:26.675Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "de6102fb-10c1-48ec-bb36-167d1bdfc409",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "904d85e4-1e47-44fc-a8c5-e21c01a31675"
+    },
+    "transactionData": {
+      "id": "999374309",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735005264"
+  }
+}
+{
+  "time": "2025-11-21T14:23:26.676Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "de6102fb-10c1-48ec-bb36-167d1bdfc409",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "904d85e4-1e47-44fc-a8c5-e21c01a31675"
+    },
+    "transactionData": {
+      "id": "999374309",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735005264"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735006676",
+    "userId": "4057118",
+    "balance": 94.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:32.458Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "ba0b2b6b-f9a4-4d04-848d-38322790e414",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "8bbc6746-42a4-482d-81df-da6735d5ac9c"
+    },
+    "transactionData": {
+      "id": "999374368",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735011180"
+  }
+}
+{
+  "time": "2025-11-21T14:23:32.460Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "ba0b2b6b-f9a4-4d04-848d-38322790e414",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "8bbc6746-42a4-482d-81df-da6735d5ac9c"
+    },
+    "transactionData": {
+      "id": "999374368",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735011180"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735012460",
+    "userId": "4057118",
+    "balance": 92.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:38.246Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "1167a1d9-213b-486a-ae46-fef850c195fa",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5c0d8983-8c3b-4139-94d1-b2c867848e0e"
+    },
+    "transactionData": {
+      "id": "999374427",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735016977"
+  }
+}
+{
+  "time": "2025-11-21T14:23:38.248Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "1167a1d9-213b-486a-ae46-fef850c195fa",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5c0d8983-8c3b-4139-94d1-b2c867848e0e"
+    },
+    "transactionData": {
+      "id": "999374427",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735016977"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735018248",
+    "userId": "4057118",
+    "balance": 90.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:44.284Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "02d12573-e65c-4fba-ad51-9461422ce217",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "ce1d041d-993b-4e37-814f-531989a43713"
+    },
+    "transactionData": {
+      "id": "999374494",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735022961"
+  }
+}
+{
+  "time": "2025-11-21T14:23:44.286Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "02d12573-e65c-4fba-ad51-9461422ce217",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "ce1d041d-993b-4e37-814f-531989a43713"
+    },
+    "transactionData": {
+      "id": "999374494",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735022961"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735024286",
+    "userId": "4057118",
+    "balance": 88.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:49.767Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c5b4b8b3-1285-4416-bf77-5220ab476268",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e6133f23-398f-46b8-9c28-65f44b7249f0"
+    },
+    "transactionData": {
+      "id": "999374568",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735028468"
+  }
+}
+{
+  "time": "2025-11-21T14:23:49.770Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c5b4b8b3-1285-4416-bf77-5220ab476268",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e6133f23-398f-46b8-9c28-65f44b7249f0"
+    },
+    "transactionData": {
+      "id": "999374568",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735028468"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735029770",
+    "userId": "4057118",
+    "balance": 86.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:23:58.122Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "4281fe7f-32a9-48df-8d91-80b68b89b6db",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7221d6ef-abf8-458e-9156-c3e8bf10dd7f"
+    },
+    "transactionData": {
+      "id": "999374707",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735036740"
+  }
+}
+{
+  "time": "2025-11-21T14:23:58.124Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "4281fe7f-32a9-48df-8d91-80b68b89b6db",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "7221d6ef-abf8-458e-9156-c3e8bf10dd7f"
+    },
+    "transactionData": {
+      "id": "999374707",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735036740"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735038124",
+    "userId": "4057118",
+    "balance": 84.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:03.023Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c362219d-b4fc-4557-a55e-617600bdf16f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "6fbf52ad-607e-441d-aef9-405f772732a8"
+    },
+    "transactionData": {
+      "id": "999374751",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735041635"
+  }
+}
+{
+  "time": "2025-11-21T14:24:03.027Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c362219d-b4fc-4557-a55e-617600bdf16f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "6fbf52ad-607e-441d-aef9-405f772732a8"
+    },
+    "transactionData": {
+      "id": "999374751",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735041635"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735043027",
+    "userId": "4057118",
+    "balance": 82.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:07.660Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a0db60e1-37bd-4ab1-ad79-606ad082f6e3",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "54c119f5-3a06-4ed1-9bff-2b681ee7ab79"
+    },
+    "transactionData": {
+      "id": "999374786",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735046388"
+  }
+}
+{
+  "time": "2025-11-21T14:24:07.662Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a0db60e1-37bd-4ab1-ad79-606ad082f6e3",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "54c119f5-3a06-4ed1-9bff-2b681ee7ab79"
+    },
+    "transactionData": {
+      "id": "999374786",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735046388"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735047662",
+    "userId": "4057118",
+    "balance": 80.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:12.224Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b9c7c95b-d492-4639-9936-5499503f9340",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b909c033-a111-4a76-91f8-a8730d658210"
+    },
+    "transactionData": {
+      "id": "999374826",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735050864"
+  }
+}
+{
+  "time": "2025-11-21T14:24:12.226Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b9c7c95b-d492-4639-9936-5499503f9340",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b909c033-a111-4a76-91f8-a8730d658210"
+    },
+    "transactionData": {
+      "id": "999374826",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735050864"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735052226",
+    "userId": "4057118",
+    "balance": 78.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:17.046Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d1a0f374-5f56-4fa0-a25b-c25e9fb96b2d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "4094f5b8-5ca6-4ee4-a502-6d2d05c22a10"
+    },
+    "transactionData": {
+      "id": "999374905",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735055659"
+  }
+}
+{
+  "time": "2025-11-21T14:24:17.048Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d1a0f374-5f56-4fa0-a25b-c25e9fb96b2d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "4094f5b8-5ca6-4ee4-a502-6d2d05c22a10"
+    },
+    "transactionData": {
+      "id": "999374905",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735055659"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735057048",
+    "userId": "4057118",
+    "balance": 76.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:21.398Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "da59c9ed-7c4f-4821-a77c-58cdab3e2aec",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "0829549b-d038-4d0f-9883-b1d319f7b1e4"
+    },
+    "transactionData": {
+      "id": "999374987",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735060037"
+  }
+}
+{
+  "time": "2025-11-21T14:24:21.400Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "da59c9ed-7c4f-4821-a77c-58cdab3e2aec",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "0829549b-d038-4d0f-9883-b1d319f7b1e4"
+    },
+    "transactionData": {
+      "id": "999374987",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735060037"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735061400",
+    "userId": "4057118",
+    "balance": 74.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:26.176Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d3d1c256-347d-439d-9fe7-4ced42e1d430",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "64866e5d-e60a-4afc-aa2d-94cab2bba246"
+    },
+    "transactionData": {
+      "id": "999375044",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735064859"
+  }
+}
+{
+  "time": "2025-11-21T14:24:26.178Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d3d1c256-347d-439d-9fe7-4ced42e1d430",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "64866e5d-e60a-4afc-aa2d-94cab2bba246"
+    },
+    "transactionData": {
+      "id": "999375044",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735064859"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735066178",
+    "userId": "4057118",
+    "balance": 72.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:31.194Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "cacb4f03-5647-4d45-9d09-818c66a5ad63",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "34c0bd8a-42c1-4e64-ac7c-67062ae9c274"
+    },
+    "transactionData": {
+      "id": "999375103",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735069753"
+  }
+}
+{
+  "time": "2025-11-21T14:24:31.197Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "cacb4f03-5647-4d45-9d09-818c66a5ad63",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "34c0bd8a-42c1-4e64-ac7c-67062ae9c274"
+    },
+    "transactionData": {
+      "id": "999375103",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735069753"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735071197",
+    "userId": "4057118",
+    "balance": 70.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:40.311Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a0c1c726-e654-4f76-9d94-d6d32dc3bb71",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "22bea352-2c24-4d06-acee-5cd9e1f9fd19"
+    },
+    "transactionData": {
+      "id": "999375224",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735078947"
+  }
+}
+{
+  "time": "2025-11-21T14:24:40.313Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a0c1c726-e654-4f76-9d94-d6d32dc3bb71",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "22bea352-2c24-4d06-acee-5cd9e1f9fd19"
+    },
+    "transactionData": {
+      "id": "999375224",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735078947"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735080313",
+    "userId": "4057118",
+    "balance": 68.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:50.964Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b54c98b0-ae18-446a-b7ff-c3bd0789aecf",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f7774427-b1c5-4794-a8b1-107b299ecbae"
+    },
+    "transactionData": {
+      "id": "999375379",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735089638"
+  }
+}
+{
+  "time": "2025-11-21T14:24:50.967Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b54c98b0-ae18-446a-b7ff-c3bd0789aecf",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f7774427-b1c5-4794-a8b1-107b299ecbae"
+    },
+    "transactionData": {
+      "id": "999375379",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735089638"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735090967",
+    "userId": "4057118",
+    "balance": 63.599999999999994,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:24:56.483Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "dada39af-01ba-49d2-8680-2b9658e9e71c",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b12e41a1-72b9-4d43-b2d9-10b42d687845"
+    },
+    "transactionData": {
+      "id": "999375432",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735095088"
+  }
+}
+{
+  "time": "2025-11-21T14:24:56.485Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "dada39af-01ba-49d2-8680-2b9658e9e71c",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "b12e41a1-72b9-4d43-b2d9-10b42d687845"
+    },
+    "transactionData": {
+      "id": "999375432",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735095088"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735096485",
+    "userId": "4057118",
+    "balance": 58.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:02.184Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c5810d17-bb60-4d1b-8aca-c73c57eecd7e",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "fef26181-1a87-425d-8c17-3a3bee967530"
+    },
+    "transactionData": {
+      "id": "999375501",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735100893"
+  }
+}
+{
+  "time": "2025-11-21T14:25:02.188Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c5810d17-bb60-4d1b-8aca-c73c57eecd7e",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "fef26181-1a87-425d-8c17-3a3bee967530"
+    },
+    "transactionData": {
+      "id": "999375501",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735100893"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735102188",
+    "userId": "4057118",
+    "balance": 53.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:07.269Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "6f74e4c1-9032-4a3d-8445-4c0097e5d3fa",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f79e8c81-77b6-4320-a2b0-ad743aa66129"
+    },
+    "transactionData": {
+      "id": "999375553",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735105973"
+  }
+}
+{
+  "time": "2025-11-21T14:25:07.271Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "6f74e4c1-9032-4a3d-8445-4c0097e5d3fa",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f79e8c81-77b6-4320-a2b0-ad743aa66129"
+    },
+    "transactionData": {
+      "id": "999375553",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735105973"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735107271",
+    "userId": "4057118",
+    "balance": 48.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:13.395Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "f8d9e447-59bb-492e-9353-5dad65b0521b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "64ba1439-747a-41d1-8e55-5ca047ca0827"
+    },
+    "transactionData": {
+      "id": "999375623",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735112024"
+  }
+}
+{
+  "time": "2025-11-21T14:25:13.398Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "f8d9e447-59bb-492e-9353-5dad65b0521b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "64ba1439-747a-41d1-8e55-5ca047ca0827"
+    },
+    "transactionData": {
+      "id": "999375623",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735112024"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735113398",
+    "userId": "4057118",
+    "balance": 43.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:19.223Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "36a628d0-1fe9-4a41-abef-7fadc572b22b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "22082bc9-300e-41db-83ed-79517d69b08a"
+    },
+    "transactionData": {
+      "id": "999375694",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735117871"
+  }
+}
+{
+  "time": "2025-11-21T14:25:19.225Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "36a628d0-1fe9-4a41-abef-7fadc572b22b",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "22082bc9-300e-41db-83ed-79517d69b08a"
+    },
+    "transactionData": {
+      "id": "999375694",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735117871"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735119225",
+    "userId": "4057118",
+    "balance": 38.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:25.312Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "3abdd6bd-5f94-47fe-bcd2-e77d2d115c3a",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "55cee476-df8d-40e6-bb5c-639ac98872e9"
+    },
+    "transactionData": {
+      "id": "999375783",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735123943"
+  }
+}
+{
+  "time": "2025-11-21T14:25:25.315Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "3abdd6bd-5f94-47fe-bcd2-e77d2d115c3a",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "55cee476-df8d-40e6-bb5c-639ac98872e9"
+    },
+    "transactionData": {
+      "id": "999375783",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735123943"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735125315",
+    "userId": "4057118",
+    "balance": 33.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:41.243Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d6408ac4-1fde-44ed-baaa-88e280b5c5e3",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "846b5785-9cc8-415b-a9c2-e0624d3298ca"
+    },
+    "transactionData": {
+      "id": "999375965",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735139876"
+  }
+}
+{
+  "time": "2025-11-21T14:25:41.245Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d6408ac4-1fde-44ed-baaa-88e280b5c5e3",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "846b5785-9cc8-415b-a9c2-e0624d3298ca"
+    },
+    "transactionData": {
+      "id": "999375965",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735139876"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735141245",
+    "userId": "4057118",
+    "balance": 71.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:46.604Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "f968b16d-de22-4be4-9346-9459f8a308de",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5323303e-2d3a-430c-bc26-16f2d3f4f347"
+    },
+    "transactionData": {
+      "id": "999376015",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735145230"
+  }
+}
+{
+  "time": "2025-11-21T14:25:46.607Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "f968b16d-de22-4be4-9346-9459f8a308de",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5323303e-2d3a-430c-bc26-16f2d3f4f347"
+    },
+    "transactionData": {
+      "id": "999376015",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735145230"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735146607",
+    "userId": "4057118",
+    "balance": 69.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:52.429Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "fad30731-9f3d-4f8a-9696-c6be05e58892",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "23da3a68-164c-45f6-8665-031ef121732d"
+    },
+    "transactionData": {
+      "id": "999376076",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735151050"
+  }
+}
+{
+  "time": "2025-11-21T14:25:52.432Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "fad30731-9f3d-4f8a-9696-c6be05e58892",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "23da3a68-164c-45f6-8665-031ef121732d"
+    },
+    "transactionData": {
+      "id": "999376076",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735151050"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735152432",
+    "userId": "4057118",
+    "balance": 67.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:25:58.530Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5a86aa8f-af8d-4ead-abcd-49065c7eb4f9",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "a287ec0d-65fd-4621-9b3c-8a4297feb2ae"
+    },
+    "transactionData": {
+      "id": "999376174",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735157131"
+  }
+}
+{
+  "time": "2025-11-21T14:25:58.532Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5a86aa8f-af8d-4ead-abcd-49065c7eb4f9",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "a287ec0d-65fd-4621-9b3c-8a4297feb2ae"
+    },
+    "transactionData": {
+      "id": "999376174",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735157131"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735158532",
+    "userId": "4057118",
+    "balance": 65.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:04.085Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "865cc5fd-424c-41cb-9b79-9c02e9a2a776",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "9892bf60-8789-4d2b-ac36-a142bdaf6529"
+    },
+    "transactionData": {
+      "id": "999376224",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735162736"
+  }
+}
+{
+  "time": "2025-11-21T14:26:04.088Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "865cc5fd-424c-41cb-9b79-9c02e9a2a776",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "9892bf60-8789-4d2b-ac36-a142bdaf6529"
+    },
+    "transactionData": {
+      "id": "999376224",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735162736"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735164088",
+    "userId": "4057118",
+    "balance": 63.599999999999994,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:09.606Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "2429a109-2a82-4c55-927b-2631fdc2b2c4",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "82295131-6050-43e2-91c2-780f387a616c"
+    },
+    "transactionData": {
+      "id": "999376314",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735168174"
+  }
+}
+{
+  "time": "2025-11-21T14:26:09.608Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "2429a109-2a82-4c55-927b-2631fdc2b2c4",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "82295131-6050-43e2-91c2-780f387a616c"
+    },
+    "transactionData": {
+      "id": "999376314",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735168174"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735169608",
+    "userId": "4057118",
+    "balance": 61.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:14.849Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "0f72bf68-0b9b-4c7f-acee-5549fb2a8193",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e402f729-979a-43d3-b688-58eaea97becc"
+    },
+    "transactionData": {
+      "id": "999376443",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735173578"
+  }
+}
+{
+  "time": "2025-11-21T14:26:14.853Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "0f72bf68-0b9b-4c7f-acee-5549fb2a8193",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e402f729-979a-43d3-b688-58eaea97becc"
+    },
+    "transactionData": {
+      "id": "999376443",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735173578"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735174853",
+    "userId": "4057118",
+    "balance": 59.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:20.157Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "372489dd-4670-4137-9f5e-c857d5c2b2d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "10effb83-9441-4104-9682-a31198babd3a"
+    },
+    "transactionData": {
+      "id": "999376507",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735178886"
+  }
+}
+{
+  "time": "2025-11-21T14:26:20.160Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "372489dd-4670-4137-9f5e-c857d5c2b2d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "10effb83-9441-4104-9682-a31198babd3a"
+    },
+    "transactionData": {
+      "id": "999376507",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735178886"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735180160",
+    "userId": "4057118",
+    "balance": 57.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:27.063Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b5d65f1f-0b46-49d7-9491-73db34709725",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "731b6589-3d4a-4b34-a69a-ba9a44a9ba5c"
+    },
+    "transactionData": {
+      "id": "999376579",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735185789"
+  }
+}
+{
+  "time": "2025-11-21T14:26:27.065Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b5d65f1f-0b46-49d7-9491-73db34709725",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "731b6589-3d4a-4b34-a69a-ba9a44a9ba5c"
+    },
+    "transactionData": {
+      "id": "999376579",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735185789"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735187065",
+    "userId": "4057118",
+    "balance": 55.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:32.667Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d5fa132f-b556-488c-9f61-2b0accf213d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "738204d1-54d7-4732-8fac-d697fd2f6d78"
+    },
+    "transactionData": {
+      "id": "999376650",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735191395"
+  }
+}
+{
+  "time": "2025-11-21T14:26:32.671Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "d5fa132f-b556-488c-9f61-2b0accf213d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "738204d1-54d7-4732-8fac-d697fd2f6d78"
+    },
+    "transactionData": {
+      "id": "999376650",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735191395"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735192671",
+    "userId": "4057118",
+    "balance": 53.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:40.309Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "0cbb725f-c880-4778-be15-b8e80271f230",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f7409010-834c-43b0-a5d6-cde77b7a19e4"
+    },
+    "transactionData": {
+      "id": "999376750",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735199023"
+  }
+}
+{
+  "time": "2025-11-21T14:26:40.310Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "0cbb725f-c880-4778-be15-b8e80271f230",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "f7409010-834c-43b0-a5d6-cde77b7a19e4"
+    },
+    "transactionData": {
+      "id": "999376750",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735199023"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735200310",
+    "userId": "4057118",
+    "balance": 51.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:46.324Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "cf31f14b-5783-47bb-9328-c7500989bf7f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d8cda660-7875-45aa-8558-dcb622c06512"
+    },
+    "transactionData": {
+      "id": "999376821",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735205046"
+  }
+}
+{
+  "time": "2025-11-21T14:26:46.326Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "cf31f14b-5783-47bb-9328-c7500989bf7f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d8cda660-7875-45aa-8558-dcb622c06512"
+    },
+    "transactionData": {
+      "id": "999376821",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735205046"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735206326",
+    "userId": "4057118",
+    "balance": 49.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:52.561Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5509af42-9db2-41be-9e45-4d3db3c54129",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "45fc8544-a5db-4016-9377-b9677efc47e0"
+    },
+    "transactionData": {
+      "id": "999376932",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735211204"
+  }
+}
+{
+  "time": "2025-11-21T14:26:52.563Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5509af42-9db2-41be-9e45-4d3db3c54129",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "45fc8544-a5db-4016-9377-b9677efc47e0"
+    },
+    "transactionData": {
+      "id": "999376932",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735211204"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735212563",
+    "userId": "4057118",
+    "balance": 47.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:26:58.603Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "09ecbf48-2e31-446e-8fd7-bc48ac346604",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "adf6d88b-62dc-4a39-b51d-b23f8ba1b895"
+    },
+    "transactionData": {
+      "id": "999376986",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735217313"
+  }
+}
+{
+  "time": "2025-11-21T14:26:58.605Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "09ecbf48-2e31-446e-8fd7-bc48ac346604",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "adf6d88b-62dc-4a39-b51d-b23f8ba1b895"
+    },
+    "transactionData": {
+      "id": "999376986",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735217313"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735218605",
+    "userId": "4057118",
+    "balance": 45.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:04.664Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "6f532b66-3451-43a9-b8ef-9f86ab36a2f9",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e6755a4d-d1f7-4a98-9d86-ad817b018400"
+    },
+    "transactionData": {
+      "id": "999377041",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735223230"
+  }
+}
+{
+  "time": "2025-11-21T14:27:04.667Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "6f532b66-3451-43a9-b8ef-9f86ab36a2f9",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "e6755a4d-d1f7-4a98-9d86-ad817b018400"
+    },
+    "transactionData": {
+      "id": "999377041",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763735223230"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735224667",
+    "userId": "4057118",
+    "balance": 43.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:19.954Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "9e958bf8-2ace-4620-8a0a-a3778083ecb6",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "472f0ee1-5e9c-4c32-aba7-d669f84c0b77"
+    },
+    "transactionData": {
+      "id": "999377181",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735238684"
+  }
+}
+{
+  "time": "2025-11-21T14:27:19.956Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "9e958bf8-2ace-4620-8a0a-a3778083ecb6",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "472f0ee1-5e9c-4c32-aba7-d669f84c0b77"
+    },
+    "transactionData": {
+      "id": "999377181",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735238684"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735239956",
+    "userId": "4057118",
+    "balance": 50.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:27.740Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c065cc3f-0a94-4ff7-a3eb-9ccc5cda5c49",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "08751121-c8a2-4a20-9eda-6c453ef9e7b8"
+    },
+    "transactionData": {
+      "id": "999377244",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735246354"
+  }
+}
+{
+  "time": "2025-11-21T14:27:27.743Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c065cc3f-0a94-4ff7-a3eb-9ccc5cda5c49",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "08751121-c8a2-4a20-9eda-6c453ef9e7b8"
+    },
+    "transactionData": {
+      "id": "999377244",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735246354"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735247742",
+    "userId": "4057118",
+    "balance": 45.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:39.133Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "7c2495aa-24bf-475a-ab57-3b8885d12a8f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "080578fe-e770-4a56-b291-f8e0841b2189"
+    },
+    "transactionData": {
+      "id": "999377388",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735257762"
+  }
+}
+{
+  "time": "2025-11-21T14:27:39.135Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "7c2495aa-24bf-475a-ab57-3b8885d12a8f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "080578fe-e770-4a56-b291-f8e0841b2189"
+    },
+    "transactionData": {
+      "id": "999377388",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735257762"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735259135",
+    "userId": "4057118",
+    "balance": 60.599999999999994,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:44.304Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a860c3c5-7270-4730-80c6-82613a5af87f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "25b34a7b-7892-4684-8f20-a22a4fd96e8b"
+    },
+    "transactionData": {
+      "id": "999377440",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735263050"
+  }
+}
+{
+  "time": "2025-11-21T14:27:44.306Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "a860c3c5-7270-4730-80c6-82613a5af87f",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "25b34a7b-7892-4684-8f20-a22a4fd96e8b"
+    },
+    "transactionData": {
+      "id": "999377440",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735263050"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735264306",
+    "userId": "4057118",
+    "balance": 55.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:50.702Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8e8aad74-6da6-4aa7-968f-1588dc1b2a38",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d4ab96d7-6e26-46c4-9106-c7e1516d8778"
+    },
+    "transactionData": {
+      "id": "999377507",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735269320"
+  }
+}
+{
+  "time": "2025-11-21T14:27:50.704Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "8e8aad74-6da6-4aa7-968f-1588dc1b2a38",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d4ab96d7-6e26-46c4-9106-c7e1516d8778"
+    },
+    "transactionData": {
+      "id": "999377507",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735269320"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735270704",
+    "userId": "4057118",
+    "balance": 50.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:27:55.832Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e34c379c-4f4b-4441-ad16-8dad7c2b63d4",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1c683b9e-ad89-47e2-9223-8e17bafdff2c"
+    },
+    "transactionData": {
+      "id": "999377565",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735274527"
+  }
+}
+{
+  "time": "2025-11-21T14:27:55.834Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e34c379c-4f4b-4441-ad16-8dad7c2b63d4",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1c683b9e-ad89-47e2-9223-8e17bafdff2c"
+    },
+    "transactionData": {
+      "id": "999377565",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735274527"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735275834",
+    "userId": "4057118",
+    "balance": 45.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:01.296Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5da501b4-c841-4f91-8219-6d9b30bee771",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1e2b41d6-80ee-4494-a218-49cf53326387"
+    },
+    "transactionData": {
+      "id": "999377613",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735280004"
+  }
+}
+{
+  "time": "2025-11-21T14:28:01.301Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5da501b4-c841-4f91-8219-6d9b30bee771",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "1e2b41d6-80ee-4494-a218-49cf53326387"
+    },
+    "transactionData": {
+      "id": "999377613",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735280004"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735281300",
+    "userId": "4057118",
+    "balance": 40.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:07.106Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5d0497dd-8518-40f6-bdc1-f4b6a30062f2",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "8fea329b-9f9d-414b-923c-0330384eb2e8"
+    },
+    "transactionData": {
+      "id": "999377676",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735285688"
+  }
+}
+{
+  "time": "2025-11-21T14:28:07.108Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5d0497dd-8518-40f6-bdc1-f4b6a30062f2",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "8fea329b-9f9d-414b-923c-0330384eb2e8"
+    },
+    "transactionData": {
+      "id": "999377676",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735285688"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735287108",
+    "userId": "4057118",
+    "balance": 35.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:12.945Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c9643e3c-451d-4a99-8dd9-52f83955f3dc",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "001b6d78-d0c6-4ea8-9588-0df3c11042ce"
+    },
+    "transactionData": {
+      "id": "999377736",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735291555"
+  }
+}
+{
+  "time": "2025-11-21T14:28:12.947Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "c9643e3c-451d-4a99-8dd9-52f83955f3dc",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "001b6d78-d0c6-4ea8-9588-0df3c11042ce"
+    },
+    "transactionData": {
+      "id": "999377736",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735291555"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735292947",
+    "userId": "4057118",
+    "balance": 30.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:18.588Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5a9d8ed8-3239-4269-9d9c-5d2d2ffa17d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "802e2a92-63e2-42b4-82ca-9b7b2dc476bc"
+    },
+    "transactionData": {
+      "id": "999377774",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735297317"
+  }
+}
+{
+  "time": "2025-11-21T14:28:18.593Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "5a9d8ed8-3239-4269-9d9c-5d2d2ffa17d5",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "802e2a92-63e2-42b4-82ca-9b7b2dc476bc"
+    },
+    "transactionData": {
+      "id": "999377774",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735297317"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735298593",
+    "userId": "4057118",
+    "balance": 25.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:24.183Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "12b9aa71-539c-44ff-a010-a3a9d0ff710e",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "988769a9-3783-4b13-a5a4-ee969575474e"
+    },
+    "transactionData": {
+      "id": "999377824",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735302891"
+  }
+}
+{
+  "time": "2025-11-21T14:28:24.185Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "12b9aa71-539c-44ff-a010-a3a9d0ff710e",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "988769a9-3783-4b13-a5a4-ee969575474e"
+    },
+    "transactionData": {
+      "id": "999377824",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735302891"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735304185",
+    "userId": "4057118",
+    "balance": 20.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:29.431Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b0dbaf90-349b-48a9-bcb5-113312eba9eb",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "42270523-5dac-4dec-aa06-144f935eca3d"
+    },
+    "transactionData": {
+      "id": "999377870",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735308039"
+  }
+}
+{
+  "time": "2025-11-21T14:28:29.432Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "b0dbaf90-349b-48a9-bcb5-113312eba9eb",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "42270523-5dac-4dec-aa06-144f935eca3d"
+    },
+    "transactionData": {
+      "id": "999377870",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735308039"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735309432",
+    "userId": "4057118",
+    "balance": 15.600000000000001,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:35.344Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "aac5fd9c-b803-49c2-b49c-27399179f70d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "111de0e8-3538-4059-82b3-d51d4a8257a0"
+    },
+    "transactionData": {
+      "id": "999377922",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735314066"
+  }
+}
+{
+  "time": "2025-11-21T14:28:35.347Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "aac5fd9c-b803-49c2-b49c-27399179f70d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "111de0e8-3538-4059-82b3-d51d4a8257a0"
+    },
+    "transactionData": {
+      "id": "999377922",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735314066"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735315347",
+    "userId": "4057118",
+    "balance": 10.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:41.432Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e5dcef92-a6a5-490b-bfb9-1005e3eeed9d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5f8ae4a2-027d-4669-b374-08eae22531f7"
+    },
+    "transactionData": {
+      "id": "999378004",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735320068"
+  }
+}
+{
+  "time": "2025-11-21T14:28:41.433Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "e5dcef92-a6a5-490b-bfb9-1005e3eeed9d",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "5f8ae4a2-027d-4669-b374-08eae22531f7"
+    },
+    "transactionData": {
+      "id": "999378004",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735320068"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735321433",
+    "userId": "4057118",
+    "balance": 5.6,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T14:28:46.734Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "42f4c0a9-b719-4957-9e0f-d99092b7d2de",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d8d56dd5-8b87-4dbe-ab8b-478c0728ec38"
+    },
+    "transactionData": {
+      "id": "999378104",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735325356"
+  }
+}
+{
+  "time": "2025-11-21T14:28:46.736Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "4057118",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SMTSG",
+      "providerTransactionId": "42f4c0a9-b719-4957-9e0f-d99092b7d2de",
+      "gameCode": "MultiHot5",
+      "description": "bet",
+      "providerRoundId": "d8d56dd5-8b87-4dbe-ab8b-478c0728ec38"
+    },
+    "transactionData": {
+      "id": "999378104",
+      "amount": 5,
+      "referenceId": ""
+    },
+    "timestamp": "1763735325356"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763735326736",
+    "userId": "4057118",
+    "balance": 0.5999999999999996,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T22:19:10.763Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "GT",
+      "providerTransactionId": "92336f1f-6306-4f5d-a6c5-e1e5a8408815",
+      "gameCode": "multiblitz7s",
+      "description": "bet",
+      "providerRoundId": "eu_kalambaKL6e523f4e-adc9-42ef-91f1-732283e961d8"
+    },
+    "transactionData": {
+      "id": "999708494",
+      "amount": 30,
+      "referenceId": ""
+    },
+    "timestamp": "1763763548516"
+  }
+}
+{
+  "time": "2025-11-21T22:19:10.765Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "GT",
+      "providerTransactionId": "92336f1f-6306-4f5d-a6c5-e1e5a8408815",
+      "gameCode": "multiblitz7s",
+      "description": "bet",
+      "providerRoundId": "eu_kalambaKL6e523f4e-adc9-42ef-91f1-732283e961d8"
+    },
+    "transactionData": {
+      "id": "999708494",
+      "amount": 30,
+      "referenceId": ""
+    },
+    "timestamp": "1763763548516"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763763550765",
+    "userId": "2755751",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T22:20:32.617Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "QT",
+      "providerTransactionId": "6920e5a954ec2f0001d3ca22",
+      "gameCode": "MSG-minesblast",
+      "description": "bet",
+      "providerRoundId": "6920e5a954ec2f0001d3ca21"
+    },
+    "transactionData": {
+      "id": "999708832",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763763626288"
+  }
+}
+{
+  "time": "2025-11-21T22:20:32.618Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "QT",
+      "providerTransactionId": "6920e5a954ec2f0001d3ca22",
+      "gameCode": "MSG-minesblast",
+      "description": "bet",
+      "providerRoundId": "6920e5a954ec2f0001d3ca21"
+    },
+    "transactionData": {
+      "id": "999708832",
+      "amount": 2,
+      "referenceId": ""
+    },
+    "timestamp": "1763763626288"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763763632618",
+    "userId": "2755751",
+    "balance": 18,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-21T22:20:43.916Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "QT",
+      "providerTransactionId": "6920e5baf48aa80001359703",
+      "gameCode": "MSG-minesblast",
+      "description": "cancel",
+      "providerRoundId": "6920e5a954ec2f0001d3ca21"
+    },
+    "transactionData": {
+      "id": "999708889",
+      "amount": 2,
+      "referenceId": "999708832"
+    },
+    "timestamp": "1763763642479"
+  }
+}
+{
+  "time": "2025-11-21T22:20:43.918Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2755751",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "QT",
+      "providerTransactionId": "6920e5baf48aa80001359703",
+      "gameCode": "MSG-minesblast",
+      "description": "cancel",
+      "providerRoundId": "6920e5a954ec2f0001d3ca21"
+    },
+    "transactionData": {
+      "id": "999708889",
+      "amount": 2,
+      "referenceId": "999708832"
+    },
+    "timestamp": "1763763642479"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763763643918",
+    "userId": "2755751",
+    "balance": 16,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

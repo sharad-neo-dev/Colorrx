@@ -1,0 +1,178 @@
+{
+  "time": "2025-11-24T11:00:47.346Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "receivedId": "35"
+  }
+}
+{
+  "time": "2025-11-24T11:00:47.350Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "isAvailable": true,
+    "withdrawal": {
+      "id": 35,
+      "orderId": "20251012210038397269893",
+      "phoneNumber": "1234567890",
+      "status": 0,
+      "bankName": "Punjab National Bank",
+      "recipientName": "Jagdeep Singh",
+      "bankAccountNumber": "775500010004623",
+      "IFSC": "PUNB0775500",
+      "upiId": "--",
+      "type": "BANK_CARD",
+      "time": "1763799966495",
+      "today": "2025-11-24 1:56:06 PM",
+      "amount": 999,
+      "remarks": "Manual Pay"
+    }
+  }
+}
+{
+  "time": "2025-11-24T11:00:47.364Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "signedParams": {
+      "merchantCode": "S820251025125903000005",
+      "orderNum": "20251012210038397269893",
+      "bankCode": "PUNB0775500",
+      "bankAccount": "775500010004623",
+      "bankUsername": "JagdeepSingh",
+      "orderAmount": "999.00",
+      "callback": "https://ace11.in/api/webapi/payment/top/withdrawNotify",
+      "timestamp": "1763982047",
+      "sign": "ceCECcwMACktz6KXOmd+3toze+ozxsbz4yHFh4F/Y51/Ydb2h2VeEXUkyJ8Gp8PrB6CqotYv9LZGc6X4po2psYWfdFqhsjiK/AcrQS6s86FDT/r+FvPh2+GmtzDIG7k49nX1K0Zvk9s8fyFJqNk9EBXZJfbbuS4puZSJyK3p5jjUWVgQPQee15/CG0hzYF3e83Jx8v/vTIT9tGoqkoMrf55v/+Zea+1m3sAm0w+ByRW+JyEtXexdPsszX/Qtra9mVzJBRv0HN83Z/UuWd0G4QGmxEPpEOPLQddvKHAM6ySuLYF/m0JMX4rxVCRLC1Kjf9y5d/pe6o8D55bAJx5OJXkfSQyFrFjxuKKtpgiJxGg8YvkGqYIs2JtqXsbLPAFHRHikAZtHJf3HjkoSgvMqhIGApf8W8R4z+kXadXRVNFLgD3G2Nz1D6tANN8qt4sv2V/OEfxrVzISQJh6rB2kUO6jTkIW302E1T+XLZQsebzQxZ5cXOI66SGQJ8B2ifZt3zYxZfCz/G/Dusp7/625WqsPJ8+0qPu4Cc8UelFJ0CZudSQ51rCaIf8yEv70hcc4IkqChqvd8lULGigXFres+onm7JAdtddkGKDeQVPvVbCOTy+P6y94JftdpPHpkhTuHiJRA2o7u0djYehkkDmlZ1DeWBSviX/jollwaG8e6K/AY="
+    }
+  }
+}
+{
+  "time": "2025-11-24T11:00:47.812Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "responseJson": "{\"code\":0,\"message\":null,\"data\":{\"platOrderNum\":\"LOAN1442590765418831872\"}}"
+  }
+}
+{
+  "time": "2025-11-24T11:00:47.815Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "success": true,
+    "message": "Withdraw request sent successfully to TopPay",
+    "platformOrder": "LOAN1442590765418831872",
+    "details": {
+      "code": 0,
+      "message": null,
+      "data": {
+        "platOrderNum": "LOAN1442590765418831872"
+      }
+    }
+  }
+}
+{
+  "time": "2025-11-24T11:00:58.122Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "receivedId": "35"
+  }
+}
+{
+  "time": "2025-11-24T11:00:58.125Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "isAvailable": true,
+    "withdrawal": {
+      "id": 35,
+      "orderId": "20251012210038397269893",
+      "phoneNumber": "1234567890",
+      "status": 0,
+      "bankName": "Punjab National Bank",
+      "recipientName": "Jagdeep Singh",
+      "bankAccountNumber": "775500010004623",
+      "IFSC": "PUNB0775500",
+      "upiId": "--",
+      "type": "BANK_CARD",
+      "time": "1763799966495",
+      "today": "2025-11-24 1:56:06 PM",
+      "amount": 999,
+      "remarks": "Manual Pay"
+    }
+  }
+}
+{
+  "time": "2025-11-24T11:00:58.131Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "signedParams": {
+      "merchantCode": "S820251025125903000005",
+      "orderNum": "20251012210038397269893",
+      "bankCode": "PUNB0775500",
+      "bankAccount": "775500010004623",
+      "bankUsername": "JagdeepSingh",
+      "orderAmount": "999.00",
+      "callback": "https://ace11.in/api/webapi/payment/top/withdrawNotify",
+      "timestamp": "1763982058",
+      "sign": "ceCECcwMACktz6KXOmd+3toze+ozxsbz4yHFh4F/Y51/Ydb2h2VeEXUkyJ8Gp8PrB6CqotYv9LZGc6X4po2psYWfdFqhsjiK/AcrQS6s86FDT/r+FvPh2+GmtzDIG7k49nX1K0Zvk9s8fyFJqNk9EBXZJfbbuS4puZSJyK3p5jjUWVgQPQee15/CG0hzYF3e83Jx8v/vTIT9tGoqkoMrf55v/+Zea+1m3sAm0w+ByRW+JyEtXexdPsszX/Qtra9mVzJBRv0HN83Z/UuWd0G4QGmxEPpEOPLQddvKHAM6ySuLYF/m0JMX4rxVCRLC1Kjf9y5d/pe6o8D55bAJx5OJXhzIyldtP4UIRMwQOtn9D6dKEtICnnDBir6XQxudjsnXenA+PjPUgh9JZvNhLkF8LxQ+Br/iZl0th51kNwu9OJO708lsm8S/QU7k6mB4rZHJJvtzZUwJ/D7kRoYgIwiPfKDRuAbJJl1UDoVgRZw+vGhSrxnH33BSdNct+IEhQerZOd7zjzZ+1H7ZMamDRD1aCr6XgvopR+x1sgEUOP1xL8ss0EDRcF7JGY05FAIJgAxVFVH+1RcD480Uu+fzBpsK93hsK0qcZnmgIIBc0w7adb344WRtmqHcYocmoGMYat9qoAAYgFEmzx69bi+whuYEM2ZCUVILJvpmQI8V15JzOjM="
+    }
+  }
+}
+{
+  "time": "2025-11-24T11:00:58.276Z",
+  "ip": "::1",
+  "url": "/api/webapi/admin/withdraw/top",
+  "method": "POST",
+  "body": {
+    "id": "35"
+  },
+  "query": {},
+  "response": {
+    "responseJson": "{\"code\":999,\"message\":\"订单号重复\",\"data\":null}"
+  }
+}

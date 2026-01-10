@@ -1,0 +1,7 @@
+[2025-11-13T23:13:31.711Z] ❌ Error: invite code not provided
+Stack: Error: invite code not provided
+    at getUserByInviteCode (file:///www/ace11/src/controllers/payment2Controller.js:1215:11)
+    at addUserAccountBalance (file:///www/ace11/src/controllers/payment2Controller.js:1156:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async topnotify (file:///www/ace11/src/controllers/payment2Controller.js:499:7)
+

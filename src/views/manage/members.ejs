@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Members list</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+
+    <style>
+      .block-click {
+        pointer-events: none;
+      }
+      .action-btn {
+        margin: 2px;
+      }
+    </style>
+  </head>
+
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <%- include('nav') %>
+
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Members list</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="filter-row"
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 10px;
+          "
+        >
+          <div class="form-group" style="text-align: center">
+            <input
+              type="text"
+              id="search"
+              placeholder="Enter the member you are looking for"
+              style="padding: 6px; width: 280px"
+            />
+          </div>
+
+          <div style="text-align: center; margin-bottom: 10px">
+            <select id="filter" style="padding: 6px; border-radius: 5px">
+              <option value="">All Users</option>
+              <option value="today">Today Join</option>
+              <option value="week">Weekly Join</option>
+              <option value="month">Monthly Join</option>
+              <option value="custom">Custom Date</option>
+            </select>
+
+            <input
+              type="date"
+              id="fromDate"
+              style="display: none; margin-left: 10px"
+            />
+            <input
+              type="date"
+              id="toDate"
+              style="display: none; margin-left: 10px"
+            />
+          </div>
+        </div>
+
+        <section class="content">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Members list</h3>
+            </div>
+
+            <div class="card-body p-0" style="overflow-y: hidden">
+              <table class="table table-striped projects" id="table1">
+                <thead>
+                  <tr>
+                    <th class="text-center">S.No</th>
+                    <th class="text-center">User ID</th>
+                    <th class="text-center">Account</th>
+                    <th class="text-center">Level</th>
+                    <th class="text-center">Amount</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Password</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <nav
+              style="margin-top: 20px; display: flex; justify-content: center"
+            >
+              <ul class="pagination table1">
+                <li class="page-item previous" id="previous">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+
+                <div id="numbers" style="display: flex">
+                  <li class="page-item">
+                    <a class="page-link active text-white" id="text-page"></a>
+                  </li>
+                </div>
+
+                <li class="page-item next" id="next">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/js/admin/admin.js"></script>
+    <!-- original code without filter -->
+    <!-- <script>
+      const Render = (datas) => {
+        let html = "";
+        if (!datas || datas.length === 0) {
+          $("tbody").html(html);
+          return;
+        }
+
+        datas.map((data) => {
+          html += `
+          <tr class="text-center">
+
+            <td>${data.id_user}</td>
+
+            <td><b style="color:#2003db">${data.phone}</b></td>
+
+            <td><b class="${data.level == 1 ? "text-danger" : ""}">
+              ${data.level == 1 ? "ADMIN" : "USER"}</b>
+            </td>
+
+            <td><b>${data.money}</b></td>
+
+            <td>
+              ${
+                data.status == 1
+                  ? '<span class="badge badge-success">Active</span>'
+                  : '<span class="badge badge-warning">Banned</span>'
+              }
+            </td>
+
+            <td><b style="color:#2003db">${data.plain_password}</b></td>
+
+            <td class="project-actions text-center" style="min-width:150px">
+
+              <a href="/admin/member/info/${data.phone}" 
+                 class="btn btn-primary btn-sm action-btn">
+                 <i class="fas fa-folder"></i> Profile
+              </a>
+
+              ${
+                data.status == 1
+                  ? `<button class="btn btn-warning btn-sm ban-btn action-btn" data-id="${data.id}" data-phone="${data.phone}">
+                     <i class="fas fa-ban"></i> Ban
+                   </button>`
+                  : `<button class="btn btn-success btn-sm unban-btn action-btn" data-id="${data.id}" data-phone="${data.phone}">
+                   <i class="fas fa-unlock"></i> Unban
+                 </button>`
+              }
+
+              <button class="btn btn-danger btn-sm delete-btn action-btn"
+                      data-id="${data.id}" data-phone="${data.phone}">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+
+            </td>
+
+          </tr>
+          `;
+        });
+
+        $("tbody").html(html);
+
+        // BAN
+        $(".ban-btn").click(function () {
+          let id = $(this).data("id");
+          Swal.fire({
+            title: "Ban this user?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ban",
+          }).then((res) => {
+            if (res.isConfirmed) {
+              $.post(
+                "/api/webapi/admin/banned",
+                { id, type: "close" },
+                (resp) => {
+                  Swal.fire(resp.message);
+                  location.reload();
+                },
+              );
+            }
+          });
+        });
+
+        // UNBAN
+        $(".unban-btn").click(function () {
+          let id = $(this).data("id");
+          Swal.fire({
+            title: "Unban this user?",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonText: "Unban",
+          }).then((res) => {
+            if (res.isConfirmed) {
+              $.post(
+                "/api/webapi/admin/banned",
+                { id, type: "open" },
+                (resp) => {
+                  Swal.fire(resp.message);
+                  location.reload();
+                },
+              );
+            }
+          });
+        });
+
+        // DELETE
+        $(".delete-btn").click(function () {
+          let id = $(this).data("id");
+
+          Swal.fire({
+            title: "Delete this user permanently?",
+            text: "This action cannot be undone!",
+            icon: "error",
+            showCancelButton: true,
+            confirmButtonText: "Delete",
+          }).then((res) => {
+            if (res.isConfirmed) {
+              $.post("/api/webapi/admin/deleteUser", { id }, (resp) => {
+                Swal.fire(resp.message);
+                location.reload();
+              });
+            }
+          });
+        });
+      };
+
+      // Pagination & search logic
+      let pageno = 1;
+      let limit = 30;
+      let searchMember = "";
+
+      const loadPage = (page, search = "", type = "") => {
+        if (type == "Next") page++;
+        if (type == "Previous") page--;
+
+        $.post(
+          "/api/webapi/admin/listMember",
+          { typeid: "1", pageno: page, limit, search, language: "vi" },
+          function (response) {
+            pageno = page;
+            $("#text-page").text(page + " / " + response.page_total);
+            if (response.status) Render(response.datas);
+          },
+        );
+      };
+
+      loadPage(pageno, searchMember);
+
+      $("#next").click((e) => {
+        e.preventDefault();
+        loadPage(pageno, searchMember, "Next");
+      });
+      $("#previous").click((e) => {
+        e.preventDefault();
+        if (pageno > 1) loadPage(pageno, searchMember, "Previous");
+      });
+
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      const searchTable = debounce(function () {
+        searchMember = $(this).val().trim();
+        loadPage(1, searchMember);
+      }, 500);
+
+      $("#search").keyup(searchTable);
+    </script> -->
+    <script>
+      let allUsers = [];
+      let filteredUsers = [];
+      let currentPage = 1;
+      let rowsPerPage = 30;
+
+      // FIXED universal date parser (works for MySQL and ISO date)
+      const onlyDate = (str) => new Date(str).toISOString().split("T")[0];
+      const toDate = (str) => new Date(str);
+
+      const loadData = () => {
+        $.post(
+          "/api/webapi/admin/listMember",
+          { typeid: "1", pageno: 1, limit: 999999 },
+          (res) => {
+            if (res.status) {
+              allUsers = res.datas;
+              filteredUsers = [...allUsers];
+
+              renderTable(filteredUsers);
+            }
+          },
+        );
+      };
+      loadData();
+
+      // FILTER
+      $("#filter").change(() => {
+        const isCustom = $("#filter").val() === "custom";
+        $("#fromDate").toggle(isCustom);
+        $("#toDate").toggle(isCustom);
+
+        applyFilter();
+      });
+
+      $("#fromDate").change(applyFilter);
+      $("#toDate").change(applyFilter);
+
+      function applyFilter() {
+        const type = $("#filter").val();
+        const today = new Date().toISOString().split("T")[0];
+        const customDate = $("#customDate").val();
+
+        filteredUsers = [...allUsers];
+
+        if (type === "today") {
+          filteredUsers = filteredUsers.filter(
+            (u) => onlyDate(u.today) === today,
+          );
+        }
+
+        if (type === "week") {
+          const weekAgo = new Date();
+          weekAgo.setDate(weekAgo.getDate() - 7);
+          filteredUsers = filteredUsers.filter(
+            (u) => toDate(u.today) >= weekAgo,
+          );
+        }
+
+        if (type === "month") {
+          const now = new Date();
+          filteredUsers = filteredUsers.filter((u) => {
+            const d = toDate(u.today);
+            return (
+              d.getMonth() === now.getMonth() &&
+              d.getFullYear() === now.getFullYear()
+            );
+          });
+        }
+
+        if (type === "custom") {
+          const from = $("#fromDate").val();
+          const to = $("#toDate").val();
+
+          if (from && to) {
+            filteredUsers = filteredUsers.filter((u) => {
+              const d = onlyDate(u.today);
+              return d >= from && d <= to;
+            });
+          }
+        }
+
+        currentPage = 1;
+        renderTable(filteredUsers);
+      }
+
+      // SEARCH
+      function debounce(fn, delay) {
+        let t;
+        return function (...args) {
+          clearTimeout(t);
+          t = setTimeout(() => fn.apply(this, args), delay);
+        };
+      }
+
+      $("#search").keyup(
+        debounce(function () {
+          const search = $(this).val().trim();
+          filteredUsers = allUsers.filter((u) => u.phone.includes(search));
+          currentPage = 1;
+          renderTable(filteredUsers);
+        }, 400),
+      );
+
+      // TABLE + PAGINATION
+      function renderTable(data) {
+        const start = (currentPage - 1) * rowsPerPage;
+        const part = data.slice(start, start + rowsPerPage);
+
+        let html = "";
+        part.forEach((user, i) => {
+          html += `
+      <tr class="text-center">
+        <td>${start + i + 1}</td>
+        <td>${user.id_user}</td>
+        <td><b>${user.phone}</b></td>
+        <td>${user.level == 1 ? "ADMIN" : "USER"}</td>
+        <td>${user.money}</td>
+        <td>${user.status == 1 ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Banned</span>'}</td>
+        <td>${user.plain_password}</td>
+        <td>
+          <a href="/admin/member/info/${user.phone}" class="btn btn-primary btn-sm action-btn">  <i class="fas fa-folder"></i> Profile</a>
+          ${
+            user.status == 1
+              ? `<button class="btn btn-warning btn-sm ban-btn" data-id="${user.id}"> <i class="fas fa-ban"></i> Ban</button>`
+              : `<button class="btn btn-success btn-sm unban-btn" data-id="${user.id}">  <i class="fas fa-unlock"></i> Unban</button>`
+          }
+          <button class="btn btn-danger btn-sm delete-btn" data-id="${user.id}"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>`;
+        });
+
+        $("tbody").html(html);
+        $("#text-page").text(
+          `${data.length ? currentPage : 0} / ${Math.ceil(Math.max(data.length, 1) / rowsPerPage)}`,
+        );
+
+        attachActions();
+      }
+
+      $("#next").click(() => {
+        if (currentPage * rowsPerPage < filteredUsers.length) {
+          currentPage++;
+          renderTable(filteredUsers);
+        }
+      });
+
+      $("#previous").click(() => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderTable(filteredUsers);
+        }
+      });
+
+      // ACTION BUTTONS
+      function attachActions() {
+        $(".ban-btn").click(function () {
+          const id = $(this).data("id");
+          Swal.fire({ title: "Ban user?", showCancelButton: true }).then(
+            (res) => {
+              if (res.isConfirmed)
+                $.post("/api/webapi/admin/banned", { id, type: "close" }, () =>
+                  location.reload(),
+                );
+            },
+          );
+        });
+
+        $(".unban-btn").click(function () {
+          const id = $(this).data("id");
+          Swal.fire({ title: "Unban user?", showCancelButton: true }).then(
+            (res) => {
+              if (res.isConfirmed)
+                $.post("/api/webapi/admin/banned", { id, type: "open" }, () =>
+                  location.reload(),
+                );
+            },
+          );
+        });
+
+        $(".delete-btn").click(function () {
+          const id = $(this).data("id");
+          Swal.fire({
+            title: "Delete permanently?",
+            showCancelButton: true,
+            icon: "warning",
+          }).then((res) => {
+            if (res.isConfirmed)
+              $.post("/api/webapi/admin/deleteUser", { id }, () =>
+                location.reload(),
+              );
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

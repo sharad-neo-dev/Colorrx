@@ -1,0 +1,116 @@
+{
+  "time": "2025-11-12T15:38:00.222Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2182474",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce7b5d964-c011-48ca-85b6-3a957aef3133",
+      "gameCode": "1000123",
+      "description": "lose",
+      "providerRoundId": "9461303808"
+    },
+    "transactionData": {
+      "id": "991255374",
+      "amount": 0,
+      "referenceId": "991254998"
+    },
+    "timestamp": "1762961879156"
+  }
+}
+{
+  "time": "2025-11-12T15:38:00.223Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2182474",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce7b5d964-c011-48ca-85b6-3a957aef3133",
+      "gameCode": "1000123",
+      "description": "lose",
+      "providerRoundId": "9461303808"
+    },
+    "transactionData": {
+      "id": "991255374",
+      "amount": 0,
+      "referenceId": "991254998"
+    },
+    "timestamp": "1762961879156"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762961880223",
+    "userId": "2182474",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-12T15:38:49.318Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2182474",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce89abc29-444f-41fb-aeea-d43ac3e1a4af",
+      "gameCode": "1000123",
+      "description": "lose",
+      "providerRoundId": "9461311860"
+    },
+    "transactionData": {
+      "id": "991256171",
+      "amount": 0,
+      "referenceId": "991255844"
+    },
+    "timestamp": "1762961928384"
+  }
+}
+{
+  "time": "2025-11-12T15:38:49.319Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2182474",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce89abc29-444f-41fb-aeea-d43ac3e1a4af",
+      "gameCode": "1000123",
+      "description": "lose",
+      "providerRoundId": "9461311860"
+    },
+    "transactionData": {
+      "id": "991256171",
+      "amount": 0,
+      "referenceId": "991255844"
+    },
+    "timestamp": "1762961928384"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1762961929319",
+    "userId": "2182474",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

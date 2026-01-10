@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recharge Records</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <%- include('nav') %>
+
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Recharge List</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ✅ SEARCH + FILTER IN ONE LINE -->
+        <div
+          class="form-group"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+          "
+        >
+          <!-- SEARCH -->
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter The Account You Want To Search"
+            class="form-control"
+            style="width: 350px"
+          />
+
+          <!--STATUS FILTER -->
+          <select id="statusFilter" class="form-control" style="width: 160px">
+            <option value="">All</option>
+            <option value="1">Success</option>
+            <option value="2">Failed</option>
+            <option value="0">Pending</option>
+          </select>
+
+          <!-- ⭐ PAYMENT METHOD FILTER (NEW, uses "type" field) -->
+          <select id="methodFilter" class="form-control" style="width: 150px">
+            <option value="">All Methods</option>
+            <option value="USDT_MANUAL">USDT_MANUAL</option>
+            <option value="upi_manual">upi_manual</option>
+            <option value="rs_pay">rs_pay</option>
+            <option value="lg_pay">lg_pay</option>
+            <option value="top_pay">top_pay</option>
+          </select>
+
+          <!-- DATE FILTER -->
+          <select id="dateFilter" class="form-control" style="width: 150px">
+            <option value="all">All Dates</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="custom">Custom Date</option>
+          </select>
+
+          <!-- CUSTOM DATE PICKER -->
+          <input
+            type="date"
+            id="fromDate"
+            class="form-control"
+            style="width: 150px; display: none"
+          />
+          <input
+            type="date"
+            id="toDate"
+            class="form-control"
+            style="width: 150px; display: none"
+          />
+        </div>
+
+        <section class="content">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Recharge List</h3>
+            </div>
+
+            <div class="card-body p-0" style="overflow-y: hidden">
+              <table class="table table-striped projects" id="table1">
+                <thead>
+                  <tr>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Account</th>
+                    <th class="text-center">Type</th>
+                    <th class="text-center">Amount</th>
+                    <th class="text-center">Code</th>
+                    <th class="text-center">UTR</th>
+                    <th class="text-center">Method</th>
+                    <th class="text-center">Time</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <nav
+              aria-label="Page navigation example"
+              style="margin-top: 20px; display: flex; justify-content: center"
+            >
+              <ul class="pagination table1">
+                <li class="page-item previous disabled">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <div id="numbers" style="display: flex"></div>
+                <li class="page-item next">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script>
+      const PaymentMethodsMap = {
+        rs_pay: "rs_pay",
+        upi_manual: "upi_manual",
+        USDT_MANUAL: "USDT_MANUAL",
+        lg_pay: "lg_pay",
+        top_pay: "top_pay",
+      };
+
+      function formateT(val) {
+        return val < 10 ? "0" + val : val;
+      }
+
+      function timerJoin(params = "", addHours = 0) {
+        let date = params ? new Date(Number(params)) : new Date();
+        date.setHours(date.getHours() + addHours);
+        let years = formateT(date.getFullYear());
+        let months = formateT(date.getMonth() + 1);
+        let days = formateT(date.getDate());
+        let hours = date.getHours() % 12 || 12;
+        let ampm = date.getHours() < 12 ? "AM" : "PM";
+        let minutes = formateT(date.getMinutes());
+        return `${years}-${months}-${days} ${hours}:${minutes} ${ampm}`;
+      }
+
+      let currentPage = 1;
+      const limit = 10;
+      let totalPages = 1;
+
+      // Full list + filtered list
+      let allData = [];
+      let filteredData = [];
+
+      // ✅ Manual date parser: "2025-22-11 1:10:01 PM" → real Date
+      function normalizeDate(str) {
+        if (!str) return new Date(NaN);
+        const parts = str.split(" ");
+        if (parts.length < 3) return new Date(NaN);
+
+        const [ymd, time, ampmRaw] = parts;
+        const [yearStr, dayStr, monthStr] = ymd.split("-");
+        const [hStr, mStr, sStr] = time.split(":");
+
+        const year = parseInt(yearStr, 10);
+        const day = parseInt(dayStr, 10);
+        const month = parseInt(monthStr, 10) - 1; // JS month 0-11
+
+        let h = parseInt(hStr, 10) || 0;
+        const m = parseInt(mStr, 10) || 0;
+        const s = parseInt(sStr, 10) || 0;
+
+        const ampm = (ampmRaw || "").toUpperCase();
+
+        if (ampm === "PM" && h < 12) h += 12;
+        if (ampm === "AM" && h === 12) h = 0;
+
+        return new Date(year, month, day, h, m, s);
+      }
+
+      function onlyDate(str) {
+        const d = normalizeDate(str);
+        if (isNaN(d)) return "";
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return `${y}-${m}-${day}`;
+      }
+
+      const toDate = (str) => normalizeDate(str);
+
+      function show(dataList) {
+        if (dataList.length === 0) {
+          $("tbody").html(
+            `<tr class="text-center"><td colspan="10">No data...</td></tr>`,
+          );
+          return;
+        }
+
+        let html = "";
+        dataList.forEach((data, index) => {
+          const serial = (currentPage - 1) * limit + index + 1;
+
+          html += `
+        <tr class="text-center">
+          <td>${serial}</td>
+          <td><b>${data.phone}</b></td>
+          <td>${
+            data.type === "bank"
+              ? '<b style="color: #3498db">BANKING</b>'
+              : '<b style="color: #a50064">UPI</b>'
+          }</td>
+
+          <td><b>${data.money}</b></td>
+          <td><b>${data.id_order}</b></td>
+          <td><b>${data.utr || ""}</b></td>
+
+          <td><b>${PaymentMethodsMap[data.type] || data.type}</b></td>
+          <td><b>${timerJoin(data.time)}</b></td>
+
+          <td>
+            <span class="badge badge-${
+              data.status == 1
+                ? "success"
+                : data.status == 2
+                  ? "danger"
+                  : "warning"
+            }">
+              ${
+                data.status == 1
+                  ? "Success"
+                  : data.status == 2
+                    ? "Failed"
+                    : "Pending"
+              }
+            </span>
+          </td>
+
+          <td>
+            ${
+              data.type === "USDT_MANUAL" && data.status === 0
+                ? `
+              <button class="btn btn-success btn-sm approve-btn" data-id="${data.id}">Approve</button>
+              <button class="btn btn-danger btn-sm decline-btn" data-id="${data.id}">Decline</button>
+            `
+                : ""
+            }
+          </td>
+
+        </tr>`;
+        });
+
+        $("tbody").html(html);
+
+        // APPROVE
+        $(".approve-btn").click(function () {
+          const id = $(this).data("id");
+          Swal.fire({
+            title: "Approve Payment?",
+            showCancelButton: true,
+            confirmButtonText: "Approve",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              $.post(
+                "/api/webapi/admin/approveRecharge",
+                { id, status: "SUCCESS" },
+                function (resp) {
+                  if (resp.status) {
+                    Swal.fire("Approved!", resp.message, "success");
+                    loadData();
+                  } else {
+                    Swal.fire("Failed", resp.message, "error");
+                  }
+                },
+              );
+            }
+          });
+        });
+
+        // DECLINE
+        $(".decline-btn").click(function () {
+          const id = $(this).data("id");
+          Swal.fire({
+            title: "Decline Payment?",
+            text: "This will cancel the recharge.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Decline",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              $.post(
+                "/api/webapi/admin/approveRecharge",
+                { id, status: "CANCELLED" },
+                function (resp) {
+                  if (resp.status) {
+                    Swal.fire("Declined!", resp.message, "success");
+                    loadData();
+                  } else {
+                    Swal.fire("Failed", resp.message, "error");
+                  }
+                },
+              );
+            }
+          });
+        });
+      }
+
+      // LOAD ALL DATA ONCE
+      function loadData() {
+        $.get(
+          "/api/webapi/admin/rechargeonly",
+          { page: 1, limit: 999999 },
+          function (response) {
+            if (response.status && response.datas2) {
+              allData = response.datas2;
+              filteredData = [...allData];
+              applyFilter();
+            } else {
+              $("tbody").html(
+                `<tr><td colspan="10" class="text-center">No data found</td></tr>`,
+              );
+            }
+          },
+        ).fail(function () {
+          $("tbody").html(
+            `<tr><td colspan="10" class="text-center">Error loading data</td></tr>`,
+          );
+        });
+      }
+
+      // MAIN FILTER FUNCTION (search + status + method + date)
+      function applyFilter() {
+        const search = $("#search").val().trim();
+        const statusVal = $("#statusFilter").val();
+        const methodVal = $("#methodFilter").val(); // ⭐ NEW
+        const dateType = $("#dateFilter").val();
+        const customDate = $("#customDate").val();
+        const today = new Date();
+        const todayStr = [
+          today.getFullYear(),
+          String(today.getMonth() + 1).padStart(2, "0"),
+          String(today.getDate()).padStart(2, "0"),
+        ].join("-");
+
+        filteredData = [...allData];
+
+        // 🔍 Search
+        if (search) {
+          filteredData = filteredData.filter((x) => x.phone.includes(search));
+        }
+
+        // 🟡 Status
+        if (statusVal !== "") {
+          filteredData = filteredData.filter(
+            (x) => String(x.status) === statusVal,
+          );
+        }
+
+        // 💳 Method / type filter (USDT_MANUAL, lg_pay, etc.)
+        if (methodVal !== "") {
+          filteredData = filteredData.filter(
+            (x) =>
+              String(x.type).trim().toLowerCase() ===
+              methodVal.trim().toLowerCase(),
+          );
+        }
+
+        // 📅 Date
+        if (dateType === "today") {
+          filteredData = filteredData.filter(
+            (x) => onlyDate(x.today) === todayStr,
+          );
+        }
+
+        if (dateType === "week") {
+          const weekAgo = new Date();
+          weekAgo.setDate(weekAgo.getDate() - 7);
+          filteredData = filteredData.filter((x) => toDate(x.today) >= weekAgo);
+        }
+
+        if (dateType === "month") {
+          const now = new Date();
+          filteredData = filteredData.filter((x) => {
+            const d = toDate(x.today);
+            return (
+              d.getMonth() === now.getMonth() &&
+              d.getFullYear() === now.getFullYear()
+            );
+          });
+        }
+
+        if (dateType === "custom") {
+          const from = $("#fromDate").val();
+          const to = $("#toDate").val();
+
+          if (from && to) {
+            filteredData = filteredData.filter((x) => {
+              const d = onlyDate(x.today);
+              return d >= from && d <= to;
+            });
+          }
+        }
+
+        currentPage = 1;
+        updatePagination();
+        renderCurrentPage();
+      }
+
+      // PAGINATION
+      function updatePagination() {
+        totalPages = Math.ceil(filteredData.length / limit) || 1;
+
+        $(".previous").toggleClass("disabled", currentPage === 1);
+        $(".next").toggleClass("disabled", currentPage === totalPages);
+
+        let numbersHtml = "";
+        let maxPagesToShow = 5;
+        let startPage = Math.max(
+          1,
+          currentPage - Math.floor(maxPagesToShow / 2),
+        );
+        let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+        startPage = Math.max(1, endPage - maxPagesToShow + 1);
+
+        for (let i = startPage; i <= endPage; i++) {
+          numbersHtml += `<li class="page-item ${i === currentPage ? "active" : ""}">
+            <a class="page-link" href="#" data-page="${i}">${i}</a>
+          </li>`;
+        }
+
+        $("#numbers").html(numbersHtml);
+
+        $("#numbers a").click(function (e) {
+          e.preventDefault();
+          const p = parseInt($(this).data("page"));
+          if (p !== currentPage) {
+            currentPage = p;
+            renderCurrentPage();
+            updatePagination();
+          }
+        });
+      }
+
+      function renderCurrentPage() {
+        const start = (currentPage - 1) * limit;
+        const pageData = filteredData.slice(start, start + limit);
+        show(pageData);
+      }
+
+      $(".previous a").click(function (e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+          currentPage--;
+          renderCurrentPage();
+          updatePagination();
+        }
+      });
+
+      $(".next a").click(function (e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderCurrentPage();
+          updatePagination();
+        }
+      });
+
+      // EVENTS
+      $("#statusFilter").change(applyFilter);
+      $("#methodFilter").change(applyFilter); // ⭐ NEW
+
+      $("#dateFilter").change(() => {
+        const isCustom = $("#dateFilter").val() === "custom";
+        $("#fromDate").toggle(isCustom);
+        $("#toDate").toggle(isCustom);
+
+        applyFilter();
+      });
+
+      $("#customDate").change(applyFilter);
+      $("#fromDate").change(applyFilter);
+      $("#toDate").change(applyFilter);
+
+      function debounce(fn, delay) {
+        let t;
+        return function (...args) {
+          clearTimeout(t);
+          t = setTimeout(() => fn.apply(this, args), delay);
+        };
+      }
+
+      $("#search").keyup(
+        debounce(function () {
+          applyFilter();
+        }, 400),
+      );
+
+      $(document).ready(() => {
+        loadData();
+      });
+    </script>
+
+    <style>
+      #preloader {
+        display: none;
+      }
+    </style>
+  </body>
+</html>

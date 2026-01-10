@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>colorrx </title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'daman-dark': '#32005A',
+                        'award-orange': '#ff5722',
+                        'invite-blue': '#2196f3',
+                        'jackpot-green': '#4caf50',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ✅ Stretch images fully without gaps */
+        
+        .card-image-placeholder,
+        .banner-image {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .gifts-image {
+            background-image: url("https://ace11.in/assets/png/giftRedeem-45917887.png");
+        }
+        
+        .attendance-image {
+            background-image: url("https://ace11.in/assets/png/signInBanner-33f86d3f.png");
+        }
+        
+        .deposit-banner .banner-image {
+            background-image: url("https://ossimg.91admin123admin.com/91club/banner/Banner_202403021314318bw3.png");
+        }
+        
+        .scam-banner .banner-image {
+            background-image: url("https://ossimg.91admin123admin.com/91club/banner/Banner_20240706170759bs74.png");
+        }
+        
+        .youtube-banner .banner-image {
+            background-image: url("https://ossimg.91admin123admin.com/91club/banner/Banner_20240131164605jo9h.jpg");
+        }
+        /* ✅ Remove unwanted spacing */
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-[#11131f] min-h-screen w-full md:max-w-[500px] mx-auto">
+
+    <!-- Header -->
+    <div class="sticky -top-1 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">Activity</h2>
+        <span class="w-6"></span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container shadow-xl rounded-xl p-5 box-border mt-5 mb-[5.25rem] space-y-5 bg-[#11131f]">
+
+        <!-- Intro Text Section -->
+       
+        <div class="intro-text-section p-4 bg-daman-dark text-white text-sm leading-relaxed rounded-xl">
+            <p class="mb-1 font-bold">Activity</p>
+            <p class="mb-1">Please remember to follow the event page</p>
+            <p class="m-0">We will launch user feedback activities from time to time</p>
+        </div>
+
+        <!-- Icon Navigation -->
+        <div class="icon-nav flex justify-around py-5 bg-daman-dark rounded-xl shadow-md">
+              <a href="/dailytask">
+            <div class="icon-nav-item text-center text-sm text-white">
+                <div class="icon-placeholder w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center text-3xl text-white shadow-lg bg-award-orange">
+                    🎖
+                </div>
+                <div>Activity<br />Award</div>
+            </div>
+</a>
+
+ <a href="/invibonus">
+
+            <div class="icon-nav-item text-center text-sm text-white">
+                <div class="icon-placeholder w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center text-3xl text-white shadow-lg bg-invite-blue">
+                    👤+
+                </div>
+                <div>Invitation <br />Bonus</div>
+            </div>
+</a>
+
+<a href="/jackpot">
+            <div class="icon-nav-item text-center text-sm text-white">
+                <div class="icon-placeholder w-16 h-16 mx-auto mb-2 rounded-full flex items-center justify-center text-3xl text-white shadow-lg bg-jackpot-green">
+                    🏆
+                </div>
+                <div>Super <br />Jackpot</div>
+            </div>
+        </div>
+</a>
+        <!-- Features Grid -->
+<div class="features-grid flex flex-row sm:flex-row justify-between gap-4">
+  
+  <!-- Gift Card -->
+  <a href="/redenvelopes" class="w-1/2">
+    <section class="feature-card rounded-xl overflow-hidden shadow-lg bg-daman-dark hover:scale-105 hover:shadow-xl transition-transform duration-200">
+      <div class="card-image-placeholder gifts-image w-full h-40 bg-gray-700"></div>
+      <div class="card-content p-4 bg-daman-dark">
+        <h3 class="text-xl font-bold text-white mb-1">Gifts</h3>
+        <p class="text-xs text-white leading-relaxed m-0">
+          Enter the redemption code to receive gift rewards.
+        </p>
+      </div>
+    </section>
+  </a>
+
+  <!-- Attendance Bonus Card -->
+  <a href="/attendance" class="w-1/2">
+    <section class="feature-card rounded-xl overflow-hidden shadow-lg bg-daman-dark hover:scale-105 hover:shadow-xl transition-transform duration-200">
+      <div class="card-image-placeholder attendance-image w-full h-40 bg-gray-700"></div>
+      <div class="card-content p-4 bg-daman-dark">
+        <h3 class="text-xl font-bold text-white mb-1">Attendance Bonus</h3>
+        <p class="text-xs text-white leading-relaxed m-0">
+          The more consecutive days you sign in, the higher the reward will be.
+        </p>
+      </div>
+    </section>
+  </a>
+
+</div>
+
+
+        <!-- Banner Section -->
+        <div class="banner-section flex flex-col space-y-4">
+            <div class="banner-card deposit-banner rounded-xl overflow-hidden shadow-lg">
+                <div class="banner-image w-full h-48"></div>
+                <h3 class="banner-title m-0 text-xl text-white font-bold p-3 bg-daman-dark text-left">
+                    New Member First Deposit Bonus
+                </h3>
+            </div>
+
+            <div class="banner-card scam-banner rounded-xl overflow-hidden shadow-lg">
+                <div class="banner-image w-full h-48"></div>
+                <h3 class="banner-title m-0 text-xl text-white font-bold p-3 bg-daman-dark text-left">
+                    Daman Tips and Tricks: Avoid Scammer
+                </h3>
+            </div>
+
+            <div class="banner-card youtube-banner rounded-xl overflow-hidden shadow-lg">
+                <div class="banner-image w-full h-48"></div>
+                <h3 class="banner-title m-0 text-xl text-white font-bold p-3 bg-daman-dark text-left">
+                    Youtube Creative Video
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Footer -->
+    <%- include('../layout/footer.ejs') %>
+
+</body>
+
+</html>

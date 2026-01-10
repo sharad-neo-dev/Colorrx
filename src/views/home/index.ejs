@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorrx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" />
+    
+      <!-- ✅ Open Graph (Facebook, LinkedIn, Discord, etc.) -->
+  <meta property="og:title" content="Ace11 - Play & Win Real Rewards" />
+  <meta property="og:description" content="Experience the thrill of Ace11 with top lottery, slots, and casino games." />
+  <meta property="og:image" content="https://colorrx.in/favicon.ico" />
+  <meta property="og:url" content="https://colorrx.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ace11" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ace11 - Play & Win Real Rewards" />
+  <meta name="twitter:description" content="Join Ace11 and enjoy premium slots, sports, and casino gaming!" />
+  <meta name="twitter:image" content="https://colorrx.in/favicon.ico" />
+  <meta name="twitter:site" content="@ace11" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+    <style>
+      #categories::-webkit-scrollbar-thumb {
+           height: 5px;
+        }
+
+    #categories::-webkit-scrollbar-track {
+            appearance: none;
+            background: transparent; /* Makes the track invisible */
+        }
+
+        /* 3. Style the overall scrollbar and make it thin */
+        #categories::-webkit-scrollbar {
+            width: 5px; /* CHANGED: Scrollbar width is now 5px */
+            background: transparent;
+        }
+
+        /* 4. Style the THUMB (the part you drag) */
+        #categories::-webkit-scrollbar-thumb {
+            background-color: #e2dede75; /* Blue thumb */
+            border-radius: 10px;
+            /* The thumb will float directly on the background content since the track is transparent! */
+        }
+        /* 2. Style the overall scrollbar — horizontal with 5px height */
+#categories::-webkit-scrollbar {
+    height: 5px; /* Height for horizontal scrollbar */
+    background: transparent;
+}
+
+
+/* Overall scrollbar */
+::-webkit-scrollbar {
+    width: 5px;   /* Vertical scrollbar width */
+    height: 5px;  /* Horizontal scrollbar height */
+    background: transparent; /* Track background */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Makes the track invisible */
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #e2dede75; /* Thumb color */
+    border-radius: 10px;
+}
+
+        .title-img {
+            background-image: url('/images/title-bg.a3d85bbd.png');
+        }
+    </style>
+</head>
+
+<body class=" bg-white text-white w-full md:max-w-[500px] mx-auto">
+
+    <!-- Header -->
+    <%- include('../layout/header.ejs') %>
+
+        <!-- Slider Section -->
+  <section class="overflow-hidden relative ">
+    <div id="slider" class="relative w-full h-[12rem] overflow-hidden"></div>
+
+    <!-- Controls -->
+    <button id="prevBtn" class="absolute top-1/2 left-2 sm:left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-75 transition">‹</button>
+    <button id="nextBtn" class="absolute top-1/2 right-2 sm:right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-75 transition">›</button>
+
+    <!-- Dots -->
+    <div id="dots" class="flex justify-center mt-4 space-x-2"></div>
+</section>
+
+
+
+
+
+   <script>
+    // --- CONFIGURATION ---
+    const API_ENDPOINT = '/api/webapi/pop';
+    const DONT_SHOW_AGAIN_KEY = 'popups_dont_show';
+
+    // --- 1. Utility Functions ---
+    function shouldShowPopups() {
+        return localStorage.getItem(DONT_SHOW_AGAIN_KEY) !== 'true';
+    }
+
+    // --- 2. Main Popup Display Logic ---
+    function showNextPopup(popups) {
+        if (!popups || popups.length === 0) return;
+
+        const currentPopup = popups.shift();
+
+        const popupHtml = `
+            <div id="popup-overlay-${currentPopup.pop_id}" 
+                data-pop-id="${currentPopup.pop_id}"
+                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                       background: rgba(0, 0, 0, 0.85); display: flex; justify-content: center;
+                       align-items: center; z-index: 9999;">
+                
+                <div id="popup-box" style="position: relative; max-width: 400px; width: 90%;">
+                    <button class="close-popup-btn" 
+                        style="position: absolute; top: 10px; right: 10px; background: none;
+                               border: none; font-size: 30px; color: white; cursor: pointer; line-height: 1;">
+                        &times;
+                    </button>
+
+                    <img src="${currentPopup.image}" 
+                         alt="Promotion Banner" 
+                         style="width: 100%; height: auto; display: block; border: none; border-radius: 12px;"/>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', popupHtml);
+        const overlay = document.getElementById(`popup-overlay-${currentPopup.pop_id}`);
+        const closeButtons = overlay.querySelectorAll('.close-popup-btn');
+
+        const closePopupAndProceed = () => {
+            overlay.remove();
+            showNextPopup(popups);
+        };
+
+        closeButtons.forEach(btn => btn.addEventListener('click', closePopupAndProceed));
+    }
+
+    // --- 3. Fetch & Display ---
+    async function fetchAndDisplayPopups() {
+        if (!shouldShowPopups()) {
+            console.log("Popups are disabled by user preference.");
+            return;
+        }
+
+        try {
+            const response = await fetch(API_ENDPOINT);
+            const result = await response.json();
+
+            if (result.status && result.count > 0) {
+                const pageName = document.body.dataset.pageName || 'home'; // optional dynamic page
+                const pagePopups = result.data.filter(item => item.page_name.toLowerCase() === pageName);
+
+                if (pagePopups.length > 0) {
+                    console.log(`Found ${pagePopups.length} popups for page: ${pageName}`);
+                    showNextPopup(pagePopups.slice());
+                }
+            }
+        } catch (error) {
+            console.error('Failed to fetch popup data:', error);
+        }
+    }
+
+    // --- 4. Initialize ---
+    document.addEventListener('DOMContentLoaded', fetchAndDisplayPopups);
+</script>
+<script>
+const sliderContainer = document.getElementById("slider");
+const dotsContainer = document.getElementById("dots");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let slides = [];
+let dots = [];
+let currentIndex = 0;
+let interval;
+
+// Fetch slider data from API
+fetch("/api/webapi/slider")
+  .then(res => res.json())
+  .then(data => {
+    if (data.status && data.count > 0) {
+      data.data.forEach((slide, i) => {
+        // Create slide image
+        const img = document.createElement("img");
+        img.src = slide.image_url;
+        img.alt = slide.title;
+        img.className = "absolute inset-0 w-full h-full object-fill transition-opacity duration-700";
+        img.classList.add(i === 0 ? "opacity-100" : "opacity-0");
+
+        // Make image clickable if page_url exists
+        if (slide.page_url) {
+          img.style.cursor = "pointer";
+          img.addEventListener("click", () => {
+            window.location.href = slide.page_url;
+          });
+        }
+
+        sliderContainer.appendChild(img);
+        slides.push(img);
+
+        // Create dot
+        const dot = document.createElement("span");
+        dot.className = "w-8 h-1 rounded-full bg-[#FA605F] bg-opacity-50 cursor-pointer transition";
+        if (i === 0) dot.classList.add("bg-opacity-100");
+        dot.addEventListener("click", () => showSlide(i));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      });
+
+      startAutoSlide();
+    }
+  })
+  .catch(err => console.error("Failed to load slider:", err));
+
+function showSlide(index) {
+  slides[currentIndex].classList.replace("opacity-100", "opacity-0");
+  dots[currentIndex].classList.remove("bg-opacity-100");
+
+  currentIndex = (index + slides.length) % slides.length;
+
+  slides[currentIndex].classList.replace("opacity-0", "opacity-100");
+  dots[currentIndex].classList.add("bg-opacity-100");
+}
+
+prevBtn.addEventListener("click", () => {
+  showSlide(currentIndex - 1);
+  resetAutoSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  showSlide(currentIndex + 1);
+  resetAutoSlide();
+});
+
+function startAutoSlide() {
+  interval = setInterval(() => showSlide(currentIndex + 1), 4000);
+}
+
+function resetAutoSlide() {
+  clearInterval(interval);
+  startAutoSlide();
+}
+</script>
+
+
+        <section class="overflow-hidden relative m-2">
+
+
+            <button class="flex items-center w-[350px] h-[40px] rounded-full px-4 text-purple-300 hover:bg-[#3a1277] transition-colors duration-300" style="background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);">
+    <i class="ri-volume-up-line text-xl mr-3"></i>
+  </button>
+        </section>
+
+
+
+
+
+        </section>
+        <!-- Categories & Games Section -->
+        <section>
+      <div id="categories" class="flex gap-2 overflow-x-auto py-2 px-3"></div>
+
+<div id="gameGrid"  style="
+    margin-bottom: 100px;
+"></div>
+        </section>
+
+        <!-- Footer -->
+        <%- include('../layout/footer.ejs') %>
+
+            <!-- Slider Script -->
+          
+
+      
+  
+
+   
+
+
+  
+
+
+
+
+   <script>
+
+
+
+const gameData = {
+  Hot: {
+    icon: "download.png",
+    games: [
+    
+      { name: "Wingo", img: "/im/wing-o.png", url: "/wingo" },
+       { name: "Aviator", img: "/im/1.png", url: "/coming-soon" },
+        { name: "Chicken Road 2", img: "/im/3.png", url: "/coming-soon" },
+         { name: "Vortex", img: "/im/vortex.png", url: "/coming-soon" },
+          { name: "Aviafly", img: "/im/4.png", url: "/coming-soon" },
+           { name: "1Tap Mines", img: "/im/9.png", url: "/coming-soon" },
+           { name: "Aero", img: "/im/10.png", url: "/coming-soon" },
+           { name: "Ludo Quick", img: "https://ind.55ace.com/img/hot-jili-163.e86f5d5f.png", url: "/coming-soon" },
+    ]
+  },
+
+  Lobby: {
+    icon: "download (1).png",
+    games: [
+     
+    ]
+  },
+
+  Casino: {
+    icon: "download (2).png",
+    games: [
+     
+    ]
+  },
+
+
+  Slots: {
+    icon: "download (3).png",
+    games: [
+  
+    ]
+  },
+
+  Fishing: {
+    icon: "download (4).png",
+    games: [
+
+    ]
+  },
+  
+  
+    Sport: {
+    icon: "download (5).png",
+    games: [
+   
+   ]
+  },
+  
+};
+
+
+
+
+
+
+
+
+
+
+// const gameData = {
+//   Hot: {
+//     icon: "download.png",
+//     games: [
+//       { name: "Aviator", img: "https://ace11.in/im/1.png", url: "/games/?providerCode=SPB&gameCode=aviator&currency=LKR" },
+//       { name: "Wingo", img: "https://ace11.in/im/wing-o.png", url: "/wingo" },
+//        { name: "Chicken Road 2", img: "https://ace11.in/im/3.png", url: "/games/?providerCode=IO&gameCode=chicken-road&currency=INR" },
+//        { name: "Aviafly", img: "https://ace11.in/im/4.png", url: "/games/?providerCode=IO&gameCode=aviafly&currency=INR" },
+//       { name: "10,001 Nights", img: "https://ace11.in/im/5.png", url: "/games/?providerCode=EVZ&gameCode=1100003&currency=INR" },
+//       { name: "Pushpa", img: "https://ace11.in/im/pushparaj.png", url: "/games/?providerCode=DC&gameCode=151084&currency=INR" },
+//       { name: "Vortex", img: "https://ace11.in/im/vortex.png", url: "/games/?providerCode=DC&gameCode=151080&currency=INR" },
+//       { name: "Mac88 Lobby", img: "https://ace11.in/im/mac88.png", url: "/games/?providerCode=DC&gameCode=150000&currency=INR" },
+      
+      
+      
+      
+      
+//       { name: "1Tap Mines", img: "https://ace11.in/im/9.png", url: "/games/?providerCode=QT&gameCode=TRB-1tapmines&currency=LKR" },
+//       { name: "Aero", img: "https://ace11.in/im/10.png", url: "/games/?providerCode=QT&gameCode=TRB-aero&currency=LKR" },
+//       { name: "Bayraktar", img: "https://ace11.in/im/11.png", url: "/games/?providerCode=QT&gameCode=TRB-bayraktar&currency=LKR" },
+//       { name: "Book of Mines", img: "https://ace11.in/im/12.png", url: "/games/?providerCode=QT&gameCode=TRB-bookofmines&currency=LKR" },
+      
+      
+      
+      
+      
+//       { name: "Jingle Spin", img: "https://ace11.in/im/13.png", url: "/games/?providerCode=EVZ&gameCode=1100082&currency=INR" },
+//       { name: "Jingle Ways Megaways", img: "https://ace11.in/im/14.png", url: "/games/?providerCode=EVZ&gameCode=1100377&currency=INR" },
+//       { name: "Jogo De Bozo", img: "https://ace11.in/im/15.png", url: "/games/?providerCode=DC&gameCode=425071&currency=INR" },
+//       { name: "Jogo do Bicho", img: "/im/16.png", url: "/games/?providerCode=DC&gameCode=600148&currency=INR" },
+//       { name: "Joker Pro", img: "https://ace11.in/im/17.png", url: "/games/?providerCode=EVZ&gameCode=1100204&currency=INR" },
+//       { name: "Crazy Time", img: "/im/crazytime.png", url: "/games/?providerCode=EVZ&gameCode=1000501&currency=INR" },
+//       { name: "Dream Catcher", img: "/im/dreamcatcher.png", url: "/games/?providerCode=EVZ&gameCode=1000077&currency=INR" },
+//       { name: "Funky Time", img: "/im/funkytime.png", url: "/games/?providerCode=EVZ&gameCode=1000501&currency=INR" },
+//       { name: "Teen Patti", img: "https://ind.55ace.com/img/hot-jili-72.0608827b.png", url: "/games/?providerCode=DC&gameCode=600112&currency=INR" },
+//       { name: "Teen Patti Joker", img: "https://ind.55ace.com/img/hot-jili-159.2016931d.png", url: "/games/?providerCode=DC&gameCode=600110&currency=INR" },
+//       { name: "Ludo Quick", img: "https://ind.55ace.com/img/hot-jili-163.e86f5d5f.png", url: "/games/?providerCode=DC&gameCode=600113&currency=INR" },
+//       { name: "Andar Bahar", img: "https://ind.55ace.com/img/hot-jili-79.42b1e646.png", url: "/games/?providerCode=DC&gameCode=600013&currency=INR" },
+//       { name: "Teen Patti 20 20", img: "https://files.conjlnuljy.com/game/5/JILI/c3a5ab4f-19f8-4299-b046-1fc4ea38ef4c.png", url: "/games/?providerCode=DC&gameCode=600112&currency=INR" },
+//       { name: "Dragon & Tiger", img: "https://ind.55ace.com/img/hot-jili-123.0a07e842.png", url: "/games/?providerCode=DC&gameCode=150067&currency=INR" },
+//       { name: "Jungle Gorilla", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Gorilla_1662557519421.9905.jpg", url: "/games/?providerCode=PP&gameCode=vs20gorilla&currency=INR" },
+//       { name: "Jungle Keno", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Keno_1694875133203.5374.png", url: "/games/?providerCode=DC&gameCode=201233&currency=INR" },
+//       { name: "Jungle King", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-King_1694504200933.0884.jpg", url: "/games/?providerCode=DC&gameCode=600045&currency=INR" },
+//       { name: "Jungle Spirit: Call of the Wild", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Spirit-Call-of-the-Wild_1685374824293.3071.png", url: "/games/?providerCode=EVZ&gameCode=1100113&currency=INR" },
+//       { name: "Jungle Stripes", img: "https://files.conjlnuljy.com/game/5/JILI/c3a5ab4f-19f8-4299-b046-1fc4ea38ef4c.png", url: "/games/?providerCode=XPG&gameCode=842_slot&currency=INR" },
+//       { name: "K3 Lottery 1", img: "http://files.worldcasinoonline.com/Document/Game/K3-Lottery-1_1751539738928.411.png", url: "/games/?providerCode=DC&gameCode=151062&currency=INR" }
+//     ]
+//   },
+
+//   Lobby: {
+//     icon: "download (1).png",
+//     games: [
+//       { name: "EUROPEAN ROULETTe", img: "jili_games/GAMEID_114.png", url: "roulette" },
+//       { name: "FORTUNE BINGO", img: "/jili_games/GAMEID_139.png", url: "blackjack", Hot: true },
+//       { name: "iRich BINGO", img: "/jili_games/GAMEID_122.png", url: "blackjack", Hot: true }
+//     ]
+//   },
+
+//   Casino: {
+//     icon: "download (2).png",
+//     games: [
+//       { name: "Evolution (live casino)", img: "https://ind.55ace.com/img/item-game-evo.78267328.png", url: "/games/?providerCode=EVZ&gameCode=&currency=INR" },
+//       { name: "Ezugi (live casino)", img: "https://ind.55ace.com/img/item-game-ezugi.4bbdc310.png", url: "/games/?providerCode=EZ&gameCode=&currency=LKR" },
+//       { name: "Sexy gaming (live casino)", img: "https://ind.55ace.com/img/item-game-awc.834e0ad0.png", url: "/games/?providerCode=AWC&gameCode=&currency=INR" },
+//       { name: "Pragmatic games (live casino)", img: "https://ind.55ace.com/img/item-game-maintenance.e064079f.png", url: "/games/?providerCode=DC&gameCode=150000&currency=INR" },
+//       { name: "Kingmaker(live casino)", img: "https://ind.55ace.com/img/item-game-maintenance.e064079f.png", url: "/games/?providerCode=DC&gameCode=400050&currency=INR" }
+//     ]
+//   },
+
+
+//   Slots: {
+//     icon: "download (3).png",
+//     games: [
+//      { name: "Mines", img: "http://files.worldcasinoonline.com/Document/Game/Mines_1721654937296.9983.png", url: "/games/?providerCode=QT&gameCode=TRB-mines&currency=LKR" },
+//       { name: "Neko", img: "http://files.worldcasinoonline.com/Document/Game/Neko_1723964426383.9482.png", url: "/games/?providerCode=QT&gameCode=TRB-neko&currency=LKR" },
+    
+    
+    
+    
+//       { name: "Mines Blast", img: "http://files.worldcasinoonline.com/Document/Game/Mines-Blast_1747317893089.5237.jpg", url: "/games/?providerCode=QT&gameCode=MSG-minesblast&currency=LKR" },
+//       { name: "Mini Baccarat", img: "http://files.worldcasinoonline.com/Document/Game/Mini-Baccarat_1722328504031.2412.png", url: "/games/?providerCode=QT&gameCode=PNG-minibaccarat&currency=LKR" },
+//       { name: "Minotaurs Wilds", img: "http://files.worldcasinoonline.com/Document/Game/Minotaurs-wilds_1747051860948.2695.jpg", url: "/games/?providerCode=QT&gameCode=MSG-minotaurswilds&currency=LKR" },
+//       { name: "Minted Coins", img: "http://files.worldcasinoonline.com/Document/Game/PRG-mintedcoins_1747384119212.1042.png", url: "/games/?providerCode=QT&gameCode=PRG-mintedcoins&currency=LKR" },
+//       { name: "BalloniX", img: "https://apis.jeetpunt.com/resize-image?url=http://files.worldcasinoonline.com/Document/Game/Ballonix_1759143724265.7104.png&width=100", url: "/games/?providerCode=IO&gameCode=ballonix&currency=INR" },
+//          { name: "Bubbles", img: "https://apis.jeetpunt.com/resize-image?url=http://files.worldcasinoonline.com/Document/Game/Bubbles_1759143746769.7056.png&width=100", url: "/games/?providerCode=IO&gameCode=bubbles&currency=INR" },
+//       { name: "Mirror Joker", img: "http://files.worldcasinoonline.com/Document/Game/PNG-mirrorjoker_1747383083480.058.png", url: "/games/?providerCode=QT&gameCode=PNG-mirrorjoker&currency=LKR" },
+//       { name: "Misery Mining xBomb", img: "http://files.worldcasinoonline.com/Document/Game/Misery-Mining_1721463251676.2126.png", url: "/games/?providerCode=QT&gameCode=IDS-1millionfortunesmegaways&currency=LKR" },
+//       { name: "Miss Tiger", img: "http://files.worldcasinoonline.com/Document/Game/Miss-Tiger_1750763445915.4788.jpg", url: "/games/?providerCode=QT&gameCode=KAG-misstiger&currency=LKR" },
+//       { name: "Mission Cash", img: "http://files.worldcasinoonline.com/Document/Game/Mission-cash_1721911705508.443.png", url: "/games/?providerCode=QT&gameCode=PNG-missioncash&currency=LKR" },
+//       { name: "Modern 7 Wonders", img: "http://files.worldcasinoonline.com/Document/Game/Modern-7-Wonders_1750763466580.698.jpg", url: "/games/?providerCode=QT&gameCode=KAG-modern7wonders&currency=LKR" },
+//       { name: "Moon Princess", img: "http://files.worldcasinoonline.com/Document/Game/Moon-princess_1721911846942.809.png", url: "/games/?providerCode=QT&gameCode=PNG-moonprincess&currency=LKR" },
+//       { name: "Moon Princess 100", img: "http://files.worldcasinoonline.com/Document/Game/Moon-princess-100_1721911781058.1428.png", url: "/games/?providerCode=QT&gameCode=PNG-moonprincess100&currency=LKR" },
+//       { name: "Moon Princess Christmas Kingdom", img: "http://files.worldcasinoonline.com/Document/Game/Moon-oricess-chrstmas-kingdom_1721911887105.0305.png", url: "/games/?providerCode=QT&gameCode=PNG-moonprincesschristmaskingdom&currency=LKR" },
+//       { name: "Moon Princess Trinity", img: "http://files.worldcasinoonline.com/Document/Game/Moon-Princess-Trinity_1722430359308.609.png", url: "/games/?providerCode=QT&gameCode=PNG-moonprincesstrinity&currency=LKR" },
+//       { name: "Moon Princess: Power of Love", img: "http://files.worldcasinoonline.com/Document/Game/Moon-Princess-Power-of-Love_1722430320235.4253.png", url: "/games/?providerCode=QT&gameCode=PNG-moonprincesspoweroflove&currency=LKR" },
+//       { name: "Mooncake Riches Hold and Win", img: "http://files.worldcasinoonline.com/Document/Game/Mooncake-Riches-Hold-and-Win_1723268787962.621.png", url: "/games/?providerCode=GT&gameCode=mooncakeriches-hnw&currency=LKR" },
+//       { name: "Muerto en Mictlán", img: "http://files.worldcasinoonline.com/Document/Game/Munerto-en-mightan_1721912043905.9075.png", url: "/games/?providerCode=QT&gameCode=PNG-muertoenmictlan&currency=LKR" },
+//       { name: "Multi Blitz 7s", img: "http://files.worldcasinoonline.com/Document/Game/Multi Blitz 7s_1756389190870.6013.png", url: "/games/?providerCode=GT&gameCode=multiblitz7s&currency=LKR" },
+//       { name: "MultiFruit 81", img: "http://files.worldcasinoonline.com/Document/Game/MultiFruit-81_1722430444877.9963.png", url: "/games/?providerCode=QT&gameCode=PNG-multifruit81&currency=LKR" },
+//       { name: "MultiHot5", img: "http://files.worldcasinoonline.com/Document/Game/multiHot05_1721736453887.465.png", url: "/games/?providerCode=SMTSG&gameCode=MultiHot5&currency=LKR" },
+//       { name: "Joker Poker", img: "http://files.worldcasinoonline.com/Document/Game/Joker-poker_1704878313374.1235.png", url: "/games/?providerCode=NGP&gameCode=458754&currency=INR" }
+//     ]
+//   },
+
+//   Fishing: {
+//     icon: "download (4).png",
+//     games: [
+//       { name: "Bombing Fishing", img: "http://files.worldcasinoonline.com/Document/Game/Bombing-Fishing_1694509449524.0454.jpg", url: "/games/?providerCode=DC&gameCode=600002&currency=INR" },
+//       { name: "Dinosaur Tycoon", img: "http://files.worldcasinoonline.com/Document/Game/Dinosaur-Tycoon_1694509466982.2368.jpg", url: "/games/?providerCode=DC&gameCode=600003&currency=INR" },
+//       { name: "Jackpot Fishing", img: "http://files.worldcasinoonline.com/Document/Game/Jackpot-Fishing_1694509485613.3982.jpg", url: "/games/?providerCode=DC&gameCode=600004&currency=INR" },
+//       { name: "Dragon Fortune", img: "http://files.worldcasinoonline.com/Document/Game/Dragon-Fortune_1694447476289.0652.jpg", url: "/games/?providerCode=DC&gameCode=600005&currency=INR" },
+//       { name: "Mega Fishing", img: "http://files.worldcasinoonline.com/Document/Game/Mega-Fishing_1694509413484.8508.jpg", url: "/games/?providerCode=DC&gameCode=600006&currency=INR" },
+//       { name: "Boom Legend", img: "http://files.worldcasinoonline.com/Document/Game/Boom-Lengend_1694447531037.537.jpg", url: "/games/?providerCode=DC&gameCode=600007&currency=INR" },
+//       { name: "Happy Fishing", img: "http://files.worldcasinoonline.com/Document/Game/Happy-Fishing_1694447584795.5422.jpg", url: "/games/?providerCode=DC&gameCode=600008&currency=INR" },
+//       { name: "All-star Fishing", img: "http://files.worldcasinoonline.com/Document/Game/All-Star-Fishing_1694509167846.8557.jpg", url: "/games/?providerCode=DC&gameCode=600056&currency=INR" },
+//       { name: "Royal Fishing", img: "http://files.worldcasinoonline.com/Document/Game/Royal-Fishing_1694509429995.738.jpg", url: "/games/?providerCode=DC&gameCode=600001&currency=INR" },
+//       { name: "Dinosaur Tycoon II", img: "http://files.worldcasinoonline.com/Document/Game/Dinosaur-Tycoon-II_1694506342631.762.jpg", url: "/games/?providerCode=DC&gameCode=600066&currency=INR" },
+//       { name: "John Hunter and the Aztec Treasure", img: "http://files.worldcasinoonline.com/Document/Game/John-Hunter-and-the-Aztec-Treasure_1662559829767.574.jpg", url: "/games/?providerCode=PP&gameCode=vs7776secrets&currency=INR" },
+//       { name: "John Hunter and the Book of Tut", img: "http://files.worldcasinoonline.com/Document/Game/John-Hunter-and-the-Book-of-Tut_1662557925156.0615.jpg", url: "/games/?providerCode=PP&gameCode=vs10bookoftut&currency=INR" },
+//       { name: "John Hunter and the Mayan Gods", img: "http://files.worldcasinoonline.com/Document/Game/John-Hunter-and-the-Mayan-Gods_1662555860250.8076.jpg", url: "/games/?providerCode=PP&gameCode=vs10mayangods&currency=INR" },
+//       { name: "John Hunter and the Quest for Bermuda Riches", img: "http://files.worldcasinoonline.com/Document/Game/John-Hunter-and-the-Quest-for-Bermuda-Riches_1662553382336.7683.jpg", url: "/games/?providerCode=PP&gameCode=vs20bermuda&currency=INR" },
+//       { name: "John Hunter and the Tomb of the Scarab Queen", img: "http://files.worldcasinoonline.com/Document/Game/John-Hunter-and-the-Tomb-of-the-Scarab-Queen_1662559700037.5847.jpg", url: "/games/?providerCode=PP&gameCode=vs25scarabqueen&currency=INR" },
+//       { name: "Joker King", img: "http://files.worldcasinoonline.com/Document/Game/Joker-King_1662555468348.3608.jpg", url: "/games/?providerCode=PP&gameCode=vs25jokerking&currency=INR" },
+//       { name: "Joker Poker", img: "http://files.worldcasinoonline.com/Document/Game/Joker-poker_1704878313374.1235.png", url: "/games/?providerCode=NGP&gameCode=458754&currency=INR" },
+//       { name: "Joker Pro", img: "http://files.worldcasinoonline.com/Document/Game/Joker-Pro_1685441994812.0605.png", url: "/games/?providerCode=EVZ&gameCode=1100204&currency=INR" },
+//       { name: "Joker's Jewels", img: "http://files.worldcasinoonline.com/Document/Game/Joker's-Jewels_1662561108190.9424.jpg", url: "/games/?providerCode=PP&gameCode=vs5joker&currency=INR" },
+//       { name: "Journey to the West", img: "http://files.worldcasinoonline.com/Document/Game/Journey-to-the-West_1662561810717.036.jpg", url: "/games/?providerCode=PP&gameCode=vs25journey&currency=INR" },
+//       { name: "Journey West M", img: "http://files.worldcasinoonline.com/Document/Game/Journey-West-M_1694503801753.9373.jpg", url: "/games/?providerCode=DC&gameCode=600063&currency=INR" },
+//       { name: "Judgement Day MegaWays", img: "http://files.worldcasinoonline.com/Document/Game/706_1716547605444.8464.jpg", url: "/games/?providerCode=EVZ&gameCode=1100541&currency=INR" },
+//       { name: "Juicy Fruits", img: "http://files.worldcasinoonline.com/Document/Game/Juicy-Fruits_1662554858230.536.jpg", url: "/games/?providerCode=PP&gameCode=vs50juicyfr&currency=INR" },
+//       { name: "Jumbo Diamond", img: "http://files.worldcasinoonline.com/Document/Game/Jumbo-Diamond_1752055483151.426.png", url: "/games/?providerCode=DC&gameCode=379009&currency=INR" },
+//       { name: "Jumbo Joker", img: "http://files.worldcasinoonline.com/Document/Game/Jumbo-Joker_1756383024027.9524.jpg", url: "/games/?providerCode=XPG&gameCode=767_slot&currency=INR" },
+//       { name: "Jumbo Joker Android", img: "https://resources.xpgnet.com//ExternalGamesImages/betsoft/769.png", url: "/games/?providerCode=XPG&gameCode=769_slot&currency=INR" },
+//       { name: "Jumbo Joker Mobile", img: "https://resources.xpgnet.com//ExternalGamesImages/betsoft/768.png", url: "/games/?providerCode=XPG&gameCode=768_slot&currency=INR" },
+//       { name: "Jungle Gorilla", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Gorilla_1662557519421.9905.jpg", url: "/games/?providerCode=PP&gameCode=vs20gorilla&currency=INR" },
+//       { name: "Jungle Keno", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Keno_1694875133203.5374.png", url: "/games/?providerCode=DC&gameCode=201233&currency=INR" },
+//       { name: "Jungle King", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-King_1694504200933.0884.jpg", url: "/games/?providerCode=DC&gameCode=600045&currency=INR" },
+//       { name: "Jungle Spirit: Call of the Wild", img: "http://files.worldcasinoonline.com/Document/Game/Jungle-Spirit-Call-of-the-Wild_1685374824293.3071.png", url: "/games/?providerCode=EVZ&gameCode=1100113&currency=INR" }
+//     ]
+//   },
+  
+  
+//     Sport: {
+//     icon: "download (5).png",
+//     games: [
+//       { name: "BOLLY TECH", img: "/im/bt-sports1.png", url: "/games/?providerCode=BT&gameCode=ag-sports&currency=INR" },
+//    ]
+//   },
+  
+// };
+
+
+const categoriesDiv = document.getElementById("categories");
+const gameGrid = document.getElementById("gameGrid");
+
+// Render category buttons
+Object.keys(gameData).forEach(cat => {
+    const button = document.createElement("button");
+    button.className = "flex flex-col items-center  px-3 py-2 bg-[#FF8A80] rounded-lg h-[60px] w-[95px] hover:bg-[#FA605F] transition shrink-0 shadow-gray-300 shadow-xl hover:shadow-2xl";
+    button.innerHTML = `<img src="${gameData[cat].icon}" class="w-10 h-10"><span class="text-xs">${cat}</span>`;
+    
+    button.addEventListener("click", () => loadGames(cat));
+    categoriesDiv.appendChild(button);
+});
+
+function loadGames(category) {
+    gameGrid.innerHTML = ""; // clear previous games
+
+    if(category !== "Lobby") {
+        const games = gameData[category].games;
+
+        const header = document.createElement("div");
+        header.className = "flex items-center gap-2 px-3 py-4 bg-[url('https://ind.55ace.com/img/title-bg.a3d85bbd.png')] bg-center bg-cover ";
+        header.innerHTML = `<h2 class="text-white text-2xl font-bold uppercase">${category} Games</h2>`;
+        gameGrid.appendChild(header);
+
+        let columns = 4; // default for Hot
+        if(category === "Casino"|| category === "Sport") columns = 1;
+        else if(category === "Slots" || category === "Fishing" ) columns = 3;
+
+        const grid = document.createElement("div");
+        grid.className = `grid grid-cols-${columns}  mt-2 mb-[5.5rem] px-4`;
+
+       games.forEach(game => {
+    const card = document.createElement("a");
+    card.href = game.url;
+    card.className = (category === "Casino"|| category === "Sport" ) 
+        ? "flex flex-col w-full  overflow-hidden" 
+        : "flex flex-col w-full  overflow-hidden";
+
+    card.innerHTML = (category !== "Casino") ? `
+        <div class="w-full aspect-square p-1">
+            <img src="${game.img}" class="w-full rounded-[0.5rem]  object-cover shadow-gray-300 shadow-xl hover:shadow-2xl">
+        </div>
+        <div class="mt-2 text-center text-sm font-semibold text-black">${game.name}</div>
+    ` : `
+        <div class="w-full aspect-square">
+            <img src="${game.img}" class="w-full h-full object-cover">
+        </div>
+    `;
+
+    grid.appendChild(card);
+});
+
+
+        gameGrid.appendChild(grid);
+
+    } else { // Lobby
+       const lobbyCategories = ["Hot", "Casino", "Slots", "Fishing", "Sport"];
+
+lobbyCategories.forEach(cat => {
+  const games = gameData[cat].games;
+
+  const section = document.createElement("section");
+  section.className = "space-y-4";
+
+  const header = document.createElement("div");
+  header.className =
+    "flex items-center gap-2 px-3 py-4 bg-[url('https://ind.55ace.com/img/title-bg.a3d85bbd.png')] bg-center bg-cover";
+  header.innerHTML = `<h2 class="text-white text-2xl font-bold uppercase">${cat} Games</h2>`;
+  section.appendChild(header);
+
+  // Scroll wrapper for Lobby categories
+  const scrollWrapper = document.createElement("div");
+  scrollWrapper.className = "overflow-x-auto whitespace-nowrap drag-scroll pb-3 sys-g-image";
+  const scrollInner = document.createElement("div");
+  
+  scrollInner.className = (cat === "Sport") ? "" : "inline-flex gap-4 px-3";
+
+
+  games.forEach(game => {
+    const card = document.createElement("a");
+    card.href = game.url;
+
+    // All cards same width for horizontal scroll
+    card.className =
+      cat === "Casino"
+        ? "flex flex-col w-auto overflow-hidden"
+        : cat === "Sport"
+          ? "flex flex-col w-full"
+          : "flex flex-col w-full rounded-lg overflow-hidden";
+
+    const dedi =
+      cat === "Casino"
+        ? `<div class="w-[250px]">`
+        : cat === "Sport"
+          ? `<div class="w-full h-auto">`
+          : `<div class="w-full">`;
+
+    const gameTitle =
+      cat != "Sport"
+        ? `<div class="mt-2 text-center text-sm font-semibold text-white">${game.name}</div>`
+        : "";
+        
+        
+            const gameimge =
+      cat === "Sport"
+        ? `<img src="${game.img}" class="w-full h-auto rounded-lg" alt="${game.name}">`
+        : `<img src="${game.img}" class="w-full h-[120px] rounded-lg" alt="${game.name}">`;
+
+    card.innerHTML = `
+      ${dedi}
+         ${gameimge}
+        ${gameTitle}
+      </div>
+    `;
+
+    scrollInner.appendChild(card);
+  });
+
+  // Append scroll only if NOT Sport
+  if (cat !== "Sport") {
+    scrollWrapper.appendChild(scrollInner);
+    section.appendChild(scrollWrapper);
+  } else {
+    // Optional: For Sport, show grid layout instead of scroll
+    const grid = document.createElement("div");
+    grid.className = "";
+    grid.appendChild(scrollInner);
+    section.appendChild(grid);
+  }
+
+  gameGrid.appendChild(section);
+});
+
+// Initialize drag scroll
+initDragScroll();
+
+    }
+}
+
+// Initialize first category
+loadGames(Object.keys(gameData)[0]);
+
+// Drag scroll function
+function initDragScroll() {
+    const sliders = document.querySelectorAll('.drag-scroll');
+    sliders.forEach(slider => {
+        let isDown = false, startX, scrollLeft;
+        slider.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; });
+        slider.addEventListener('mouseleave', () => isDown = false);
+        slider.addEventListener('mouseup', () => isDown = false);
+        slider.addEventListener('mousemove', e => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            slider.scrollLeft = scrollLeft - (x - startX) * 2;
+        });
+    });
+}
+
+
+</script>
+
+
+            
+          <style>
+.aspect-square {
+    aspect-ratio: 0 / 1;
+}
+</style>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us | Ace11</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#0b0c1a',
+                        'app-purple': '#3e1474',
+                        'nav-item-bg': 'rgba(255, 255, 255, 0.1)',
+                        'icon-purple': '#3e1474',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="bg-app-bg min-h-screen pb-24 w-full md:max-w-[500px] mx-auto">
+
+    <!-- Header -->
+    <div class="sticky top-0 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+      <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+    </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">About us</h2>
+        <span class="w-6"></span>
+    </div>
+
+    <!-- Content -->
+    <div class="px-4 mt-6">
+        <div class="bg-white rounded-xl shadow-md divide-y divide-gray-200 overflow-hidden">
+
+            <!-- Item 1 -->
+            <a href="/about/privacyPolicy" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
+                <div class="flex items-center space-x-3">
+                    <i class="ri-file-text-line text-xl text-app-purple"></i>
+                    <span class="text-gray-800 text-sm font-medium">Confidentiality Agreement</span>
+                </div>
+                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="/about/riskAgreement" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
+                <div class="flex items-center space-x-3">
+                    <i class="ri-file-text-line text-xl text-app-purple"></i>
+                    <span class="text-gray-800 text-sm font-medium">Risk Disclosure Agreement</span>
+                </div>
+                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Footer (Injected via EJS if used with Node.js/Express) -->
+    <%- include('../../layout/footer.ejs') %>
+
+</body>
+
+</html>

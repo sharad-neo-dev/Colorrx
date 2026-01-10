@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage POPs</title>
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+
+  <!-- AdminLTE & Bootstrap 4 -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <%- include('nav') %>
+
+    <div class="content-wrapper">
+      <!-- Header -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <h1>Manage POPs</h1>
+        </div>
+      </section>
+
+      <!-- Search -->
+      <div class="form-group text-center mb-4">
+        <input type="text" id="search" placeholder="Search by page name" class="form-control"
+          style="max-width: 400px; display: inline-block;">
+      </div>
+
+      <!-- POP Table -->
+      <section class="content">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="card-title">POPs</h3>
+            <button class="btn btn-success btn-sm" id="addPopBtn">
+              <i class="fas fa-plus"></i> Create POP
+            </button>
+          </div>
+
+          <div class="card-body p-0">
+            <table class="table table-striped projects" id="popTable">
+              <thead>
+                <tr class="text-center">
+                  <th>#</th>
+                  <th>Page Name</th>
+                  <th>Image</th>
+                  <th>Created At</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- POP rows will be injected here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Modal for Create/Edit POP -->
+  <div class="modal fade" id="popModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="popForm" enctype="multipart/form-data">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Create POP</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="popId" name="pop_id">
+            <div class="form-group mb-3">
+              <label for="page_name">Page Name</label>
+              <select class="form-control" id="page_name" name="page_name" required>
+                <option value="">-- Select Page --</option>
+                <option value="home">Home</option>
+             
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label for="image">POP Image</label>
+              <input type="file" class="form-control" id="image" name="image" accept="image/*">
+              <small id="currentImage" class="text-muted"></small>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="savePopBtn">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/dist/js/adminlte.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // Load all POPs
+      function loadPOPs() {
+        $.ajax({
+          url: '/api/webapi/pop',
+          type: 'GET',
+          success: function (res) {
+            let html = '';
+            if (res.status && res.data.length > 0) {
+              res.data.forEach((p, index) => {
+                html += `
+                  <tr class="text-center">
+                    <td>${index + 1}</td>
+                    <td>${p.page_name.charAt(0).toUpperCase() + p.page_name.slice(1)}</td>
+                    <td>${p.image ? `<img src="${p.image}" width="80"/>` : ''}</td>
+                    <td>${new Date(p.created_at).toLocaleString()}</td>
+                    <td>
+                      <button class="btn btn-info btn-sm edit-pop" data-id="${p.pop_id}">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                      </button>
+                      <button class="btn btn-danger btn-sm delete-pop" data-id="${p.pop_id}">
+                        <i class="fas fa-trash"></i> Delete
+                      </button>
+                    </td>
+                  </tr>`;
+              });
+            } else {
+              html = `<tr class="text-center"><td colspan="5">No POPs found</td></tr>`;
+            }
+            $('#popTable tbody').html(html);
+          },
+          error: function () {
+            $('#popTable tbody').html('<tr class="text-center"><td colspan="5">Server error</td></tr>');
+          }
+        });
+      }
+
+      loadPOPs();
+
+      // Search POP
+      $('#search').on('keyup', function () {
+        const value = $(this).val().toLowerCase();
+        $('#popTable tbody tr').filter(function () {
+          const pageName = $(this).find('td:nth-child(2)').text().toLowerCase();
+          $(this).toggle(pageName.includes(value));
+        });
+      });
+
+      // Open create POP modal
+      $('#addPopBtn').click(function () {
+        $('#popForm')[0].reset();
+        $('#popId').val('');
+        $('#modalTitle').text('Create POP');
+        $('#currentImage').text('');
+        $('#popModal').modal('show');
+      });
+
+      // Edit POP
+      $(document).on('click', '.edit-pop', function () {
+        const id = $(this).data('id');
+        $.ajax({
+          url: `/api/webapi/pop/${id}`,
+          type: 'GET',
+          success: function (res) {
+            if (res.status) {
+              $('#popId').val(res.data.pop_id);
+              $('#page_name').val(res.data.page_name.toLowerCase());
+              $('#currentImage').text(res.data.image ? `Current image: ${res.data.image}` : '');
+              $('#modalTitle').text('Edit POP');
+              $('#popModal').modal('show');
+            } else {
+              Swal.fire('Error!', res.message, 'error');
+            }
+          },
+          error: function () {
+            Swal.fire('Error!', 'Something went wrong', 'error');
+          }
+        });
+      });
+
+      // Save POP (create or update)
+      $('#popForm').submit(function (e) {
+        e.preventDefault();
+
+        const popId = $('#popId').val();
+        const formData = new FormData(this);
+
+        let ajaxOptions = {
+          url: '/api/webapi/pop',
+          type: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function (res) {
+            if (res.status) {
+              Swal.fire('Success!', res.message, 'success');
+              $('#popForm')[0].reset();
+              $('#popModal').modal('hide');
+              loadPOPs();
+            } else {
+              Swal.fire('Error!', res.message, 'error');
+            }
+          },
+          error: function () {
+            Swal.fire('Error!', 'Something went wrong', 'error');
+          }
+        };
+
+        if (popId) {
+          ajaxOptions.url = `/api/webapi/pop/${popId}`;
+          ajaxOptions.type = 'PUT';
+        }
+
+        $.ajax(ajaxOptions);
+      });
+
+      // Delete POP
+      $(document).on('click', '.delete-pop', function () {
+        const id = $(this).data('id');
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "This will be permanently deleted!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: `/api/webapi/pop/${id}`,
+              type: 'DELETE',
+              success: function (res) {
+                if (res.status) {
+                  Swal.fire('Deleted!', res.message, 'success');
+                  loadPOPs();
+                } else {
+                  Swal.fire('Error!', res.message, 'error');
+                }
+              },
+              error: function () {
+                Swal.fire('Error!', 'Something went wrong', 'error');
+              }
+            });
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner Management</title>
+<link rel="stylesheet" href="/dist/css/adminlte.min.css">
+<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<style>
+#loader { display:none; position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999; }
+#loader div { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:24px; }
+</style>
+</head>
+<body class="hold-transition sidebar-mini">
+
+<div id="loader"><div>Loading...</div></div>
+
+<div class="wrapper">
+  <%- include('nav') %>
+  <div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6"><h1>Banner Management</h1></div>
+          <div class="col-sm-6 text-right">
+            <button class="btn btn-success" id="addBannerBtn"><i class="fas fa-plus"></i> Add Banner</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="card">
+        <div class="card-header"><h3 class="card-title">List of Banners</h3></div>
+        <div class="card-body p-0">
+          <table class="table table-striped text-center" id="bannerTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>url</th>
+                <th>Created At</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/adminlte.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+<script>
+const showLoader = () => $("#loader").show();
+const hideLoader = () => $("#loader").hide();
+
+const loadBanners = () => {
+  showLoader();
+  $.get("/api/webapi/slider", (res) => {
+    hideLoader();
+    if(res.status) renderBanners(res.data);
+  });
+};
+
+const renderBanners = (banners) => {
+  let html = '';
+  banners.forEach((b,i) => {
+    html += `<tr>
+      <td>${i+1}</td>
+      <td>${b.title}</td>
+      <td><img src="${b.image_url}" style="width:100px"/></td>
+       <td>${b.page_url}</td>
+      <td>${new Date(b.created_at).toLocaleString()}</td>
+      <td>
+
+        <button class="btn btn-danger btn-sm delete-btn" data-id="${b.id}">Delete</button>
+      </td>
+    </tr>`;
+  });
+  $("#bannerTable tbody").html(html);
+
+  $(".delete-btn").click(function(){
+    const id = $(this).data("id");
+    Swal.fire({
+      title: 'Are you sure?', icon:'warning', showCancelButton:true, confirmButtonText:'Yes'
+    }).then((r)=>{
+      if(r.isConfirmed){
+        showLoader();
+        $.ajax({url:`/api/webapi/slider/${id}`, type:'DELETE', success:()=>{ hideLoader(); loadBanners(); }});
+      }
+    });
+  });
+
+  $(".edit-btn").click(function(){
+    const id = $(this).data("id");
+    const banner = banners.find(b=>b.id===id);
+    Swal.fire({
+      title:'Edit Banner',
+      html:`<input id="swal-title" class="swal2-input" value="${banner.title}">
+            <input type="file" id="swal-image" class="swal2-file">`,
+      confirmButtonText:'Update',
+      preConfirm:()=>{
+        const title=$("#swal-title").val();
+        const file=$("#swal-image")[0].files[0];
+        if(!title) Swal.showValidationMessage('Title required');
+        return { title, file };
+      }
+    }).then((r)=>{
+      if(r.isConfirmed){
+        const formData = new FormData();
+        formData.append('title', r.value.title);
+        if(r.value.file) formData.append('image', r.value.file);
+        showLoader();
+        $.ajax({
+          url:`/api/webapi/slider/${id}`,
+          type:'PUT',
+          data:formData,
+          processData:false,
+          contentType:false,
+          success:()=>{ hideLoader(); loadBanners(); }
+        });
+      }
+    });
+  });
+};
+
+$("#addBannerBtn").click(()=>{
+  Swal.fire({
+    title:'Add Banner',
+    html:`<input id="swal-title" class="swal2-input" placeholder="Title">
+          <input id="page-url" class="swal2-input" placeholder="Page Url">
+          <input type="file" id="swal-image" class="swal2-file">`,
+    confirmButtonText:'Create',
+    preConfirm:()=>{
+      const title=$("#swal-title").val();
+      const page_url=$("#page-url").val();
+      const file=$("#swal-image")[0].files[0];
+      if(!title || !file) Swal.showValidationMessage('Title and image required');
+      return { title,file,page_url };
+    }
+  }).then(r=>{
+    if(r.isConfirmed){
+      const fd=new FormData();
+      fd.append('title', r.value.title);
+      fd.append('page_url', r.value.page_url);
+      fd.append('image', r.value.file);
+      showLoader();
+      $.ajax({
+        url:'/api/webapi/slider/create',
+        type:'POST',
+        data:fd,
+        processData:false,
+        contentType:false,
+        success:()=>{ hideLoader(); loadBanners(); }
+      });
+    }
+  });
+});
+
+loadBanners();
+</script>
+
+</body>
+</html>

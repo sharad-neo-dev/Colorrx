@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>USDT Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<style>
+    body { font-family: Arial, sans-serif; background:#f2f2f2; margin:0; padding:0; }
+    .wrapper { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+    .container { background:#fff; width:100%; max-width:500px; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-start; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align:center; background:linear-gradient(to right,#0073e6,#00c6ff); color:#fff; padding:15px; margin:0; font-size:20px; position:relative; display:flex; align-items:center; justify-content:center; }
+    .back-btn { position:absolute; left:10px; background:#fff; border:none; padding:6px 10px; border-radius:5px; cursor:pointer; font-weight:bold; }
+    .content { padding:20px; flex:1; }
+    .amount { display:flex; align-items:center; justify-content:center; gap:10px; font-size:22px; font-weight:bold; color:#0073e6; margin:10px 0; }
+    .qrcode { text-align:center; margin:20px 0; }
+    .qrcode img { max-width:220px; width:100%; height:auto; }
+    .upi-box { margin:20px 0; padding:15px; border:1px solid #ddd; border-radius:10px; text-align:center; font-weight:bold; position:relative; }
+    .copy-btn { margin-top:10px; display:inline-block; background:#0073e6; color:#fff; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; font-size:14px; }
+    .copy-btn:hover { background:#005bb5; }
+    input[type=text] { width:100%; padding:14px; margin:10px 0; border:1px solid #ccc; border-radius:5px; font-size:15px; box-sizing:border-box; }
+    button.submit-btn { width:100%; background:linear-gradient(to right,#0073e6,#00c6ff); color:#fff; border:none; padding:14px; font-size:16px; border-radius:5px; cursor:pointer; margin-top:10px; display:flex; align-items:center; justify-content:center; }
+    button.submit-btn:hover { background:linear-gradient(to right,#005bb5,#0099cc); }
+    .error { font-size:14px; color:red; margin-top:-5px; margin-bottom:10px; text-align:center; display:none; }
+    .loader { border:3px solid #f3f3f3; border-top:3px solid #fff; border-radius:50%; width:16px; height:16px; animation: spin 1s linear infinite; display:none; margin-left:8px; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @media(max-width:600px){ .container { border-radius:0; max-width:100%; min-height:100vh; } h2 { font-size:18px; padding:12px; } .amount { font-size:20px; } }
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <h2>
+            <button class="back-btn" onclick="history.back()">← Back</button>
+            USDT Payment
+        </h2>
+
+        <div class="content">
+
+            <!-- Display Amount -->
+            <p class="amount">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" style="vertical-align:middle; margin-right:5px;">
+                    <circle cx="128" cy="128" r="128" fill="#26A17B"/>
+                    <path fill="#fff" d="M144.9 139.9c-1.2.1-7.3.4-21.1.4c-11 0-18.8-.2-21.5-.4c-42.5-1.9-74.3-9.3-74.3-18.1s31.8-16.2 74.3-18.1V70.1h-42v-22h115.6v22h-42v33.7c42.5 1.9 74.3 9.3 74.3 18.1c0 8.8-31.8 16.2-74.3 18.1zM209.3 127c0-12.5-36.3-22.6-81-22.6s-81 10.1-81 22.6c0 10.9 24.9 20 59 22.1v35.3h44v-35.3c34.1-2.1 59-11.2 59-22.1z"/>
+                </svg>
+                <%= amount || '100.00' %>
+            </p>
+
+            <p style="text-align:center;">Use Mobile Scan QR to pay</p>
+
+            <!-- QR Code (only if active) -->
+            <% if (usdtSettings.usdt_qr_is_active) { %>
+            <div class="qrcode">
+                <img src="<%= usdtSettings.usdt_qr_code || '/uploads/default.png' %>" alt="QR Code">
+            </div>
+            <% } %>
+
+            <!-- USDT Address (only if active) -->
+            <% if (usdtSettings.usdt_upi_is_active) { %>
+            <div class="upi-box">
+                USDT Address: <br>
+                <span id="usdtAddress"><%= usdtSettings.usdt_upi || 'YOUR_USDT_WALLET_ADDRESS' %></span>
+                <button type="button" class="copy-btn" onclick="copyUSDT()">Copy Address</button>
+            </div>
+            <% } %>
+
+            <p style="text-align:center;">Submit Trx number Below the Form</p>
+
+            <form id="utrForm">
+                <input type="text" name="utr" placeholder="Enter 12–16 character Trx No" maxlength="16" minlength="12" required>
+                <div id="utrError" class="error">Trx number must be 12–16 characters (letters & numbers)</div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Submit Trx number</span>
+                    <span class="loader"></span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+function copyUSDT() {
+    const address = document.getElementById("usdtAddress").innerText;
+    navigator.clipboard.writeText(address).then(() => {
+        Toastify({ 
+            text: "USDT Address Copied!", 
+            duration: 2000, 
+            gravity: "top", 
+            position: "center", 
+            backgroundColor: "green" 
+        }).showToast();
+    }).catch(() => {
+        Toastify({ 
+            text: "Failed to copy address", 
+            duration: 2000, 
+            gravity: "top", 
+            position: "center", 
+            backgroundColor: "red" 
+        }).showToast();
+    });
+}
+
+const form = document.getElementById("utrForm");
+const utrInput = document.querySelector("input[name='utr']");
+const utrError = document.getElementById("utrError");
+const submitBtn = document.getElementById("submitBtn");
+const btnText = submitBtn.querySelector(".btn-text");
+const loader = submitBtn.querySelector(".loader");
+
+// You can pass amount from server-side ejs variable
+const usdtAmount = "<%= amount %>"; // e.g., 50
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const utr = utrInput.value.trim();
+
+    // Validate UTR (12–16 alphanumeric characters)
+  
+
+    btnText.textContent = "Submitting...";
+    loader.style.display = "inline-block";
+    submitBtn.disabled = true;
+    utrInput.disabled = true;
+
+    fetch("/api/webapi/usdt/submit", { // your POST endpoint
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ 
+            utr, 
+            money: usdtAmount,   // send as `money` for backend
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        Toastify({ 
+            text: data.message || "Response received", 
+            duration: 2500, 
+            gravity: "top", 
+            position: "center", 
+            backgroundColor: data.status ? "green" : "red" 
+        }).showToast();
+
+        if (data.status) {
+            setTimeout(() => { window.location.href = "/wallet/rechargerecord"; }, 1000);
+        }
+    })
+    .catch(() => {
+        Toastify({ 
+            text: "Error submitting Trx number", 
+            duration: 2500, 
+            gravity: "top", 
+            position: "center", 
+            backgroundColor: "red" 
+        }).showToast();
+    })
+    .finally(() => {
+        btnText.textContent = "Submit Trx number";
+        loader.style.display = "none";
+        submitBtn.disabled = false;
+        utrInput.disabled = false;
+    });
+});
+</script>
+
+</body>
+</html>

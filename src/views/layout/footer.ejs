@@ -1,0 +1,98 @@
+
+
+<footer
+  class="fixed bottom-0 z-50 w-full md:max-w-[500px] border-t border-gray-800 shadow-inner block"
+  style="background: #fff;"
+>
+
+
+   <a id="telegramBtn" href="#" target="_blank"
+     class="fixed right-2 bottom-[6rem] z-50 w-16 h-16">
+    <img src="/images/support10.png" alt="Support" class="w-16 h-16 object-contain">
+  </a>
+
+    <nav id="mobileNav" class="max-w-md mx-auto flex justify-between items-center px-0 py-2 text-gray-400 relative">
+
+        <!-- Home -->
+        <a href="/home" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold text-gray-400 transition-all" data-menu="home">
+            <img src="/img/Home/home.png" alt="Home" class="w-12 h-12 mb-1">
+            <span>Home</span>
+        </a>
+
+        <!-- Promo -->
+        <a href="/promotion" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold text-gray-400 transition-all" data-menu="promo">
+            <img src="/img/Home/Promo.png" alt="Promo" class="w-12 h-12 mb-1">
+            <span>Promo</span>
+        </a>
+
+        <!-- Wallet (Always Circle) -->
+        <a href="/wallet/recharge" class="wallet-fixed flex-1 flex flex-col items-center justify-center relative" data-menu="wallet">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#ffcc33] to-[#ff8800] shadow-lg mb-1">
+                <img src="/img/icon/bankCard-72696d64.png" alt="Wallet" class="w-6 h-6
+                ">
+            </div>
+            <span class="text-[#ff8800] font-bold text-[11px]">Wallet</span>
+        </a>
+
+        <!-- Earn Money -->
+        <a href="/earn-money" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold text-gray-400 transition-all" data-menu="earn">
+            <img src="/img/Home/EarnMoney.png" alt="Earn Money" class="w-12 h-12 mb-1">
+            <span> Earn money</span>
+        </a>
+
+        <!-- Me -->
+        <a href="/mian" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold text-gray-400 transition-all" data-menu="me">
+            <img src="/img/Home/download (1).png" alt="Me" class="w-12 h-12 mb-1">
+            <span>Me</span>
+        </a>
+    </nav>
+</footer>
+
+<script>
+  const footerLinks = document.querySelectorAll('#mobileNav .nav-link');
+  const currentPath = window.location.pathname;
+
+  function setActive(link) {
+    footerLinks.forEach(l => {
+      l.classList.remove("text-[#FA605F]");
+      l.querySelector("span").classList.remove("text-[#FA605F]");
+    });
+
+    link.querySelector("span").classList.add("text-[#FA605F]");
+  }
+
+  // On load: match path
+  let matched = false;
+  footerLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      setActive(link);
+      matched = true;
+    }
+  });
+
+  if (!matched && footerLinks.length > 0) {
+    setActive(footerLinks[0]);
+  }
+
+  // On click
+  footerLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      setActive(this);
+    });
+  });
+
+  async function loadTelegramLink() {
+    try {
+      const res = await fetch('/api/webapi/appsetting');
+      const data = await res.json();
+      if (data.success && data.data.telegram) {
+        document.getElementById('telegramBtn').href = data.data.telegram;
+      }
+    } catch (error) {
+      console.error('Failed to load Telegram link:', error);
+    }
+  }
+
+
+  loadTelegramLink();
+</script>

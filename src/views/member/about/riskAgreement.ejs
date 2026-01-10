@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Risk Disclosure Agreement | Ace11</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'app-bg': '#0b0c1a',
+                        'app-purple': '#3e1474',
+                        'nav-item-bg': 'rgba(255, 255, 255, 0.1)',
+                        'icon-purple': '#3e1474',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="bg-app-bg min-h-screen pb-24 w-full md:max-w-[500px] mx-auto text-sm">
+
+    <!-- Header -->
+    <div class="sticky top-0 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+      <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+    </button>
+        <h2 class="flex-1 text-center text-white font-semibold text-lg">Risk Disclosure Agreement</h2>
+        <span class="w-6"></span>
+    </div>
+
+    <!-- Content -->
+    <div class="px-4 mt-6">
+        <div class="bg-white rounded-lg shadow-md p-4 space-y-4 leading-relaxed text-gray-800">
+            <h3 class="text-base font-semibold text-gray-900">User Agreement</h3>
+
+            <p><strong>1.</strong> To avoid betting disputes, members must read the company's rules before entering the app. Once the player “I agree” by entering this company to bet, you will be considered to be in agreement with the company’s User Agreement.</p>
+
+            <p><strong>2.</strong> It is the member's responsibility to ensure the confidentiality of their account and login information. Any online bets placed using your account number and member password will be considered valid. Please change your password
+                from time to time. The company is not responsible for any compensation for bets made with a stolen account and password.</p>
+
+            <p><strong>3.</strong> The company reserves the right to change this agreement or the game rules or confidentiality rules from time to time. The modified terms will take effect on the date specified after the change occurs, and the right to make
+                final decisions on all disputes is reserved by the company.</p>
+
+            <p><strong>4.</strong> Users must be of legal age according to the laws of the country of residence to use an online casino or application. Online bets that have not been successfully submitted will be considered void.</p>
+
+            <p><strong>5.</strong> When a player is automatically or forcibly disconnected from the game before the game result is announced, it will not affect the game result.</p>
+        </div>
+    </div>
+
+    <!-- Footer (Injected via EJS if using Express.js) -->
+    <%- include('../../layout/footer.ejs') %>
+
+</body>
+
+</html>

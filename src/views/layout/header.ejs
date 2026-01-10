@@ -1,0 +1,395 @@
+
+    <!-- ✅ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+      :root {
+        --primary-purple: #2d0f54;
+        --dark-bg: #101114;
+        --accent-red-start: #b42614;
+        --accent-red-end: #7b0101;
+        --button-purple: #5c2c9d;
+      }
+
+      /* 
+      .bg-gradient-header {
+        background: linear-gradient(to bottom, #2d0f54, #101114 96.35%);
+      }*/
+      /*
+       .bg-gradient-header {
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
+      }*/
+      .bg-gradient-header {
+        background: #fff;
+      }
+
+      .balance-button {
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        color: white;
+        font-weight: 600;
+        font-size: 0.875rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+      }
+
+      .add-button {
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
+      }
+
+      .profile-ring {
+        border: 2px solid #f95959;
+      }
+
+      .vip-tag {
+        background-color: white;
+        color: #1c0f2a;
+        font-size: 0.6rem;
+        font-weight: bold;
+        padding: 0 0.5rem;
+        border-radius: 0.25rem;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        white-space: nowrap;
+      }
+
+      .currency-dropdown {
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
+        border-radius: 9999px;
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      @keyframes slideDownFade {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slideDownFade {
+        animation: slideDownFade 0.4s ease-out forwards;
+      }
+
+      /* ✅ Sticky popup on top */
+   
+      
+      
+      .main-header-css{
+       position: sticky;
+        top: 0;
+        z-index: 9999;
+      }
+    </style>
+
+
+<div class="main-header-css">
+    <!-- 🔴 Download Popup -->
+    <div
+      id="download-popup"
+      class="hidden w-full md:max-w-[500px] mx-auto flex justify-between items-center px-4 py-2 text-white text-sm font-medium rounded-md shadow-md animate-slideDownFade"
+      style="background: linear-gradient(180deg, #041030 0%, #0b1b4d 100%);"
+    >
+      <div class="flex items-center gap-2">
+        <a id="applink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 bg-gradient-to-b from-[#b42614] to-[#7b0101] px-4 py-1.5 rounded-full font-semibold text-xs text-white hover:opacity-90 transition"
+        >
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="18"
+  height="18"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="butt"
+  stroke-linejoin="miter"
+  class="lucide lucide-download"
+>
+  <!-- Arrow head -->
+  <polyline points="7 10 12 15 17 10" />
+  <!-- Arrow stem -->
+  <line x1="12" y1="3" x2="12" y2="15" />
+</svg>
+
+          <span>Download App</span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span id="timer" class="text-xs font-semibold">(5s)</span>
+        <button
+          id="close-btn"
+          class="text-white hover:text-gray-300 text-sm font-bold"
+        >
+          ✖
+        </button>
+      </div>
+    </div>
+
+    <!-- 🔵 Header -->
+    <header
+      id="main-header"
+      class="w-full md:max-w-[500px] mx-auto flex items-center justify-between px-4 py-3 shadow-md bg-gradient-header z-40 transition-all duration-300 rounded-b-md"
+    >
+      <div class="flex items-center">
+        <img
+          src="/img/Home/daman-red.png"
+          alt="Logo"
+          class="h-12 w-auto object-contain"
+        />
+      </div>
+
+      <!-- Auth Buttons -->
+      <div id="auth-buttons" class="flex items-center gap-2">
+        <a
+          href="/login"
+          class="px-5 py-2 rounded-lg hover:bg-[#ffffff1a] text-white text-sm font-medium transition-colors duration-300 inline-block text-center"
+          >Login</a
+        >
+        <a
+          href="/register"
+          class="px-5 py-2 rounded-lg text-white text-sm font-medium bg-gradient-to-b from-[#b42614] to-[#7b0101] hover:opacity-90 transition-opacity duration-300 inline-block text-center"
+          >Register</a
+        >
+      </div>
+
+      <!-- User Status -->
+      <div id="user-status" class="hidden flex items-center gap-2">
+        <div class="balance-button">
+          <span id="user-balance">₹ 0.00</span>
+        </div>
+
+        <a
+          href="/wallet/recharge"
+          class="w-10 h-10 flex items-center justify-center rounded-lg add-button text-white shadow-lg transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-plus"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+          </svg>
+        </a>
+
+        <div class="relative">
+          <img
+            id="profile-img"
+            src="https://picsum.photos/40/40"
+            alt="User Profile"
+            class="w-10 h-10 rounded-full object-cover profile-ring"
+          />
+          <span class="vip-tag">VIP0</span>
+        </div>
+
+        <div class="currency-dropdown text-white h-10 w-10 flex-shrink-0">
+          <span class="text-base font-semibold">₹</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-down w-4 h-4"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
+      </div>
+    </header>
+    </div>
+
+    <!-- ✅ Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      async function fetchUserBalance() {
+        try {
+          const response = await axios.get("/api/webapi/GetUserInfo");
+          const userData = response?.data?.data || {};
+          const balance = parseFloat(userData.money_user || 0).toFixed(2);
+          document.getElementById("user-balance").textContent = `₹ ${balance}`;
+        } catch (err) {
+          console.error("Balance fetch failed:", err);
+          document.getElementById("user-balance").textContent = "₹ 0.00";
+        }
+      }
+
+     
+     function getAllCookies() {
+  const cookies = {};
+
+  // 🧠 If no cookies exist, return empty object
+  if (!document.cookie || document.cookie.trim() === "") {
+    return cookies;
+  }
+
+  // 🧩 Split cookie string safely
+  document.cookie.split(";").forEach((cookie) => {
+    const trimmed = cookie.trim();
+    if (!trimmed) return;
+
+    const separatorIndex = trimmed.indexOf("=");
+    if (separatorIndex === -1) {
+      // 🧠 Handle cookies without a value (rare)
+      cookies[trimmed] = "";
+      return;
+    }
+
+    const name = trimmed.substring(0, separatorIndex).trim();
+    const value = trimmed.substring(separatorIndex + 1).trim();
+
+    try {
+      cookies[name] = decodeURIComponent(value);
+    } catch {
+      cookies[name] = value; // fallback if decoding fails
+    }
+  });
+
+  return cookies;
+}
+
+
+     function updateHeaderStatus() {
+  const cookies = getAllCookies();
+  const token = cookies["token"];
+  const auth = cookies["auth"];
+
+  const authButtons = document.getElementById("auth-buttons");
+  const userStatus = document.getElementById("user-status");
+
+  // 🧠 Determine if user is logged in
+  const isLoggedIn = !!(token && auth);
+
+  if (isLoggedIn) {
+    // ✅ Hide auth buttons and show user info
+    if (authButtons) authButtons.style.display = "none";
+    if (userStatus) userStatus.style.display = "flex";
+
+    // 🧾 Fetch user balance (avoid multiple intervals)
+     fetchUserBalance();
+    //  if (!window.__balanceInterval) {
+    //    window.__balanceInterval = setInterval(fetchUserBalance, 3000);
+    //  }
+   
+  } else {
+    // 🚪 User not logged in
+    if (authButtons) authButtons.style.display = "flex";
+    if (userStatus) userStatus.style.display = "none";
+
+    // 💡 Show popup only on homepage
+    const currentPath = window.location.pathname;
+    if (currentPath === "/" || currentPath === "/home") {
+      showDownloadPopup();
+    }
+
+    // 🧹 Stop any ongoing balance interval
+    if (window.__balanceInterval) {
+      clearInterval(window.__balanceInterval);
+      window.__balanceInterval = null;
+    }
+  }
+}
+
+
+      function showDownloadPopup() {
+        const popup = document.getElementById("download-popup");
+        const timerEl = document.getElementById("timer");
+        const closeBtn = document.getElementById("close-btn");
+
+        let timeLeft = 5;
+        popup.classList.remove("hidden");
+        timerEl.textContent = `(${timeLeft}s)`;
+
+        const countdown = setInterval(() => {
+          timeLeft--;
+          timerEl.textContent = `(${timeLeft}s)`;
+          if (timeLeft <= 0) {
+            clearInterval(countdown);
+            popup.classList.add("hidden");
+          }
+        }, 1000);
+
+        closeBtn.addEventListener("click", () => {
+          popup.classList.add("hidden");
+          clearInterval(countdown);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", updateHeaderStatus);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         async function loadAppLink() {
+    try {
+      const res = await fetch('/api/webapi/appsetting');
+      const data = await res.json();
+      if (data.success && data.data.app) {
+        document.getElementById('applink').href = data.data.app;
+      }
+    } catch (error) {
+      console.error('Failed to load Telegram link:', error);
+    }
+  }
+
+  loadAppLink();
+  
+  
+  
+  
+function reload() {
+
+
+  const Payment_order_id = localStorage.getItem("Payment_order_id");
+        localStorage.removeItem("Payment_order_id");
+
+  if (Payment_order_id) {
+    setTimeout(() => {
+      fetchUserBalance(); 
+    }, 2000);
+
+    setTimeout(() => {
+      fetchUserBalance();
+
+    }, 5000); // 2s + 3s = 5s total
+  } else {
+    console.log("No Payment_order_id found in localStorage");
+  }
+}
+
+  reload();    
+      
+    </script>
+

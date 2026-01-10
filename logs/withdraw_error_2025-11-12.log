@@ -1,0 +1,14 @@
+{
+  "time": "2025-11-12T11:27:29.098Z",
+  "ip": "27.58.79.255",
+  "url": "/api/webapi/admin/withdraw/lg",
+  "method": "POST",
+  "body": {
+    "id": "18"
+  },
+  "query": {},
+  "response": {
+    "error": "db is not defined",
+    "stack": "ReferenceError: db is not defined\n    at sendToLGPay (file:///www/ace11/src/controllers/withdrawalController.js:1199:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Statistics | colorrx</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        // Tailwind Configuration for custom colors based on the dark theme image
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main-dark': '#1c1c2b',
+                        /* Main dark background (from image_9c91ec.png) */
+                        'card-dark': '#29293f',
+                        /* Card/Container background */
+                        'header-purple': '#3e1474',
+                        'active-red': '#fe485c',
+                        /* Primary active color */
+                        'text-win': '#00b74a',
+                        /* Green for wins/positive values */
+                        'text-loss': '#ef4444',
+                        /* Red for loss/negative values */
+                        'text-primary': '#f0f0f0',
+                        /* Light text for main content */
+                        'text-secondary': '#a0a0a0',
+                        /* Grey text for labels */
+                        'card-border': '#3a3a50',
+                        /* Subtle card border/divider */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base styles */
+        
+        body {
+            background-color: #0b0c1a;
+            /* Dark outer background */
+            color: #f0f0f0;
+            /* Default text color */
+        }
+        /* Header Gradient for the title bar - Seamless transition to dark body */
+        
+        .bg-gradient-header {
+            background: linear-gradient(180deg, #3e1474, #0b0c1a 96.35%);
+        }
+        /* Main Container Styling: App container now fills the full dark background */
+        
+        .app-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #1c1c2b;
+            /* Main Dark Background */
+            min-height: 100vh;
+        }
+        /* Custom Tab Styling */
+        
+        .stat-tab {
+            color: #a0a0a0;
+            transition: all 0.3s;
+        }
+        
+        .stat-tab.active-tab {
+            color: #fe485c;
+            font-weight: 600;
+        }
+        
+        .stat-tab.active-tab::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background-color: #fe485c;
+            margin: 0 auto;
+            margin-top: 4px;
+            border-radius: 9999px;
+        }
+        /* Game Card Styling */
+        
+        .game-card {
+            background-color: #29293f;
+            /* Dark card background */
+            border: 1px solid #3a3a50;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+        }
+        
+        .game-header {
+            background-color: #29293f;
+            /* Same as card body for consistency */
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f0f0f0;
+            border-bottom: 1px solid #3a3a50;
+            /* Dark divider */
+        }
+        
+        .summary-card {
+            background-color: #29293f;
+            border: 1px solid #3a3a50;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="text-sm full md:max-w-[500px] mx-auto">
+
+    <div class="app-container  ">
+        <!-- Header -->
+        <header class="sticky top-0 z-10 flex items-center h-14 px-4 bg-gradient-header">
+            <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+                <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-semibold text-lg">Game statistics</h2>
+            <span class="w-6"></span>
+        </header>
+
+        <!-- Tabs -->
+        <div class="flex justify-around bg-main-dark pt-3 pb-2 border-b border-card-border sticky top-14 z-10">
+            <button id="tab_today" class="stat-tab text-base px-2 active-tab" onclick="selectReportTab('today')">Today</button>
+            <button id="tab_yesterday" class="stat-tab text-base px-2" onclick="selectReportTab('yesterday')">Yesterday</button>
+            <button id="tab_week" class="stat-tab text-base px-2" onclick="selectReportTab('week')">This week</button>
+            <button id="tab_month" class="stat-tab text-base px-2" onclick="selectReportTab('month')">This month</button>
+        </div>
+
+        <!-- Summary and List Container -->
+        <div class="p-4 bg-main-dark min-h-screen">
+            <!-- Summary Card -->
+            <div class="summary-card p-4 rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-text-primary text-center mb-1">
+                    ₹<span id="total_bet_amount_display">0.00</span>
+                </h3>
+                <p class="text-text-secondary text-center text-sm">Total bet</p>
+            </div>
+
+            <!-- Game Stats List -->
+            <div id="game_stats_list" class="gamestats-container-items space-y-4">
+                <!-- Data will be injected here -->
+            </div>
+
+            <!-- No Data Message -->
+            <div id="no-record" class="flex flex-col items-center text-center mt-20 hidden">
+                <i class="ri-bar-chart-2-line text-6xl text-gray-700"></i>
+                <h2 class="text-xl font-bold text-gray-500 mt-4">No Game Data</h2>
+                <p class="text-sm text-gray-600 mt-1">No statistics found for the selected period.</p>
+            </div>
+        </div>
+    </div>
+    <%- include('../layout/footer.ejs') %>
+
+        <script>
+            // Utility to format number (using basic function as Intl is not needed for the original data's format)
+            function formatAmount(amount) {
+                // Converts to a fixed 2 decimal string
+                return parseFloat(amount).toFixed(2);
+            }
+
+            /**
+             * Renders the list of game statistics into the UI.
+             * @param {Array} list - Array of game statistic objects.
+             */
+            const renderData = (list) => {
+                const $listContainer = $("#game_stats_list");
+                $listContainer.empty();
+                $("#no-record").addClass("hidden");
+
+                if (!list || list.length === 0) {
+                    $("#no-record").removeClass("hidden");
+                    return;
+                }
+
+                const html = list
+                    .map(item => {
+                        const profitLossValue = item.totalWinAmount - item.totalBetAmount;
+                        // Determine profit/loss color
+                        const profitLossColor = profitLossValue >= 0 ? 'text-text-win' : 'text-text-loss';
+                        const profitLoss = formatAmount(profitLossValue);
+                        const gameName = item.gameName || 'Lottery'; // Default to Lottery if name is missing
+
+                        return `
+                    <div class="game-card">
+                        <!-- Game Header (e.g., lottery) -->
+                        <div class="game-header flex items-center space-x-2">
+                            <!-- Placeholder icon/image -->
+                            <img alt="${gameName} icon" class="w-5 h-5 rounded-full" src="https://placehold.co/20x20/4a4a6e/ffffff?text=L" />
+                            <span>${gameName}</span>
+                        </div>
+                        
+                        <!-- Statistics Grid -->
+                        <div class="p-4 grid grid-cols-2 gap-4">
+                            <!-- Total bet -->
+                            <div class="flex flex-col border-r border-card-border pr-4">
+                                <h4 class="text-text-secondary text-xs">Total bet</h4>
+                                <h5 class="text-text-primary font-semibold text-lg">₹${formatAmount(item.totalBetAmount)}</h5>
+                            </div>
+                            <!-- Number of bets -->
+                            <div class="flex flex-col">
+                                <h4 class="text-text-secondary text-xs">Number of bets</h4>
+                                <h5 class="text-text-primary font-semibold text-lg">${item.numberOfBets}</h5>
+                            </div>
+
+                            <!-- Winning amount -->
+                            <div class="flex flex-col border-r border-card-border pr-4 pt-3">
+                                <h4 class="text-text-secondary text-xs">Winning amount</h4>
+                                <span class="text-text-primary font-semibold text-lg">₹${formatAmount(item.totalWinAmount)}</span>
+                            </div>
+
+                            <!-- Profit/Loss -->
+                            <div class="flex flex-col pt-3">
+                                <h4 class="text-text-secondary text-xs">Profit/Loss</h4>
+                                <span class="font-semibold text-lg ${profitLossColor}">₹${profitLoss}</span>
+                            </div>
+                        </div>
+                    </div>`;
+                    })
+                    .join("");
+
+                $listContainer.html(html);
+            };
+
+
+            /**
+             * Fetches and initializes game statistics for the given tab type.
+             * @param {string} tab - The time period (e.g., 'today', 'yesterday', 'week', 'month').
+             */
+            const initData = async(tab) => {
+                // Disable tabs while fetching
+                $(".stat-tab").css("pointer-events", "none");
+
+                try {
+                    // Using $.ajax for API call
+                    $.ajax({
+                        type: "GET",
+                        url: `/game/statistics?type=${tab}`,
+                        dataType: "json",
+                        success: function(response) {
+                            const totalBetAmount = response.totalBetAmount || 0;
+                            const list = response.list || [];
+
+                            // Update summary display
+                            $("#total_bet_amount_display").text(formatAmount(totalBetAmount));
+
+                            // Render game list
+                            renderData(list);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error fetching game statistics:", status, error);
+                            // Show default data on failure
+                            $("#total_bet_amount_display").text(formatAmount(0));
+                            renderData([]);
+                        },
+                        complete: function() {
+                            // Re-enable tabs after data is loaded
+                            $(".stat-tab").css("pointer-events", "initial");
+                        }
+                    });
+
+                } catch (e) {
+                    console.error("Fetch failed:", e);
+                    // Ensure tabs are re-enabled even on sync error
+                    $(".stat-tab").css("pointer-events", "initial");
+                }
+            };
+
+            /**
+             * Handles tab selection, updates active state, and loads data.
+             * @param {string} type - The time period (e.g., 'today', 'yesterday', 'week', 'month').
+             */
+            const selectReportTab = async(type) => {
+                // Update active tab styling
+                $(".stat-tab").removeClass("active-tab");
+                $(`#tab_${type}`).addClass("active-tab");
+
+                // Load new data
+                initData(type);
+            };
+
+
+            // --- Initialization ---
+            $(document).ready(function() {
+                // Start with the 'today' tab selected and load its data
+                initData("today");
+            });
+        </script>
+</body>
+
+</html>

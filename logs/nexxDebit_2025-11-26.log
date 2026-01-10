@@ -1,0 +1,638 @@
+{
+  "time": "2025-11-26T12:13:41.226Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508702660",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063288"
+    },
+    "transactionData": {
+      "id": "1003509050",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159219059"
+  }
+}
+{
+  "time": "2025-11-26T12:13:41.229Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508702660",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063288"
+    },
+    "transactionData": {
+      "id": "1003509050",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159219059"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764159221229",
+    "userId": "8505701",
+    "balance": 78.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:14:07.887Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508831765",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063289"
+    },
+    "transactionData": {
+      "id": "1003509309",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159245808"
+  }
+}
+{
+  "time": "2025-11-26T12:14:07.891Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508831765",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063289"
+    },
+    "transactionData": {
+      "id": "1003509309",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159245808"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764159247891",
+    "userId": "8505701",
+    "balance": 87.63,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:14:33.815Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508908149",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063290"
+    },
+    "transactionData": {
+      "id": "1003509533",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159271578"
+  }
+}
+{
+  "time": "2025-11-26T12:14:33.817Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130508908149",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063290"
+    },
+    "transactionData": {
+      "id": "1003509533",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159271578"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764159273817",
+    "userId": "8505701",
+    "balance": 95.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:15:20.103Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130509097530",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063292"
+    },
+    "transactionData": {
+      "id": "1003509966",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159317939"
+  }
+}
+{
+  "time": "2025-11-26T12:15:20.106Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130509097530",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063292"
+    },
+    "transactionData": {
+      "id": "1003509966",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159317939"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764159320106",
+    "userId": "8505701",
+    "balance": 105.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:15:42.148Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130509184418",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063293"
+    },
+    "transactionData": {
+      "id": "1003510133",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159339849"
+  }
+}
+{
+  "time": "2025-11-26T12:15:42.150Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "8505701",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV130509184418",
+      "gameCode": "aviator",
+      "description": "bet",
+      "providerRoundId": "4063293"
+    },
+    "transactionData": {
+      "id": "1003510133",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159339849"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1764159342150",
+    "userId": "8505701",
+    "balance": 85.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:16:11.827Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "cb78225d-f6c7-4524-9ed1-046382fa7349",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "e970ec03-7aa4-4cbd-94af-968d604b1865"
+    },
+    "transactionData": {
+      "id": "1003510361",
+      "amount": 55,
+      "referenceId": ""
+    },
+    "timestamp": "1764159370598"
+  }
+}
+{
+  "time": "2025-11-26T12:16:11.830Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "cb78225d-f6c7-4524-9ed1-046382fa7349",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "e970ec03-7aa4-4cbd-94af-968d604b1865"
+    },
+    "transactionData": {
+      "id": "1003510361",
+      "amount": 55,
+      "referenceId": ""
+    },
+    "timestamp": "1764159370598"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159371830",
+    "userId": "8505701",
+    "balance": 30.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:16:54.849Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "82c54516-6f97-49aa-a4d1-117b0d864d72",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "4a0d61e9-cb15-44c3-bf94-23824c6ba862"
+    },
+    "transactionData": {
+      "id": "1003510764",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159413639"
+  }
+}
+{
+  "time": "2025-11-26T12:16:54.852Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "82c54516-6f97-49aa-a4d1-117b0d864d72",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "4a0d61e9-cb15-44c3-bf94-23824c6ba862"
+    },
+    "transactionData": {
+      "id": "1003510764",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159413639"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159414852",
+    "userId": "8505701",
+    "balance": 113.43,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:17:13.616Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "7dd696fb-1ed2-43ec-b32c-8cae87c0f96c",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "3ba9573d-674f-4e88-bfa6-d0009754479c"
+    },
+    "transactionData": {
+      "id": "1003510954",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159432542"
+  }
+}
+{
+  "time": "2025-11-26T12:17:13.618Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "7dd696fb-1ed2-43ec-b32c-8cae87c0f96c",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "3ba9573d-674f-4e88-bfa6-d0009754479c"
+    },
+    "transactionData": {
+      "id": "1003510954",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159432542"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159433618",
+    "userId": "8505701",
+    "balance": 118.03,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:17:20.745Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "38d89c53-1dcf-4cf7-923e-a0eec95ab250",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "696e2b7d-a9ac-4cfb-a741-1d22e589daaa"
+    },
+    "transactionData": {
+      "id": "1003511014",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159439671"
+  }
+}
+{
+  "time": "2025-11-26T12:17:20.748Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "38d89c53-1dcf-4cf7-923e-a0eec95ab250",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "696e2b7d-a9ac-4cfb-a741-1d22e589daaa"
+    },
+    "transactionData": {
+      "id": "1003511014",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159439671"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159440748",
+    "userId": "8505701",
+    "balance": 118.63,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:17:55.850Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "3f8c16e9-0a57-4767-b4fe-939efa379f02",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "5376b735-6570-4918-ab58-976fa812d8b9"
+    },
+    "transactionData": {
+      "id": "1003511258",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159474773"
+  }
+}
+{
+  "time": "2025-11-26T12:17:55.853Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "3f8c16e9-0a57-4767-b4fe-939efa379f02",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "5376b735-6570-4918-ab58-976fa812d8b9"
+    },
+    "transactionData": {
+      "id": "1003511258",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159474773"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159475853",
+    "userId": "8505701",
+    "balance": 139.43,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-26T12:18:16.602Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "d5fee001-f511-45a8-aa50-2621a486d0ee",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "c303350a-2e57-4aa3-a4ae-21848c033b2e"
+    },
+    "transactionData": {
+      "id": "1003511427",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159495506"
+  }
+}
+{
+  "time": "2025-11-26T12:18:16.604Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "8505701",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "IO",
+      "providerTransactionId": "d5fee001-f511-45a8-aa50-2621a486d0ee",
+      "gameCode": "chicken-road",
+      "description": "bet",
+      "providerRoundId": "c303350a-2e57-4aa3-a4ae-21848c033b2e"
+    },
+    "transactionData": {
+      "id": "1003511427",
+      "amount": 20,
+      "referenceId": ""
+    },
+    "timestamp": "1764159495506"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1764159496604",
+    "userId": "8505701",
+    "balance": 119.43,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

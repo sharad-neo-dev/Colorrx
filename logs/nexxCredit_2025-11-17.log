@@ -1,0 +1,3132 @@
+{
+  "time": "2025-11-17T13:09:45.220Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W7de391d6-4001-4e8b-a3ca-833eafa6f903",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "1a4c7272-cdbc-4841-8662-59e820bdd42e"
+    },
+    "transactionData": {
+      "id": "995898396",
+      "amount": 0,
+      "referenceId": "995898179"
+    },
+    "timestamp": "1763384983649"
+  }
+}
+{
+  "time": "2025-11-17T13:09:45.223Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W7de391d6-4001-4e8b-a3ca-833eafa6f903",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "1a4c7272-cdbc-4841-8662-59e820bdd42e"
+    },
+    "transactionData": {
+      "id": "995898396",
+      "amount": 0,
+      "referenceId": "995898179"
+    },
+    "timestamp": "1763384983649"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763384985223",
+    "userId": "1903138",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:09:57.861Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W45b5fd65-7002-4ba7-bfec-4f78ab5104f1",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "3a3e2f98-8ebb-4f40-becd-d3194c89a1c1"
+    },
+    "transactionData": {
+      "id": "995898548",
+      "amount": 0,
+      "referenceId": "995898395"
+    },
+    "timestamp": "1763384996168"
+  }
+}
+{
+  "time": "2025-11-17T13:09:57.862Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W45b5fd65-7002-4ba7-bfec-4f78ab5104f1",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "3a3e2f98-8ebb-4f40-becd-d3194c89a1c1"
+    },
+    "transactionData": {
+      "id": "995898548",
+      "amount": 0,
+      "referenceId": "995898395"
+    },
+    "timestamp": "1763384996168"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763384997862",
+    "userId": "1903138",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:10:05.511Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W7b6e7177-7812-4a52-b56c-5fb206ed60a8",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "a378a9af-23ba-499f-a336-ccf159cd45b2"
+    },
+    "transactionData": {
+      "id": "995898657",
+      "amount": 0,
+      "referenceId": "995898547"
+    },
+    "timestamp": "1763385003764"
+  }
+}
+{
+  "time": "2025-11-17T13:10:05.512Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W7b6e7177-7812-4a52-b56c-5fb206ed60a8",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "a378a9af-23ba-499f-a336-ccf159cd45b2"
+    },
+    "transactionData": {
+      "id": "995898657",
+      "amount": 0,
+      "referenceId": "995898547"
+    },
+    "timestamp": "1763385003764"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385005512",
+    "userId": "1903138",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:10:12.534Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf28dee2b-5233-4952-a89e-c4dbd3e8c04c",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "94cbf1dd-1662-4059-b7d3-31ebc96d9483"
+    },
+    "transactionData": {
+      "id": "995898724",
+      "amount": 0,
+      "referenceId": "995898653"
+    },
+    "timestamp": "1763385010733"
+  }
+}
+{
+  "time": "2025-11-17T13:10:12.535Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf28dee2b-5233-4952-a89e-c4dbd3e8c04c",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "94cbf1dd-1662-4059-b7d3-31ebc96d9483"
+    },
+    "transactionData": {
+      "id": "995898724",
+      "amount": 0,
+      "referenceId": "995898653"
+    },
+    "timestamp": "1763385010733"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385012535",
+    "userId": "1903138",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:10:18.914Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W0c934299-2813-48c8-9e20-c4a77cb2856b",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "ede74df1-d222-47e1-8e71-55973e825772"
+    },
+    "transactionData": {
+      "id": "995898848",
+      "amount": 73.5,
+      "referenceId": "995898725"
+    },
+    "timestamp": "1763385017093"
+  }
+}
+{
+  "time": "2025-11-17T13:10:18.917Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W0c934299-2813-48c8-9e20-c4a77cb2856b",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "ede74df1-d222-47e1-8e71-55973e825772"
+    },
+    "transactionData": {
+      "id": "995898848",
+      "amount": 73.5,
+      "referenceId": "995898725"
+    },
+    "timestamp": "1763385017093"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385018917",
+    "userId": "1903138",
+    "balance": 73.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:11:13.819Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W149f56eb-1cd2-4f05-9dc0-19f72323a828",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "757d8c0e-ceb6-4925-9e33-cbcdfddc3450"
+    },
+    "transactionData": {
+      "id": "995899319",
+      "amount": 0,
+      "referenceId": "995899299"
+    },
+    "timestamp": "1763385072131"
+  }
+}
+{
+  "time": "2025-11-17T13:11:13.821Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W149f56eb-1cd2-4f05-9dc0-19f72323a828",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "757d8c0e-ceb6-4925-9e33-cbcdfddc3450"
+    },
+    "transactionData": {
+      "id": "995899319",
+      "amount": 0,
+      "referenceId": "995899299"
+    },
+    "timestamp": "1763385072131"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385073821",
+    "userId": "1903138",
+    "balance": 63.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:11:19.348Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "We481e70d-be39-4d5b-a099-1259f6b03a3e",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "416c56df-9914-48b3-a823-04c37cbbedd1"
+    },
+    "transactionData": {
+      "id": "995899376",
+      "amount": 0,
+      "referenceId": "995899369"
+    },
+    "timestamp": "1763385077584"
+  }
+}
+{
+  "time": "2025-11-17T13:11:19.349Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "We481e70d-be39-4d5b-a099-1259f6b03a3e",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "416c56df-9914-48b3-a823-04c37cbbedd1"
+    },
+    "transactionData": {
+      "id": "995899376",
+      "amount": 0,
+      "referenceId": "995899369"
+    },
+    "timestamp": "1763385077584"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385079349",
+    "userId": "1903138",
+    "balance": 53.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:11:32.112Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wb887400f-38cc-4af6-8a81-8bf9a1cf27f6",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "432e1063-eaaa-4722-b928-f831901a566a"
+    },
+    "transactionData": {
+      "id": "995899500",
+      "amount": 0,
+      "referenceId": "995899424"
+    },
+    "timestamp": "1763385090411"
+  }
+}
+{
+  "time": "2025-11-17T13:11:32.113Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wb887400f-38cc-4af6-8a81-8bf9a1cf27f6",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "432e1063-eaaa-4722-b928-f831901a566a"
+    },
+    "transactionData": {
+      "id": "995899500",
+      "amount": 0,
+      "referenceId": "995899424"
+    },
+    "timestamp": "1763385090411"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385092113",
+    "userId": "1903138",
+    "balance": 33.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:11:40.516Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf2e61396-ea12-44f9-b5ec-f782e1df6cbb",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "ea0b11d7-ec77-4d7c-bfdc-1ff668d37c88"
+    },
+    "transactionData": {
+      "id": "995899567",
+      "amount": 0,
+      "referenceId": "995899499"
+    },
+    "timestamp": "1763385098965"
+  }
+}
+{
+  "time": "2025-11-17T13:11:40.517Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf2e61396-ea12-44f9-b5ec-f782e1df6cbb",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "ea0b11d7-ec77-4d7c-bfdc-1ff668d37c88"
+    },
+    "transactionData": {
+      "id": "995899567",
+      "amount": 0,
+      "referenceId": "995899499"
+    },
+    "timestamp": "1763385098965"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385100517",
+    "userId": "1903138",
+    "balance": 33.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:11:48.637Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wb9f65d5f-c4a6-43a3-83a8-8bc2fb158448",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "52875017-ff11-4e4d-bc2e-5b8f2b838d20"
+    },
+    "transactionData": {
+      "id": "995899645",
+      "amount": 116,
+      "referenceId": "995899566"
+    },
+    "timestamp": "1763385106909"
+  }
+}
+{
+  "time": "2025-11-17T13:11:48.640Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wb9f65d5f-c4a6-43a3-83a8-8bc2fb158448",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "52875017-ff11-4e4d-bc2e-5b8f2b838d20"
+    },
+    "transactionData": {
+      "id": "995899645",
+      "amount": 116,
+      "referenceId": "995899566"
+    },
+    "timestamp": "1763385106909"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385108640",
+    "userId": "1903138",
+    "balance": 139.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:02.718Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf21d7041-88a1-4d04-a819-d1fc0f29e993",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "26544228-08eb-4c97-ae65-dc286004742c"
+    },
+    "transactionData": {
+      "id": "995899827",
+      "amount": 0,
+      "referenceId": "995899819"
+    },
+    "timestamp": "1763385120874"
+  }
+}
+{
+  "time": "2025-11-17T13:12:02.720Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf21d7041-88a1-4d04-a819-d1fc0f29e993",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "26544228-08eb-4c97-ae65-dc286004742c"
+    },
+    "transactionData": {
+      "id": "995899827",
+      "amount": 0,
+      "referenceId": "995899819"
+    },
+    "timestamp": "1763385120874"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385122720",
+    "userId": "1903138",
+    "balance": 129.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:08.284Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W91739aff-25dd-4f1d-ab65-45cb52835957",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "3bfabcca-eb02-4474-847a-dcc534619441"
+    },
+    "transactionData": {
+      "id": "995899882",
+      "amount": 0,
+      "referenceId": "995899870"
+    },
+    "timestamp": "1763385126679"
+  }
+}
+{
+  "time": "2025-11-17T13:12:08.285Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W91739aff-25dd-4f1d-ab65-45cb52835957",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "3bfabcca-eb02-4474-847a-dcc534619441"
+    },
+    "transactionData": {
+      "id": "995899882",
+      "amount": 0,
+      "referenceId": "995899870"
+    },
+    "timestamp": "1763385126679"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385128285",
+    "userId": "1903138",
+    "balance": 119.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:13.578Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W4526ca94-1e24-425e-aebe-3ad422797387",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "adfd6311-a05c-41b3-a04e-3cfc6550acc9"
+    },
+    "transactionData": {
+      "id": "995899935",
+      "amount": 0,
+      "referenceId": "995899928"
+    },
+    "timestamp": "1763385131859"
+  }
+}
+{
+  "time": "2025-11-17T13:12:13.579Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W4526ca94-1e24-425e-aebe-3ad422797387",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "adfd6311-a05c-41b3-a04e-3cfc6550acc9"
+    },
+    "transactionData": {
+      "id": "995899935",
+      "amount": 0,
+      "referenceId": "995899928"
+    },
+    "timestamp": "1763385131859"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385133579",
+    "userId": "1903138",
+    "balance": 109.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:19.918Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "We833e1c0-e045-4c2c-9043-e6bb59f72a52",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "60e4cc98-39d1-4e1a-b4fd-1b50578ea96c"
+    },
+    "transactionData": {
+      "id": "995900031",
+      "amount": 0,
+      "referenceId": "995900016"
+    },
+    "timestamp": "1763385138202"
+  }
+}
+{
+  "time": "2025-11-17T13:12:19.918Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "We833e1c0-e045-4c2c-9043-e6bb59f72a52",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "60e4cc98-39d1-4e1a-b4fd-1b50578ea96c"
+    },
+    "transactionData": {
+      "id": "995900031",
+      "amount": 0,
+      "referenceId": "995900016"
+    },
+    "timestamp": "1763385138202"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385139918",
+    "userId": "1903138",
+    "balance": 99.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:25.796Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W2a2bc779-ed73-4acf-847b-25b9852454b7",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "ced49b7d-2e98-4ef4-b2d4-b2c6b5957407"
+    },
+    "transactionData": {
+      "id": "995900090",
+      "amount": 0,
+      "referenceId": "995900083"
+    },
+    "timestamp": "1763385144142"
+  }
+}
+{
+  "time": "2025-11-17T13:12:25.797Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W2a2bc779-ed73-4acf-847b-25b9852454b7",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "ced49b7d-2e98-4ef4-b2d4-b2c6b5957407"
+    },
+    "transactionData": {
+      "id": "995900090",
+      "amount": 0,
+      "referenceId": "995900083"
+    },
+    "timestamp": "1763385144142"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385145797",
+    "userId": "1903138",
+    "balance": 89.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:38.190Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W82379dde-7d72-4810-a668-4adbe8bd527d",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "243f1b69-dede-4b11-8587-136891a8e44d"
+    },
+    "transactionData": {
+      "id": "995900194",
+      "amount": 0,
+      "referenceId": "995900140"
+    },
+    "timestamp": "1763385156490"
+  }
+}
+{
+  "time": "2025-11-17T13:12:38.191Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W82379dde-7d72-4810-a668-4adbe8bd527d",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "243f1b69-dede-4b11-8587-136891a8e44d"
+    },
+    "transactionData": {
+      "id": "995900194",
+      "amount": 0,
+      "referenceId": "995900140"
+    },
+    "timestamp": "1763385156490"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385158191",
+    "userId": "1903138",
+    "balance": 49.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:43.883Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W3284d74b-af5c-40e3-be59-2a1b8e38303d",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "7cf7c3f5-72c0-4cf2-bb4d-e26a487582c5"
+    },
+    "transactionData": {
+      "id": "995900271",
+      "amount": 0,
+      "referenceId": "995900189"
+    },
+    "timestamp": "1763385162286"
+  }
+}
+{
+  "time": "2025-11-17T13:12:43.884Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W3284d74b-af5c-40e3-be59-2a1b8e38303d",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "7cf7c3f5-72c0-4cf2-bb4d-e26a487582c5"
+    },
+    "transactionData": {
+      "id": "995900271",
+      "amount": 0,
+      "referenceId": "995900189"
+    },
+    "timestamp": "1763385162286"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385163884",
+    "userId": "1903138",
+    "balance": 29.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:50.357Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf34a590b-462b-49a6-8d49-a8181d8641eb",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "58aee225-3042-4fe5-b677-274c797b67f1"
+    },
+    "transactionData": {
+      "id": "995900339",
+      "amount": 0,
+      "referenceId": "995900270"
+    },
+    "timestamp": "1763385168640"
+  }
+}
+{
+  "time": "2025-11-17T13:12:50.358Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "Wf34a590b-462b-49a6-8d49-a8181d8641eb",
+      "gameCode": "151080",
+      "description": "lose",
+      "providerRoundId": "58aee225-3042-4fe5-b677-274c797b67f1"
+    },
+    "transactionData": {
+      "id": "995900339",
+      "amount": 0,
+      "referenceId": "995900270"
+    },
+    "timestamp": "1763385168640"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385170358",
+    "userId": "1903138",
+    "balance": 29.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:12:57.912Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W41fd32dc-6882-4f1d-9386-cae0222c4055",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "d587ec50-e67d-48e2-ada9-ebc426c9fb47"
+    },
+    "transactionData": {
+      "id": "995900426",
+      "amount": 97,
+      "referenceId": "995900338"
+    },
+    "timestamp": "1763385176213"
+  }
+}
+{
+  "time": "2025-11-17T13:12:57.914Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "DC",
+      "providerTransactionId": "W41fd32dc-6882-4f1d-9386-cae0222c4055",
+      "gameCode": "151080",
+      "description": "win",
+      "providerRoundId": "d587ec50-e67d-48e2-ada9-ebc426c9fb47"
+    },
+    "transactionData": {
+      "id": "995900426",
+      "amount": 97,
+      "referenceId": "995900338"
+    },
+    "timestamp": "1763385176213"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385177914",
+    "userId": "1903138",
+    "balance": 106.5,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:22:13.236Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862489-2722364290",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526674489"
+    },
+    "transactionData": {
+      "id": "995907848",
+      "amount": 2.4,
+      "referenceId": "995907806"
+    },
+    "timestamp": "1763385731458"
+  }
+}
+{
+  "time": "2025-11-17T13:22:13.238Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862489-2722364290",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526674489"
+    },
+    "transactionData": {
+      "id": "995907848",
+      "amount": 2.4,
+      "referenceId": "995907806"
+    },
+    "timestamp": "1763385731458"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385733238",
+    "userId": "1903138",
+    "balance": 100.9,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:22:23.458Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862651-2722364595",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526675315"
+    },
+    "transactionData": {
+      "id": "995908025",
+      "amount": 0,
+      "referenceId": "995907984"
+    },
+    "timestamp": "1763385741747"
+  }
+}
+{
+  "time": "2025-11-17T13:22:23.459Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862651-2722364595",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526675315"
+    },
+    "transactionData": {
+      "id": "995908025",
+      "amount": 0,
+      "referenceId": "995907984"
+    },
+    "timestamp": "1763385741747"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385743459",
+    "userId": "1903138",
+    "balance": 92.9,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:22:30.239Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862783-2722364870",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526676423"
+    },
+    "transactionData": {
+      "id": "995908116",
+      "amount": 0,
+      "referenceId": "995908092"
+    },
+    "timestamp": "1763385748641"
+  }
+}
+{
+  "time": "2025-11-17T13:22:30.240Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862783-2722364870",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526676423"
+    },
+    "transactionData": {
+      "id": "995908116",
+      "amount": 0,
+      "referenceId": "995908092"
+    },
+    "timestamp": "1763385748641"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385750240",
+    "userId": "1903138",
+    "balance": 84.9,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:22:36.554Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862892-2722365085",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526677523"
+    },
+    "transactionData": {
+      "id": "995908191",
+      "amount": 0,
+      "referenceId": "995908160"
+    },
+    "timestamp": "1763385754805"
+  }
+}
+{
+  "time": "2025-11-17T13:22:36.555Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366862892-2722365085",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526677523"
+    },
+    "transactionData": {
+      "id": "995908191",
+      "amount": 0,
+      "referenceId": "995908160"
+    },
+    "timestamp": "1763385754805"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385756555",
+    "userId": "1903138",
+    "balance": 76.9,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:22:47.806Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863083-2722365467",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526683614"
+    },
+    "transactionData": {
+      "id": "995908315",
+      "amount": 0,
+      "referenceId": "995908298"
+    },
+    "timestamp": "1763385766238"
+  }
+}
+{
+  "time": "2025-11-17T13:22:47.807Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863083-2722365467",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526683614"
+    },
+    "transactionData": {
+      "id": "995908315",
+      "amount": 0,
+      "referenceId": "995908298"
+    },
+    "timestamp": "1763385766238"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385767807",
+    "userId": "1903138",
+    "balance": 68.9,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:01.053Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863198-2722365689",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526685565"
+    },
+    "transactionData": {
+      "id": "995908474",
+      "amount": 6.4,
+      "referenceId": "995908372"
+    },
+    "timestamp": "1763385779341"
+  }
+}
+{
+  "time": "2025-11-17T13:23:01.055Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863198-2722365689",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526685565"
+    },
+    "transactionData": {
+      "id": "995908474",
+      "amount": 6.4,
+      "referenceId": "995908372"
+    },
+    "timestamp": "1763385779341"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385781055",
+    "userId": "1903138",
+    "balance": 67.3,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:04.597Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863351-2722365996",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526686420"
+    },
+    "transactionData": {
+      "id": "995908512",
+      "amount": 0,
+      "referenceId": "995908488"
+    },
+    "timestamp": "1763385782844"
+  }
+}
+{
+  "time": "2025-11-17T13:23:04.599Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863351-2722365996",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526686420"
+    },
+    "transactionData": {
+      "id": "995908512",
+      "amount": 0,
+      "referenceId": "995908488"
+    },
+    "timestamp": "1763385782844"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385784599",
+    "userId": "1903138",
+    "balance": 59.3,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:13.315Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863503-2722366295",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526687298"
+    },
+    "transactionData": {
+      "id": "995908583",
+      "amount": 2.4,
+      "referenceId": "995908559"
+    },
+    "timestamp": "1763385791732"
+  }
+}
+{
+  "time": "2025-11-17T13:23:13.317Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863503-2722366295",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526687298"
+    },
+    "transactionData": {
+      "id": "995908583",
+      "amount": 2.4,
+      "referenceId": "995908559"
+    },
+    "timestamp": "1763385791732"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385793317",
+    "userId": "1903138",
+    "balance": 53.699999999999996,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:23.131Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863631-2722366552",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526689165"
+    },
+    "transactionData": {
+      "id": "995908692",
+      "amount": 0,
+      "referenceId": "995908641"
+    },
+    "timestamp": "1763385801356"
+  }
+}
+{
+  "time": "2025-11-17T13:23:23.132Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863631-2722366552",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526689165"
+    },
+    "transactionData": {
+      "id": "995908692",
+      "amount": 0,
+      "referenceId": "995908641"
+    },
+    "timestamp": "1763385801356"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385803132",
+    "userId": "1903138",
+    "balance": 45.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:31.833Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863747-2722366783",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526689889"
+    },
+    "transactionData": {
+      "id": "995908832",
+      "amount": 0,
+      "referenceId": "995908764"
+    },
+    "timestamp": "1763385810110"
+  }
+}
+{
+  "time": "2025-11-17T13:23:31.834Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863747-2722366783",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526689889"
+    },
+    "transactionData": {
+      "id": "995908832",
+      "amount": 0,
+      "referenceId": "995908764"
+    },
+    "timestamp": "1763385810110"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385811834",
+    "userId": "1903138",
+    "balance": 37.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:40.949Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863955-2722367199",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526691829"
+    },
+    "transactionData": {
+      "id": "995909006",
+      "amount": 0,
+      "referenceId": "995908980"
+    },
+    "timestamp": "1763385819346"
+  }
+}
+{
+  "time": "2025-11-17T13:23:40.950Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366863955-2722367199",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526691829"
+    },
+    "transactionData": {
+      "id": "995909006",
+      "amount": 0,
+      "referenceId": "995908980"
+    },
+    "timestamp": "1763385819346"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385820950",
+    "userId": "1903138",
+    "balance": 29.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:47.806Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864067-2722367418",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526692269"
+    },
+    "transactionData": {
+      "id": "995909087",
+      "amount": 4,
+      "referenceId": "995909062"
+    },
+    "timestamp": "1763385826122"
+  }
+}
+{
+  "time": "2025-11-17T13:23:47.809Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864067-2722367418",
+      "gameCode": "1100003",
+      "description": "win",
+      "providerRoundId": "9526692269"
+    },
+    "transactionData": {
+      "id": "995909087",
+      "amount": 4,
+      "referenceId": "995909062"
+    },
+    "timestamp": "1763385826122"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385827809",
+    "userId": "1903138",
+    "balance": 25.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:23:54.673Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864186-2722367653",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526697364"
+    },
+    "transactionData": {
+      "id": "995909174",
+      "amount": 0,
+      "referenceId": "995909148"
+    },
+    "timestamp": "1763385832977"
+  }
+}
+{
+  "time": "2025-11-17T13:23:54.674Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864186-2722367653",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526697364"
+    },
+    "transactionData": {
+      "id": "995909174",
+      "amount": 0,
+      "referenceId": "995909148"
+    },
+    "timestamp": "1763385832977"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385834674",
+    "userId": "1903138",
+    "balance": 17.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:24:01.371Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864276-2722367838",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526698653"
+    },
+    "transactionData": {
+      "id": "995909315",
+      "amount": 0,
+      "referenceId": "995909240"
+    },
+    "timestamp": "1763385839522"
+  }
+}
+{
+  "time": "2025-11-17T13:24:01.372Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864276-2722367838",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526698653"
+    },
+    "transactionData": {
+      "id": "995909315",
+      "amount": 0,
+      "referenceId": "995909240"
+    },
+    "timestamp": "1763385839522"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385841372",
+    "userId": "1903138",
+    "balance": 9.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T13:24:10.840Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864450-2722368173",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526700912"
+    },
+    "transactionData": {
+      "id": "995909438",
+      "amount": 0,
+      "referenceId": "995909410"
+    },
+    "timestamp": "1763385849131"
+  }
+}
+{
+  "time": "2025-11-17T13:24:10.841Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "1903138",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cezugi00000000001-1366864450-2722368173",
+      "gameCode": "1100003",
+      "description": "lose",
+      "providerRoundId": "9526700912"
+    },
+    "transactionData": {
+      "id": "995909438",
+      "amount": 0,
+      "referenceId": "995909410"
+    },
+    "timestamp": "1763385849131"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763385850841",
+    "userId": "1903138",
+    "balance": 1.7,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T15:33:14.341Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2125477",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV127772838418",
+      "gameCode": "aviator",
+      "description": "win",
+      "providerRoundId": "4030961"
+    },
+    "transactionData": {
+      "id": "996020221",
+      "amount": 11.1,
+      "referenceId": "996020164"
+    },
+    "timestamp": "1763393591462"
+  }
+}
+{
+  "time": "2025-11-17T15:33:14.343Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "user": {
+      "id": "2125477",
+      "currency": "LKR"
+    },
+    "gameData": {
+      "providerCode": "SPB",
+      "providerTransactionId": "SPRBAPACAV127772838418",
+      "gameCode": "aviator",
+      "description": "win",
+      "providerRoundId": "4030961"
+    },
+    "transactionData": {
+      "id": "996020221",
+      "amount": 11.1,
+      "referenceId": "996020164"
+    },
+    "timestamp": "1763393591462"
+  },
+  "response": {
+    "partnerKey": "Gq1FOuQKNaVsr3PtaSgDlnKTa1o48U2jROX6fLVhf4Klzh2RgHIuFMUFGVR3PEkhwHRgBipsY1A=",
+    "timestamp": "1763393594343",
+    "userId": "2125477",
+    "balance": 51.1,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T17:54:44.673Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C8978af41-69f0-4b96-a373-933559f19253",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530308294"
+    },
+    "transactionData": {
+      "id": "996147500",
+      "amount": 0,
+      "referenceId": "996146610"
+    },
+    "timestamp": "1763402083027"
+  }
+}
+{
+  "time": "2025-11-17T17:54:44.674Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C8978af41-69f0-4b96-a373-933559f19253",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530308294"
+    },
+    "transactionData": {
+      "id": "996147500",
+      "amount": 0,
+      "referenceId": "996146610"
+    },
+    "timestamp": "1763402083027"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402084674",
+    "userId": "2157853",
+    "balance": 40,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T17:55:55.811Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C3f24bb46-18fc-42f5-b3c9-71df26c1b779",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530322644"
+    },
+    "transactionData": {
+      "id": "996148727",
+      "amount": 0,
+      "referenceId": "996147786"
+    },
+    "timestamp": "1763402154037"
+  }
+}
+{
+  "time": "2025-11-17T17:55:55.812Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C3f24bb46-18fc-42f5-b3c9-71df26c1b779",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530322644"
+    },
+    "transactionData": {
+      "id": "996148727",
+      "amount": 0,
+      "referenceId": "996147786"
+    },
+    "timestamp": "1763402154037"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402155812",
+    "userId": "2157853",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T17:57:05.478Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C800048c3-56b3-4fdb-a78d-9bb6b329fd00",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530340099"
+    },
+    "transactionData": {
+      "id": "996149725",
+      "amount": 0,
+      "referenceId": "996148937"
+    },
+    "timestamp": "1763402223911"
+  }
+}
+{
+  "time": "2025-11-17T17:57:05.479Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C800048c3-56b3-4fdb-a78d-9bb6b329fd00",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530340099"
+    },
+    "transactionData": {
+      "id": "996149725",
+      "amount": 0,
+      "referenceId": "996148937"
+    },
+    "timestamp": "1763402223911"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402225479",
+    "userId": "2157853",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:00:39.889Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C878c3950-8970-4c64-8501-907c663c4f66",
+      "gameCode": "1000419",
+      "description": "win",
+      "providerRoundId": "9530356898"
+    },
+    "transactionData": {
+      "id": "996153385",
+      "amount": 240,
+      "referenceId": "996149947"
+    },
+    "timestamp": "1763402438272"
+  }
+}
+{
+  "time": "2025-11-17T18:00:39.891Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C878c3950-8970-4c64-8501-907c663c4f66",
+      "gameCode": "1000419",
+      "description": "win",
+      "providerRoundId": "9530356898"
+    },
+    "transactionData": {
+      "id": "996153385",
+      "amount": 240,
+      "referenceId": "996149947"
+    },
+    "timestamp": "1763402438272"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402439891",
+    "userId": "2157853",
+    "balance": 250,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:01:49.666Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cb4cb95ea-9922-432a-9561-b794b06c305e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530405365"
+    },
+    "transactionData": {
+      "id": "996154433",
+      "amount": 0,
+      "referenceId": "996153601"
+    },
+    "timestamp": "1763402508026"
+  }
+}
+{
+  "time": "2025-11-17T18:01:49.667Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cb4cb95ea-9922-432a-9561-b794b06c305e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530405365"
+    },
+    "transactionData": {
+      "id": "996154433",
+      "amount": 0,
+      "referenceId": "996153601"
+    },
+    "timestamp": "1763402508026"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402509667",
+    "userId": "2157853",
+    "balance": 230,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:02:59.812Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cbc7b8bcd-0f76-40b2-b624-4a6079f2f3c4",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530418334"
+    },
+    "transactionData": {
+      "id": "996155604",
+      "amount": 0,
+      "referenceId": "996154688"
+    },
+    "timestamp": "1763402578218"
+  }
+}
+{
+  "time": "2025-11-17T18:02:59.813Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cbc7b8bcd-0f76-40b2-b624-4a6079f2f3c4",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530418334"
+    },
+    "transactionData": {
+      "id": "996155604",
+      "amount": 0,
+      "referenceId": "996154688"
+    },
+    "timestamp": "1763402578218"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402579813",
+    "userId": "2157853",
+    "balance": 210,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:04:08.929Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C99b1b5fd-b6cc-495e-b4a6-ba201b5cc208",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530436020"
+    },
+    "transactionData": {
+      "id": "996156515",
+      "amount": 0,
+      "referenceId": "996155867"
+    },
+    "timestamp": "1763402647286"
+  }
+}
+{
+  "time": "2025-11-17T18:04:08.930Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C99b1b5fd-b6cc-495e-b4a6-ba201b5cc208",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530436020"
+    },
+    "transactionData": {
+      "id": "996156515",
+      "amount": 0,
+      "referenceId": "996155867"
+    },
+    "timestamp": "1763402647286"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402648930",
+    "userId": "2157853",
+    "balance": 190,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:05:18.004Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cd068d3ee-4cc5-4d36-b8f1-e5399bfdfb30",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530452801"
+    },
+    "transactionData": {
+      "id": "996157395",
+      "amount": 0,
+      "referenceId": "996156679"
+    },
+    "timestamp": "1763402716208"
+  }
+}
+{
+  "time": "2025-11-17T18:05:18.004Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cd068d3ee-4cc5-4d36-b8f1-e5399bfdfb30",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530452801"
+    },
+    "transactionData": {
+      "id": "996157395",
+      "amount": 0,
+      "referenceId": "996156679"
+    },
+    "timestamp": "1763402716208"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402718004",
+    "userId": "2157853",
+    "balance": 170,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:06:30.325Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cdec2f30d-49ed-4fdb-a049-2ffdf9bd8a9e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530471524"
+    },
+    "transactionData": {
+      "id": "996158323",
+      "amount": 0,
+      "referenceId": "996157569"
+    },
+    "timestamp": "1763402788675"
+  }
+}
+{
+  "time": "2025-11-17T18:06:30.326Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cdec2f30d-49ed-4fdb-a049-2ffdf9bd8a9e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530471524"
+    },
+    "transactionData": {
+      "id": "996158323",
+      "amount": 0,
+      "referenceId": "996157569"
+    },
+    "timestamp": "1763402788675"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402790326",
+    "userId": "2157853",
+    "balance": 150,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:07:40.707Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ca7617bf7-d9b0-479c-86ab-0b1895c5724f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530488472"
+    },
+    "transactionData": {
+      "id": "996159132",
+      "amount": 0,
+      "referenceId": "996158517"
+    },
+    "timestamp": "1763402858917"
+  }
+}
+{
+  "time": "2025-11-17T18:07:40.708Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ca7617bf7-d9b0-479c-86ab-0b1895c5724f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530488472"
+    },
+    "transactionData": {
+      "id": "996159132",
+      "amount": 0,
+      "referenceId": "996158517"
+    },
+    "timestamp": "1763402858917"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402860708",
+    "userId": "2157853",
+    "balance": 120,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:09:02.590Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530505167"
+    },
+    "transactionData": {
+      "id": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c",
+      "amount": 0,
+      "referenceId": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c"
+    },
+    "timestamp": "1763402940818"
+  }
+}
+{
+  "time": "2025-11-17T18:09:02.592Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530505167"
+    },
+    "transactionData": {
+      "id": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c",
+      "amount": 0,
+      "referenceId": "C6d93dcfe-9cd6-4540-bca2-eb3c0f35108c"
+    },
+    "timestamp": "1763402940818"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763402942592",
+    "userId": "2157853",
+    "balance": 100,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:10:05.473Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ccfb8d2eb-bd0a-458b-a94a-3ca7420dbe22",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530521344"
+    },
+    "transactionData": {
+      "id": "996161132",
+      "amount": 0,
+      "referenceId": "996160432"
+    },
+    "timestamp": "1763403003739"
+  }
+}
+{
+  "time": "2025-11-17T18:10:05.474Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ccfb8d2eb-bd0a-458b-a94a-3ca7420dbe22",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530521344"
+    },
+    "transactionData": {
+      "id": "996161132",
+      "amount": 0,
+      "referenceId": "996160432"
+    },
+    "timestamp": "1763403003739"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403005474",
+    "userId": "2157853",
+    "balance": 80,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:11:16.407Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cb3c7bce3-4e34-49e3-b151-25979568a16e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530538795"
+    },
+    "transactionData": {
+      "id": "996161952",
+      "amount": 0,
+      "referenceId": "996161329"
+    },
+    "timestamp": "1763403074792"
+  }
+}
+{
+  "time": "2025-11-17T18:11:16.408Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cb3c7bce3-4e34-49e3-b151-25979568a16e",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530538795"
+    },
+    "transactionData": {
+      "id": "996161952",
+      "amount": 0,
+      "referenceId": "996161329"
+    },
+    "timestamp": "1763403074792"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403076408",
+    "userId": "2157853",
+    "balance": 60,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:16:01.642Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C6aef06f4-2339-4bed-90bb-5c087c215651",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530602026"
+    },
+    "transactionData": {
+      "id": "996165365",
+      "amount": 0,
+      "referenceId": "996164747"
+    },
+    "timestamp": "1763403359853"
+  }
+}
+{
+  "time": "2025-11-17T18:16:01.643Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C6aef06f4-2339-4bed-90bb-5c087c215651",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530602026"
+    },
+    "transactionData": {
+      "id": "996165365",
+      "amount": 0,
+      "referenceId": "996164747"
+    },
+    "timestamp": "1763403359853"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403361643",
+    "userId": "2157853",
+    "balance": 50,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:17:13.842Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C31fb500c-d23f-491d-9cee-5c474f1ce67f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530618839"
+    },
+    "transactionData": {
+      "id": "996166218",
+      "amount": 0,
+      "referenceId": "996165534"
+    },
+    "timestamp": "1763403432104"
+  }
+}
+{
+  "time": "2025-11-17T18:17:13.843Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C31fb500c-d23f-491d-9cee-5c474f1ce67f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530618839"
+    },
+    "transactionData": {
+      "id": "996166218",
+      "amount": 0,
+      "referenceId": "996165534"
+    },
+    "timestamp": "1763403432104"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403433843",
+    "userId": "2157853",
+    "balance": 40,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:18:23.084Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cd9f9d2dd-0726-44c6-b2dc-6b917aa5c41f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530634676"
+    },
+    "transactionData": {
+      "id": "996167105",
+      "amount": 0,
+      "referenceId": "996166406"
+    },
+    "timestamp": "1763403501337"
+  }
+}
+{
+  "time": "2025-11-17T18:18:23.085Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Cd9f9d2dd-0726-44c6-b2dc-6b917aa5c41f",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530634676"
+    },
+    "transactionData": {
+      "id": "996167105",
+      "amount": 0,
+      "referenceId": "996166406"
+    },
+    "timestamp": "1763403501337"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403503085",
+    "userId": "2157853",
+    "balance": 30,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:24:54.913Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce90f3b14-d614-4a7c-b519-3407372cec89",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530715893"
+    },
+    "transactionData": {
+      "id": "996171831",
+      "amount": 0,
+      "referenceId": "996171264"
+    },
+    "timestamp": "1763403893306"
+  }
+}
+{
+  "time": "2025-11-17T18:24:54.914Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "Ce90f3b14-d614-4a7c-b519-3407372cec89",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530715893"
+    },
+    "transactionData": {
+      "id": "996171831",
+      "amount": 0,
+      "referenceId": "996171264"
+    },
+    "timestamp": "1763403893306"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403894914",
+    "userId": "2157853",
+    "balance": 20,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:26:04.113Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C87f3c7a1-6a99-4f2c-aef7-02edb078ac52",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530731615"
+    },
+    "transactionData": {
+      "id": "996172491",
+      "amount": 0,
+      "referenceId": "996171988"
+    },
+    "timestamp": "1763403962363"
+  }
+}
+{
+  "time": "2025-11-17T18:26:04.114Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C87f3c7a1-6a99-4f2c-aef7-02edb078ac52",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530731615"
+    },
+    "transactionData": {
+      "id": "996172491",
+      "amount": 0,
+      "referenceId": "996171988"
+    },
+    "timestamp": "1763403962363"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763403964114",
+    "userId": "2157853",
+    "balance": 10,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}
+{
+  "time": "2025-11-17T18:27:19.400Z",
+  "ip": "::ffff:127.0.0.1",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C10b8d299-6681-4340-b1ff-91a00ae820d6",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530745040"
+    },
+    "transactionData": {
+      "id": "996173153",
+      "amount": 0,
+      "referenceId": "996172616"
+    },
+    "timestamp": "1763404037569"
+  }
+}
+{
+  "time": "2025-11-17T18:27:19.401Z",
+  "ip": "104.192.0.106",
+  "body": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "user": {
+      "id": "2157853",
+      "currency": "INR"
+    },
+    "gameData": {
+      "providerCode": "EVZ",
+      "providerTransactionId": "C10b8d299-6681-4340-b1ff-91a00ae820d6",
+      "gameCode": "1000419",
+      "description": "lose",
+      "providerRoundId": "9530745040"
+    },
+    "transactionData": {
+      "id": "996173153",
+      "amount": 0,
+      "referenceId": "996172616"
+    },
+    "timestamp": "1763404037569"
+  },
+  "response": {
+    "partnerKey": "VEVLCYjd+MQtzVY9MuSSdkN3XAItzba3PXfzifH8uGTz1Mvotq2l47zH8dbt4YB7R9Yp+BaoooE=",
+    "timestamp": "1763404039401",
+    "userId": "2157853",
+    "balance": 0,
+    "status": {
+      "code": "SUCCESS",
+      "message": ""
+    }
+  }
+}

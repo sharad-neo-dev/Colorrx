@@ -1,0 +1,183 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit history | colorrx </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <style>
+        /* Base styles for the dark theme */
+        
+        .bg-gradient-header {
+            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+        }
+        
+        .deposit-card {
+            background-color: #1a1a2e;
+            /* Darker card background */
+            border: 1px solid #3e1474;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            transition: transform 0.2s;
+        }
+        
+        .deposit-card:hover {
+            transform: translateY(-2px);
+            border-color: #9333ea;
+        }
+        
+        .status-success {
+            color: #34d399;
+            /* Green-400 */
+        }
+        
+        .status-failed {
+            color: #ef4444;
+            /* Red-500 */
+        }
+        
+        .status-pending {
+            color: #f59e0b;
+            /* Amber-500 */
+        }
+        
+        .divider {
+            border-top: 1px dashed #3e1474;
+            margin: 10px 0;
+        }
+        
+        .price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #d8b4fe;
+            /* Purple-300 for money */
+        }
+        /* Flatpickr Dark Theme (Revising existing styles for clarity) */
+        
+        .flatpickr-calendar {
+            background: #2c0050 !important;
+            border-radius: 12px;
+            color: white !important;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+        
+        .flatpickr-months,
+        .flatpickr-weekdays {
+            background: #3e1474 !important;
+            color: white !important;
+        }
+        
+        .flatpickr-day {
+            color: white !important;
+        }
+        
+        .flatpickr-day.today {
+            border-color: #9333ea !important;
+        }
+        
+        .flatpickr-day.selected {
+            background: #9333ea !important;
+            color: white !important;
+        }
+        
+        .flatpickr-day:hover {
+            background: #6d28d9 !important;
+        }
+        
+        .flatpickr-current-month input.cur-year {
+            color: white !important;
+        }
+        /* Date Input Styling */
+        
+        .date-input {
+            background-color: transparent !important;
+            /* Make inner input transparent */
+            border: none !important;
+            color: white !important;
+            padding: 0;
+            cursor: pointer;
+            text-align: left;
+            width: 100px;
+            /* Adjusted width for better fit */
+        }
+        
+        .date-picker-wrapper {
+            background-color: #280b4d;
+            border-radius: 8px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        /* Utility classes for container */
+        
+        .width-scrren {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #101114;
+            /* Solid background for content area */
+        }
+        
+        @media (max-width: 768px) {
+            .width-scrren {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-300">
+
+    <div class="width-scrren">
+        <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
+            <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+            <h2 class="flex-1 text-center text-white font-bold text-lg">Commission Details</h2>
+            <span class="w-6"></span>
+        </header>
+
+        <div class="flex items-center gap-4 p-4 justify-center bg-[#101114]   mb-10 shadow-lg">
+            <div class="date-picker-wrapper">
+                <i class="ri-calendar-2-line text-purple-400"></i>
+                <input type="text" id="start_date" class="date-input" value="2025-09-20" readonly>
+            </div>
+
+            <span class="text-gray-500 font-semibold">—</span>
+
+            <div class="date-picker-wrapper">
+                <i class="ri-calendar-2-line text-purple-400"></i>
+                <input type="text" id="end_date" class="date-input" value="2025-09-27" readonly>
+            </div>
+        </div>
+
+
+     
+
+        <div id="pagination" class="flex justify-center gap-2 mt-4 p-4">
+        </div>
+
+        <%- include('../layout/footer.ejs') %>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Record | colorrx</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <style>
+        /* Dark theme for Flatpickr */
+        
+        .flatpickr-calendar {
+            background: #2c0050 !important;
+            border-radius: 12px;
+            color: white !important;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+        
+        .flatpickr-months {
+            background: #3e1474 !important;
+            color: white !important;
+        }
+        
+        .flatpickr-weekdays {
+            background: #3e1474 !important;
+        }
+        
+        .flatpickr-day {
+            color: white !important;
+        }
+        
+        .flatpickr-day.today {
+            border-color: #9333ea !important;
+        }
+        
+        .flatpickr-day.selected {
+            background: #9333ea !important;
+            color: white !important;
+        }
+        
+        .flatpickr-day:hover {
+            background: #6d28d9 !important;
+        }
+        
+        .flatpickr-current-month input.cur-year {
+            color: white !important;
+        }
+        /* Input style */
+        
+        .date-input {
+            background-color: #280b4d;
+            border-radius: 8px;
+            padding: 6px 8px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            width: 130px;
+            text-align: center;
+        }
+        /* Center the calendar popup */
+        
+        .flatpickr-calendar.center-popup {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            z-index: 9999 !important;
+            width: 100%;
+            max-width: 500px;
+            /* desktop */
+        }
+        /* Mobile: full width */
+        
+        @media (max-width: 768px) {
+            .flatpickr-calendar.center-popup {
+                width: 100% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+                border-radius: 0 !important;
+                max-width: 100% !important;
+            }
+        }
+        /* Optional: dimmed background */
+        
+        .flatpickr-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9998;
+        }
+        
+        .width-scrren {
+            max-width: 500px;
+            justify-content: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            /* ✅ Center me karega */
+            /* background-size: contain; */
+        }
+        /* Tablets (<= 768px) */
+        
+        @media (max-width: 768px) {
+            .width-scrren {
+                max-width: 100%;
+            }
+        }
+        
+        .imag {
+            background-image: url('/images/shadow1-bg.e64ed77f.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-300 imag ">
+
+    <div class="width-scrren ">
+        <div class="flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
+            <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
+      <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+    </button>
+            <h2 class="flex-1 text-center text-white font-semibold text-lg">Record</h2>
+            <span class="w-6"></span>
+        </div>
+
+        <!-- Date Range Picker -->
+        <div class="flex items-center gap-2 p-4 justify-center">
+            <!-- Start Date -->
+            <div class="flex items-center gap-1 px-2 py-1 rounded-lg" style="background-color:#280b4d;">
+                <i class="ri-calendar-2-line text-purple-400"></i>
+                <input type="text" id="start_date" class="date-input" value="2025-09-20" readonly>
+            </div>
+
+            <span class="text-gray-400">to</span>
+
+            <!-- End Date -->
+            <div class="flex items-center gap-1 px-2 py-1 rounded-lg" style="background-color:#280b4d;">
+                <i class="ri-calendar-2-line text-purple-400"></i>
+                <input type="text" id="end_date" class="date-input" value="2025-09-27" readonly>
+            </div>
+        </div>
+
+        <!-- No Record Section -->
+        <div id="no-record" class="flex flex-col items-center text-center mt-[14rem]">
+            <img src="/images/download10.png" alt="No Record" width="50" height="50">
+            <h2 class="text-lg font-semibold text-white mt-4">No Record</h2>
+            <p class="text-sm text-gray-400">Haven't found any record</p>
+        </div>
+
+        <!-- Transactions Container -->
+        <div class="transRecord__container-content mt-6 px-4 w-full max-w-md mx-auto"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center gap-2 mt-4"></div>
+
+        <!-- Footer (Bottom Nav) -->
+        <%- include('../layout/footer.ejs') %>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const limit = 10;
+            let page = 1;
+            let filterType = "All";
+            let startDate = $('#start_date').val();
+            let endDate = $('#end_date').val();
+
+            function loadsData(datas) {
+                if (!datas.length) {
+                    $("#no-record").show();
+                    $(".transRecord__container-content").html("");
+                    return;
+                }
+                $("#no-record").hide();
+            }
+
+            function loadTransactions(filterType, startDate, endDate, page) {
+                $.ajax({
+                    type: "GET",
+                    url: `/api/webapi/withdraw/transactionRecord?startDate=${startDate}&endDate=${endDate}&filterType=${filterType}&page=${page}&limit=${limit}`,
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.data && response.data.length > 0) {
+                            loadsData(response.data);
+                        } else {
+                            loadsData([]);
+                        }
+                    },
+                    error: function() {
+                        loadsData([]);
+                    }
+                });
+            }
+
+            // Initial load
+            loadTransactions(filterType, startDate, endDate, page);
+
+            // Shared Flatpickr options
+            const flatpickrOptions = {
+                dateFormat: "Y-m-d",
+                appendTo: document.body,
+                onOpen: function(selectedDates, dateStr, instance) {
+                    instance.calendarContainer.classList.add("center-popup");
+
+                    // Add overlay background
+                    if (!$(".flatpickr-overlay").length) {
+                        $("body").append('<div class="flatpickr-overlay"></div>');
+                    }
+                },
+                onClose: function(selectedDates, dateStr, instance) {
+                    instance.calendarContainer.classList.remove("center-popup");
+                    $(".flatpickr-overlay").remove();
+                }
+            };
+
+            // Init for Start Date
+            $("#start_date").flatpickr({
+                ...flatpickrOptions,
+                defaultDate: startDate,
+                onChange: function(selectedDates, dateStr) {
+                    startDate = dateStr;
+                    loadTransactions(filterType, startDate, endDate, page);
+                }
+            });
+
+            // Init for End Date
+            $("#end_date").flatpickr({
+                ...flatpickrOptions,
+                defaultDate: endDate,
+                onChange: function(selectedDates, dateStr) {
+                    endDate = dateStr;
+                    loadTransactions(filterType, startDate, endDate, page);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
