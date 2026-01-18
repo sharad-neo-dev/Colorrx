@@ -1,72 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notification | colorrx </title>
+    <title>Notification | colorrx</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'app-bg': '#0b0c1a',
-                        'app-purple': '#3e1474',
-                        'nav-item-bg': 'rgba(255, 255, 255, 0.1)',
-                        'icon-purple': '#3e1474',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "app-bg": "#0b0c1a",
+              "app-purple": "#3e1474",
+              "nav-item-bg": "rgba(255, 255, 255, 0.1)",
+              "icon-purple": "#3e1474",
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Remix Icon CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="bg-app-bg min-h-screen pb-24 w-full md:max-w-[500px] mx-auto text-sm">
-
+  <body class="min-h-screen pb-24 w-full md:max-w-[500px] mx-auto text-sm">
     <!-- Header -->
-    <div class="sticky top-0 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
-        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
-            <i class="ri-arrow-left-s-line w-6 h-auto"></i>
-        </button>
-        <h2 class="flex-1 text-center text-white font-semibold text-lg">Notification</h2>
-        <span class="w-6"></span>
+    <div
+      class="sticky top-0 z-10 flex items-center h-14 px-2"
+      style="background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%)"
+    >
+      <button
+        onclick="history.back()"
+        aria-label="Back"
+        class="text-white pr-4 text-lg"
+      >
+        <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+      </button>
+      <h2 class="flex-1 text-center text-white font-semibold text-lg">
+        Notification
+      </h2>
+      <span class="w-6"></span>
     </div>
 
     <!-- Notifications Content -->
     <div class="px-4 mt-6 space-y-6">
+      <!-- Notification 1 -->
+      <div
+        class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800"
+      >
+        <h3 class="text-base font-semibold text-gray-900">Welcome to Daman</h3>
+        <p>Welcome to Daman, bringing you a good gaming experience!</p>
+      </div>
 
-        <!-- Notification 1 -->
-        <div class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800">
-            <h3 class="text-base font-semibold text-gray-900">Welcome to Daman</h3>
-            <p>Welcome to Daman, bringing you a good gaming experience!</p>
-        </div>
+      <!-- Notification 2 -->
+      <div
+        class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800"
+      >
+        <h3 class="text-base font-semibold text-gray-900">
+          Withdrawal received funds time
+        </h3>
+        <p>
+          Hello, withdrawals typically take 1–2 hours to process. We appreciate
+          your patience and request that you wait for the status "Success"
+          before attempting to access your bank or e-wallet. Happy gaming!
+        </p>
+      </div>
 
-        <!-- Notification 2 -->
-        <div class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800">
-            <h3 class="text-base font-semibold text-gray-900">Withdrawal received funds time</h3>
-            <p>
-                Hello, withdrawals typically take 1–2 hours to process. We appreciate your patience and request that you wait for the status "Success" before attempting to access your bank or e-wallet. Happy gaming!
-            </p>
-        </div>
-
-        <!-- Notification 3 -->
-        <div class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800">
-            <h3 class="text-base font-semibold text-gray-900">Must tie the correct bank/ewallet details</h3>
-            <p>
-                Attention for all members, please make sure that you registered your bank details correctly to avoid wrong transfers in future! Please contact our official customer service if you registered it wrong. Thank you!
-            </p>
-        </div>
+      <!-- Notification 3 -->
+      <div
+        class="bg-white rounded-lg shadow-md p-4 leading-relaxed text-gray-800"
+      >
+        <h3 class="text-base font-semibold text-gray-900">
+          Must tie the correct bank/ewallet details
+        </h3>
+        <p>
+          Attention for all members, please make sure that you registered your
+          bank details correctly to avoid wrong transfers in future! Please
+          contact our official customer service if you registered it wrong.
+          Thank you!
+        </p>
+      </div>
     </div>
 
     <!-- Footer (Injected via EJS if using Express.js) -->
     <%- include('../layout/footer.ejs') %>
-
-</body>
-
+  </body>
 </html>

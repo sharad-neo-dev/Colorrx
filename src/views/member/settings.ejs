@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile - About Us | colorrx</title>
@@ -9,143 +8,184 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'app-bg': '#0b0c1a',
-                        'app-purple': '#3e1474',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "app-bg": "#0b0c1a",
+              "app-purple": "#3e1474",
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Remixicon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
+  </head>
 
-<body class="bg-app-bg min-h-screen w-full md:max-w-[500px] mx-auto pb-24">
-
+  <body class="min-h-screen w-full md:max-w-[500px] mx-auto pb-24">
     <!-- Header -->
-    <div class="sticky top-0 z-10 flex items-center h-14 px-2" style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);">
-        <button onclick="history.back()" aria-label="Back" class="text-white pr-4 text-lg">
-      <i class="ri-arrow-left-s-line w-6 h-auto"></i>
-    </button>
-        <h2 class="flex-1 text-center text-white font-semibold text-lg">About Us</h2>
-        <span class="w-6"></span>
+    <div
+      class="sticky top-0 z-10 flex items-center h-14 px-2"
+      style="background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%)"
+    >
+      <button
+        onclick="history.back()"
+        aria-label="Back"
+        class="text-white pr-4 text-lg"
+      >
+        <i class="ri-arrow-left-s-line w-6 h-auto"></i>
+      </button>
+      <h2 class="flex-1 text-center text-white font-semibold text-lg">
+        About Us
+      </h2>
+      <span class="w-6"></span>
     </div>
 
     <!-- Profile Card -->
     <div class="px-4 mt-6">
-        <div class="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-2xl shadow-lg p-5 text-white relative">
-            <div class="flex items-center space-x-4">
-                <img id="avatar_display" src="/assets/png/1-a6662edb.png" alt="Avatar" class="w-16 h-16 rounded-full border-2 border-white object-cover">
-                <div>
-                    <h3 id="nickname_display" class="text-lg font-semibold cursor-pointer hover:underline">
-                        Member79233
-                    </h3>
-                    <p class="text-xs opacity-80">UID: <span id="uid_display">7211854</span></p>
-                </div>
-            </div>
-            <a href="/settings/change_avatar" class="absolute top-4 right-4 bg-white text-purple-700 px-3 py-1 rounded-full text-xs shadow">
-        Change Avatar
-      </a>
+      <div
+        class="bg-gradient-to-r from-[#f95959] to-red-200 rounded-2xl shadow-lg p-5 text-white relative"
+      >
+        <div class="flex items-center space-x-4">
+          <img
+            id="avatar_display"
+            src="/assets/png/1-a6662edb.png"
+            alt="Avatar"
+            class="w-16 h-16 rounded-full border-2 border-white object-cover"
+          />
+          <div>
+            <h3
+              id="nickname_display"
+              class="text-lg font-semibold cursor-pointer hover:underline"
+            >
+              Member79233
+            </h3>
+            <p class="text-xs opacity-80">
+              UID: <span id="uid_display">7211854</span>
+            </p>
+          </div>
         </div>
+        <a
+          href="/settings/change_avatar"
+          class="absolute top-4 right-4 bg-[#f95959] text-white px-3 py-1 rounded-full text-xs shadow"
+        >
+          Change Avatar
+        </a>
+      </div>
     </div>
 
     <!-- Agreements -->
     <div class="px-4 mt-6">
-        <div class="bg-white rounded-xl shadow-md divide-y divide-gray-200 overflow-hidden">
+      <div
+        class="bg-white rounded-xl shadow-md divide-y divide-gray-200 overflow-hidden"
+      >
+        <a
+          href="/mian/forgot"
+          class="flex items-center justify-between px-4 py-4 hover:bg-gray-50"
+        >
+          <div class="flex items-center space-x-3">
+            <i class="ri-lock-password-line text-xl text-app-purple"></i>
+            <span class="text-gray-800 text-sm font-medium"
+              >Login password</span
+            >
+          </div>
+          <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+        </a>
 
-            <a href="/mian/forgot" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
-                <div class="flex items-center space-x-3">
-                    <i class="ri-lock-password-line text-xl text-app-purple"></i>
-                    <span class="text-gray-800 text-sm font-medium">Login password</span>
-                </div>
-                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
-            </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-4 hover:bg-gray-50"
+        >
+          <div class="flex items-center space-x-3">
+            <i class="ri-mail-line text-xl text-app-purple"></i>
+            <span class="text-gray-800 text-sm font-medium">Bind mailbox</span>
+          </div>
+          <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+        </a>
 
-            <a href="#" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
-                <div class="flex items-center space-x-3">
-                    <i class="ri-mail-line text-xl text-app-purple"></i>
-                    <span class="text-gray-800 text-sm font-medium">Bind mailbox</span>
-                </div>
-                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
-            </a>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-4 hover:bg-gray-50"
+        >
+          <div class="flex items-center space-x-3">
+            <i class="ri-shield-check-line text-xl text-app-purple"></i>
+            <span class="text-gray-800 text-sm font-medium"
+              >Google Verification</span
+            >
+          </div>
+          <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+        </a>
 
-            <a href="#" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
-                <div class="flex items-center space-x-3">
-                    <i class="ri-shield-check-line text-xl text-app-purple"></i>
-                    <span class="text-gray-800 text-sm font-medium">Google Verification</span>
-                </div>
-                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
-            </a>
-
-            <a href="#" class="flex items-center justify-between px-4 py-4 hover:bg-gray-50">
-                <div class="flex items-center space-x-3">
-                    <i class="ri-refresh-line text-xl text-app-purple"></i>
-                    <span class="text-gray-800 text-sm font-medium">Updated version (1.0.9)</span>
-                </div>
-                <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
-            </a>
-
-        </div>
+        <a
+          href="#"
+          class="flex items-center justify-between px-4 py-4 hover:bg-gray-50"
+        >
+          <div class="flex items-center space-x-3">
+            <i class="ri-refresh-line text-xl text-app-purple"></i>
+            <span class="text-gray-800 text-sm font-medium"
+              >Updated version (1.0.9)</span
+            >
+          </div>
+          <i class="ri-arrow-right-s-line text-gray-400 text-lg"></i>
+        </a>
+      </div>
     </div>
 
     <!-- Footer (EJS include if using Node/Express with EJS) -->
     <%- include('../layout/footer.ejs') %>
 
-        <!-- ✅ Dynamic User Info Script -->
-        <script>
-            const fetchUser = async() => {
-                try {
-                    const response = await axios.get("/api/webapi/GetUserInfo");
-                    let userData = {};
-                    if (response && response.data && response.data.data) {
-                        userData = response.data.data;
-                    }
+    <!-- ✅ Dynamic User Info Script -->
+    <script>
+      const fetchUser = async () => {
+        try {
+          const response = await axios.get("/api/webapi/GetUserInfo");
+          let userData = {};
+          if (response && response.data && response.data.data) {
+            userData = response.data.data;
+          }
 
+          // ✅ Update avatar
+          if (userData.avatar) {
+            const avatarPath = `/assets/png/${userData.avatar}`;
+            $("#avatar_display").attr("src", avatarPath);
+          }
 
-                    // ✅ Update avatar
-                    if (userData.avatar) {
-                        const avatarPath = `/assets/png/${userData.avatar}`;
-                        $("#avatar_display").attr("src", avatarPath);
-                    }
+          // ✅ Update nickname
+          if (userData.name_user) {
+            $("#nickname_display").text(userData.name_user);
+          }
 
-                    // ✅ Update nickname
-                    if (userData.name_user) {
-                        $("#nickname_display").text(userData.name_user);
-                    }
+          // ✅ Update UID
+          if (userData.id_user) {
+            $("#uid_display").text(userData.id_user);
+          }
 
-                    // ✅ Update UID
-                    if (userData.id_user) {
-                        $("#uid_display").text(userData.id_user);
-                    }
+          // ✅ Optional: Mark selected avatar in avatar grid (if present)
+          $(".van-grid-item img").each(function () {
+            const filename = $(this).attr("src").split("/").pop();
+            if (filename === userData.avatar) {
+              $(this).addClass("active");
+              $(this).parent().find(".checkbox_root").show();
+            }
+          });
+        } catch (error) {
+          console.error("Failed to fetch user info", error);
+        }
+      };
 
-                    // ✅ Optional: Mark selected avatar in avatar grid (if present)
-                    $(".van-grid-item img").each(function() {
-                        const filename = $(this).attr("src").split("/").pop();
-                        if (filename === userData.avatar) {
-                            $(this).addClass("active");
-                            $(this).parent().find(".checkbox_root").show();
-                        }
-                    });
-
-                } catch (error) {
-                    console.error("Failed to fetch user info", error);
-                }
-            };
-
-            // Run on page load
-            window.onload = fetchUser;
-        </script>
-</body>
-
+      // Run on page load
+      window.onload = fetchUser;
+    </script>
+  </body>
 </html>

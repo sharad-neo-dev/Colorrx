@@ -1,362 +1,405 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Withdrawal History | colorrx</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Remix Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Moment.js (for reliable time formatting) -->
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
     <!-- Flatpickr (Date Picker) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-        // Tailwind Configuration for custom colors
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'app-bg': '#101114',
-                        'card-bg': '#1a1a2e',
-                        'app-purple': '#3e1474',
-                    }
-                }
-            }
-        }
+      // Tailwind Configuration for custom colors
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "app-bg": "#101114",
+              "card-bg": "#1a1a2e",
+              "app-purple": "#3e1474",
+            },
+          },
+        },
+      };
     </script>
 
     <style>
-        /* Base styles for the dark theme */
-        
-        body {
-            background-color: black;
-        }
-        
-        .bg-gradient-header {
-            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
-        }
-        
-        .withdraw-card {
-            background-color: #1a1a2e;
-            border: 1px solid #3e1474;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            margin-bottom: 1rem;
-            padding: 1rem;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        
-        .withdraw-card:hover {
-            transform: translateY(-2px);
-            border-color: #9333ea;
-        }
-        
-        .status-success {
-            color: #34d399;
-            /* Green-400 */
-        }
-        
-        .status-failed {
-            color: #ef4444;
-            /* Red-500 */
-        }
-        
-        .status-pending {
-            color: #f59e0b;
-            /* Amber-500 */
-        }
-        
-        .divider {
-            border-top: 1px dashed #3e1474;
-            margin: 10px 0;
-        }
-        
-        .price {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #d8b4fe;
-            /* Purple-300 for money */
-        }
-        /* Custom scrollbar-hide for tabs */
-        
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
-        /* Utility classes for container */
-        
-        .width-scrren {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: #101114;
-        }
-        /* Tab active class update */
-        
-        .funtab_item.active-tab {
-            color: #9333ea;
-            background-color: #9333ea20;
-        }
-        /* Flatpickr Styling */
-        
-        .flatpickr-calendar {
-            background: #2c0050 !important;
-            border-radius: 12px;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        }
-        
-        .flatpickr-months,
-        .flatpickr-weekdays {
-            background: #3e1474 !important;
-            color: white !important;
-        }
-        
-        .flatpickr-day {
-            color: white !important;
-        }
-        
-        .flatpickr-day.today {
-            border-color: #9333ea !important;
-        }
-        
-        .flatpickr-day.selected {
-            background: #9333ea !important;
-            color: white !important;
-        }
-        
-        .flatpickr-day:hover {
-            background: #6d28d9 !important;
-        }
-        
-        .flatpickr-current-month input.cur-year {
-            color: white !important;
-        }
-        
-        .date-input {
-            background-color: transparent !important;
-            border: none !important;
-            color: white !important;
-            padding: 0;
-            cursor: pointer;
-            text-align: left;
-            width: 100px;
-        }
-        
-        .date-picker-wrapper {
-            background-color: #280b4d;
-            border-radius: 8px;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        /* Custom alert message styling */
-        
-        .msg {
-            position: fixed;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 50;
-            pointer-events: none;
-        }
-        
-        .msg-content {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 16px;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            transition: all 0.3s;
-            transform: scale(1);
-            opacity: 1;
-        }
-        
-        .v-leave-to {
-            transform: scale(0.9);
-            opacity: 0;
-        }
-        
-        .imag {
-            background-image: url('/images/shadow1-bg.e64ed77f.png');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: auto;
-        }
+      /* Base styles for the dark theme */
+
+      body {
+        background-color: white;
+      }
+
+      .bg-gradient-header {
+        /* background: linear-gradient(180deg, #3e1474, #101114 96.35%); */
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 50%);
+      }
+
+      .withdraw-card {
+        background-color: #1a1a2e;
+        border: 1px solid #3e1474;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+        padding: 1rem;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+
+      .withdraw-card:hover {
+        transform: translateY(-2px);
+        border-color: #9333ea;
+      }
+
+      .status-success {
+        color: #34d399;
+        /* Green-400 */
+      }
+
+      .status-failed {
+        color: #ef4444;
+        /* Red-500 */
+      }
+
+      .status-pending {
+        color: #f59e0b;
+        /* Amber-500 */
+      }
+
+      .divider {
+        border-top: 1px dashed #3e1474;
+        margin: 10px 0;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #d8b4fe;
+        /* Purple-300 for money */
+      }
+      /* Custom scrollbar-hide for tabs */
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+      /* Utility classes for container */
+
+      .width-scrren {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+      }
+      /* Tab active class update */
+
+      .funtab_item.active-tab {
+        color: white;
+        background-color: #f95959;
+      }
+      /* Flatpickr Styling */
+
+      .flatpickr-calendar {
+        background: #f95959 !important;
+        border-radius: 12px;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .flatpickr-months,
+      .flatpickr-weekdays {
+        background: #f95959 !important;
+        color: white !important;
+      }
+
+      .flatpickr-day {
+        color: white !important;
+      }
+
+      .flatpickr-day.today {
+        border-color: #f95959 !important;
+      }
+
+      .flatpickr-day.selected {
+        background: #f95959 !important;
+        color: white !important;
+      }
+
+      .flatpickr-day:hover {
+        background: #f95959 !important;
+      }
+
+      .flatpickr-current-month input.cur-year {
+        color: white !important;
+      }
+
+      .date-input {
+        background-color: transparent !important;
+        border: none !important;
+        color: white !important;
+        padding: 0;
+        cursor: pointer;
+        text-align: left;
+        width: 100px;
+      }
+
+      .date-picker-wrapper {
+        background-color: #f95959;
+        border-radius: 8px;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      /* Custom alert message styling */
+
+      .msg {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+        pointer-events: none;
+      }
+
+      .msg-content {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        transition: all 0.3s;
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .v-leave-to {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      .imag {
+        background-image: url("/images/shadow1-bg.e64ed77f.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-black text-gray-300 imag w-full md:max-w-[500px] mx-auto">
-
+  <body class="bg-white text-gray-300 imag w-full md:max-w-[500px] mx-auto">
     <div class="width-scrren">
-        <!-- Header -->
-        <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
-            <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
-                <i class="ri-arrow-left-s-line"></i>
-            </button>
-            <h2 class="flex-1 text-center text-white font-bold text-lg">Withdraw history</h2>
-            <span class="w-6"></span>
-        </header>
+      <!-- Header -->
+      <header
+        class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10"
+      >
+        <button
+          onclick="history.back()"
+          aria-label="Back"
+          class="text-white text-xl"
+        >
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-bold text-lg">
+          Withdraw history
+        </h2>
+        <span class="w-6"></span>
+      </header>
 
-        <!-- Date Picker Section -->
-        <div class="flex items-center gap-4 p-4 justify-center bg-[#101114] shadow-lg border-b border-gray-800">
-            <div class="date-picker-wrapper">
-                <i class="ri-calendar-2-line text-purple-400"></i>
-                <input type="text" id="start_date" class="date-input" readonly>
-            </div>
-
-            <span class="text-gray-500 font-semibold">—</span>
-
-            <div class="date-picker-wrapper">
-                <i class="ri-calendar-2-line text-purple-400"></i>
-                <input type="text" id="end_date" class="date-input" readonly>
-            </div>
+      <!-- Date Picker Section -->
+      <div class="flex items-center gap-4 p-4 justify-center shadow-lg">
+        <div class="date-picker-wrapper">
+          <i class="ri-calendar-2-line text-white"></i>
+          <input type="text" id="start_date" class="date-input" readonly />
         </div>
 
-        <!-- Status/Type Filter Tabs -->
-        <div class="flex justify-start bg-[#101114] py-2 border-b border-gray-800 px-4">
-            <div id="nav_list" class="flex overflow-x-auto whitespace-nowrap scrollbar-hide">
-                <!-- Note: 'active-tab' class is used for styling the selected tab -->
-                <button class="funtab_item active-tab text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300" data-type="All">
-                    All
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40" data-type="BANK_CARD">
-                    Gateway
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40" data-type="UPI_MANUAL">
-                    UPI Manual
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40" data-type="USDT_ADDRESS">
-                    USDT
-                </button>
-            </div>
+        <span class="text-gray-800 font-semibold">—</span>
+
+        <div class="date-picker-wrapper">
+          <i class="ri-calendar-2-line text-white"></i>
+          <input type="text" id="end_date" class="date-input" readonly />
+        </div>
+      </div>
+
+      <!-- Status/Type Filter Tabs -->
+      <div class="flex justify-start py-2 px-4">
+        <div
+          id="nav_list"
+          class="flex overflow-x-auto whitespace-nowrap scrollbar-hide"
+        >
+          <!-- Note: 'active-tab' class is used for styling the selected tab -->
+          <button
+            class="funtab_item active-tab text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300"
+            data-type="All"
+          >
+            All
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]/40"
+            data-type="BANK_CARD"
+          >
+            Gateway
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]/40"
+            data-type="UPI_MANUAL"
+          >
+            UPI Manual
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]/40"
+            data-type="USDT_ADDRESS"
+          >
+            USDT
+          </button>
+        </div>
+      </div>
+
+      <!-- Withdrawal History Content -->
+      <div class="transRecord__container-content mt-4 px-4 flex-1">
+        <div id="withdraw_history_list" class="space-y-4">
+          <!-- Data will be loaded here -->
         </div>
 
-        <!-- Withdrawal History Content -->
-        <div class="transRecord__container-content mt-4 px-4 flex-1">
-            <div id="withdraw_history_list" class="space-y-4">
-                <!-- Data will be loaded here -->
-            </div>
-
-            <div id="no-record" class="flex flex-col items-center text-center mt-[14rem]">
-                <img src="/images/download10.png" alt="No Record" width="50" height="50">
-                <h2 class="text-lg font-semibold text-white mt-4">No Record</h2>
-                <p class="text-sm text-gray-400">Haven't found any record</p>
-            </div>
+        <div
+          id="no-record"
+          class="flex flex-col items-center text-center mt-[14rem]"
+        >
+          <img
+            src="/images/download10.png"
+            alt="No Record"
+            width="50"
+            height="50"
+          />
+          <h2 class="text-lg font-semibold text-white mt-4">No Record</h2>
+          <p class="text-sm text-gray-400">Haven't found any record</p>
         </div>
+      </div>
     </div>
     <%- include('../layout/footer.ejs') %>
-        <script>
-            // --- Utility Functions ---
+    <script>
+      // --- Utility Functions ---
 
-            function formatIndianNumber(num) {
-                let formattedNum = new Intl.NumberFormat("en-IN", {
-                    maximumFractionDigits: 2,
-                    minimumFractionDigits: 2,
-                }).format(num)
-                return formattedNum
-            }
+      function formatIndianNumber(num) {
+        let formattedNum = new Intl.NumberFormat("en-IN", {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: 2,
+        }).format(num);
+        return formattedNum;
+      }
 
-            // Replaced custom timerJoin with Moment.js for robust time formatting
-            function timerJoin(timestamp) {
-                // Moment.js expects the timestamp in milliseconds (which `Number(params)` from original code provides)
-                if (!timestamp) return moment().format("YYYY-MM-DD hh:mm:ss A");
-                let date = moment(Number(timestamp));
-                return date.format("YYYY-MM-DD hh:mm:ss A");
-            }
+      // Replaced custom timerJoin with Moment.js for robust time formatting
+      function timerJoin(timestamp) {
+        // Moment.js expects the timestamp in milliseconds (which `Number(params)` from original code provides)
+        if (!timestamp) return moment().format("YYYY-MM-DD hh:mm:ss A");
+        let date = moment(Number(timestamp));
+        return date.format("YYYY-MM-DD hh:mm:ss A");
+      }
 
-            function alertMess(text) {
-                // Simplified alert function using the custom CSS classes
-                const $msg = $(`
+      function alertMess(text) {
+        // Simplified alert function using the custom CSS classes
+        const $msg = $(`
                 <div class="msg">
                     <div class="msg-content v-enter-active v-enter-to">${text}</div>
                 </div>
             `);
-                $("body").append($msg);
+        $("body").append($msg);
 
-                setTimeout(() => {
-                    // Apply leave animation classes
-                    $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
-                    $(".msg .msg-content").addClass("v-leave-active v-leave-to");
+        setTimeout(() => {
+          // Apply leave animation classes
+          $(".msg .msg-content").removeClass("v-enter-active v-enter-to");
+          $(".msg .msg-content").addClass("v-leave-active v-leave-to");
 
-                    // Remove the element after the animation
-                    setTimeout(() => {
-                        $msg.remove();
-                    }, 300); // Wait for the transition duration
-                }, 1000);
-            }
+          // Remove the element after the animation
+          setTimeout(() => {
+            $msg.remove();
+          }, 300); // Wait for the transition duration
+        }, 1000);
+      }
 
-            // --- Core Data Rendering Function (Updated with Tailwind HTML) ---
+      // --- Core Data Rendering Function (Updated with Tailwind HTML) ---
 
-            function loads(datas) {
-                const $listContainer = $("#withdraw_history_list");
-                const $noRecord = $("#no-record");
-                $listContainer.empty();
+      function loads(datas) {
+        const $listContainer = $("#withdraw_history_list");
+        const $noRecord = $("#no-record");
+        $listContainer.empty();
 
-                if (datas.length) {
-                    $noRecord.addClass("hidden");
-                } else {
-                    $noRecord.removeClass("hidden");
-                    return;
-                }
+        if (datas.length) {
+          $noRecord.addClass("hidden");
+        } else {
+          $noRecord.removeClass("hidden");
+          return;
+        }
 
-                // Mapping status codes to display text and classes (0=Processing, 1=Complete, 2=Failed)
-                const WithdrawalStatusMap = {
-                    1: {
-                        text: "Complete",
-                        class: "status-success",
-                        icon: "ri-check-line"
-                    },
-                    2: {
-                        text: "Failed",
-                        class: "status-failed",
-                        icon: "ri-close-circle-line"
-                    },
-                    0: {
-                        text: "Processing",
-                        class: "status-pending",
-                        icon: "ri-time-line"
-                    },
-                };
+        // Mapping status codes to display text and classes (0=Processing, 1=Complete, 2=Failed)
+        const WithdrawalStatusMap = {
+          1: {
+            text: "Complete",
+            class: "status-success",
+            icon: "ri-check-line",
+          },
+          2: {
+            text: "Failed",
+            class: "status-failed",
+            icon: "ri-close-circle-line",
+          },
+          0: {
+            text: "Processing",
+            class: "status-pending",
+            icon: "ri-time-line",
+          },
+        };
 
-                // Mapping API 'type' to display names and currency
-                const WithdrawalMethodsMapForDisplay = {
-                    USDT_ADDRESS: "USDT",
-                    BANK_CARD: "Gateway",
-                    UPI_MANUAL: "UPI Manual",
-                }
+        // Mapping API 'type' to display names and currency
+        const WithdrawalMethodsMapForDisplay = {
+          USDT_ADDRESS: "USDT",
+          BANK_CARD: "Gateway",
+          UPI_MANUAL: "UPI Manual",
+        };
 
-                const CurrencyMap = {
-                    USDT_ADDRESS: "$",
-                    BANK_CARD: "₹",
-                    UPI_MANUAL: "₹",
-                }
+        const CurrencyMap = {
+          USDT_ADDRESS: "$",
+          BANK_CARD: "₹",
+          UPI_MANUAL: "₹",
+        };
 
-                let html = datas.map(data => {
-                            const status = WithdrawalStatusMap[data.status] || WithdrawalStatusMap[0];
-                            const typeText = WithdrawalMethodsMapForDisplay[data.type] || data.type;
-                            const currency = CurrencyMap[data.type] || "₹";
+        let html = datas
+          .map((data) => {
+            const status =
+              WithdrawalStatusMap[data.status] || WithdrawalStatusMap[0];
+            const typeText =
+              WithdrawalMethodsMapForDisplay[data.type] || data.type;
+            const currency = CurrencyMap[data.type] || "₹";
 
-                            return `
+            return `
                     <div class="withdraw-card" data-status="${status.text}" data-type="${data.type}">
                         <div class="flex justify-between items-center pb-2">
                             <span class="text-base font-semibold text-white">Withdrawal</span>
@@ -384,149 +427,155 @@
                                 <i class="ri-file-copy-line text-purple-400 text-sm"></i>
                             </div>
 
-                            ${data.remarks ? 
-                                `<div class="col-span-2 mt-2">
+                            ${
+                              data.remarks
+                                ? `<div class="col-span-2 mt-2">
                                     <div class="text-gray-400">Remarks</div>
                                     <div class="text-gray-200 text-sm">${data.remarks}</div>
                                 </div>`
-                                : ''}
+                                : ""
+                            }
                         </div>
                     </div>
                 `;
-            }).join('');
+          })
+          .join("");
 
-            $listContainer.html(html);
+        $listContainer.html(html);
 
-            // Re-attach copy functionality after new HTML is injected
-            $(".copy-order-btn").off('click').on('click', function (e) {
-                e.preventDefault();
-                const orderId = $(this).find('.number').text().trim();
-                // Use the standard clipboard API (if available)
-                navigator.clipboard.writeText(orderId).then(() => {
-                    alertMess("Copy successful"); 
-                }).catch(err => {
-                    console.error('Copy failed:', err);
-                });
-            });
-        }
-        
-        // --- API Call and Filtering Logic ---
-        
-        function filterAndLoadData() {
-            const selectedType = $(".funtab_item.active-tab").data('type'); // Get the data-type attribute
-            const startDate = $("#start_date").val();
-            const endDate = $("#end_date").val();
-            
-            // Determine API query parameter based on selected tab
-            let typeParam = selectedType === "All" ? "" : selectedType;
-            
-            // Call the withdrawal history API
-            $.ajax({
-                type: "GET",
-                url: "/api/webapi/withdraw/history",
-                dataType: "json",
-                data: {
-                    type: typeParam, // Send the selected type (or empty string for 'All')
-                    startDate: startDate, // Pass date range
-                    endDate: endDate,
-                },
-                success: function (response) {
-                    if (response.withdrawList && response.withdrawList.length > 0) {
-                        
-                        // NOTE: If the API filters the data based on 'type' and dates, 
-                        // you can simply call loads(response.withdrawList).
-                        // If the API only takes dates, you might need client-side filtering 
-                        // for 'type', but we rely on the backend here since the type is 
-                        // passed in the data object.
+        // Re-attach copy functionality after new HTML is injected
+        $(".copy-order-btn")
+          .off("click")
+          .on("click", function (e) {
+            e.preventDefault();
+            const orderId = $(this).find(".number").text().trim();
+            // Use the standard clipboard API (if available)
+            navigator.clipboard
+              .writeText(orderId)
+              .then(() => {
+                alertMess("Copy successful");
+              })
+              .catch((err) => {
+                console.error("Copy failed:", err);
+              });
+          });
+      }
 
-                        loads(response.withdrawList);
-                    } else {
-                        loads([]); // Show no record
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error fetching withdrawal history:", status, error);
-                    loads([]); // Show no record on API error
-                }
-            });
-        }
+      // --- API Call and Filtering Logic ---
 
-        // --- Initialization and Event Binding ---
+      function filterAndLoadData() {
+        const selectedType = $(".funtab_item.active-tab").data("type"); // Get the data-type attribute
+        const startDate = $("#start_date").val();
+        const endDate = $("#end_date").val();
 
-        $(document).ready(function() {
-            // Set default dates to today and 7 days ago
-            const today = moment().format("YYYY-MM-DD");
-            const sevenDaysAgo = moment().subtract(7, 'days').format("YYYY-MM-DD");
-            
-            $("#start_date").val(sevenDaysAgo);
-            $("#end_date").val(today);
-            
-            // Initialize Flatpickr for date range selection
-            flatpickr("#start_date", {
-                dateFormat: "Y-m-d",
-                defaultDate: sevenDaysAgo,
-                maxDate: today,
-                onChange: function(selectedDates, dateStr, instance) {
-                    flatpickr("#end_date").set("minDate", dateStr);
-                    filterAndLoadData();
-                }
-            });
-            flatpickr("#end_date", {
-                dateFormat: "Y-m-d",
-                defaultDate: today,
-                minDate: sevenDaysAgo,
-                maxDate: today,
-                onChange: function(selectedDates, dateStr, instance) {
-                    flatpickr("#start_date").set("maxDate", dateStr);
-                    filterAndLoadData();
-                }
-            });
-            
-            // Initial call to load data when the page loads
-            filterAndLoadData(); 
+        // Determine API query parameter based on selected tab
+        let typeParam = selectedType === "All" ? "" : selectedType;
 
-            // Tab click handling (updated to use 'active-tab' class)
-            $(".funtab_item").click(function () {
-                const $this = $(this);
-                const index = $this.index();
-                
-                // Tab scroll effect (from original code)
-                let scrollX = 0;
-                if (index > 1) {
-                    scrollX = (index - 1) * 100; // rough estimation
-                }
-                $("#nav_list").scrollLeft(scrollX);
+        // Call the withdrawal history API
+        $.ajax({
+          type: "GET",
+          url: "/api/webapi/withdraw/history",
+          dataType: "json",
+          data: {
+            type: typeParam, // Send the selected type (or empty string for 'All')
+            startDate: startDate, // Pass date range
+            endDate: endDate,
+          },
+          success: function (response) {
+            if (response.withdrawList && response.withdrawList.length > 0) {
+              // NOTE: If the API filters the data based on 'type' and dates,
+              // you can simply call loads(response.withdrawList).
+              // If the API only takes dates, you might need client-side filtering
+              // for 'type', but we rely on the backend here since the type is
+              // passed in the data object.
 
-                // Update active class
-                $this.addClass("active-tab").siblings().removeClass("active-tab")
-                
-                // Re-load/filter data
-                filterAndLoadData(); 
-            })
-
-            // Check for clientTxnId/txnId and confirm recharge (Original logic retained)
-            const searchParams = new URLSearchParams(window.location.search)
-            const clientTxnId = searchParams.get("client_txn_id")
-            const txnId = searchParams.get("txn_id")
-
-            if (!!txnId && !!clientTxnId) {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/webapi/confirm_recharge",
-                    data: {
-                        client_txn_id: clientTxnId,
-                        txn_id: txnId,
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        window.location.href = `${window.location.origin}${window.location.pathname}`
-                        // Note: Using localStorage for userData might not work in all environments.
-                        localStorage.removeItem("userData") 
-                    },
-                })
+              loads(response.withdrawList);
+            } else {
+              loads([]); // Show no record
             }
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching withdrawal history:", status, error);
+            loads([]); // Show no record on API error
+          },
         });
-        </script>
-</body>
+      }
 
+      // --- Initialization and Event Binding ---
+
+      $(document).ready(function () {
+        // Set default dates to today and 7 days ago
+        const today = moment().format("YYYY-MM-DD");
+        const sevenDaysAgo = moment().subtract(7, "days").format("YYYY-MM-DD");
+
+        $("#start_date").val(sevenDaysAgo);
+        $("#end_date").val(today);
+
+        // Initialize Flatpickr for date range selection
+        flatpickr("#start_date", {
+          dateFormat: "Y-m-d",
+          defaultDate: sevenDaysAgo,
+          maxDate: today,
+          onChange: function (selectedDates, dateStr, instance) {
+            flatpickr("#end_date").set("minDate", dateStr);
+            filterAndLoadData();
+          },
+        });
+        flatpickr("#end_date", {
+          dateFormat: "Y-m-d",
+          defaultDate: today,
+          minDate: sevenDaysAgo,
+          maxDate: today,
+          onChange: function (selectedDates, dateStr, instance) {
+            flatpickr("#start_date").set("maxDate", dateStr);
+            filterAndLoadData();
+          },
+        });
+
+        // Initial call to load data when the page loads
+        filterAndLoadData();
+
+        // Tab click handling (updated to use 'active-tab' class)
+        $(".funtab_item").click(function () {
+          const $this = $(this);
+          const index = $this.index();
+
+          // Tab scroll effect (from original code)
+          let scrollX = 0;
+          if (index > 1) {
+            scrollX = (index - 1) * 100; // rough estimation
+          }
+          $("#nav_list").scrollLeft(scrollX);
+
+          // Update active class
+          $this.addClass("active-tab").siblings().removeClass("active-tab");
+
+          // Re-load/filter data
+          filterAndLoadData();
+        });
+
+        // Check for clientTxnId/txnId and confirm recharge (Original logic retained)
+        const searchParams = new URLSearchParams(window.location.search);
+        const clientTxnId = searchParams.get("client_txn_id");
+        const txnId = searchParams.get("txn_id");
+
+        if (!!txnId && !!clientTxnId) {
+          $.ajax({
+            type: "POST",
+            url: "/api/webapi/confirm_recharge",
+            data: {
+              client_txn_id: clientTxnId,
+              txn_id: txnId,
+            },
+            dataType: "json",
+            success: function (response) {
+              window.location.href = `${window.location.origin}${window.location.pathname}`;
+              // Note: Using localStorage for userData might not work in all environments.
+              localStorage.removeItem("userData");
+            },
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

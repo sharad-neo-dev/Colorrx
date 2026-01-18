@@ -1,52 +1,101 @@
-   <footer class="w-full md:max-w-[500px] fixed bottom-0 border-t border-gray-800 shadow-inner z-50 bg-white">
-  <a id="telegramBtn" href="#" target="_blank"
-     class="fixed right-2 bottom-[6rem] z-50 w-16 h-16">
-    <img src="/images/support10.png" alt="Support" class="w-16 h-16 object-contain">
+<footer
+  class="w-full md:max-w-[500px] fixed bottom-0 border-t border-gray-800 shadow-inner z-50 bg-white"
+>
+  <a
+    id="telegramBtn"
+    href="#"
+    target="_blank"
+    class="fixed right-2 bottom-[6rem] z-50 w-16 h-16"
+  >
+    <img
+      src="/images/support10.png"
+      alt="Support"
+      class="w-16 h-16 object-contain"
+    />
   </a>
 
-  <nav id="mobileNav" class="max-w-md mx-auto flex justify-between items-center px-0 py-2 text-gray-400 relative">
+  <nav
+    id="mobileNav"
+    class="max-w-md mx-auto flex justify-between items-center px-0 py-2 text-gray-400 relative"
+  >
     <!-- Withdraw -->
-    <a href="/wallet/withdrawal" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all" data-menu="withdraw">
-      <img src="/footer/Withdraw.png" class="icon-inactive w-12 h-12 mb-1" alt="Withdraw">
-      <img src="/footer/Withdrawactive.png" class="icon-active w-12 h-12 mb-1 hidden" alt="Withdraw Active">
+    <a
+      href="/wallet/withdrawal"
+      class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all"
+      data-menu="withdraw"
+    >
+      <img
+        src="/footer/Withdraw.png"
+        class="icon-inactive w-12 h-12 mb-1"
+        alt="Withdraw"
+      />
+      <img
+        src="/footer/Withdrawactive.png"
+        class="icon-active w-12 h-12 mb-1 hidden"
+        alt="Withdraw Active"
+      />
       <span>Withdraw</span>
     </a>
 
     <!-- Deposit -->
-    <a href="/wallet/recharge" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all" data-menu="deposit">
-      <img src="/footer/deposit.png" class="icon-inactive w-12 h-12 mb-1" alt="Deposit">
-      <img src="/footer/depositactive.png" class="icon-active w-12 h-12 mb-1 hidden" alt="Deposit Active">
+    <a
+      href="/wallet/recharge"
+      class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all"
+      data-menu="deposit"
+    >
+      <img
+        src="/footer/deposit.png"
+        class="icon-inactive w-12 h-12 mb-1"
+        alt="Deposit"
+      />
+      <img
+        src="/footer/depositactive.png"
+        class="icon-active w-12 h-12 mb-1 hidden"
+        alt="Deposit Active"
+      />
       <span>Deposit</span>
     </a>
 
     <!-- Buy USDT -->
-    <a href="/wallet/buyusd" class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all" data-menu="buyusd">
-      <img src="/footer/usd.png" class="icon-inactive w-12 h-12 mb-1" alt="USDT">
-      <img src="/footer/usdactive.png" class="icon-active w-12 h-12 mb-1 hidden" alt="USDT Active">
+    <a
+      href="/wallet/buyusd"
+      class="nav-link flex-1 flex flex-col items-center justify-center text-[11px] font-semibold transition-all"
+      data-menu="buyusd"
+    >
+      <img
+        src="/footer/usd.png"
+        class="icon-inactive w-12 h-12 mb-1"
+        alt="USDT"
+      />
+      <img
+        src="/footer/usdactive.png"
+        class="icon-active w-12 h-12 mb-1 hidden"
+        alt="USDT Active"
+      />
       <span>Buy USDT</span>
     </a>
   </nav>
 </footer>
 
 <script>
-  const footerLinks = document.querySelectorAll('#mobileNav .nav-link');
+  const footerLinks = document.querySelectorAll("#mobileNav .nav-link");
   const currentPath = window.location.pathname;
 
   function setActive(link) {
-    footerLinks.forEach(l => {
-      l.querySelector('.icon-active').classList.add('hidden');
-      l.querySelector('.icon-inactive').classList.remove('hidden');
-      l.querySelector('span').classList.remove('text-[#FA605F]');
+    footerLinks.forEach((l) => {
+      l.querySelector(".icon-active").classList.add("hidden");
+      l.querySelector(".icon-inactive").classList.remove("hidden");
+      l.querySelector("span").classList.remove("text-[#FA605F]");
     });
 
-    link.querySelector('.icon-active').classList.remove('hidden');
-    link.querySelector('.icon-inactive').classList.add('hidden');
-    link.querySelector('span').classList.add('text-[#FA605F]');
+    link.querySelector(".icon-active").classList.remove("hidden");
+    link.querySelector(".icon-inactive").classList.add("hidden");
+    link.querySelector("span").classList.add("text-[#FA605F]");
   }
 
   let matched = false;
-  footerLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
+  footerLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
       setActive(link);
       matched = true;
     }
@@ -54,24 +103,23 @@
 
   if (!matched && footerLinks.length > 0) setActive(footerLinks[0]);
 
-  footerLinks.forEach(link => {
-    link.addEventListener('click', function () {
+  footerLinks.forEach((link) => {
+    link.addEventListener("click", function () {
       setActive(this);
     });
   });
 
   async function loadTelegramLink() {
     try {
-      const res = await fetch('/api/webapi/appsetting');
+      const res = await fetch("/api/webapi/appsetting");
       const data = await res.json();
       if (data.success && data.data.telegram) {
-        document.getElementById('telegramBtn').href = data.data.telegram;
+        document.getElementById("telegramBtn").href = data.data.telegram;
       }
     } catch (error) {
-      console.error('Failed to load Telegram link:', error);
+      console.error("Failed to load Telegram link:", error);
     }
   }
-
 
   loadTelegramLink();
 </script>

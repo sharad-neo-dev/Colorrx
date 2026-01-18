@@ -1,296 +1,371 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deposit history | colorrx</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <style>
-        /* Base styles for the dark theme */
-        
-        .bg-gradient-header {
-            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
-        }
-        
-        .deposit-card {
-            background-color: #1a1a2e;
-            /* Darker card background */
-            border: 1px solid #3e1474;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            margin-bottom: 1rem;
-            padding: 1rem;
-            transition: transform 0.2s;
-        }
-        
-        .deposit-card:hover {
-            transform: translateY(-2px);
-            border-color: #9333ea;
-        }
-        
-        .status-success {
-            color: #34d399;
-            /* Green-400 */
-        }
-        
-        .status-failed {
-            color: #ef4444;
-            /* Red-500 */
-        }
-        
-        .status-pending {
-            color: #f59e0b;
-            /* Amber-500 */
-        }
-        
-        .divider {
-            border-top: 1px dashed #3e1474;
-            margin: 10px 0;
-        }
-        
-        .price {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #d8b4fe;
-            /* Purple-300 for money */
-        }
-        /* Flatpickr Dark Theme (Revising existing styles for clarity) */
-        
-        .flatpickr-calendar {
-            background: #2c0050 !important;
-            border-radius: 12px;
-            color: white !important;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        }
-        
-        .flatpickr-months,
-        .flatpickr-weekdays {
-            background: #3e1474 !important;
-            color: white !important;
-        }
-        
-        .flatpickr-day {
-            color: white !important;
-        }
-        
-        .flatpickr-day.today {
-            border-color: #9333ea !important;
-        }
-        
-        .flatpickr-day.selected {
-            background: #9333ea !important;
-            color: white !important;
-        }
-        
-        .flatpickr-day:hover {
-            background: #6d28d9 !important;
-        }
-        
-        .flatpickr-current-month input.cur-year {
-            color: white !important;
-        }
-        /* Date Input Styling */
-        
-        .date-input {
-            background-color: transparent !important;
-            /* Make inner input transparent */
-            border: none !important;
-            color: white !important;
-            padding: 0;
-            cursor: pointer;
-            text-align: left;
-            width: 100px;
-            /* Adjusted width for better fit */
-        }
-        
-        .date-picker-wrapper {
-            background-color: #280b4d;
-            border-radius: 8px;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        /* Utility classes for container */
-        
+      /* Base styles for the dark theme */
+
+      .bg-gradient-header {
+        background: linear-gradient(180deg, #3e1474, #101114 96.35%);
+      }
+
+      .deposit-card {
+        background-color: #f95959;
+        /* Darker card background */
+        border: 1px solid #f95959;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+        padding: 1rem;
+        transition: transform 0.2s;
+      }
+
+      .deposit-card:hover {
+        transform: translateY(-2px);
+        border-color: #9333ea;
+      }
+
+      .status-success {
+        color: #34d399;
+        /* Green-400 */
+      }
+
+      .status-failed {
+        color: #ef4444;
+        /* Red-500 */
+      }
+
+      .status-pending {
+        color: #f59e0b;
+        /* Amber-500 */
+      }
+
+      .divider {
+        border-top: 1px dashed #3e1474;
+        margin: 10px 0;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #d8b4fe;
+        /* Purple-300 for money */
+      }
+      /* Flatpickr Dark Theme (Revising existing styles for clarity) */
+
+      .flatpickr-calendar {
+        background: #f95959 !important;
+        border-radius: 12px;
+        color: white !important;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .flatpickr-months,
+      .flatpickr-weekdays {
+        background: #f95959 !important;
+        color: white !important;
+      }
+
+      .flatpickr-day {
+        color: white !important;
+      }
+
+      .flatpickr-day.today {
+        border-color: #f95959 !important;
+      }
+
+      .flatpickr-day.selected {
+        background: #f95959 !important;
+        color: white !important;
+      }
+
+      .flatpickr-day:hover {
+        background: #f95959 !important;
+      }
+
+      .flatpickr-current-month input.cur-year {
+        color: white !important;
+      }
+      /* Date Input Styling */
+
+      .date-input {
+        background-color: transparent !important;
+        /* Make inner input transparent */
+        border: none !important;
+        color: white !important;
+        padding: 0;
+        cursor: pointer;
+        text-align: left;
+        width: 100px;
+        /* Adjusted width for better fit */
+      }
+
+      .date-picker-wrapper {
+        background-color: #f95959;
+        border-radius: 8px;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      /* Utility classes for container */
+
+      .width-scrren {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        /* Solid background for content area */
+      }
+
+      @media (max-width: 768px) {
         .width-scrren {
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: #101114;
-            /* Solid background for content area */
+          max-width: 100%;
         }
-        
-        @media (max-width: 768px) {
-            .width-scrren {
-                max-width: 100%;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-black text-gray-300">
-
+  <body class="text-gray-300">
     <div class="width-scrren">
-        <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
-            <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
-                <i class="ri-arrow-left-s-line"></i>
-            </button>
-            <h2 class="flex-1 text-center text-white font-bold text-lg">Deposit History</h2>
-            <span class="w-6"></span>
-        </header>
+      <header
+        class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10"
+        style="background: linear-gradient(90deg, #f95959 0%, #ff9a8e 50%)"
+      >
+        <button
+          onclick="history.back()"
+          aria-label="Back"
+          class="text-white text-xl"
+        >
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <h2 class="flex-1 text-center text-white font-bold text-lg">
+          Deposit History
+        </h2>
+        <span class="w-6"></span>
+      </header>
 
-        <div class="flex items-center gap-4 p-4 justify-center bg-[#101114]   mb-10 shadow-lg">
-            <div class="date-picker-wrapper">
-                <i class="ri-calendar-2-line text-purple-400"></i>
-                <input type="text" id="start_date" class="date-input" value="2025-09-20" readonly>
-            </div>
-
-            <span class="text-gray-500 font-semibold">—</span>
-
-            <div class="date-picker-wrapper">
-                <i class="ri-calendar-2-line text-purple-400"></i>
-                <input type="text" id="end_date" class="date-input" value="2025-09-27" readonly>
-            </div>
+      <div class="flex items-center gap-4 p-4 justify-center shadow-lg">
+        <div class="date-picker-wrapper">
+          <i class="ri-calendar-2-line text-purple-100"></i>
+          <input
+            type="text"
+            id="start_date"
+            class="date-input"
+            value="2025-09-20"
+            readonly
+          />
         </div>
 
-        <div class="flex justify-center bg-[#101114] py-2 border-b border-gray-800">
-            <div id="nav_list" class="flex overflow-x-auto whitespace-nowrap scrollbar-hide">
-                <button class="funtab_item activeClassName text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 text-purple-400 bg-purple-900/40">
-                    <span class="tab_item tab_active">All</span>
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40">
-                    <span class="tab_item">Gateway</span>
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40">
-                    <span class="tab_item">UPI Manual</span>
-                </button>
-                <button class="funtab_item text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-purple-400 hover:bg-purple-900/40">
-                    <span class="tab_item">USDT</span>
-                </button>
+        <span class="text-gray-500 font-semibold">—</span>
+
+        <div class="date-picker-wrapper">
+          <i class="ri-calendar-2-line text-purple-100"></i>
+          <input
+            type="text"
+            id="end_date"
+            class="date-input"
+            value="2025-09-27"
+            readonly
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-center py-2 border-b border-gray-800">
+        <div
+          id="nav_list"
+          class="flex overflow-x-auto whitespace-nowrap scrollbar-hide"
+        >
+          <button
+            class="funtab_item activeClassName text-sm font-medium px-4 py-2 mx-1 rounded-full transition duration-300 text-white bg-[#f95959]"
+          >
+            <span class="tab_item tab_active">All</span>
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]"
+          >
+            <span class="tab_item">Gateway</span>
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]"
+          >
+            <span class="tab_item">UPI Manual</span>
+          </button>
+          <button
+            class="funtab_item text-sm text-black font-medium px-4 py-2 mx-1 rounded-full transition duration-300 hover:text-white hover:bg-[#f95959]"
+          >
+            <span class="tab_item">USDT</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="transRecord__container-content mt-4 px-4 flex-1">
+        <div id="deposit_history_list" class="space-y-4">
+          <div class="deposit-card hidden">
+            <div class="flex justify-between items-center pb-2">
+              <span class="text-base font-semibold text-white">Deposit</span>
+              <div class="flex items-center gap-2 status-success">
+                <span class="font-medium">Complete</span>
+                <i class="ri-arrow-right-s-line"></i>
+              </div>
             </div>
+            <div class="divider"></div>
+            <div class="grid grid-cols-2 gap-y-2 text-sm">
+              <div class="text-gray-400">Balance</div>
+              <div class="text-right price">₹500.00</div>
+
+              <div class="text-gray-400">Type</div>
+              <div class="text-right text-gray-200">UPI GATEWAY</div>
+
+              <div class="text-gray-400">Time</div>
+              <div class="text-right text-gray-200">2025-09-25 10:30:00 AM</div>
+
+              <div class="text-gray-400">Order number</div>
+              <div class="text-right flex items-center justify-end gap-1">
+                <span class="number text-gray-200 cursor-pointer"
+                  >1234567890</span
+                >
+                <i class="ri-file-copy-line text-purple-400"></i>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="transRecord__container-content mt-4 px-4 flex-1">
-            <div id="deposit_history_list" class="space-y-4">
-                <div class="deposit-card hidden">
-                    <div class="flex justify-between items-center pb-2">
-                        <span class="text-base font-semibold text-white">Deposit</span>
-                        <div class="flex items-center gap-2 status-success">
-                            <span class="font-medium">Complete</span>
-                            <i class="ri-arrow-right-s-line"></i>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="grid grid-cols-2 gap-y-2 text-sm">
-                        <div class="text-gray-400">Balance</div>
-                        <div class="text-right price">₹500.00</div>
-
-                        <div class="text-gray-400">Type</div>
-                        <div class="text-right text-gray-200">UPI GATEWAY</div>
-
-                        <div class="text-gray-400">Time</div>
-                        <div class="text-right text-gray-200">2025-09-25 10:30:00 AM</div>
-
-                        <div class="text-gray-400">Order number</div>
-                        <div class="text-right flex items-center justify-end gap-1">
-                            <span class="number text-gray-200 cursor-pointer">1234567890</span>
-                            <i class="ri-file-copy-line text-purple-400"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="no-record" class="no_data_image flex flex-col items-center text-center mt-[14rem] hidden">
-                <img src="/images/download10.png" alt="No Record" width="50" height="50">
-                <h2 class="text-xl font-bold text-white mt-4">No Record</h2>
-                <p class="text-sm text-gray-500 mt-1">Haven't found any record for this period.</p>
-            </div>
+        <div
+          id="no-record"
+          class="no_data_image flex flex-col items-center text-center mt-[14rem] hidden"
+        >
+          <img
+            src="/images/download10.png"
+            alt="No Record"
+            width="50"
+            height="50"
+          />
+          <h2 class="text-xl font-bold text-white mt-4">No Record</h2>
+          <p class="text-sm text-gray-500 mt-1">
+            Haven't found any record for this period.
+          </p>
         </div>
+      </div>
 
-        <div id="pagination" class="flex justify-center gap-2 mt-4 p-4">
-        </div>
+      <div id="pagination" class="flex justify-center gap-2 mt-4 p-4"></div>
 
-        <%- include('../layout/footer.ejs') %>
+      <%- include('../layout/footer.ejs') %>
     </div>
 
     <script>
-        function formateT(params) {
-            let result = params < 10 ? "0" + params : params
-            return result
+      function formateT(params) {
+        let result = params < 10 ? "0" + params : params;
+        return result;
+      }
+
+      function timerJoin(params = "", addHours = 0) {
+        let date = "";
+        if (params) {
+          date = new Date(Number(params));
+        } else {
+          date = new Date();
         }
 
-        function timerJoin(params = "", addHours = 0) {
-            let date = ""
-            if (params) {
-                date = new Date(Number(params))
-            } else {
-                date = new Date()
-            }
+        // Adjust for local time if needed (assuming server time is being converted)
+        // For now, keeping original logic which might not be timezone-aware
+        date.setHours(date.getHours() + addHours);
 
-            // Adjust for local time if needed (assuming server time is being converted)
-            // For now, keeping original logic which might not be timezone-aware
-            date.setHours(date.getHours() + addHours)
+        let years = formateT(date.getFullYear());
+        let months = formateT(date.getMonth() + 1);
+        let days = formateT(date.getDate());
 
-            let years = formateT(date.getFullYear())
-            let months = formateT(date.getMonth() + 1)
-            let days = formateT(date.getDate())
+        let hours = date.getHours() % 12;
+        hours = hours === 0 ? 12 : hours;
+        let ampm = date.getHours() < 12 ? "AM" : "PM";
 
-            let hours = date.getHours() % 12
-            hours = hours === 0 ? 12 : hours
-            let ampm = date.getHours() < 12 ? "AM" : "PM"
+        let minutes = formateT(date.getMinutes());
+        let seconds = formateT(date.getSeconds());
 
-            let minutes = formateT(date.getMinutes())
-            let seconds = formateT(date.getSeconds())
+        return (
+          years +
+          "-" +
+          months +
+          "-" +
+          days +
+          " " +
+          hours +
+          ":" +
+          minutes +
+          ":" +
+          seconds +
+          " " +
+          ampm
+        );
+      }
 
-            return years + "-" + months + "-" + days + " " + hours + ":" + minutes + ":" + seconds + " " + ampm
+      function loads(datas) {
+        const $depositList = $("#deposit_history_list");
+        const $noRecord = $("#no-record");
+
+        if (datas.length) {
+          $noRecord.addClass("hidden");
+        } else {
+          $noRecord.removeClass("hidden");
+          $depositList.empty(); // Clear existing content
+          return;
         }
 
-        function loads(datas) {
-            const $depositList = $("#deposit_history_list");
-            const $noRecord = $("#no-record");
+        const PaymentMethodsMap = {
+          upi_gateway: "UPI GATEWAY",
+          upi_gatewa: "UPI GATEWAY",
+          upi_manual: "UPI Manual",
+          usdt_manual: "USDT Manual",
+          usdt_manua: "USDT Manual",
+          wow_pay: "WOW Pay",
+          sunpay: "SUN Pay",
+          usdt: "USDT",
+        };
 
-            if (datas.length) {
-                $noRecord.addClass("hidden");
-            } else {
-                $noRecord.removeClass("hidden");
-                $depositList.empty(); // Clear existing content
-                return;
-            }
+        let html = datas
+          .map((data) => {
+            const statusClass =
+              data.status == 1
+                ? "status-success"
+                : data.status == 2
+                  ? "status-failed"
+                  : "status-pending";
+            const statusText =
+              data.status == 1
+                ? "Complete"
+                : data.status == 2
+                  ? "Failed"
+                  : "Processing";
+            const arrowIcon =
+              data.status == 1 ? `<i class="ri-arrow-right-s-line"></i>` : "";
+            const paymentType = PaymentMethodsMap[data.type] || data.type;
+            const timeStr = timerJoin(data.time);
 
-            const PaymentMethodsMap = {
-                upi_gateway: "UPI GATEWAY",
-                upi_gatewa: "UPI GATEWAY",
-                upi_manual: "UPI Manual",
-                usdt_manual: "USDT Manual",
-                usdt_manua: "USDT Manual",
-                wow_pay: "WOW Pay",
-                sunpay: "SUN Pay",
-                usdt: "USDT",
-            }
-
-            let html = datas.map(data => {
-                const statusClass = data.status == 1 ? "status-success" : data.status == 2 ? "status-failed" : "status-pending";
-                const statusText = data.status == 1 ? "Complete" : data.status == 2 ? "Failed" : "Processing";
-                const arrowIcon = data.status == 1 ? `<i class="ri-arrow-right-s-line"></i>` : "";
-                const paymentType = PaymentMethodsMap[data.type] || data.type;
-                const timeStr = timerJoin(data.time);
-
-                return `
+            return `
                     <div class="deposit-card">
                         <div class="flex justify-between items-center">
                             <span class="text-base font-semibold text-white">Deposit</span>
@@ -318,104 +393,116 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+          })
+          .join("");
 
-            $depositList.html(html);
+        $depositList.html(html);
 
-            // Re-bind the click handler for copying
-            $(".number").off('click').on('click', function(e) {
-                e.preventDefault();
-                let text = $(this).data('order-id').trim(); // Use data attribute
-                navigator.clipboard.writeText(text);
-                $(this).addClass("block-click");
-                alertMess("Copy successful", $(this));
-            });
-        }
+        // Re-bind the click handler for copying
+        $(".number")
+          .off("click")
+          .on("click", function (e) {
+            e.preventDefault();
+            let text = $(this).data("order-id").trim(); // Use data attribute
+            navigator.clipboard.writeText(text);
+            $(this).addClass("block-click");
+            alertMess("Copy successful", $(this));
+          });
+      }
 
-        function alertMess(text, sic) {
-            const $msg = $(`
+      function alertMess(text, sic) {
+        const $msg = $(`
                 <div class="msg fixed top-4 left-1/2 -translate-x-1/2 z-[10000]">
                     <div class="msg-content px-4 py-2 bg-purple-600 text-white rounded-lg shadow-xl animate-fade-in"> ${text} </div>
                 </div>
             `);
-            $("body").append($msg);
+        $("body").append($msg);
 
-            // Simple animation and removal
-            setTimeout(() => {
-                $msg.find(".msg-content").removeClass("animate-fade-in").addClass("animate-fade-out");
-                setTimeout(() => {
-                    $msg.remove();
-                }, 500); // Wait for fade-out animation
-                sic.removeClass("block-click");
-            }, 1000);
-        }
+        // Simple animation and removal
+        setTimeout(() => {
+          $msg
+            .find(".msg-content")
+            .removeClass("animate-fade-in")
+            .addClass("animate-fade-out");
+          setTimeout(() => {
+            $msg.remove();
+          }, 500); // Wait for fade-out animation
+          sic.removeClass("block-click");
+        }, 1000);
+      }
 
-        // Initial data load (assuming this endpoint returns the entire list)
+      // Initial data load (assuming this endpoint returns the entire list)
+      $.ajax({
+        type: "GET",
+        url: "/api/webapi/recharge/list",
+        dataType: "json",
+        success: function (response) {
+          loads(response.datas);
+        },
+      });
+
+      // Tab click handler
+      $(".funtab_item").click(function () {
+        let index = $(this).index();
+
+        // Update active state
+        $(this)
+          .addClass("activeClassName")
+          .siblings()
+          .removeClass("activeClassName");
+
+        // The logic for tab content is now server-side in this structure (using AJAX)
+        // You would typically use the index to filter client-side or send a new request
+        // For now, using the existing AJAX logic from the original script
         $.ajax({
-            type: "GET",
-            url: "/api/webapi/recharge/list",
-            dataType: "json",
-            success: function(response) {
-                loads(response.datas);
-            },
-        })
+          type: "GET",
+          url: "/api/webapi/recharge/list",
+          dataType: "json",
+          success: function (response) {
+            if (response.datas.length == 0) return;
 
-        // Tab click handler
-        $(".funtab_item").click(function() {
-            let index = $(this).index()
+            let paymentMethods = [];
+            if (index == 1) {
+              paymentMethods = ["upi_gatewa", "sunpay", "wow_pay"];
+            } else if (index == 2) {
+              paymentMethods = ["upi_manual"];
+            } else if (index == 3) {
+              paymentMethods = ["usdt_manua", "usdt_manual", "usdt"];
+            }
 
-            // Update active state
-            $(this).addClass("activeClassName").siblings().removeClass("activeClassName")
+            if (paymentMethods.length) {
+              loads(
+                response.datas.filter((data) =>
+                  paymentMethods.includes(data.type),
+                ),
+              );
+            } else {
+              loads(response.datas); // All tab (index 0)
+            }
+          },
+        });
+      });
 
-            // The logic for tab content is now server-side in this structure (using AJAX)
-            // You would typically use the index to filter client-side or send a new request
-            // For now, using the existing AJAX logic from the original script
-            $.ajax({
-                type: "GET",
-                url: "/api/webapi/recharge/list",
-                dataType: "json",
-                success: function(response) {
-                    if (response.datas.length == 0) return
+      // Confirmation logic
+      const searchParams = new URLSearchParams(window.location.search);
+      const clientTxnId = searchParams.get("client_txn_id");
+      const txnId = searchParams.get("txn_id");
 
-                    let paymentMethods = []
-                    if (index == 1) {
-                        paymentMethods = ["upi_gatewa", "sunpay", "wow_pay"]
-                    } else if (index == 2) {
-                        paymentMethods = ["upi_manual"]
-                    } else if (index == 3) {
-                        paymentMethods = ["usdt_manua", "usdt_manual", "usdt"]
-                    }
-
-                    if (paymentMethods.length) {
-                        loads(response.datas.filter(data => paymentMethods.includes(data.type)))
-                    } else {
-                        loads(response.datas) // All tab (index 0)
-                    }
-                },
-            })
-        })
-
-        // Confirmation logic
-        const searchParams = new URLSearchParams(window.location.search)
-        const clientTxnId = searchParams.get("client_txn_id")
-        const txnId = searchParams.get("txn_id")
-
-        if (!!txnId && !!clientTxnId) {
-            $.ajax({
-                type: "POST",
-                url: "/api/webapi/confirm_recharge",
-                data: {
-                    client_txn_id: clientTxnId,
-                    txn_id: txnId,
-                },
-                dataType: "json",
-                success: function(response) {
-                    window.location.href = `${window.location.origin}${window.location.pathname}`
-                    localStorage.removeItem("userData")
-                },
-            })
-        }
+      if (!!txnId && !!clientTxnId) {
+        $.ajax({
+          type: "POST",
+          url: "/api/webapi/confirm_recharge",
+          data: {
+            client_txn_id: clientTxnId,
+            txn_id: txnId,
+          },
+          dataType: "json",
+          success: function (response) {
+            window.location.href = `${window.location.origin}${window.location.pathname}`;
+            localStorage.removeItem("userData");
+          },
+        });
+      }
     </script>
-</body>
-
+  </body>
 </html>

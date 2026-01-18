@@ -199,7 +199,7 @@ fetch("/api/webapi/slider")
         const img = document.createElement("img");
         img.src = slide.image_url;
         img.alt = slide.title;
-        img.className = "absolute inset-0 w-full h-full object-fill transition-opacity duration-700";
+        img.className = "absolute inset-0 w-full h-full object-fill transition-opacity duration-700 shadow-gray-300 shadow-2xl rounded-md";
         img.classList.add(i === 0 ? "opacity-100" : "opacity-0");
 
         // Make image clickable if page_url exists
@@ -523,7 +523,7 @@ const gameGrid = document.getElementById("gameGrid");
 // Render category buttons
 Object.keys(gameData).forEach(cat => {
     const button = document.createElement("button");
-    button.className = "flex flex-col items-center  px-3 py-2 bg-[#FF8A80] rounded-lg h-[60px] w-[95px] hover:bg-[#FA605F] transition shrink-0 shadow-gray-300 shadow-xl hover:shadow-2xl";
+    button.className = "flex flex-col items-center  px-3 py-2 bg-[#FF8A80] rounded-lg h-[65px] w-[95px] hover:bg-[#FA605F] transition shrink-0 shadow-gray-300 shadow-xl hover:shadow-2xl";
     button.innerHTML = `<img src="${gameData[cat].icon}" class="w-10 h-10"><span class="text-xs">${cat}</span>`;
     
     button.addEventListener("click", () => loadGames(cat));
@@ -559,7 +559,7 @@ function loadGames(category) {
         <div class="w-full aspect-square p-1">
             <img src="${game.img}" class="w-full rounded-[0.5rem]  object-cover shadow-gray-300 shadow-xl hover:shadow-2xl">
         </div>
-        <div class="mt-2 text-center text-sm font-semibold text-black">${game.name}</div>
+        <div class="mt-0.5 mb-3 text-center text-sm font-semibold text-black">${game.name}</div>
     ` : `
         <div class="w-full aspect-square">
             <img src="${game.img}" class="w-full h-full object-cover">
@@ -625,12 +625,12 @@ lobbyCategories.forEach(cat => {
         ? `<img src="${game.img}" class="w-full h-auto rounded-lg" alt="${game.name}">`
         : `<img src="${game.img}" class="w-full h-[120px] rounded-lg" alt="${game.name}">`;
 
-    card.innerHTML = `
-      ${dedi}
-         ${gameimge}
-        ${gameTitle}
-      </div>
-    `;
+    // card.innerHTML = `
+    //   ${dedi}
+    //      ${gameimge}
+    //     ${gameTitle}
+    //   </div>
+    // `;
 
     scrollInner.appendChild(card);
   });

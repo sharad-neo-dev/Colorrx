@@ -1,1262 +1,2025 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daman App Activity - colorrx</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Daman App Activity - colorrx</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'daman-dark': '#32005A',
-                        'award-orange': '#ff5722',
-                        'invite-blue': '#2196f3',
-                        'jackpot-green': '#4caf50',
-                    }
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "daman-dark": "#32005A",
+                            "award-orange": "#ff5722",
+                            "invite-blue": "#2196f3",
+                            "jackpot-green": "#4caf50",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            /* ✅ Stretch images fully without gaps */
+
+            body {
+                background: white;
+            }
+            .container {
+                max-width: 400px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .sys-tab-menu {
+                display: flex;
+                gap: 5px;
+                background: transparent;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .sys-tab-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 20%;
+                height: 60px;
+                background: #2b2b2b;
+                color: #aaa;
+                border-radius: 10px;
+                text-decoration: none;
+                font-size: 12px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .sys-tab-item i {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .sys-tab-item:hover {
+                background: #3a3a3a;
+                color: #fff;
+            }
+
+            .sys-tab-item.active {
+                background: #ff9a8e;
+                color: #fff;
+            }
+
+            .sys-tab-content {
+                display: none;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                /* background: #1d1d1d;
+    padding: 20px; */
+                border-radius: 12px;
+            }
+
+            .sys-tab-content.active {
+                display: block;
+            }
+
+            .sys-rebate-container {
+                background: white;
+                border-radius: 16px;
+                max-width: 100%;
+                overflow: hidden;
+                padding: 15px;
+            }
+
+            /* Tabs */
+            .sys-rebate-tabs {
+                display: flex;
+                background: white;
+                border-radius: 10px;
+                padding: 6px;
+                margin-bottom: 20px;
+            }
+
+            .sys-tab-btn {
+                flex: 1;
+                background: transparent;
+                color: #000000;
+                border: none;
+                padding: 10px 0;
+                border-radius: 8px;
+                font-size: 13px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .sys-tab-btn.active {
+                background: #f95959;
+                color: #fff;
+                /* font-weight: 600; */
+            }
+
+            /* Stat Box */
+            .sys-stat-box {
+                background: linear-gradient(180deg, #f95959);
+                border-radius: 12px;
+                padding: 20px 11px;
+                margin-bottom: 20px;
+            }
+            .sys-stat-box p {
+                font-size: 14px;
+                color: #fff;
+            }
+            .sys-stat-box h3 {
+                color: #000000;
+                margin: 4px 0 16px;
+                font-size: 22px;
+            }
+
+            /* Filter Box */
+            .sys-filter-box {
+                background: linear-gradient(180deg, #f95959, #ffffff);
+                border-radius: 12px;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            .sys-filter-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            .sys-input {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                background: white;
+                border-radius: 8px;
+                padding: 12px;
+                color: #ccc;
+            }
+            .sys-input i {
+                margin-right: 6px;
+                color: #aaa;
+            }
+            .sys-input input,
+            .sys-input select {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #000;
+                font-size: 13px;
+                width: 100%;
+            }
+
+            /* Table */
+            .sys-rebate-section table {
+                width: 100%;
+                border-collapse: collapse;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .sys-rebate-section th,
+            .sys-rebate-section td {
+                text-align: left;
+                padding: 10px;
+                font-size: 13px;
+            }
+            .sys-rebate-section th {
+                background: #f95959;
+                color: #ffffff;
+                font-weight: 500;
+            }
+            .sys-rebate-section td {
+                background: white;
+                color: #aaa;
+            }
+            .sys-rebate-section td[colspan] {
+                text-align: center;
+                padding: 20px;
+            }
+
+            /* Hide inactive content */
+            .sys-tab-content,
+            .sys-rebate-section {
+                display: none;
+            }
+            .sys-tab-content.active,
+            .sys-rebate-section.active {
+                display: block;
+            }
+            @media (max-width: 425px) {
+                .sys-rebate-container {
+                    padding: 7px;
                 }
             }
-        }
-    </script>
+        </style>
+    </head>
 
-    <style>
-        /* ✅ Stretch images fully without gaps */
-        
-     body{
-
-            background: white;
-     }  
-  .container {
-    max-width:400px;
-    width:100%;
-    margin:0 auto;
-    text-align:center;
-    padding: 0 10px;
-
-  }
-
-  .sys-tab-menu {
-    display: flex;
-    gap: 5px;
-    background: transparent;
-    justify-content: center;
-    margin: 20px 0;
-  }
-
-  .sys-tab-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
-    height: 60px;
-    background: #2b2b2b;
-    color: #aaa;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .sys-tab-item i {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-
-  .sys-tab-item:hover {
-    background: #3a3a3a;
-    color: #fff;
-  }
-
-  .sys-tab-item.active {
-    background: #ff9a8e;
-    color: #fff;
-  }
-
-  .sys-tab-content {
-    display: none;
-    width:100%;
-    max-width: 500px;
-    margin: 0 auto;
-    /* background: #1d1d1d;
-    padding: 20px; */
-    border-radius: 12px;
-  }
-
-  .sys-tab-content.active {
-    display: block;
-  }
-  
-
-  .sys-rebate-container {
-    background: white;
-    border-radius: 16px;
-    max-width: 100%;
-    overflow: hidden;
-    padding: 15px;
-  }
-
-  /* Tabs */
-  .sys-rebate-tabs {
-    display: flex;
-    background: #141419;
-    border-radius: 10px;
-    padding: 6px;
-    margin-bottom: 20px;
-  }
-
-  .sys-tab-btn {
-    flex: 1;
-    background: transparent;
-    color: #aaa;
-    border: none;
-    padding: 10px 0;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .sys-tab-btn.active {
-    background: linear-gradient(90deg, #7367f0, #8e2de2);
-    color: #fff;
-    /* font-weight: 600; */
-  }
-
-  /* Stat Box */
-  .sys-stat-box {
-    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
-    border-radius: 12px;
-    padding: 20px 11px;
-    margin-bottom: 20px;
-  }
-  .sys-stat-box p {
-    font-size: 14px;
-    color: #ccc;
-  }
-  .sys-stat-box h3 {
-    color: #00e0ff;
-    margin: 4px 0 16px;
-    font-size: 22px;
-  }
-
-  /* Filter Box */
-  .sys-filter-box {
-    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 20px;
-  }
-  .sys-filter-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .sys-input {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: rgb(8 10 39 / 62%);
-    border-radius: 8px;
-    padding:  12px;
-    color: #ccc;
-  }
-  .sys-input i {
-    margin-right: 6px;
-    color: #aaa;
-  }
-  .sys-input input, 
-  .sys-input select {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 13px;
-    width: 100%;
-  }
-
-  /* Table */
-  .sys-rebate-section table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .sys-rebate-section th, .sys-rebate-section td {
-    text-align: left;
-    padding: 10px;
-    font-size: 13px;
-  }
-  .sys-rebate-section th {
-    background: linear-gradient(180deg, rgb(139 54 248 / 53%), rgba(51, 74, 214, .341));
-    color: #bbb;
-    font-weight: 500;
-  }
-  .sys-rebate-section td {
-    background: rgb(8 10 39);
-    color: #aaa;
-  }
-  .sys-rebate-section td[colspan] {
-    text-align: center;
-    padding: 20px;
-  }
-
-  /* Hide inactive content */
-  .sys-tab-content, .sys-rebate-section{
-    display: none;
-  }
-  .sys-tab-content.active, .sys-rebate-section.active{
-    display: block;
-  }
-  @media (max-width:425px){
-    .sys-rebate-container {
-      padding: 7px;
-  }
-  
-  }
-
-  
-    </style>
-</head>
-
-<body class="font-sans bg-white min-h-screen w-full md:max-w-[500px] mx-auto">
- <div class="sticky -top-1 z-10 flex items-center h-14 px-2" style="background:white;">
-        <button onclick="history.back()" aria-label="Back" class=" text-black pr-4 text-lg">
-      <i class="fa-solid fa-arrow-left"></i>
-    </button>
-        <h2 class="flex-1 text-center text-black font-semibold text-lg">Earn money</h2>
-        <span class="w-6"></span>
-    </div>
-   <div class="container">
-    <div class="sys-tab-menu">
-      <div class="sys-tab-item active" data-tab="rule">
-        <i class="ri-clipboard-line"></i>
-        Rule
-      </div>
-      <div class="sys-tab-item" data-tab="dashboard">
-        <i class="ri-dashboard-line"></i>
-        Dashboard
-      </div>
-      <div class="sys-tab-item" data-tab="reward">
-        <i class="ri-money-dollar-circle-line"></i>
-        Reward
-      </div>
-      <div class="sys-tab-item" data-tab="invite">
-        <i class="ri-link-m"></i>
-        Invite Link
-      </div>
-      <div class="sys-tab-item" data-tab="download">
-        <i class="ri-download-line"></i>
-        Download
-      </div>
-    </div>
-
-    <!-- Tab Contents -->
-    <div class="sys-tab-content active" id="rule">
-      <div class="max-w-7xl mx-auto ">
-          <div class="w-full mb-2">
-            <img src="https://files.conjlnuljy.com/promo/5/eefeb293-2ca4-4219-a4b9-c498864e02b9.png" alt="Image" class="w-full h-auto rounded-lg shadow-lg">
+    <body
+        class="font-sans bg-white min-h-screen w-full md:max-w-[500px] mx-auto"
+    >
+        <div
+            class="sticky -top-1 z-10 flex items-center h-14 px-2"
+            style="background: white"
+        >
+            <button
+                onclick="history.back()"
+                aria-label="Back"
+                class="text-black pr-4 text-lg"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h2 class="flex-1 text-center text-black font-semibold text-lg">
+                Earn money
+            </h2>
+            <span class="w-6"></span>
         </div>
-        <div class="agency-policy">
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-            <div class="agency-policy-title" data-v-cacbc52e="">🎉 Invite Friends &amp; Get</div>
-            <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-        </div>
-
-        <div class=" text-black rounded-lg mt-5 mb-5 text-start">
-            <div class="space-y-4 text-sm sys-rule-txt">
-                <p><span class="font-bold"><span class="text-green-500">₹83,583.50</span></span> Referral Bonus</p>
-                <p><span class="font-bold"><span class="text-green-500">1.5%</span></span> Lifetime Commission</p>
-                <p><span class="font-bold">Up to <span class="text-green-500"> ₹1,000</span></span> Extra Cash per Valid Referral</p>
-            </div>
-
-            <div class="mt-5 space-y-4 text-sm">
-                <ul class="list-disc pl-5 space-y-2">
-                  <li>
-                    <p class="leading-relaxed">
-                    Invite a friend now and receive a generous <span class="text-green-500">₹83,583.50 </span> bonus instantly! Plus, enjoy a commission of up to <span class="text-green-500">1.5%</span> based on your friend’s total betting amount — whether they win or lose.
-                </p>
-                </li>
-                <li>
-                  <p class="leading-relaxed">
-                    Earn stable, long-term commissions from our casino and sports betting platform. Start earning now and turn your network into income!
-                </p>
-               </li>
-                </ul>
-            </div>
-        </div>
-        <div class="agency-policy">
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-            <div class="agency-policy-title" data-v-cacbc52e="">Referral Rewards Program</div>
-            <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-        </div>
-        <div class="space-y-3 max-w-3xl mx-auto mt-3 mb-3">
-        <div class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black ">
-            <div class="flex items-center space-x-4">
-                <span class="text-4xl font-bold ">1</span>
-                <div class="text-start">
-                    <h3 class="text-xl"><span class="text-yellow-200">Share</span> to friends</h3>
-                    <p class="text-sm mt-2">Share your referral link or code to your friends</p>
+        <div class="container">
+            <div class="sys-tab-menu">
+                <div class="sys-tab-item active" data-tab="rule">
+                    <i class="ri-clipboard-line"></i>
+                    Rule
+                </div>
+                <div class="sys-tab-item" data-tab="dashboard">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                </div>
+                <div class="sys-tab-item" data-tab="reward">
+                    <i class="ri-money-dollar-circle-line"></i>
+                    Reward
+                </div>
+                <div class="sys-tab-item" data-tab="invite">
+                    <i class="ri-link-m"></i>
+                    Invite Link
+                </div>
+                <div class="sys-tab-item" data-tab="download">
+                    <i class="ri-download-line"></i>
+                    Download
                 </div>
             </div>
-        </div>
-        <div class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black ">
-            <div class="flex items-center space-x-4">
-                <span class="text-4xl font-bold">2</span>
-                <div class="text-start">
-                    <h3 class="text-xl">Get <span class="text-yellow-200">₹86,286.31</span> </h3>
-                    <p class="text-sm mt-2">Your awards will be locked for now</p>
+
+            <!-- Tab Contents -->
+            <div class="sys-tab-content active" id="rule">
+                <div class="max-w-7xl mx-auto">
+                    <div class="w-full mb-2">
+                        <img
+                            src="https://files.conjlnuljy.com/promo/5/eefeb293-2ca4-4219-a4b9-c498864e02b9.png"
+                            alt="Image"
+                            class="w-full h-auto rounded-lg shadow-lg"
+                        />
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            🎉 Invite Friends &amp; Get
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+
+                    <div class="text-black rounded-lg mt-5 mb-5 text-start">
+                        <div class="space-y-4 text-sm sys-rule-txt">
+                            <p>
+                                <span class="font-bold"
+                                    ><span class="text-green-500"
+                                        >₹83,583.50</span
+                                    ></span
+                                >
+                                Referral Bonus
+                            </p>
+                            <p>
+                                <span class="font-bold"
+                                    ><span class="text-green-500"
+                                        >1.5%</span
+                                    ></span
+                                >
+                                Lifetime Commission
+                            </p>
+                            <p>
+                                <span class="font-bold"
+                                    >Up to
+                                    <span class="text-green-500">
+                                        ₹1,000</span
+                                    ></span
+                                >
+                                Extra Cash per Valid Referral
+                            </p>
+                        </div>
+
+                        <div class="mt-5 space-y-4 text-sm">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>
+                                    <p class="leading-relaxed">
+                                        Invite a friend now and receive a
+                                        generous
+                                        <span class="text-green-500"
+                                            >₹83,583.50
+                                        </span>
+                                        bonus instantly! Plus, enjoy a
+                                        commission of up to
+                                        <span class="text-green-500">1.5%</span>
+                                        based on your friend’s total betting
+                                        amount — whether they win or lose.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="leading-relaxed">
+                                        Earn stable, long-term commissions from
+                                        our casino and sports betting platform.
+                                        Start earning now and turn your network
+                                        into income!
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            Referral Rewards Program
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div class="space-y-3 max-w-3xl mx-auto mt-3 mb-3">
+                        <div
+                            class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black"
+                        >
+                            <div class="flex items-center space-x-4">
+                                <span class="text-4xl font-bold">1</span>
+                                <div class="text-start">
+                                    <h3 class="text-xl">
+                                        <span class="text-yellow-200"
+                                            >Share</span
+                                        >
+                                        to friends
+                                    </h3>
+                                    <p class="text-sm mt-2">
+                                        Share your referral link or code to your
+                                        friends
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black"
+                        >
+                            <div class="flex items-center space-x-4">
+                                <span class="text-4xl font-bold">2</span>
+                                <div class="text-start">
+                                    <h3 class="text-xl">
+                                        Get
+                                        <span class="text-yellow-200"
+                                            >₹86,286.31</span
+                                        >
+                                    </h3>
+                                    <p class="text-sm mt-2">
+                                        Your awards will be locked for now
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black"
+                        >
+                            <div class="flex items-center space-x-4">
+                                <span class="text-4xl font-bold">3</span>
+                                <div class="text-start">
+                                    <h3 class="text-xl">
+                                        Get
+                                        <span class="text-yellow-200"
+                                            >rewards</span
+                                        >
+                                    </h3>
+                                    <p class="text-sm mt-2">
+                                        Earn rewards as your friends place bets
+                                        — see rules below
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            Total Betting vs. Unlock Reward
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div
+                        class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3"
+                    >
+                        <table class="min-w-full table-auto">
+                            <thead>
+                                <tr class="text-left bg-[#FA605F] text-lg">
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Total Betting Amount (INR)
+                                    </th>
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Unlock Reward Amount (INR)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹83,500</td>
+                                    <td class="px-3 py-1">₹41.75</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹417,500</td>
+                                    <td class="px-3 py-1">₹208.75</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹1,419,500</td>
+                                    <td class="px-3 py-1">₹501.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹4,091,500</td>
+                                    <td class="px-3 py-1">₹1,002.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹10,771,500</td>
+                                    <td class="px-3 py-1">₹2,087.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹26,803,500</td>
+                                    <td class="px-3 py-1">₹4,175.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹64,235,500</td>
+                                    <td class="px-3 py-1">₹6,680.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹149,745,500</td>
+                                    <td class="px-3 py-1">₹10,020.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹342,099,500</td>
+                                    <td class="px-3 py-1">₹17,117.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹774,108,500</td>
+                                    <td class="px-3 py-1">₹41,750.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            Commission Rewards & Rates
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div
+                        class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3"
+                    >
+                        <table class="min-w-full table-auto">
+                            <thead>
+                                <tr class="text-left bg-[#FA605F] text-lg">
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Total Betting Amount (INR)
+                                    </th>
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Unlock Reward Amount (INR)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹83,500</td>
+                                    <td class="px-3 py-1">₹41.75</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹417,500</td>
+                                    <td class="px-3 py-1">₹208.75</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹1,419,500</td>
+                                    <td class="px-3 py-1">₹501.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹4,091,500</td>
+                                    <td class="px-3 py-1">₹1,002.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹10,771,500</td>
+                                    <td class="px-3 py-1">₹2,087.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹26,803,500</td>
+                                    <td class="px-3 py-1">₹4,175.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹64,235,500</td>
+                                    <td class="px-3 py-1">₹6,680.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹149,745,500</td>
+                                    <td class="px-3 py-1">₹10,020.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹342,099,500</td>
+                                    <td class="px-3 py-1">₹17,117.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹774,108,500</td>
+                                    <td class="px-3 py-1">₹41,750.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Active users: daily bet amount 2000</li>
+                            <li>
+                                Your reward will be calculated based on the
+                                total bet amount of your members. The reward
+                                gained can either be withdrawn or used for
+                                further betting.
+                            </li>
+                            <li>
+                                Refer as many friends as you can to gain bigger
+                                percentage of rebates.
+                            </li>
+                            <li>
+                                Earn lifetime revenue on your referred players.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            Valid Referral Reward
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div
+                        class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3"
+                    >
+                        <table class="min-w-full table-auto">
+                            <thead>
+                                <tr class="text-left bg-[#FA605F] text-lg">
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Total Betting Amount (INR)
+                                    </th>
+                                    <th
+                                        class="px-3 py-1 font-medium sys-table-head"
+                                    >
+                                        Unlock Reward Amount (INR)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹83,500</td>
+                                    <td class="px-3 py-1">₹41.75</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹417,500</td>
+                                    <td class="px-3 py-1">₹208.75</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹1,419,500</td>
+                                    <td class="px-3 py-1">₹501.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹4,091,500</td>
+                                    <td class="px-3 py-1">₹1,002.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹10,771,500</td>
+                                    <td class="px-3 py-1">₹2,087.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹26,803,500</td>
+                                    <td class="px-3 py-1">₹4,175.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹64,235,500</td>
+                                    <td class="px-3 py-1">₹6,680.00</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹149,745,500</td>
+                                    <td class="px-3 py-1">₹10,020.00</td>
+                                </tr>
+                                <tr class="border-t bg-[#FA605F]/60 text-sm">
+                                    <td class="px-3 py-1">₹342,099,500</td>
+                                    <td class="px-3 py-1">₹17,117.50</td>
+                                </tr>
+                                <tr
+                                    class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                >
+                                    <td class="px-3 py-1">₹774,108,500</td>
+                                    <td class="px-3 py-1">₹41,750.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                Note: Fixed rewards are issued only after the
+                                invited users meet the rating criteria.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            Reward
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>
+                                System evaluates each invited user based on
+                                their betting activity. Encourage your friends
+                                to place real bets and stay active — usually,
+                                total bets over Rs2000 have a higher chance of
+                                qualifying. Rewards will be issued automatically
+                                upon meeting the criteria.
+                            </li>
+                            <li>
+                                In cases of malicious behavior such as fake
+                                accounts or reward farming, related rewards will
+                                be canceled and not issued.
+                            </li>
+                            <li>
+                                In cases of malicious behavior such as fake
+                                accounts or reward farming, related rewards will
+                                be canceled and not issued.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agency-policy">
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                        <div class="agency-policy-title" data-v-cacbc52e="">
+                            FAQ
+                        </div>
+                        <div
+                            class="agency-policy-separator"
+                            data-v-cacbc52e=""
+                        ></div>
+                    </div>
+                    <div class="w-full max-w-md mx-auto mt-3">
+                        <div
+                            class="border-b border-t border-gray-500 overflow-hidden"
+                        >
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >1. How to earn commissions?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        You can earn up to 1.5% of the daily
+                                        wagers of players you refer. The higher
+                                        your level, the higher the commission
+                                        percentage you can earn.
+                                    </li>
+                                    <li>
+                                        If your affiliate or your affiliate
+                                        becomes an agent and they are at a lower
+                                        level than their immediate superior,
+                                        then you can receive up to 1.2% of the
+                                        affiliate's wagering rebate amount. The
+                                        commission rate depends on the level
+                                        difference between you and your
+                                        affiliate, the greater the level
+                                        difference, the more commission you
+                                        receive.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >2. How to invite your friends?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        Share the game via social media or share
+                                        the referral link to your friends.
+                                    </li>
+
+                                    <li>
+                                        Friends must click on your promotion
+                                        link, download the App, install the game
+                                        and register to start betting to get
+                                        commission.
+                                    </li>
+                                    <li>
+                                        Registration must be completed through a
+                                        referral link.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >3. How much can I earn from
+                                    referrals?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        You can earn up to 1.5% commission on
+                                        the betting amount of each referred user
+                                        and their referrals.
+                                    </li>
+
+                                    <li>
+                                        Additionally, for every successful
+                                        referral, you will receive:
+                                        <ul
+                                            class="list-disc pl-3 ml-5 text-start text-sm space-y-2"
+                                        >
+                                            <li>₹83,583.50 bonus</li>
+                                            <li>
+                                                ₹1,000 extra reward for each
+                                                valid referral.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >4. What's the purpose of level?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        We have divided 13 levels based on the
+                                        number of recommended users and betting
+                                        performance.
+                                    </li>
+                                    <li>
+                                        Upgrade conditions require that the bet
+                                        amount and team size meet the
+                                        requirements at the same time. The
+                                        higher your level, the higher the
+                                        commission percentage you will receive
+                                        from members' bet amounts.
+                                    </li>
+                                    <li>
+                                        Level difference: When the immediate
+                                        superior minus the corresponding direct
+                                        member level is ≥ 1, there is a level
+                                        difference, otherwise there is no level
+                                        difference.
+                                    </li>
+                                    <li>
+                                        The higher your level, the higher the
+                                        commission percentage you get from level
+                                        difference bets.
+                                        <div
+                                            class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3"
+                                        >
+                                            <table
+                                                class="min-w-full table-auto"
+                                            >
+                                                <thead>
+                                                    <tr
+                                                        class="text-left bg-[#FA605F] text-lg"
+                                                    >
+                                                        <th
+                                                            class="px-3 py-1 font-medium sys-table-head"
+                                                        >
+                                                            Total Betting Amount
+                                                            (INR)
+                                                        </th>
+                                                        <th
+                                                            class="px-3 py-1 font-medium sys-table-head"
+                                                        >
+                                                            Unlock Reward Amount
+                                                            (INR)
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr
+                                                        class="border-t bg-[#FA605F]/60 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹83,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹41.75
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹417,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹208.75
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="border-t bg-[#FA605F]/60 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹1,419,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹501.00
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹4,091,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹1,002.00
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="border-t bg-[#FA605F]/60 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹10,771,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹2,087.50
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹26,803,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹4,175.00
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="border-t bg-[#FA605F]/60 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹64,235,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹6,680.00
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹149,745,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹10,020.00
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="border-t bg-[#FA605F]/60 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹342,099,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹17,117.50
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        class="bg-[#FA605F] border-t border-purple-500 text-sm"
+                                                    >
+                                                        <td class="px-3 py-1">
+                                                            ₹774,108,500
+                                                        </td>
+                                                        <td class="px-3 py-1">
+                                                            ₹41,750.00
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >5. How to upgrade your level?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        The more members you bring to the game
+                                        and the more they bet, the higher the
+                                        tiers you can get.
+                                    </li>
+
+                                    <li>
+                                        If you have extraordinary channel
+                                        promotion capabilities, please contact
+                                        our customer service center for
+                                        verification.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >6. How to turn your friends into
+                                    members?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        Log in to 55Ace, share your
+                                        recommendation link with your friends on
+                                        the recommendation page, guide them to
+                                        register from the link, and they can
+                                        become your direct members.
+                                    </li>
+
+                                    <li>
+                                        Encourage your members to invite their
+                                        friends to play games, and the friends
+                                        they invite will become your indirect
+                                        members.
+                                    </li>
+                                    <li>
+                                        When friends of your direct members
+                                        become your indirect members, they can
+                                        still grow their membership this way.
+                                        All their sub-members will be considered
+                                        as your indirect sub-members.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >7. How to get commission from your
+                                    members?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        There must be a level difference between
+                                        you and all your lower-level members,
+                                        otherwise no level difference commission
+                                        will be generated.
+                                    </li>
+
+                                    <li>
+                                        The proportion of commission is
+                                        determined by the difference between
+                                        your level and the level of your
+                                        subordinate members.
+                                    </li>
+                                    <li>
+                                        Example
+                                        <img
+                                            data-v-cacbc52e=""
+                                            class="affi-graph mt-3 mb-4"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAU8AAADACAMAAACzghF5AAAAqFBMVEUxJWEyJWEwKGAwIGAAAAAxJWEyJWFHO3E9N4xDPZ1FQJ9GPYRHNq41J2xGPH5KOLlGP5L///8zJmZEM6Q+Lo07LII4KXdBMZheU4NHPHhFP5k0KGo3K3I2K3LRztxIN7RSR3qjnbj08/Y5LHx1bJQ/L5M8LYiMhKZ1bJVAOpY8NIbo5+26tsquqcHo5u2Xka9qYIvc2uXGwtNCMp6BeJ5GPoxGPHtpYIu2UH2QAAAABnRSTlO37yAgAO9rJ2JlAAAG/ElEQVR42uzXy2rDMBCFYeeCpym0dLqSUzCSapBTS86F0L7/mzVKCcFkI8MshnL+hW7LDyFQtV5WixqJVK3W1RKaci1WVVUjucAp2wKessETnpqDJzw1B094ag6e8NQcPOGpOXj+b8/PzXNhu5daYco8v94aKqzZagRV5rltqLjXp1pfujw/tlRes6n1BU/J4CkbPGWDp2zwlA2essFTNrWeNpg8HTqi3sXUE5EJ9HcEz9LunhTbTDg6ctzGE6eLK1POtfAs7u5p/f6COlDgLsN6B8/ZTd5P563hQGO87eA5t4mnHdLpRJY7yhk+wHNuE0/qmE12pGsc4Dm3qScdI9088z2F5+ymnq27DH5PuZ7ND9u8SvAs79Ezjfa6bsn6vLdjgmdxj552GEN/br0h2rPrz8fBwLO0qWcKeTRxYB+viOHIvjX4b5aG/7ts8JQNnrLBUzZ4ygZP2eApGzyle99Qed+7Wl+6PH/Zt2PVhmEoCsPbpVCpKrJsQ9OgwdjQrCHv/2o17s1gFFeSB90j0L8kZAl8WCdgE/r5SPd89IQXmOfl6/Ge2Cfi5YnmSZfp9pbUbSDE0Dxrr3k2T+SaZ/NErnk2T+SaZ/NErg5PuyD+Fy6sEs/FG4V48yOoCs9BddrosQ5ReE/dqYHIEPVqrODQg3va2TtaM7S2VCCK7bn42RIRe1IFhx7Zc+i6b35r+FXf1UTI4Xr+DSf39ISfUVRP67yjZ+zJLWrGFQX15OHkdp7YMwrpuQ7nQLsM7dId6owCem7DuSvwxJ1ROE/rlLPBp4aCnHKAomie23CGhZ6gM4rlycMZ9NJzWwa0p/BInoe/MkeegDOK48nD+TpDRznvLOEE49n78djl2BNtRkE8eTgP+tdz24krgQThGbvLEfFEmlEAz2A4g6KeODMq79n76LUV94SZUVlPHs54huJppeQPvaRn8kWV5gkxo4KePJxJGUrLGUeCCXrmXE3JnvIzKuTJw5lYhqfsjIp56tH3lFyWp+SMynjycOZkKCcrNaMynpO6a8op11NsRgU8eTgzM5TbVXWaSlfe0/JwZpbvKTKjhT15OLM75cnP8ItW2HM6eQZPegrMaDlPHs6TmdNfWnRGC3ra2f+yc0erqQNRFIbvdiTBEKQKjXolFcx93//VWmRftpM4+18zQfK/QOA7zOK0yfRumQU8y85oIc/AcHoBT9v/PtvKVMYTOHURz6Izqvf04YwU9Sw2o3pPH85Ycc9CMyr3ZF7sEJ62/9LPqNiTOmeIZ4kZFXtefDijQZ7+mxhhQk8fTiTMUz2jSs8P//IQiPN8zujdVKk84f+gkJ7SGdV44h9muifWUTejvKcPJxntqZtR3tM/2UbDPVWHHvcU/WTHe2pEYU8fTjyJp+LQo55+u5pP5cnfACc9fTjxhJ74oec8/XY1ntgTvgEOecqGU+4JzyjjKX0zq/cEb4ADnsrh1HtmzWgiwNNfZwjTe1I3wAFP5XDqPeEZjXr6e2C8Gp7EDfCQp3449Z7wjEY89cOp96TXK+ApGs7CnvCMZnhqh7O+5/MNd65opqffrsZbh2doRtOe9YezhmfgBniGp+hvyK3KM3dG//VczXDW8sz7UOhvzzUNZx1Pn9GXz2GG58lqVOep+5c9q99/f7c2z81zzW2em+eaW+R5mHaJbqbomnrmdDZFt13wmcs8z+N3n2jYGd+t7VO1R+Obhj5RN86DLvN8dE2y8Wp0h8dnk6w9GN1paJL1D5trmWfbpOsmo7uMTbqB/zecuiZda3NBnj/s2stqwzAQheGdlARaokDLpA1CVgSOLd9J+v6P1sh0kS5iUbCmNpx/kSwHf2bwBc+/8Kc9v+cGnpPBE57wfAye8IRnCJ7PPQ1xe9I9dk+6XAyLp1Yts6cKVYbTk7SyVtUMnqR6ze15Jep8zenZ9J2UV1+l98y9U4bZ091/sobRM1cU/pxyyT11JW37D57DwOipf4Z1JrUnKSdrzexpm8ZaYvTsM67re+7DGhhezyzPW68ZPRs2T+2zLFMt/76TcnyeQyXHLqk9w9Vda6/5PaW68nm21oycqkvsGdZ9XHhWz5yIakV8nsb3dOdsapnYU1cyZFtWz5DNWe/nh/F+3iTfdyNDxnB6Uoj9edM5g/chj63kfQg8nwVPeMIzBE94wvN36/UsRaw1eJZcnsVX5NjOYu4Ou9ixfYq5O0fO4XGu78FOuynQ420r5q/8OE7N3Jdi/orb1MzX3buIFjzjvRTbicqDSNB5ambxJhJ02EzOPIlo+N77L8EzGjwXHjzhueTgCc8lB094Ljl4wnPJwROeSw6e3+3SOREAMBDDQOee8Id8JFy40ELQiJ7J6EnPZPSkZzJ6eul9GIlBnaRiUJ9tTXGoyarnAIPiWJisqQhQAAAAAElFTkSuQmCC"
+                                        />
+                                        <table
+                                            data-v-cacbc52e=""
+                                            class="rebate-example-table"
+                                        >
+                                            <tbody data-v-cacbc52e="">
+                                                <tr data-v-cacbc52e="">
+                                                    <td data-v-cacbc52e="">
+                                                        Name
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        Level
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        Betting
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        Members
+                                                    </td>
+                                                </tr>
+                                                <tr data-v-cacbc52e="">
+                                                    <td data-v-cacbc52e="">
+                                                        You
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        8(1.0%)
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        972,000
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        49
+                                                    </td>
+                                                </tr>
+                                                <tr data-v-cacbc52e="">
+                                                    <td data-v-cacbc52e="">
+                                                        A
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        8(1.0%)
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        760,000
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        35
+                                                    </td>
+                                                </tr>
+                                                <tr data-v-cacbc52e="">
+                                                    <td data-v-cacbc52e="">
+                                                        B
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        6(0.8%)
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        210,000
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        13
+                                                    </td>
+                                                </tr>
+                                                <tr data-v-cacbc52e="">
+                                                    <td data-v-cacbc52e="">
+                                                        C
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        1(0.3%)
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        2,000
+                                                    </td>
+                                                    <td data-v-cacbc52e="">
+                                                        1
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >8. If I have multiple websites or accounts,
+                                    how many affiliate links can I create?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        You can create up to 20 unique affiliate
+                                        tracking codes , helping you manage and
+                                        analyze different traffic sources more
+                                        efficiently.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-500 overflow-hidden">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn"
+                            >
+                                <span class="text-start"
+                                    >9. Are there promotional banners
+                                    available?</span
+                                >
+                                <svg
+                                    class="w-5 h-5 transition-transform duration-300 accordion-icon"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
+                                </svg>
+                            </button>
+                            <div
+                                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300"
+                            >
+                                <ul
+                                    class="list-disc pl-5 ml-5 text-start text-sm space-y-2"
+                                >
+                                    <li>
+                                        Yes, we offer promotional banners in
+                                        various sizes to help you with your
+                                        marketing efforts.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bg-[#FA605F]/25 p-3 rounded-lg shadow-lg text-black ">
-            <div class="flex items-center space-x-4">
-                <span class="text-4xl font-bold">3</span>
-                <div class="text-start">
-                    <h3 class="text-xl">Get <span class="text-yellow-200">rewards</span> </h3>
-                    <p class="text-sm mt-2">Earn rewards as your friends place bets — see rules below</p>
+
+            <div class="sys-tab-content" id="dashboard">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-md font-semibold">My Progress</h2>
+                    <div class="flex items-center space-x-2">
+                        <span
+                            class="bg-[#f95959] text-white px-3 py-1 rounded-full text-xs"
+                            >Member</span
+                        >
+                        <span
+                            class="bg-yellow-500 px-3 py-1 rounded-full text-xs"
+                            >Bet Amount</span
+                        >
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-r from-[#f95959] to-red-700 p-3 rounded-lg shadow-lg max-w-lg mx-auto text-white mb-4"
+                >
+                    <div class="mb-0">
+                        <div class="flex justify-between items-center mb-2">
+                            <span>VIP LEVEL: 0</span>
+                        </div>
+                        <div class="h-2 bg-white rounded-full mb-2">
+                            <div
+                                class="h-full bg-green-500 rounded-full"
+                                style="width: 50%"
+                            ></div>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span>0</span>
+                            <span>1</span>
+                        </div>
+                        <div class="h-2 bg-white rounded-full mb-2">
+                            <div
+                                class="h-full bg-yellow-500 rounded-full"
+                                style="width: 30%"
+                            ></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>0%</span>
+                            <span>2,000</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span>0%</span>
+                            <span>0.3%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mb-6">
+                    <input
+                        type="date"
+                        class="px-2 py-2 rounded-lg bg-red-400 text-black"
+                    />
+                    <span>to</span>
+                    <input
+                        type="date"
+                        class="px-2 py-2 rounded-lg bg-red-400 text-black"
+                    />
+                </div>
+                <div class="mt-5">
+                    <div class="mb-6">
+                        <div class="flex space-x-2">
+                            <button
+                                onclick="showTab('mine')"
+                                class="tab-button w-full py-3 text-center text-lg font-semibold text-black hover:bg-red-400 hover:text-white focus:outline-none rounded-lg bg-gray-300/25"
+                                id="mine-tab"
+                            >
+                                Mine
+                            </button>
+                            <button
+                                onclick="showTab('team')"
+                                class="tab-button w-full py-3 text-center text-lg font-semibold text-black hover:bg-red-400 hover:text-white focus:outline-none rounded-lg bg-gray-300/25"
+                                id="team-tab"
+                            >
+                                Team
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        id="mine-content"
+                        class="tab-content bg-gray-300/10 rounded-lg p-5"
+                    >
+                        <div class="mb-3 text-center">
+                            <span>Myself betting amount:</span>
+                            <span class="text-xl font-semibold">₹ 0</span>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <span>Myself rebate:</span>
+                            <span class="text-xl font-semibold">₹ 0</span>
+                        </div>
+                    </div>
+
+                    <div
+                        id="team-content"
+                        class="tab-content bg-gray-300/10 rounded-lg p-5 hidden"
+                    >
+                        <div class="mb-3 text-center">
+                            <span>Team betting amount:</span>
+                            <span class="text-xl font-semibold">₹ 0</span>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <span>Team rebate:</span>
+                            <span class="text-xl font-semibold">₹ 0</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="agency-policy">
-        <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-          <div class="agency-policy-title" data-v-cacbc52e="">Total Betting vs. Unlock Reward</div>
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-      </div>
-        <div class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3">
-        <table class="min-w-full table-auto">
-            <thead>
-                <tr class="text-left bg-[#FA605F] text-lg">
-                    <th class="px-3 py-1 font-medium sys-table-head">Total Betting Amount (INR)</th>
-                    <th class="px-3 py-1 font-medium sys-table-head">Unlock Reward Amount (INR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹83,500</td>
-                    <td class="px-3 py-1">₹41.75</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹417,500</td>
-                    <td class="px-3 py-1">₹208.75</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹1,419,500</td>
-                    <td class="px-3 py-1">₹501.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹4,091,500</td>
-                    <td class="px-3 py-1">₹1,002.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹10,771,500</td>
-                    <td class="px-3 py-1">₹2,087.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹26,803,500</td>
-                    <td class="px-3 py-1">₹4,175.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹64,235,500</td>
-                    <td class="px-3 py-1">₹6,680.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹149,745,500</td>
-                    <td class="px-3 py-1">₹10,020.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹342,099,500</td>
-                    <td class="px-3 py-1">₹17,117.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹774,108,500</td>
-                    <td class="px-3 py-1">₹41,750.00</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-     <div class="agency-policy">
-        <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-          <div class="agency-policy-title" data-v-cacbc52e="">Commission Rewards & Rates</div>
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-      </div>
-        <div class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3">
-        <table class="min-w-full table-auto">
-            <thead>
-                <tr class="text-left bg-[#FA605F] text-lg">
-                    <th class="px-3 py-1 font-medium sys-table-head">Total Betting Amount (INR)</th>
-                    <th class="px-3 py-1 font-medium sys-table-head">Unlock Reward Amount (INR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹83,500</td>
-                    <td class="px-3 py-1">₹41.75</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹417,500</td>
-                    <td class="px-3 py-1">₹208.75</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹1,419,500</td>
-                    <td class="px-3 py-1">₹501.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹4,091,500</td>
-                    <td class="px-3 py-1">₹1,002.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹10,771,500</td>
-                    <td class="px-3 py-1">₹2,087.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹26,803,500</td>
-                    <td class="px-3 py-1">₹4,175.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹64,235,500</td>
-                    <td class="px-3 py-1">₹6,680.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹149,745,500</td>
-                    <td class="px-3 py-1">₹10,020.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹342,099,500</td>
-                    <td class="px-3 py-1">₹17,117.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹774,108,500</td>
-                    <td class="px-3 py-1">₹41,750.00</td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
-    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
-        <ul class="list-disc pl-5 space-y-2">
-            <li>
-              Active users: daily bet amount 2000
-          </li>
-          <li>
-            Your reward will be calculated based on the total bet amount of your members. The reward gained can either be withdrawn or used for further betting.
-          </li>
-          <li>Refer as many friends as you can to gain bigger percentage of rebates.</li>
-          <li>Earn lifetime revenue on your referred players.</li>
-          </ul>
-      </div>
-      <div class="agency-policy">
-        <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-          <div class="agency-policy-title" data-v-cacbc52e="">Valid Referral Reward</div>
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-      </div>
-        <div class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3">
-        <table class="min-w-full table-auto">
-            <thead>
-                <tr class="text-left bg-[#FA605F] text-lg">
-                    <th class="px-3 py-1 font-medium sys-table-head">Total Betting Amount (INR)</th>
-                    <th class="px-3 py-1 font-medium sys-table-head">Unlock Reward Amount (INR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹83,500</td>
-                    <td class="px-3 py-1">₹41.75</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹417,500</td>
-                    <td class="px-3 py-1">₹208.75</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹1,419,500</td>
-                    <td class="px-3 py-1">₹501.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹4,091,500</td>
-                    <td class="px-3 py-1">₹1,002.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹10,771,500</td>
-                    <td class="px-3 py-1">₹2,087.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹26,803,500</td>
-                    <td class="px-3 py-1">₹4,175.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹64,235,500</td>
-                    <td class="px-3 py-1">₹6,680.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹149,745,500</td>
-                    <td class="px-3 py-1">₹10,020.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹342,099,500</td>
-                    <td class="px-3 py-1">₹17,117.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹774,108,500</td>
-                    <td class="px-3 py-1">₹41,750.00</td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
-    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
-        <ul class="list-disc pl-5 space-y-2">
-            <li>
-             Note: Fixed rewards are issued only after the invited users meet the rating criteria.
-          </li>
-          </ul>
-      </div>
-      <div class="agency-policy">
-        <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-          <div class="agency-policy-title" data-v-cacbc52e="">Reward</div>
-          <div class="agency-policy-separator" data-v-cacbc52e="" ></div>
-      </div>
-    <div class="mt-3 mb-3 space-y-4 text-sm text-start">
-        <ul class="list-disc pl-5 space-y-2">
-            <li>
-             System evaluates each invited user based on their betting activity. Encourage your friends to place real bets and stay active — usually, total bets over Rs2000 have a higher chance of qualifying. Rewards will be issued automatically upon meeting the criteria.
-          </li>
-          <li>
-             In cases of malicious behavior such as fake accounts or reward farming, related rewards will be canceled and not issued.
-          </li>
-           <li>
-             In cases of malicious behavior such as fake accounts or reward farming, related rewards will be canceled and not issued.
-          </li>
-          </ul>
-      </div>
-      <div class="agency-policy">
-        <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-          <div class="agency-policy-title" data-v-cacbc52e="">FAQ</div>
-          <div class="agency-policy-separator" data-v-cacbc52e=""></div>
-      </div>
-      <div class="w-full max-w-md mx-auto mt-3">
-        <div class="border-b border-t border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">1. How to earn commissions?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li> You can earn up to 1.5% of the daily wagers of players you refer. The higher your level, the higher the commission percentage you can earn. 
-              </li>
-              <li>
-                If your affiliate or your affiliate becomes an agent and they are at a lower level than their immediate superior, then you can receive up to 1.2% of the affiliate's wagering rebate amount. The commission rate depends on the level difference between you and your affiliate, the greater the level difference, the more commission you receive.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">2. How to invite your friends?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>Share the game via social media or share the referral link to your friends.
-              </li>
-                
-              <li>
-                Friends must click on your promotion link, download the App, install the game and register to start betting to get commission.
-              </li>
-              <li>
-                Registration must be completed through a referral link.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">3. How much can I earn from referrals?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>You can earn up to 1.5% commission on the betting amount of each referred user and their referrals.
-              </li>
-                
-              <li>
-                Additionally, for every successful referral, you will receive:
-                 <ul class="list-disc pl-3 ml-5 text-start text-sm space-y-2">
-                  <li>₹83,583.50 bonus</li>
-                  <li>₹1,000 extra reward for each valid referral.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">4. What's the purpose of level?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>We have divided 13 levels based on the number of recommended users and betting performance.
-              </li>
-              <li>
-                Upgrade conditions require that the bet amount and team size meet the requirements at the same time. The higher your level, the higher the commission percentage you will receive from members' bet amounts.
-              </li>
-               <li>
-                Level difference: When the immediate superior minus the corresponding direct member level is ≥ 1, there is a level difference, otherwise there is no level difference.
-              </li>
-              <li>
-                The higher your level, the higher the commission percentage you get from level difference bets.
-                <div class="overflow-x-auto bg-purple-700 rounded-lg shadow-lg mt-3 mb-3">
-        <table class="min-w-full table-auto">
-            <thead>
-                <tr class="text-left bg-[#FA605F] text-lg">
-                    <th class="px-3 py-1 font-medium sys-table-head">Total Betting Amount (INR)</th>
-                    <th class="px-3 py-1 font-medium sys-table-head">Unlock Reward Amount (INR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹83,500</td>
-                    <td class="px-3 py-1">₹41.75</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹417,500</td>
-                    <td class="px-3 py-1">₹208.75</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹1,419,500</td>
-                    <td class="px-3 py-1">₹501.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹4,091,500</td>
-                    <td class="px-3 py-1">₹1,002.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹10,771,500</td>
-                    <td class="px-3 py-1">₹2,087.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹26,803,500</td>
-                    <td class="px-3 py-1">₹4,175.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹64,235,500</td>
-                    <td class="px-3 py-1">₹6,680.00</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹149,745,500</td>
-                    <td class="px-3 py-1">₹10,020.00</td>
-                </tr>
-                <tr class="border-t bg-[#FA605F]/60 text-sm">
-                    <td class="px-3 py-1">₹342,099,500</td>
-                    <td class="px-3 py-1">₹17,117.50</td>
-                </tr>
-                <tr class="bg-[#FA605F] border-t border-purple-500 text-sm">
-                    <td class="px-3 py-1">₹774,108,500</td>
-                    <td class="px-3 py-1">₹41,750.00</td>
-                </tr>
-            </tbody>
-        </table>
-        
-    </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">5. How to upgrade your level?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>The more members you bring to the game and the more they bet, the higher the tiers you can get.</li>
-                
-              <li>
-                If you have extraordinary channel promotion capabilities, please contact our customer service center for verification.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">6. How to turn your friends into members?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>Log in to 55Ace, share your recommendation link with your friends on the recommendation page, guide them to register from the link, and they can become your direct members.</li>
-                
-              <li>
-                Encourage your members to invite their friends to play games, and the friends they invite will become your indirect members.
-              </li>
-              <li>
-                When friends of your direct members become your indirect members, they can still grow their membership this way. All their sub-members will be considered as your indirect sub-members.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">7. How to get commission from your members?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>There must be a level difference between you and all your lower-level members, otherwise no level difference commission will be generated.</li>
-                
-              <li>
-                The proportion of commission is determined by the difference between your level and the level of your subordinate members.
-              </li>
-              <li>
-                Example
-                <img data-v-cacbc52e="" class="affi-graph mt-3 mb-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAU8AAADACAMAAACzghF5AAAAqFBMVEUxJWEyJWEwKGAwIGAAAAAxJWEyJWFHO3E9N4xDPZ1FQJ9GPYRHNq41J2xGPH5KOLlGP5L///8zJmZEM6Q+Lo07LII4KXdBMZheU4NHPHhFP5k0KGo3K3I2K3LRztxIN7RSR3qjnbj08/Y5LHx1bJQ/L5M8LYiMhKZ1bJVAOpY8NIbo5+26tsquqcHo5u2Xka9qYIvc2uXGwtNCMp6BeJ5GPoxGPHtpYIu2UH2QAAAABnRSTlO37yAgAO9rJ2JlAAAG/ElEQVR42uzXy2rDMBCFYeeCpym0dLqSUzCSapBTS86F0L7/mzVKCcFkI8MshnL+hW7LDyFQtV5WixqJVK3W1RKaci1WVVUjucAp2wKessETnpqDJzw1B094ag6e8NQcPOGpOXj+b8/PzXNhu5daYco8v94aKqzZagRV5rltqLjXp1pfujw/tlRes6n1BU/J4CkbPGWDp2zwlA2essFTNrWeNpg8HTqi3sXUE5EJ9HcEz9LunhTbTDg6ctzGE6eLK1POtfAs7u5p/f6COlDgLsN6B8/ZTd5P563hQGO87eA5t4mnHdLpRJY7yhk+wHNuE0/qmE12pGsc4Dm3qScdI9088z2F5+ymnq27DH5PuZ7ND9u8SvAs79Ezjfa6bsn6vLdjgmdxj552GEN/br0h2rPrz8fBwLO0qWcKeTRxYB+viOHIvjX4b5aG/7ts8JQNnrLBUzZ4ygZP2eApGzyle99Qed+7Wl+6PH/Zt2PVhmEoCsPbpVCpKrJsQ9OgwdjQrCHv/2o17s1gFFeSB90j0L8kZAl8WCdgE/r5SPd89IQXmOfl6/Ge2Cfi5YnmSZfp9pbUbSDE0Dxrr3k2T+SaZ/NErnk2T+SaZ/NErg5PuyD+Fy6sEs/FG4V48yOoCs9BddrosQ5ReE/dqYHIEPVqrODQg3va2TtaM7S2VCCK7bn42RIRe1IFhx7Zc+i6b35r+FXf1UTI4Xr+DSf39ISfUVRP67yjZ+zJLWrGFQX15OHkdp7YMwrpuQ7nQLsM7dId6owCem7DuSvwxJ1ROE/rlLPBp4aCnHKAomie23CGhZ6gM4rlycMZ9NJzWwa0p/BInoe/MkeegDOK48nD+TpDRznvLOEE49n78djl2BNtRkE8eTgP+tdz24krgQThGbvLEfFEmlEAz2A4g6KeODMq79n76LUV94SZUVlPHs54huJppeQPvaRn8kWV5gkxo4KePJxJGUrLGUeCCXrmXE3JnvIzKuTJw5lYhqfsjIp56tH3lFyWp+SMynjycOZkKCcrNaMynpO6a8op11NsRgU8eTgzM5TbVXWaSlfe0/JwZpbvKTKjhT15OLM75cnP8ItW2HM6eQZPegrMaDlPHs6TmdNfWnRGC3ra2f+yc0erqQNRFIbvdiTBEKQKjXolFcx93//VWmRftpM4+18zQfK/QOA7zOK0yfRumQU8y85oIc/AcHoBT9v/PtvKVMYTOHURz6Izqvf04YwU9Sw2o3pPH85Ycc9CMyr3ZF7sEJ62/9LPqNiTOmeIZ4kZFXtefDijQZ7+mxhhQk8fTiTMUz2jSs8P//IQiPN8zujdVKk84f+gkJ7SGdV44h9muifWUTejvKcPJxntqZtR3tM/2UbDPVWHHvcU/WTHe2pEYU8fTjyJp+LQo55+u5pP5cnfACc9fTjxhJ74oec8/XY1ntgTvgEOecqGU+4JzyjjKX0zq/cEb4ADnsrh1HtmzWgiwNNfZwjTe1I3wAFP5XDqPeEZjXr6e2C8Gp7EDfCQp3449Z7wjEY89cOp96TXK+ApGs7CnvCMZnhqh7O+5/MNd65opqffrsZbh2doRtOe9YezhmfgBniGp+hvyK3KM3dG//VczXDW8sz7UOhvzzUNZx1Pn9GXz2GG58lqVOep+5c9q99/f7c2z81zzW2em+eaW+R5mHaJbqbomnrmdDZFt13wmcs8z+N3n2jYGd+t7VO1R+Obhj5RN86DLvN8dE2y8Wp0h8dnk6w9GN1paJL1D5trmWfbpOsmo7uMTbqB/zecuiZda3NBnj/s2stqwzAQheGdlARaokDLpA1CVgSOLd9J+v6P1sh0kS5iUbCmNpx/kSwHf2bwBc+/8Kc9v+cGnpPBE57wfAye8IRnCJ7PPQ1xe9I9dk+6XAyLp1Yts6cKVYbTk7SyVtUMnqR6ze15Jep8zenZ9J2UV1+l98y9U4bZ091/sobRM1cU/pxyyT11JW37D57DwOipf4Z1JrUnKSdrzexpm8ZaYvTsM67re+7DGhhezyzPW68ZPRs2T+2zLFMt/76TcnyeQyXHLqk9w9Vda6/5PaW68nm21oycqkvsGdZ9XHhWz5yIakV8nsb3dOdsapnYU1cyZFtWz5DNWe/nh/F+3iTfdyNDxnB6Uoj9edM5g/chj63kfQg8nwVPeMIzBE94wvN36/UsRaw1eJZcnsVX5NjOYu4Ou9ixfYq5O0fO4XGu78FOuynQ420r5q/8OE7N3Jdi/orb1MzX3buIFjzjvRTbicqDSNB5ambxJhJ02EzOPIlo+N77L8EzGjwXHjzhueTgCc8lB094Ljl4wnPJwROeSw6e3+3SOREAMBDDQOee8Id8JFy40ELQiJ7J6EnPZPSkZzJ6eul9GIlBnaRiUJ9tTXGoyarnAIPiWJisqQhQAAAAAElFTkSuQmCC">
-                <table data-v-cacbc52e="" class="rebate-example-table"><tbody data-v-cacbc52e=""><tr data-v-cacbc52e=""><td data-v-cacbc52e="">Name</td><td data-v-cacbc52e="">Level</td><td data-v-cacbc52e="">Betting</td><td data-v-cacbc52e="">Members</td></tr><tr data-v-cacbc52e=""><td data-v-cacbc52e="">You</td><td data-v-cacbc52e="">8(1.0%)</td><td data-v-cacbc52e="">972,000</td><td data-v-cacbc52e="">49</td></tr><tr data-v-cacbc52e=""><td data-v-cacbc52e="">A</td><td data-v-cacbc52e="">8(1.0%)</td><td data-v-cacbc52e="">760,000</td><td data-v-cacbc52e="">35</td></tr><tr data-v-cacbc52e=""><td data-v-cacbc52e="">B</td><td data-v-cacbc52e="">6(0.8%)</td><td data-v-cacbc52e="">210,000</td><td data-v-cacbc52e="">13</td></tr><tr data-v-cacbc52e=""><td data-v-cacbc52e="">C</td><td data-v-cacbc52e="">1(0.3%)</td><td data-v-cacbc52e="">2,000</td><td data-v-cacbc52e="">1</td></tr></tbody></table>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">8. If I have multiple websites or accounts, how many affiliate links can I create?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li>You can create up to 20 unique affiliate tracking codes , helping you manage and analyze different traffic sources more efficiently.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-b border-gray-500 overflow-hidden">
-          <button class="w-full flex justify-between items-center px-4 py-3 text-black font-medium accordion-btn">
-            <span class="text-start">9. Are there promotional banners available?</span>
-            <svg class="w-5 h-5 transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 text-gray-300 ">
-            <ul class="list-disc pl-5 ml-5 text-start text-sm space-y-2">
-              <li> Yes, we offer promotional banners in various sizes to help you with your marketing efforts. </li>
-            </ul>
-          </div>
-        </div>
-</div>
+            <div class="sys-tab-content" id="reward">
+                <div class="sys-rebate-container">
+                    <div class="sys-rebate-tabs">
+                        <button class="sys-tab-btn active" data-tab="refer">
+                            Refer Bet Rebate
+                        </button>
+                        <button class="sys-tab-btn" data-tab="daily">
+                            Daily Bet Rebate
+                        </button>
+                        <button class="sys-tab-btn" data-tab="bonus">
+                            Refer Bonus
+                        </button>
+                    </div>
 
-    </div>
-    </div>
+                    <div class="sys-rebate-section active" id="refer">
+                        <div class="sys-stat-box">
+                            <p>Total Received</p>
+                            <h3>₹ 0</h3>
+                            <hr
+                                style="
+                                    border: 0;
+                                    height: 1px;
+                                    background: rgba(255, 255, 255, 0.1);
+                                    margin: 15px 0;
+                                "
+                            />
+                            <p>Lock Money</p>
+                            <h3>₹ 0</h3>
+                        </div>
 
-    <div class="sys-tab-content" id="dashboard">
-      <div class="flex justify-between items-center mb-6">
-    <h2 class="text-md font-semibold">My Progress</h2>
-    <div class="flex items-center space-x-2">
-      <span class="bg-purple-500 px-3 py-1 rounded-full text-xs">Member</span>
-      <span class="bg-yellow-500 px-3 py-1 rounded-full text-xs">Bet Amount</span>
-    </div>
-  </div>
-      <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-3 rounded-lg shadow-lg max-w-lg mx-auto text-black mb-4">
-  <div class="mb-0">
-    <div class="flex justify-between items-center mb-2">
-      <span>VIP LEVEL: 0</span>
-      
-    </div>
-    <div class="h-2 bg-purple-400 rounded-full mb-2">
-      <div class="h-full bg-green-500 rounded-full" style="width: 50%"></div>
-    </div>
-    <div class="flex justify-between items-center mb-2">
-      <span>0</span>
-      <span>1</span>
-    </div>
-    <div class="h-2 bg-purple-400 rounded-full mb-2">
-      <div class="h-full bg-yellow-500 rounded-full" style="width: 30%"></div>
-    </div>
-    <div class="flex justify-between items-center">
-      <span>0%</span>
-      <span>2,000</span>
-    </div>
-  <div class="mt-4 flex justify-between items-center">
-      <span>0%</span>
-      <span>0.3%</span>
-    </div></div>
-</div>
-<div class="flex justify-between items-center mb-6">
-    <input type="date" class="px-2 py-2 rounded-lg bg-gray-800 text-black">
-    <span>to</span>
-    <input type="date" class="px-2 py-2 rounded-lg bg-gray-800 text-black">
-  </div>
-<div class="mt-5">
-  <div class="mb-6">
-    <div class="flex space-x-2">
-      <button onclick="showTab('mine')" class="tab-button w-full py-3 text-center text-lg font-semibold text-black hover:bg-purple-600 focus:outline-none rounded-lg bg-gray-300/25" id="mine-tab">Mine</button>
-      <button onclick="showTab('team')" class="tab-button w-full py-3 text-center text-lg font-semibold text-black hover:bg-purple-600 focus:outline-none rounded-lg bg-gray-300/25" id="team-tab">Team</button>
-    </div>
-  </div>
-<div id="mine-content" class="tab-content bg-gray-300/10 rounded-lg p-5 ">
-    <div class="mb-3 text-center">
-      <span>Myself betting amount:</span>
-      <span class="text-xl font-semibold">₹ 0</span>
-    </div>
-    <div class="mb-3 text-center">
-      <span>Myself rebate:</span>
-      <span class="text-xl font-semibold">₹ 0</span>
-    </div>
-  </div>
+                        <div class="sys-filter-box">
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-smartphone-line"></i>
+                                    <input
+                                        type="text"
+                                        placeholder="Phone number"
+                                    />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-key-2-line"></i>
+                                    <select>
+                                        <option>Invite Code</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                            </div>
+                        </div>
 
-  <div id="team-content" class="tab-content bg-gray-300/10 rounded-lg p-5 hidden">
-    <div class="mb-3 text-center">
-      <span>Team betting amount:</span>
-      <span class="text-xl font-semibold">₹ 0</span>
-    </div>
-    <div class="mb-3 text-center">
-      <span>Team rebate:</span>
-      <span class="text-xl font-semibold">₹ 0</span>
-    </div>
-  </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Bet Amount</th>
+                                    <th>Reward</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">No records.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-</div>
+                    <div class="sys-rebate-section" id="daily">
+                        <div class="sys-stat-box">
+                            <p>Total Received</p>
+                            <h3>₹ 0</h3>
+                            <hr
+                                style="
+                                    border: 0;
+                                    height: 1px;
+                                    background: rgba(255, 255, 255, 0.1);
+                                    margin: 15px 0;
+                                "
+                            />
+                            <p>Lock Money</p>
+                            <h3>₹ 0</h3>
+                        </div>
 
-    </div>
-    <div class="sys-tab-content" id="reward">
-      <div class="sys-rebate-container">
-        <div class="sys-rebate-tabs">
-          <button class="sys-tab-btn active" data-tab="refer">Refer Bet Rebate</button>
-          <button class="sys-tab-btn" data-tab="daily">Daily Bet Rebate</button>
-          <button class="sys-tab-btn" data-tab="bonus">Refer Bonus</button>
-        </div>
+                        <div class="sys-filter-box">
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-smartphone-line"></i>
+                                    <input
+                                        type="text"
+                                        placeholder="Phone number"
+                                    />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-key-2-line"></i>
+                                    <select>
+                                        <option>Invite Code</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="sys-rebate-section active" id="refer">
-          <div class="sys-stat-box">
-            <p>Total Received</p>
-            <h3>₹ 0</h3>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 15px 0;">
-            <p>Lock Money</p>
-            <h3>₹ 0</h3>
-          </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Bet Amount</th>
+                                    <th>Reward</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">No records.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-          <div class="sys-filter-box">
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-smartphone-line"></i>
-                <input type="text" placeholder="Phone number">
-              </div>
-              <div class="sys-input">
-                <i class="ri-key-2-line"></i>
-                <select>
-                  <option>Invite Code</option>
-                </select>
-              </div>
-            </div>
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-            </div>
-          </div>
+                    <div class="sys-rebate-section" id="bonus">
+                        <div class="sys-stat-box">
+                            <p>Total Received</p>
+                            <h3>₹ 0</h3>
+                            <hr
+                                style="
+                                    border: 0;
+                                    height: 1px;
+                                    background: rgba(255, 255, 255, 0.1);
+                                    margin: 15px 0;
+                                "
+                            />
+                            <p>Lock Money</p>
+                            <h3>₹ 0</h3>
+                        </div>
 
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>Bet Amount</th>
-                <th>Reward</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="3">No records.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                        <div class="sys-filter-box">
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-smartphone-line"></i>
+                                    <input
+                                        type="text"
+                                        placeholder="Phone number"
+                                    />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-key-2-line"></i>
+                                    <select>
+                                        <option>Invite Code</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="sys-filter-row">
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                                <div class="sys-input">
+                                    <i class="ri-calendar-line"></i>
+                                    <input type="date" value="2025-10-15" />
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="sys-rebate-section" id="daily">
-          <div class="sys-stat-box">
-            <p>Total Received</p>
-            <h3>₹ 0</h3>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 15px 0;">
-            <p>Lock Money</p>
-            <h3>₹ 0</h3>
-          </div>
-
-          <div class="sys-filter-box">
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-smartphone-line"></i>
-                <input type="text" placeholder="Phone number">
-              </div>
-              <div class="sys-input">
-                <i class="ri-key-2-line"></i>
-                <select>
-                  <option>Invite Code</option>
-                </select>
-              </div>
-            </div>
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-            </div>
-          </div>
-
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>Bet Amount</th>
-                <th>Reward</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="3">No records.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="sys-rebate-section" id="bonus">
-          <div class="sys-stat-box">
-            <p>Total Received</p>
-            <h3>₹ 0</h3>
-            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 15px 0;">
-            <p>Lock Money</p>
-            <h3>₹ 0</h3>
-          </div>
-
-          <div class="sys-filter-box">
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-smartphone-line"></i>
-                <input type="text" placeholder="Phone number">
-              </div>
-              <div class="sys-input">
-                <i class="ri-key-2-line"></i>
-                <select>
-                  <option>Invite Code</option>
-                </select>
-              </div>
-            </div>
-            <div class="sys-filter-row">
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-              <div class="sys-input">
-                <i class="ri-calendar-line"></i>
-                <input type="date" value="2025-10-15">
-              </div>
-            </div>
-          </div>
-
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>Bet Amount</th>
-                <th>Reward</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="3">No records.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <div class="sys-tab-content" id="invite">
-      <div class="bg-gradient-to-r bg-purple-700/25 p-3 rounded-xl shadow-xl w-full max-w-lg mx-auto mb-4 text-black">
-          <div class="flex gap-[55px]">
-            <div class="flex flex-col justify-start mb-2">
-                  <h2 class="text-xs font-mediaum text-start">Create referral link</h2>
-              <div class="text-lg font-medium flex items-center space-x-2">
-                      <span>2</span>
-                      <span>/</span>
-                      <span>20</span>
-                  </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Bet Amount</th>
+                                    <th>Reward</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">No records.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-          <div class="flex flex-col justify-start mb-2">
-                  <h2 class="text-xs font-mediaum text-start">friends</h2>
-              <div class="text-lg font-medium flex items-center space-x-2">
-                      <span>0</span>
-                      
-                      
-                  </div></div>
             </div>
-            
-           <div class="mt-4 flex flex-col gap-2">
-  <button 
-      class="bg-purple-600 text-black py-2 px-6 rounded-md w-full hover:bg-purple-700 text-xs"
-      onclick="copyLink()"
-  >
-      Copy LINK
-  </button>
 
-  <button 
-      class="bg-purple-600 text-black py-2 px-6 rounded-md w-full hover:bg-purple-700 text-xs"
-      onclick="copyCode()"
-  >
-      Copy CODE
-  </button>
-</div>
+            <div class="sys-tab-content" id="invite">
+                <div
+                    class="bg-gradient-to-r bg-[#f95959]/25 p-3 rounded-xl shadow-xl w-full max-w-lg mx-auto mb-4 text-black"
+                >
+                    <div class="flex gap-[55px]">
+                        <div class="flex flex-col justify-start mb-2">
+                            <h2 class="text-xs font-mediaum text-start">
+                                Create referral link
+                            </h2>
+                            <div
+                                class="text-lg font-medium flex items-center space-x-2"
+                            >
+                                <span>2</span>
+                                <span>/</span>
+                                <span>20</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-start mb-2">
+                            <h2 class="text-xs font-mediaum text-start">
+                                friends
+                            </h2>
+                            <div
+                                class="text-lg font-medium flex items-center space-x-2"
+                            >
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-col gap-2">
+                        <button
+                            class="bg-[#f95959]/80 text-white py-2 px-6 rounded-md w-full hover:bg-[#f95959] text-xs"
+                            onclick="copyLink()"
+                        >
+                            Copy LINK
+                        </button>
+
+                        <button
+                            class="bg-[#f95959]/80 text-white py-2 px-6 rounded-md w-full hover:bg-[#f95959] text-xs"
+                            onclick="copyCode()"
+                        >
+                            Copy CODE
+                        </button>
+                    </div>
+                </div>
+                <div class="sys-rebate-section active" id="refer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Link</th>
+                                <th>Friends</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>default</td>
+                                <td>EE3IIK2S385D1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>iyi</td>
+                                <td>EE3IIK2S385D2</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sys-tab-content" id="download">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/d309f4b2-6636-4d77-b282-e834aaec62c1.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/d309f4b2-6636-4d77-b282-e834aaec62c1.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/8ccf0c5e-c561-44d4-9694-caf67d4627da.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/6ad69be0-1124-4186-96ae-4c92b26fa4dd.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/6b0587c6-c1d2-4082-aeea-a5f355bb1dcc.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/f2529155-7534-4902-bf31-b8ad9b33de45.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/63115f26-9aed-41ff-a276-a91a4c1f6a98.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <img
+                            class="w-full"
+                            src="https://files.conjlnuljy.com/poster/5/e1d20d6d-c264-42fc-9ba1-f85ead28eec2.png"
+                            alt="PG Slots"
+                        />
+                        <div class="text-center">
+                            <button
+                                class="px-4 py-[2px] bg-red-400 text-white rounded-md text-xs"
+                            >
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
         </div>
-      <div class="sys-rebate-section active" id="refer">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Link</th>
-                <th>Friends</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>default</td>
-                <td>EE3IIK2S385D1 </td>
-                <td>0</td>
-              </tr>
-               <tr>
-                <td>iyi</td>
-                <td>EE3IIK2S385D2</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            const mainTabs = document.querySelectorAll(".sys-tab-item");
+            const mainContents = document.querySelectorAll(".sys-tab-content");
 
-    <div class="sys-tab-content" id="download">
-     <div class="grid grid-cols-2 gap-2">
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/d309f4b2-6636-4d77-b282-e834aaec62c1.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
+            mainTabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    mainTabs.forEach((t) => t.classList.remove("active"));
+                    tab.classList.add("active");
 
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/d309f4b2-6636-4d77-b282-e834aaec62c1.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div><div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/8ccf0c5e-c561-44d4-9694-caf67d4627da.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/6ad69be0-1124-4186-96ae-4c92b26fa4dd.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-   <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/6b0587c6-c1d2-4082-aeea-a5f355bb1dcc.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/f2529155-7534-4902-bf31-b8ad9b33de45.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/63115f26-9aed-41ff-a276-a91a4c1f6a98.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-  <div class=" rounded-lg shadow-lg overflow-hidden">
-    <img class="w-full" src="https://files.conjlnuljy.com/poster/5/e1d20d6d-c264-42fc-9ba1-f85ead28eec2.png" alt="PG Slots">
-    <div class="text-center">
-      <button class="px-4 py-[2px] bg-purple-600  text-black rounded-md text-xs">Download</button>
-    </div>
-  </div>
-</div>
+                    mainContents.forEach((c) => c.classList.remove("active"));
 
-    </div>
-    <br>
-    <br>
-  </div>
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    const mainTabs = document.querySelectorAll('.sys-tab-item');
-    const mainContents = document.querySelectorAll('.sys-tab-content');
+                    const target = tab.getAttribute("data-tab");
+                    document.getElementById(target).classList.add("active");
 
-    mainTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        mainTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+                    window.scrollTo(0, 0);
+                });
+            });
 
-        mainContents.forEach(c => c.classList.remove('active'));
+            const rebateTabs = document.querySelectorAll(".sys-tab-btn");
+            const rebateSections = document.querySelectorAll(
+                ".sys-rebate-section",
+            );
 
-        const target = tab.getAttribute('data-tab');
-        document.getElementById(target).classList.add('active');
-        
-        window.scrollTo(0, 0);
-      });
-    });
+            rebateTabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    const targetSection = document.getElementById(
+                        tab.getAttribute("data-tab"),
+                    );
 
-    const rebateTabs = document.querySelectorAll('.sys-tab-btn');
-    const rebateSections = document.querySelectorAll('.sys-rebate-section');
+                    rebateTabs.forEach((tab) => tab.classList.remove("active"));
+                    tab.classList.add("active");
 
-    rebateTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetSection = document.getElementById(tab.getAttribute('data-tab'));
+                    rebateSections.forEach((section) =>
+                        section.classList.remove("active"),
+                    );
+                    targetSection.classList.add("active");
+                });
+            });
 
-        rebateTabs.forEach(tab => tab.classList.remove('active'));
-        tab.classList.add('active');
+            document.querySelectorAll(".accordion-btn").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector(".accordion-icon");
 
-        rebateSections.forEach(section => section.classList.remove('active'));
-        targetSection.classList.add('active');
-      });
-    });
+                    // Close all other accordions
+                    document
+                        .querySelectorAll(".accordion-content")
+                        .forEach((item) => {
+                            if (item !== content) {
+                                item.style.maxHeight = null;
+                                item.previousElementSibling
+                                    .querySelector(".accordion-icon")
+                                    .classList.remove("rotate-180");
+                            }
+                        });
 
+                    // Toggle current
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove("rotate-180");
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add("rotate-180");
+                    }
+                });
+            });
+        </script>
+        <script>
+            function showTab(tab) {
+                const contents = document.querySelectorAll(".tab-content");
+                contents.forEach((content) => content.classList.add("hidden"));
+                const tabButtons = document.querySelectorAll(".tab-button");
+                tabButtons.forEach((button) =>
+                    button.classList.remove("bg-purple-600", " text-black"),
+                );
+                document
+                    .getElementById(`${tab}-content`)
+                    .classList.remove("hidden");
+                document
+                    .getElementById(`${tab}-tab`)
+                    .classList.add("bg-purple-600", " text-black");
+            }
+            document
+                .getElementById("mine-tab")
+                .classList.add("bg-purple-600", " text-black");
 
+            let inviteCode = "";
 
-    document.querySelectorAll('.accordion-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
-    const icon = button.querySelector('.accordion-icon');
+            // Fetch user info on page load
+            async function fetchInviteCode() {
+                try {
+                    const response = await axios.get("/api/webapi/GetUserInfo");
+                    const userData = response?.data?.data || {};
+                    inviteCode = userData.code || "";
+                } catch (err) {
+                    console.error("Failed to fetch invite code:", err);
+                }
+            }
 
-    // Close all other accordions
-    document.querySelectorAll('.accordion-content').forEach(item => {
-      if (item !== content) {
-        item.style.maxHeight = null;
-        item.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotate-180');
-      }
-    });
+            window.addEventListener("load", fetchInviteCode);
 
-    // Toggle current
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-      icon.classList.remove('rotate-180');
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-      icon.classList.add('rotate-180');
-    }
-  });
-});
+            function copyLink() {
+                if (!inviteCode) {
+                    Swal.fire("Error", "Invite code not ready yet!", "error");
+                    return;
+                }
 
-  </script>
-<script>
-  function showTab(tab) {
-  const contents = document.querySelectorAll('.tab-content');
-  contents.forEach(content => content.classList.add('hidden'));
-  const tabButtons = document.querySelectorAll('.tab-button');
-  tabButtons.forEach(button => button.classList.remove('bg-purple-600', ' text-black'));
-  document.getElementById(`${tab}-content`).classList.remove('hidden');
-  document.getElementById(`${tab}-tab`).classList.add('bg-purple-600', ' text-black');
-}
-document.getElementById('mine-tab').classList.add('bg-purple-600', ' text-black');
+                // Automatically get the current domain
+                const domain = window.location.origin;
+                const inviteLink = `${domain}/register?invitationCode=${inviteCode}`;
 
+                navigator.clipboard
+                    .writeText(inviteLink)
+                    .then(() =>
+                        Swal.fire(
+                            "Copied!",
+                            "Invite link copied to clipboard ✅",
+                            "success",
+                        ),
+                    )
+                    .catch((err) => console.error(err));
+            }
 
+            function copyCode() {
+                if (!inviteCode) {
+                    Swal.fire("Error", "Invite code not ready yet!", "error");
+                    return;
+                }
+                navigator.clipboard
+                    .writeText(inviteCode)
+                    .then(() =>
+                        Swal.fire(
+                            "Copied!",
+                            "Invite code copied ✅",
+                            "success",
+                        ),
+                    )
+                    .catch((err) => console.error(err));
+            }
+        </script>
 
-
-
-
-
-
-
-
-
-
-
-let inviteCode = "";
-
-// Fetch user info on page load
-async function fetchInviteCode() {
-    try {
-        const response = await axios.get("/api/webapi/GetUserInfo");
-        const userData = response?.data?.data || {};
-        inviteCode = userData.code || "";
-    } catch (err) {
-        console.error("Failed to fetch invite code:", err);
-    }
-}
-
-window.addEventListener("load", fetchInviteCode);
-
-function copyLink() {
-    if (!inviteCode) {
-        Swal.fire("Error", "Invite code not ready yet!", "error");
-        return;
-    }
-
-    // Automatically get the current domain
-    const domain = window.location.origin; 
-    const inviteLink = `${domain}/register?invitationCode=${inviteCode}`;
-
-    navigator.clipboard.writeText(inviteLink)
-        .then(() => Swal.fire("Copied!", "Invite link copied to clipboard ✅", "success"))
-        .catch(err => console.error(err));
-}
-
-
-function copyCode() {
-    if (!inviteCode) {
-        Swal.fire("Error", "Invite code not ready yet!", "error");
-        return;
-    }
-    navigator.clipboard.writeText(inviteCode)
-        .then(() => Swal.fire("Copied!", "Invite code copied ✅", "success"))
-        .catch(err => console.error(err));
-}
-
-
-
-
-
-
-</script> 
-
-
-    <%- include('../layout/footer.ejs') %>
-
-</body>
- 
-
+        <%- include('../layout/footer.ejs') %>
+    </body>
 </html>

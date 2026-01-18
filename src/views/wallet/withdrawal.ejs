@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -9,8 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <style>
@@ -19,7 +19,7 @@
         }
 
         .select {
-            border: 2px solid #FA605F;
+            border: 2px solid #fa605f;
             box-shadow: 0 0 10px #d9b38c66;
         }
 
@@ -59,7 +59,6 @@
 </head>
 
 <body class="bg-white text-black min-h-screen font-sans w-full md:max-w-[500px] mx-auto">
-
     <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
         <button onclick="history.back()" aria-label="Back" class="text-black text-xl">
             <i class="ri-arrow-left-s-line"></i>
@@ -71,7 +70,9 @@
     <div class="m-4 bg-[#FA605F] rounded-2xl p-5 shadow-lg">
         <p class="text-sm text-white mb-1">Available balance</p>
         <div class="flex items-center justify-between">
-            <p id="money_amount_display" class="text-3xl  text-white font-bold">₹ 50.00</p>
+            <p id="money_amount_display" class="text-3xl text-white font-bold">
+                ₹ 50.00
+            </p>
             <button id="reload_money_amount_button" class="text-white text-xl">
                 <i class="ri-refresh-line"></i>
             </button>
@@ -86,7 +87,7 @@
             BANK CARD
         </button>
         <button type="button"
-            class="bg-[#FA605F]  text-white hover:bg-[#3b3971] w-28 h-28 rounded-2xl flex flex-col justify-center items-center text-sm"
+            class="bg-[#FA605F] text-white hover:bg-[#3b3971] w-28 h-28 rounded-2xl flex flex-col justify-center items-center text-sm"
             data-type="USDT_ADDRESS">
             <i class="ri-currency-line text-3xl mb-1 text-[#27ae60]"></i>
             USDT
@@ -94,8 +95,7 @@
     </div>
 
     <div id="main_account_info_holder" class="bg-[#FA605F] mx-4 rounded-xl p-4 text-sm">
-        <div class="flex flex-col items-center justify-center text-center py-4"
-            onclick="handleOpenAddMethod()">
+        <div class="flex flex-col items-center justify-center text-center py-4" onclick="handleOpenAddMethod()">
             <div class="border-2 border-dashed border-gray-500 rounded-full p-2 mb-2">
                 <i class="ri-add-line text-3xl text-gray-500"></i>
             </div>
@@ -104,18 +104,20 @@
     </div>
 
     <div class="mx-4 mt-4">
-        <p class="text-red-400 text-xs mb-2">Need to add beneficiary information to be able to withdraw money</p>
+        <p class="text-red-400 text-xs mb-2">
+            Need to add beneficiary information to be able to withdraw money
+        </p>
         <div class="flex space-x-2">
-            <div id="usdt_amount_box" class="relative flex-1" style="display: none;">
+            <div id="usdt_amount_box" class="relative flex-1" style="display: none">
                 <span id="usdt_currency_indicator" class="absolute left-3 top-3 text-xl text-white">$</span>
                 <input id="usdt_amount_input" type="number" placeholder="Please enter the amount"
-                    class="w-full pl-8 pr-4 py-3 rounded-xl bg-[#FA605F] text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FA605F]">
+                    class="w-full pl-8 pr-4 py-3 rounded-xl bg-[#FA605F] text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FA605F]" />
             </div>
 
             <div id="inr_amount_box" class="relative flex-1">
                 <span id="inr_currency_indicator" class="absolute left-3 top-3 text-xl text-white">₹</span>
                 <input id="inr_money_amount_input" type="number" placeholder="Please enter the amount"
-                    class="w-full pl-8 pr-4 py-3 rounded-xl bg-[#FA605F] text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FA605F]">
+                    class="w-full pl-8 pr-4 py-3 rounded-xl bg-[#FA605F] text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FA605F]" />
             </div>
         </div>
 
@@ -124,116 +126,143 @@
 
     <div class="mx-4 mt-5">
         <button id="submit_withdraw_btn"
-            class="w-full bg-[#FA605F] py-3 rounded-xl text-white font-semibold transition" >
+            class="w-full bg-[#FA605F] py-3 rounded-xl text-white font-semibold transition">
             Withdraw
         </button>
     </div>
 
     <div class="text-xs text-black mt-6 mx-6 space-y-2 pb-10">
-        <p>◆ Need to bet <span id="need_to_bet">₹0.00</span> to be able to withdraw</p>
+        <p>
+            ◆ Need to bet <span id="need_to_bet">₹0.00</span> to be able to withdraw
+        </p>
         <p>◆ Withdraw time: 00:00–23:59</p>
-        <p>◆ Remaining withdrawal times today: <span id="remaining_withdrawals">3</span></p>
-        <p>◆ Withdrawal amount range: <span id="withdrawal_range">₹220.00 – ₹100,000.00</span></p>
-        <p>◆ Please confirm your beneficial account information before withdrawing. If your information is incorrect, our company will not be liable for the amount of loss</p>
-        <p>◆ If your beneficial information is incorrect, please contact customer service</p>
+        <p>
+            ◆ Remaining withdrawal times today:
+            <span id="remaining_withdrawals">3</span>
+        </p>
+        <p>
+            ◆ Withdrawal amount range:
+            <span id="withdrawal_range">₹220.00 – ₹100,000.00</span>
+        </p>
+        <p>
+            ◆ Please confirm your beneficial account information before withdrawing.
+            If your information is incorrect, our company will not be liable for the
+            amount of loss
+        </p>
+        <p>
+            ◆ If your beneficial information is incorrect, please contact customer
+            service
+        </p>
     </div>
-      <%- include('../layout/walltefooter.ejs') %>
-    <script>
-        let MoneyAmountInput = document.querySelector("#inr_money_amount_input");
+    <%- include('../layout/walltefooter.ejs') %>
+        <script>
+            let MoneyAmountInput = document.querySelector("#inr_money_amount_input");
 
-        const WithdrawalMethodOptions = document.querySelector("#withdrawal_methods");
-        const ReloadMoneyAmountButton = document.querySelector("#reload_money_amount_button");
-        const SubmitWithdrawButton = document.querySelector("#submit_withdraw_btn");
-        const ConvertedDisplay = document.querySelector("#converted_amount_display");
-        const BankInfoHolder = document.querySelector("#main_account_info_holder");
+            const WithdrawalMethodOptions = document.querySelector(
+                "#withdrawal_methods",
+            );
+            const ReloadMoneyAmountButton = document.querySelector(
+                "#reload_money_amount_button",
+            );
+            const SubmitWithdrawButton = document.querySelector(
+                "#submit_withdraw_btn",
+            );
+            const ConvertedDisplay = document.querySelector(
+                "#converted_amount_display",
+            );
+            const BankInfoHolder = document.querySelector(
+                "#main_account_info_holder",
+            );
 
-        const UsdtAmountInput = document.querySelector("#usdt_amount_input");
-        const UsdtAmountBox = document.querySelector("#usdt_amount_box");
-        const InrAmountBox = document.querySelector("#inr_amount_box");
+            const UsdtAmountInput = document.querySelector("#usdt_amount_input");
+            const UsdtAmountBox = document.querySelector("#usdt_amount_box");
+            const InrAmountBox = document.querySelector("#inr_amount_box");
 
+            // Utility to use a fixed value if the EJS variable is not available/parsed
+            const USDT_INR_EXCHANGE_RATE =
+                parseFloat("<%=USDT_INR_EXCHANGE_RATE%>") || 88.5;
+            const MINIMUM_MONEY_USDT = parseInt("<%=MINIMUM_MONEY_USDT%>") || 5;
+            const MINIMUM_MONEY_INR = parseInt("<%=MINIMUM_MONEY_INR%>") || 220;
 
-        // Utility to use a fixed value if the EJS variable is not available/parsed
-        const USDT_INR_EXCHANGE_RATE = parseFloat("<%=USDT_INR_EXCHANGE_RATE%>") || 88.5;
-        const MINIMUM_MONEY_USDT = parseInt("<%=MINIMUM_MONEY_USDT%>") || 5; 
-        const MINIMUM_MONEY_INR = parseInt("<%=MINIMUM_MONEY_INR%>") || 220; 
+            const WithdrawalMethodsMap = {
+                USDT_ADDRESS: "USDT_ADDRESS",
+                BANK_CARD: "BANK_CARD",
+            };
 
-        const WithdrawalMethodsMap = {
-            USDT_ADDRESS: "USDT_ADDRESS",
-            BANK_CARD: "BANK_CARD",
-        };
+            const userInfoTypes = {
+                balance: "money_user",
+                betAmount: "total_bet_amount",
+            };
 
-        const userInfoTypes = {
-            balance: "money_user",
-            betAmount: "total_bet_amount",
-        };
+            let userData = null;
+            let AllowedWithdrawAmount = 0;
+            let totalBetAmountRemaining = 0;
 
-        let userData = null;
-        let AllowedWithdrawAmount = 0;
-        let totalBetAmountRemaining = 0;
-
-
-        // Toastify helper
-        function showToast(message, type = "info") {
-            Toastify({
-                text: message,
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: type === "success"
-                    ? "linear-gradient(to right, #00b09b, #96c93d)"
-                    : "linear-gradient(to right, #ff416c, #ff4b2b)",
-            }).showToast();
-        }
-
-        const alertMessage = text => {
-            showToast(text, "info");
-        };
-
-        // UI Update for Need to Bet amount
-        const setUserNeedToBet = remainingBet => {
-            const needToBet = document.querySelector("#need_to_bet");
-            if (needToBet) {
-                needToBet.textContent = remainingBet;
-            } else {
-                console.error("Element #need_to_bet not found");
+            // Toastify helper
+            function showToast(message, type = "info") {
+                Toastify({
+                    text: message,
+                    duration: 3000,
+                    gravity: "top",
+                    position: "center",
+                    backgroundColor:
+                        type === "success"
+                            ? "linear-gradient(to right, #00b09b, #96c93d)"
+                            : "linear-gradient(to right, #ff416c, #ff4b2b)",
+                }).showToast();
             }
-        };
 
-        // Fetch user data and update UI
-        const fetchUser = async () => {
-            try {
-                // *** RESTORED API CALL for User Info ***
-                const response = await axios.post("/api/webapi/check/Info");
-                
-                userData = response?.data?.userInfo;
-                AllowedWithdrawAmount = response.data.allowedWithdrawAmount;
-                totalBetAmountRemaining = response.data.totalBetAmountRemaining;
+            const alertMessage = (text) => {
+                showToast(text, "info");
+            };
 
-                // Update Balance
-                const balanceDisplay = document.getElementById("money_amount_display");
-                if (balanceDisplay) {
-                    balanceDisplay.textContent = `₹ ${parseFloat(userData?.[userInfoTypes.balance] ?? 0).toFixed(2)}`;
+            // UI Update for Need to Bet amount
+            const setUserNeedToBet = (remainingBet) => {
+                const needToBet = document.querySelector("#need_to_bet");
+                if (needToBet) {
+                    needToBet.textContent = remainingBet;
+                } else {
+                    console.error("Element #need_to_bet not found");
                 }
+            };
 
-                // Update Need to Bet
-                setUserNeedToBet(`₹ ${totalBetAmountRemaining.toFixed(2)}`);
+            // Fetch user data and update UI
+            const fetchUser = async () => {
+                try {
+                    // *** RESTORED API CALL for User Info ***
+                    const response = await axios.post("/api/webapi/check/Info");
 
-                handleCheckAndSelectWithdrawalMethod();
+                    userData = response?.data?.userInfo;
+                    AllowedWithdrawAmount = response.data.allowedWithdrawAmount;
+                    totalBetAmountRemaining = response.data.totalBetAmountRemaining;
 
-            } catch (error) {
-                console.error("Error fetching user data:", error);
-                // The original code uses a general 'Something went wrong' alert here too
-                alertMessage("Something went wrong while fetching user data.");
-            }
-        };
+                    // Update Balance
+                    const balanceDisplay = document.getElementById(
+                        "money_amount_display",
+                    );
+                    if (balanceDisplay) {
+                        balanceDisplay.textContent = `₹ ${parseFloat(userData?.[userInfoTypes.balance] ?? 0).toFixed(2)}`;
+                    }
 
-        // Render Bank Info (combines the logic from both script blocks)
-        function renderBankInfo(account, isUSDT) {
-            BankInfoHolder.innerHTML = ''; 
+                    // Update Need to Bet
+                    setUserNeedToBet(`₹ ${totalBetAmountRemaining.toFixed(2)}`);
 
-            if (account?.isAvailable) {
-                if (!isUSDT) { // Bank Card is available
-                    BankInfoHolder.innerHTML = `
+                    handleCheckAndSelectWithdrawalMethod();
+                } catch (error) {
+                    console.error("Error fetching user data:", error);
+                    // The original code uses a general 'Something went wrong' alert here too
+                    alertMessage("Something went wrong while fetching user data.");
+                }
+            };
+
+            // Render Bank Info (combines the logic from both script blocks)
+            function renderBankInfo(account, isUSDT) {
+                BankInfoHolder.innerHTML = "";
+
+                if (account?.isAvailable) {
+                    if (!isUSDT) {
+                        // Bank Card is available
+                        BankInfoHolder.innerHTML = `
                         <p class="text-white"><span class="text-white">Bank Name:</span> ${account.bankName}</p>
                         <p class="text-white"><span class="text-white">Recipient's Name:</span> ${account.recipientName}</p>
                         <p class="text-white"><span class="text-white">Account Number:</span> ${account.bankAccountNumber}</p>
@@ -241,22 +270,28 @@
                             Change Bank Card Information
                         </a>
                     `;
-                } else { // USDT is available
-                    BankInfoHolder.innerHTML = `
+                    } else {
+                        // USDT is available
+                        BankInfoHolder.innerHTML = `
                         <p><span class="text-white">USDT Address:</span> ${account.usdtAddress}</p>
                         <p><span class="text-white">Address Alias:</span> ${account.addressAlias}</p>
                         <a onclick="handleOpenAddMethod()" class="block text-[#FA605F] text-center mt-2 font-medium cursor-pointer">
                             Change USDT Address Information
                         </a>
                     `;
-                }
-            } else {
-                // Render Add Method UI
-                const selectedType = document.querySelector(".select").getAttribute("data-type");
-                const isUSDT_current = selectedType === WithdrawalMethodsMap.USDT_ADDRESS;
-                const buttonText = isUSDT_current ? "Add address" : "Add a bank account number";
-                
-                BankInfoHolder.innerHTML = `
+                    }
+                } else {
+                    // Render Add Method UI
+                    const selectedType = document
+                        .querySelector(".select")
+                        .getAttribute("data-type");
+                    const isUSDT_current =
+                        selectedType === WithdrawalMethodsMap.USDT_ADDRESS;
+                    const buttonText = isUSDT_current
+                        ? "Add address"
+                        : "Add a bank account number";
+
+                    BankInfoHolder.innerHTML = `
                     <div class="flex flex-col items-center justify-center text-center py-4">
                         <div class="border-2 border-dashed border-gray-500 rounded-full p-2 mb-2 cursor-pointer" onclick="handleOpenAddMethod()">
                             <i class="ri-add-line text-3xl text-gray-500"></i>
@@ -264,206 +299,235 @@
                         <span id="add_method_type_text" class="text-white">${buttonText}</span>
                     </div>
                 `;
-            }
-        }
-
-        // Initialize Bank Card method info
-        const initBankCard = async () => {
-            try {
-                // *** RESTORED API CALL for Bank Card Info ***
-                const response = await axios({
-                    method: "GET",
-                    url: "/api/webapi/withdraw/BANK_CARD",
-                });
-
-                MoneyAmountInput = document.querySelector("#inr_money_amount_input");
-                UsdtAmountBox.style.display = "none";
-                InrAmountBox.style.display = "flex";
-                ConvertedDisplay.classList.add("hidden");
-                UsdtAmountInput.value = '';
-
-                renderBankInfo(response?.data?.account, false);
-                handleMoneyAmountInput(); 
-            } catch (error) {
-                console.error("Error initializing Bank Card:", error);
-                alertMessage("Something went wrong loading Bank Card info!");
-            }
-        };
-
-        // Initialize USDT method info
-        const initUSDTAddress = async () => {
-            try {
-                // *** RESTORED API CALL for USDT Address Info ***
-                const response = await axios({
-                    method: "GET",
-                    url: "/api/webapi/withdraw/usdt_address",
-                });
-                
-                MoneyAmountInput = document.querySelector("#usdt_amount_input");
-                UsdtAmountBox.style.display = "flex";
-                InrAmountBox.style.display = "none";
-                ConvertedDisplay.classList.remove("hidden");
-                document.querySelector("#inr_money_amount_input").value = '';
-
-
-                renderBankInfo(response?.data?.account, true);
-                handleMoneyAmountInput(); 
-            } catch (error) {
-                console.error("Error initializing USDT Address:", error);
-                alertMessage("Something went wrong loading USDT info!");
-            }
-        };
-
-        // Determines and calls the correct init function
-        const handleCheckAndSelectWithdrawalMethod = () => {
-            const currentWithdrawalMethod = WithdrawalMethodOptions.querySelector(".select");
-
-            const currencyIndicator = document.querySelector("#inr_currency_indicator");
-            const usdtCurrencyIndicator = document.querySelector("#usdt_currency_indicator");
-
-            if (currentWithdrawalMethod.getAttribute("data-type") === WithdrawalMethodsMap.BANK_CARD) {
-                currencyIndicator.innerHTML = "₹";
-                initBankCard();
-            } else if (currentWithdrawalMethod.getAttribute("data-type") === WithdrawalMethodsMap.USDT_ADDRESS) {
-                usdtCurrencyIndicator.innerHTML = "$";
-                initUSDTAddress();
-            } else {
-                currencyIndicator.innerHTML = "₹";
-                initBankCard();
-            }
-        };
-
-        // Handles click on the withdrawal method buttons
-        const handleSelectPaymentGateway = event => {
-            Array.from(WithdrawalMethodOptions.children).forEach(child => {
-                child.classList.remove("select");
-                if (event.currentTarget.getAttribute("data-type") === child.getAttribute("data-type")) {
-                    child.classList.add("select");
                 }
+            }
+
+            // Initialize Bank Card method info
+            const initBankCard = async () => {
+                try {
+                    // *** RESTORED API CALL for Bank Card Info ***
+                    const response = await axios({
+                        method: "GET",
+                        url: "/api/webapi/withdraw/BANK_CARD",
+                    });
+
+                    MoneyAmountInput = document.querySelector("#inr_money_amount_input");
+                    UsdtAmountBox.style.display = "none";
+                    InrAmountBox.style.display = "flex";
+                    ConvertedDisplay.classList.add("hidden");
+                    UsdtAmountInput.value = "";
+
+                    renderBankInfo(response?.data?.account, false);
+                    handleMoneyAmountInput();
+                } catch (error) {
+                    console.error("Error initializing Bank Card:", error);
+                    alertMessage("Something went wrong loading Bank Card info!");
+                }
+            };
+
+            // Initialize USDT method info
+            const initUSDTAddress = async () => {
+                try {
+                    // *** RESTORED API CALL for USDT Address Info ***
+                    const response = await axios({
+                        method: "GET",
+                        url: "/api/webapi/withdraw/usdt_address",
+                    });
+
+                    MoneyAmountInput = document.querySelector("#usdt_amount_input");
+                    UsdtAmountBox.style.display = "flex";
+                    InrAmountBox.style.display = "none";
+                    ConvertedDisplay.classList.remove("hidden");
+                    document.querySelector("#inr_money_amount_input").value = "";
+
+                    renderBankInfo(response?.data?.account, true);
+                    handleMoneyAmountInput();
+                } catch (error) {
+                    console.error("Error initializing USDT Address:", error);
+                    alertMessage("Something went wrong loading USDT info!");
+                }
+            };
+
+            // Determines and calls the correct init function
+            const handleCheckAndSelectWithdrawalMethod = () => {
+                const currentWithdrawalMethod =
+                    WithdrawalMethodOptions.querySelector(".select");
+
+                const currencyIndicator = document.querySelector(
+                    "#inr_currency_indicator",
+                );
+                const usdtCurrencyIndicator = document.querySelector(
+                    "#usdt_currency_indicator",
+                );
+
+                if (
+                    currentWithdrawalMethod.getAttribute("data-type") ===
+                    WithdrawalMethodsMap.BANK_CARD
+                ) {
+                    currencyIndicator.innerHTML = "₹";
+                    initBankCard();
+                } else if (
+                    currentWithdrawalMethod.getAttribute("data-type") ===
+                    WithdrawalMethodsMap.USDT_ADDRESS
+                ) {
+                    usdtCurrencyIndicator.innerHTML = "$";
+                    initUSDTAddress();
+                } else {
+                    currencyIndicator.innerHTML = "₹";
+                    initBankCard();
+                }
+            };
+
+            // Handles click on the withdrawal method buttons
+            const handleSelectPaymentGateway = (event) => {
+                Array.from(WithdrawalMethodOptions.children).forEach((child) => {
+                    child.classList.remove("select");
+                    if (
+                        event.currentTarget.getAttribute("data-type") ===
+                        child.getAttribute("data-type")
+                    ) {
+                        child.classList.add("select");
+                    }
+                });
+
+                handleCheckAndSelectWithdrawalMethod();
+            };
+
+            // Handles money input logic (conversion, button state)
+            const handleMoneyAmountInput = () => {
+                const currentWithdrawalMethod =
+                    WithdrawalMethodOptions.querySelector(".select");
+                const inputMoney = parseFloat(MoneyAmountInput.value);
+
+                let isEnabled = false;
+
+                console.log("shiiiiiiiiiiiiiiiiiiiiiiiiii" + AllowedWithdrawAmount);
+
+                if (AllowedWithdrawAmount) {
+                    isEnabled = true;
+                } else {
+                    isEnabled = false;
+                }
+
+                if (
+                    currentWithdrawalMethod.getAttribute("data-type") ===
+                    WithdrawalMethodsMap.USDT_ADDRESS
+                ) {
+                    if (inputMoney > 0) {
+                        const inr = (inputMoney * USDT_INR_EXCHANGE_RATE).toFixed(2);
+                        ConvertedDisplay.innerHTML = `≈ ₹${inr}`;
+                    } else {
+                        ConvertedDisplay.innerHTML = "";
+                    }
+
+                    const minimumMoneyAllowedUSDT = MINIMUM_MONEY_USDT;
+
+                    //   if (inputMoney >= minimumMoneyAllowedUSDT && inputMoney <= (AllowedWithdrawAmount / USDT_INR_EXCHANGE_RATE)) {
+                    //                     isEnabled = true;
+                    //                 }
+                    //             } else {
+                    //                 const minimumMoneyAllowedINR = MINIMUM_MONEY_INR;
+
+                    //                 if (inputMoney >= minimumMoneyAllowedINR && inputMoney <= AllowedWithdrawAmount) {
+                    //                     isEnabled = true;
+                    //                 }
+                }
+                console.log("shiiiiiiiiiiiiiiiiiiiiiiiiii" + isEnabled);
+
+                // Update Withdraw button style and state
+                if (isEnabled) {
+                    SubmitWithdrawButton.style.background =
+                        "linear-gradient(90deg, #FA605F 0%, #d9b38c 100%)";
+                    SubmitWithdrawButton.disabled = false;
+                } else {
+                    SubmitWithdrawButton.style.background =
+                        "linear-gradient(180deg, #cfd1de 0%, #c7c9d9 100%)";
+                    SubmitWithdrawButton.disabled = true;
+                }
+            };
+
+            // Handles opening the Add/Change Method page
+            const handleOpenAddMethod = () => {
+                const currentWithdrawalMethod =
+                    WithdrawalMethodOptions.querySelector(".select");
+
+                switch (currentWithdrawalMethod.getAttribute("data-type")) {
+                    case WithdrawalMethodsMap.BANK_CARD:
+                        window.location.href = "/wallet/addBank";
+                        break;
+                    case WithdrawalMethodsMap.USDT_ADDRESS:
+                        window.location.href = "/wallet/addAddress";
+                        break;
+                    default:
+                        window.location.href = "";
+                        break;
+                }
+            };
+
+            // Handles the submission of the withdrawal request
+            const handleSubmitWithdrawRequest = async () => {
+                const selected = WithdrawalMethodOptions.querySelector(".select");
+                const type = selected.getAttribute("data-type");
+                const amount = parseFloat(MoneyAmountInput.value);
+
+                if (!amount || amount < 1) {
+                    showToast("Please enter a valid amount", "error");
+                    return;
+                }
+
+                try {
+                    // *** RESTORED API CALL for Withdrawal Submission ***
+                    const response = await axios.post("/api/webapi/withdraw/create", {
+                        amount,
+                        withdrawalMethod: type,
+                        AllowedWithdrawAmount,
+                        totalBetAmountRemaining,
+                    });
+
+                    showToast(
+                        response.data.message || "Withdrawal successful",
+                        "success",
+                    );
+                    setTimeout(
+                        () => (window.location.href = "/wallet/withdrawalrecord"),
+                        1200,
+                    );
+                } catch (err) {
+                    const message =
+                        (err &&
+                            err.response &&
+                            err.response.data &&
+                            err.response.data.message) ||
+                        "Withdrawal failed. Try again.";
+                    showToast(message, "error");
+                }
+            };
+
+            // --------------------------------
+            // Event Listeners and Initial Load
+            // --------------------------------
+
+            document
+                .querySelector("#inr_money_amount_input")
+                .addEventListener("input", handleMoneyAmountInput);
+            document
+                .querySelector("#usdt_amount_input")
+                .addEventListener("input", handleMoneyAmountInput);
+
+            SubmitWithdrawButton.addEventListener(
+                "click",
+                handleSubmitWithdrawRequest,
+            );
+            ReloadMoneyAmountButton.addEventListener("click", fetchUser);
+
+            Array.from(WithdrawalMethodOptions.children).forEach((child) => {
+                if (Array.from(child.classList).includes("disabled")) return;
+                child.addEventListener("click", handleSelectPaymentGateway);
             });
 
-            handleCheckAndSelectWithdrawalMethod();
-        };
-
-        // Handles money input logic (conversion, button state)
-        const handleMoneyAmountInput = () => {
-            const currentWithdrawalMethod = WithdrawalMethodOptions.querySelector(".select");
-            const inputMoney = parseFloat(MoneyAmountInput.value);
-
-            let isEnabled = false;
-            
-            
-            
-              console.log("shiiiiiiiiiiiiiiiiiiiiiiiiii"+AllowedWithdrawAmount);
-
-if(AllowedWithdrawAmount){
-
-  isEnabled = true;  
-}else{
-
-  isEnabled = false;  
-
-}
-
-            if (currentWithdrawalMethod.getAttribute("data-type") === WithdrawalMethodsMap.USDT_ADDRESS) {
-                if (inputMoney > 0) {
-                    const inr = (inputMoney * USDT_INR_EXCHANGE_RATE).toFixed(2);
-                    ConvertedDisplay.innerHTML = `≈ ₹${inr}`;
-                } else {
-                    ConvertedDisplay.innerHTML = "";
-                }
-
-                const minimumMoneyAllowedUSDT = MINIMUM_MONEY_USDT;
-
-              //   if (inputMoney >= minimumMoneyAllowedUSDT && inputMoney <= (AllowedWithdrawAmount / USDT_INR_EXCHANGE_RATE)) {
-//                     isEnabled = true;
-//                 }
-//             } else {
-//                 const minimumMoneyAllowedINR = MINIMUM_MONEY_INR;
-
-//                 if (inputMoney >= minimumMoneyAllowedINR && inputMoney <= AllowedWithdrawAmount) {
-//                     isEnabled = true;
-//                 }
-  
-            }
-            console.log("shiiiiiiiiiiiiiiiiiiiiiiiiii"+isEnabled);
-
-            // Update Withdraw button style and state
-            if (isEnabled) {
-                SubmitWithdrawButton.style.background = "linear-gradient(90deg, #FA605F 0%, #d9b38c 100%)";
-                SubmitWithdrawButton.disabled = false;
-            } else {
-                SubmitWithdrawButton.style.background = "linear-gradient(180deg, #cfd1de 0%, #c7c9d9 100%)";
-                SubmitWithdrawButton.disabled = true;
-            }
-        };
-
-        // Handles opening the Add/Change Method page
-        const handleOpenAddMethod = () => {
-            const currentWithdrawalMethod = WithdrawalMethodOptions.querySelector(".select");
-
-            switch (currentWithdrawalMethod.getAttribute("data-type")) {
-                case WithdrawalMethodsMap.BANK_CARD:
-                    window.location.href = "/wallet/addBank";
-                    break;
-                case WithdrawalMethodsMap.USDT_ADDRESS:
-                    window.location.href = "/wallet/addAddress";
-                    break;
-                default:
-                    window.location.href = "";
-                    break;
-            }
-        };
-
-        // Handles the submission of the withdrawal request
-        const handleSubmitWithdrawRequest = async () => {
-            const selected = WithdrawalMethodOptions.querySelector(".select");
-            const type = selected.getAttribute("data-type");
-            const amount = parseFloat(MoneyAmountInput.value);
-
-            if (!amount || amount < 1) {
-                showToast("Please enter a valid amount", "error");
-                return;
-            }
-
-            try {
-                // *** RESTORED API CALL for Withdrawal Submission ***
-                const response = await axios.post("/api/webapi/withdraw/create", {
-                    amount,
-                    withdrawalMethod: type,
-                    AllowedWithdrawAmount,
-                    totalBetAmountRemaining
-                });
-
-                showToast(response.data.message || "Withdrawal successful", "success");
-                setTimeout(() => window.location.href = "/wallet/withdrawalrecord", 1200);
-
-            } catch (err) {
-                const message =
-                    (err && err.response && err.response.data && err.response.data.message) ||
-                    "Withdrawal failed. Try again.";
-                showToast(message, "error");
-            }
-        };
-
-        // --------------------------------
-        // Event Listeners and Initial Load
-        // --------------------------------
-
-        document.querySelector("#inr_money_amount_input").addEventListener("input", handleMoneyAmountInput);
-        document.querySelector("#usdt_amount_input").addEventListener("input", handleMoneyAmountInput);
-
-        SubmitWithdrawButton.addEventListener("click", handleSubmitWithdrawRequest);
-        ReloadMoneyAmountButton.addEventListener("click", fetchUser);
-
-        Array.from(WithdrawalMethodOptions.children).forEach(child => {
-            if (Array.from(child.classList).includes("disabled")) return;
-            child.addEventListener("click", handleSelectPaymentGateway);
-        });
-
-        // Run initial setup
-        fetchUser(); 
-    </script>
+            // Run initial setup
+            fetchUser();
+        </script>
 </body>
 
 </html>
