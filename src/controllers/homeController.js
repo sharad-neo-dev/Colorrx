@@ -2,20 +2,14 @@ import connection from "../config/connectDB.js";
 
 const homePage = async (req, res) => {
   let auth = req.cookies.auth;
-  
-  const [users] = await connection.query(
-    "SELECT `app` FROM admin_ac",
-    [auth],
-  );
-  return res.render("home/index.ejs",{auth});
-}
 
+  const [users] = await connection.query("SELECT `app` FROM admin_ac", [auth]);
+  return res.render("home/index.ejs", { auth });
+};
 
 const activityPage = async (req, res) => {
   return res.render("checkIn/activity.ejs");
 };
-
-
 
 const games = async (req, res) => {
   try {
@@ -29,10 +23,8 @@ const games = async (req, res) => {
   }
 };
 
-
 const comeingsooon = async (req, res) => {
   try {
-   
     // Render the EJS view with query params
     return res.render("comeingsooon.ejs");
   } catch (error) {
@@ -41,27 +33,15 @@ const comeingsooon = async (req, res) => {
   }
 };
 
-
-
-
 const appsetting = async (req, res) => {
   try {
-    // Fetch all settings from admin_ac
- const [rows] = await connection.query(
-      "SELECT app, telegram FROM admin_ac LIMIT 1"
-    );
-
-    if (rows.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "No settings found",
-      });
-    }
-
-    // Send result in JSON format
+    // Return settings from environment variables
     return res.json({
       success: true,
-      data: rows[0],
+      data: {
+        app: process.env.ADMIN_APP_LINK || "",
+        telegram: process.env.ADMIN_TELEGRAM || "",
+      },
     });
   } catch (error) {
     console.error("Error in appseting:", error);
@@ -73,9 +53,6 @@ const appsetting = async (req, res) => {
   }
 };
 
-
-
-
 const slotmachineextra = async (req, res) => {
   return res.render("promotion/slot-machine-extra.ejs");
 };
@@ -83,7 +60,6 @@ const slotmachineextra = async (req, res) => {
 const earnmoney = async (req, res) => {
   return res.render("promotion/earnmoney.ejs");
 };
-
 
 const viprewards = async (req, res) => {
   return res.render("promotion/viprewards.ejs");
@@ -133,25 +109,18 @@ const earn_moneyPage = async (req, res) => {
 //   return res.render("member/support.ejs", { telegram });
 // };
 
-
 const supportPage = async (req, res) => {
+  const auth = req.cookies.auth;
 
-    const auth = req.cookies.auth;
+  // You probably want to use auth to identify the admin or user,
+  // but your SQL query currently ignores it.
+  const [rows] = await connection.query("SELECT `cskh` FROM admin_ac", [auth]);
 
-    // You probably want to use auth to identify the admin or user,
-    // but your SQL query currently ignores it.
-    const [rows] = await connection.query(
-      "SELECT `cskh` FROM admin_ac", 
-      [auth]
-    );
+  // If no user found, handle gracefully
+  if (rows.length === 0) {
+    return res.status(404).send("User not found or unauthorized.");
+  }
 
-    // If no user found, handle gracefully
-    if (rows.length === 0) {
-      return res.status(404).send("User not found or unauthorized.");
-    }
-
-
-    
   // const [users] = await connection.query(
   //   "SELECT `level`, `ctv` FROM users WHERE token = ?",
   //   [auth],
@@ -183,17 +152,12 @@ const supportPage = async (req, res) => {
   //   telegram = settings[0].telegram;
   // }
 
-    // Extract the telegram field
-    const telegram2 = rows[0].cskh;
+  // Extract the telegram field
+  const telegram2 = rows[0].cskh;
 
-    // Render the support page with telegram2 data
-    return res.render("member/support.ejs", { telegram2 });
-
-  
+  // Render the support page with telegram2 data
+  return res.render("member/support.ejs", { telegram2 });
 };
-
-
-
 
 const attendancePage = async (req, res) => {
   return res.render("checkIn/attendance.ejs");
@@ -327,9 +291,7 @@ const walletPage = async (req, res) => {
 
 // const rechargePage = async (req, res) => {
 //      const [rows] = await connection.query('SELECT usdt_conversion_rate,NetworkType FROM manual_usdt_settings WHERE id = 1');
-    
-    
-    
+
 //   return res.render("wallet/recharge.ejs", {
 //     MINIMUM_MONEY_USDT: process.env.MINIMUM_MONEY_USDT,
 //     MINIMUM_MONEY_INR: process.env.MINIMUM_MONEY_INR,
@@ -337,42 +299,32 @@ const walletPage = async (req, res) => {
 //   });
 // };
 
-
 const rechargePage = async (req, res) => {
   try {
     // Fetch conversion rate and network type from database
     const [rows] = await connection.query(
-      'SELECT usdt_conversion_rate, NetworkType FROM manual_usdt_settings WHERE id = 1'
+      "SELECT usdt_conversion_rate, NetworkType FROM manual_usdt_settings WHERE id = 1",
     );
 
     // If no record found, set defaults
-    const settings = rows[0] || { usdt_conversion_rate: 0, NetworkType: '' };
+    const settings = rows[0] || { usdt_conversion_rate: 0, NetworkType: "" };
 
     // Render the EJS page with both .env and DB values
     return res.render("wallet/recharge.ejs", {
       MINIMUM_MONEY_USDT: process.env.MINIMUM_MONEY_USDT,
       MINIMUM_MONEY_INR: process.env.MINIMUM_MONEY_INR,
       USDT_CONVERSION_RATE: settings.usdt_conversion_rate, // ✅ from DB
-      NETWORK_TYPE: settings.NetworkType                    // ✅ from DB
+      NETWORK_TYPE: settings.NetworkType, // ✅ from DB
     });
-
   } catch (err) {
     console.error("Error loading recharge page:", err);
     return res.status(500).send("Error loading recharge page");
   }
 };
 
-
-
-
 const buyusdPage = async (req, res) => {
-  return res.render("wallet/buyusd.ejs", {
-   
-  });
+  return res.render("wallet/buyusd.ejs", {});
 };
-
-
-
 
 const rechargerecordPage = async (req, res) => {
   return res.render("wallet/rechargerecord.ejs");
@@ -552,7 +504,7 @@ const homeController = {
   slotmachineextra,
   earnmoney,
   guidePage,
-    comeingsooon,
+  comeingsooon,
   feedbackPage,
   notificationPage,
   loginNotificationPage,

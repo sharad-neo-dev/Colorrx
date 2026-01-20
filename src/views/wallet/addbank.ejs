@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Bank Account | colorrx</title>
@@ -9,206 +8,258 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <style>
-        .bg-gradient-header {
-            background: linear-gradient(180deg, #3e1474, #101114 96.35%);
-        }
+      .bg-gradient-header {
+        background: linear-gradient(90deg, #f95959 0%, #ff9a8e 50%);
+      }
 
-        /* Custom styles for the message alert (used in the original JS) */
-        .message_alert_root {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            pointer-events: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      /* Custom styles for the message alert (used in the original JS) */
+      .message_alert_root {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .message_alert_text {
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            border-radius: 5px;
-            font-size: 16px;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
+      .message_alert_text {
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
 
-        .message_alert_root .message_alert_text {
-            opacity: 1;
-        }
+      .message_alert_root .message_alert_text {
+        opacity: 1;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-[#0e0d2a] text-white min-h-screen font-sans w-full md:max-w-[500px] mx-auto">
+  <body
+    class="text-white min-h-screen font-sans w-full md:max-w-[500px] mx-auto"
+  >
+    <header
+      class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10"
+    >
+      <button
+        onclick="history.back()"
+        aria-label="Back"
+        class="text-white text-xl"
+      >
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <h2 class="flex-1 text-center text-white font-bold text-lg">
+        Add a bank account number
+      </h2>
+      <div class="w-8"></div>
+    </header>
 
-    <header class="flex items-center h-14 px-4 bg-gradient-header sticky top-0 z-10">
-        <button onclick="history.back()" aria-label="Back" class="text-white text-xl">
-            <i class="ri-arrow-left-s-line"></i>
-        </button>
-        <h2 class="flex-1 text-center text-white font-bold text-lg">Add a bank account number</h2>
-        <div class="w-8"></div> </header>
-
-    <div class="mx-4 mt-4 p-3 rounded-xl text-sm text-[#ff4b2b] bg-[#3e1474] flex items-center shadow-lg">
-        <i class="ri-error-warning-fill mr-2 text-xl"></i>
-        <span>To ensure the safety of your funds, please bind your bank account</span>
+    <div
+      class="mx-4 mt-4 p-3 rounded-xl text-sm text-white bg-[#f95959] flex items-center shadow-lg"
+    >
+      <i class="ri-error-warning-fill mr-2 text-xl"></i>
+      <span
+        >To ensure the safety of your funds, please bind your bank account</span
+      >
     </div>
 
     <div class="p-4 space-y-4">
-
-        <div class="bg-[#292757] rounded-xl p-3 flex justify-between items-center cursor-pointer border border-[#b1835a] shadow-md">
-            <div class="flex items-center">
-                <i class="ri-bank-fill text-xl mr-3 text-[#f39c12]"></i>
-                <span class="text-sm text-gray-400">Choose a bank</span>
-            </div>
-            <a href="/wallet/selectBank" class="flex items-center text-sm font-semibold text-[#b1835a]">
-                <span id="bank_name_display">The Hasti Coop Bank</span>
-                <i class="ri-arrow-right-s-line text-xl"></i>
-            </a>
+      <div
+        class="bg-white rounded-xl p-3 flex justify-between items-center cursor-pointer border border-[#b1835a] shadow-md"
+      >
+        <div class="flex items-center">
+          <i class="ri-bank-fill text-xl mr-3 text-[#f39c12]"></i>
+          <span class="text-sm text-gray-400">Choose a bank</span>
         </div>
+        <a
+          href="/wallet/selectBank"
+          class="flex items-center text-sm font-semibold text-[#b1835a]"
+        >
+          <span id="bank_name_display">The Hasti Coop Bank</span>
+          <i class="ri-arrow-right-s-line text-xl"></i>
+        </a>
+      </div>
 
-        <div class="relative bg-[#292757] rounded-xl flex items-center px-3 py-3 shadow-md">
-            <i class="ri-user-line text-xl mr-3 text-gray-400"></i>
-            <input type="text" placeholder="Full recipient's name"
-                class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-sm" />
-        </div>
+      <div
+        class="relative bg-white rounded-xl flex items-center px-3 py-3 shadow-md"
+      >
+        <i class="ri-user-line text-xl mr-3 text-gray-400"></i>
+        <input
+          type="text"
+          placeholder="Full recipient's name"
+          class="w-full bg-transparent text-black placeholder-gray-400 focus:outline-none text-sm"
+        />
+      </div>
 
-        <div class="relative bg-[#292757] rounded-xl flex items-center px-3 py-3 shadow-md">
-            <i class="ri-bank-card-2-line text-xl mr-3 text-gray-400"></i>
-            <input type="number" placeholder="Bank account number"
-                class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-sm" />
-        </div>
+      <div
+        class="relative bg-white rounded-xl flex items-center px-3 py-3 shadow-md"
+      >
+        <i class="ri-bank-card-2-line text-xl mr-3 text-gray-400"></i>
+        <input
+          type="number"
+          placeholder="Bank account number"
+          class="w-full bg-transparent text-black placeholder-gray-400 focus:outline-none text-sm"
+        />
+      </div>
 
-        <div class="relative bg-[#292757] rounded-xl flex items-center px-3 py-3 shadow-md">
-            <i class="ri-phone-line text-xl mr-3 text-gray-400"></i>
-            <input type="number" placeholder="Phone number"
-                class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-sm" />
-        </div>
+      <div
+        class="relative bg-white rounded-xl flex items-center px-3 py-3 shadow-md"
+      >
+        <i class="ri-phone-line text-xl mr-3 text-gray-400"></i>
+        <input
+          type="number"
+          placeholder="Phone number"
+          class="w-full bg-transparent text-black placeholder-gray-400 focus:outline-none text-sm"
+        />
+      </div>
 
-        <div class="relative bg-[#292757] rounded-xl flex items-center px-3 py-3 shadow-md">
-            <i class="ri-search-line text-xl mr-3 text-gray-400"></i>
-            <input type="text" placeholder="IFSC code"
-                class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-sm" />
-        </div>
+      <div
+        class="relative bg-white rounded-xl flex items-center px-3 py-3 shadow-md"
+      >
+        <i class="ri-search-line text-xl mr-3 text-gray-400"></i>
+        <input
+          type="text"
+          placeholder="IFSC code"
+          class="w-full bg-transparent text-black placeholder-gray-400 focus:outline-none text-sm"
+        />
+      </div>
 
-        <div class="pt-4">
-<button id="submit_button"
-    style="background: linear-gradient(180deg, #3e1474, #101114 96.35%);"
-    class="w-full py-3 rounded-xl text-white font-semibold hover:opacity-90 transition shadow-lg">
-    Save
-</button>
-
-        </div>
-
+      <div class="pt-4">
+        <button
+          id="submit_button"
+          style="background: #f95959"
+          class="w-full py-3 rounded-xl text-white font-semibold hover:opacity-90 transition shadow-lg"
+        >
+          Save
+        </button>
+      </div>
     </div>
-      <%- include('../layout/footer.ejs') %>
+    <%- include('../layout/footer.ejs') %>
     <script>
-        // Use Toastify for alerts in the new UI style
-        function showToast(message, type = "info") {
-            Toastify({
-                text: message,
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: type === "success"
-                    ? "linear-gradient(to right, #00b09b, #96c93d)"
-                    : "linear-gradient(to right, #ff416c, #ff4b2b)",
-            }).showToast();
+      // Use Toastify for alerts in the new UI style
+      function showToast(message, type = "info") {
+        Toastify({
+          text: message,
+          duration: 3000,
+          gravity: "top",
+          position: "center",
+          backgroundColor:
+            type === "success"
+              ? "linear-gradient(to right, #00b09b, #96c93d)"
+              : "linear-gradient(to right, #ff416c, #ff4b2b)",
+        }).showToast();
+      }
+
+      // Replaced original alertMessage function with a simple wrapper for showToast
+      const alertMessage = (text) => {
+        showToast(text, "error");
+      };
+
+      $(document).ready(function () {
+        // Display stored bank name on load
+        const bankName = localStorage.getItem("bankName");
+        if (bankName) {
+          $("#bank_name_display").text(bankName);
+        } else {
+          $("#bank_name_display").text("Select Bank"); // Default text if none is stored
         }
+      });
 
-        // Replaced original alertMessage function with a simple wrapper for showToast
-        const alertMessage = text => {
-            showToast(text, "error");
-        };
+      // Function to fetch and pre-fill saved bank details
+      const initPreviousValues = async () => {
+        try {
+          const response = await axios({
+            method: "GET",
+            url: "/api/webapi/withdraw/bank_card",
+          });
 
-        $(document).ready(function () {
-            // Display stored bank name on load
-            const bankName = localStorage.getItem("bankName");
-            if (bankName) {
-                $("#bank_name_display").text(bankName);
-            } else {
-                $("#bank_name_display").text("Select Bank"); // Default text if none is stored
-            }
-        });
+          if (response?.data?.account?.isAvailable) {
+            // Save and display bank name
+            localStorage.setItem("bankName", response?.data?.account?.bankName);
+            $("#bank_name_display").text(response?.data?.account?.bankName);
 
-        // Function to fetch and pre-fill saved bank details
-        const initPreviousValues = async () => {
-            try {
-                const response = await axios({
-                    method: "GET",
-                    url: "/api/webapi/withdraw/bank_card",
-                });
+            // Pre-fill input fields based on their order in the HTML
+            // 0: recipientName, 1: bankAccountNumber, 2: phoneNumber, 3: IFSC
+            $("input:eq(0)").val(response?.data?.account?.recipientName);
+            $("input:eq(1)").val(response?.data?.account?.bankAccountNumber);
+            $("input:eq(2)").val(response?.data?.account?.phoneNumber);
+            $("input:eq(3)").val(response?.data?.account?.IFSC);
+          }
+        } catch (error) {
+          console.error("Error fetching previous bank details:", error);
+          alertMessage("Failed to load saved bank details.");
+        }
+      };
+      initPreviousValues();
 
-                if (response?.data?.account?.isAvailable) {
-                    // Save and display bank name
-                    localStorage.setItem("bankName", response?.data?.account?.bankName);
-                    $("#bank_name_display").text(response?.data?.account?.bankName);
+      // Submit Button Handler
+      $("#submit_button").click(async function (e) {
+        try {
+          e.preventDefault();
 
-                    // Pre-fill input fields based on their order in the HTML
-                    // 0: recipientName, 1: bankAccountNumber, 2: phoneNumber, 3: IFSC
-                    $("input:eq(0)").val(response?.data?.account?.recipientName);
-                    $("input:eq(1)").val(response?.data?.account?.bankAccountNumber);
-                    $("input:eq(2)").val(response?.data?.account?.phoneNumber);
-                    $("input:eq(3)").val(response?.data?.account?.IFSC);
-                }
-            } catch (error) {
-                console.error("Error fetching previous bank details:", error);
-                alertMessage("Failed to load saved bank details.");
-            }
-        };
-        initPreviousValues();
+          // Retrieve values from the UI
+          let bankName = localStorage.getItem("bankName");
+          let recipientName = $("input:eq(0)").val().trim();
+          let bankAccountNumber = $("input:eq(1)").val().trim();
+          let phoneNumber = $("input:eq(2)").val().trim();
+          let IFSC = $("input:eq(3)").val().trim();
+          // upiId is sent as a placeholder as per the original script
+          let upiId = "--";
 
-        // Submit Button Handler
-        $("#submit_button").click(async function (e) {
-            try {
-                e.preventDefault();
+          // Basic validation
+          if (
+            bankName &&
+            recipientName &&
+            bankAccountNumber &&
+            phoneNumber &&
+            IFSC
+          ) {
+            const response = await axios({
+              method: "POST",
+              url: "/api/webapi/withdraw/add_bank_card",
+              data: {
+                bankName,
+                recipientName,
+                bankAccountNumber,
+                phoneNumber,
+                IFSC,
+                upiId,
+              },
+            });
 
-                // Retrieve values from the UI
-                let bankName = localStorage.getItem("bankName");
-                let recipientName = $("input:eq(0)").val().trim();
-                let bankAccountNumber = $("input:eq(1)").val().trim();
-                let phoneNumber = $("input:eq(2)").val().trim();
-                let IFSC = $("input:eq(3)").val().trim();
-                // upiId is sent as a placeholder as per the original script
-                let upiId = "--"; 
-
-                // Basic validation
-                if (bankName && recipientName && bankAccountNumber && phoneNumber && IFSC) {
-                    const response = await axios({
-                        method: "POST",
-                        url: "/api/webapi/withdraw/add_bank_card",
-                        data: {
-                            bankName,
-                            recipientName,
-                            bankAccountNumber,
-                            phoneNumber,
-                            IFSC,
-                            upiId,
-                        },
-                    });
-
-                    showToast(response.data.message, "success"); // Use success toast
-                    setTimeout(() => {
-                        window.location.href = "/wallet/withdrawal";
-                    }, 1200);
-                } else {
-                    alertMessage("Please enter full information");
-                }
-            } catch (error) {
-                console.error("Error submitting bank details:", error);
-                // Use the error message from the response if available
-                const message = error?.response?.data?.message || "Something went wrong! Please try again.";
-                alertMessage(message);
-            }
-        });
+            showToast(response.data.message, "success"); // Use success toast
+            setTimeout(() => {
+              window.location.href = "/wallet/withdrawal";
+            }, 1200);
+          } else {
+            alertMessage("Please enter full information");
+          }
+        } catch (error) {
+          console.error("Error submitting bank details:", error);
+          // Use the error message from the response if available
+          const message =
+            error?.response?.data?.message ||
+            "Something went wrong! Please try again.";
+          alertMessage(message);
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>

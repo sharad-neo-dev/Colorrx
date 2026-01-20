@@ -15,7 +15,6 @@
     />
   </a>
   <a
-    id="telegramBtn"
     target="_blank"
     class="fixed right-4 bottom-[6rem] z-50 flex items-center justify-center w-12 h-12 bg-purple-700 rounded-full"
     onclick="shareContent()"
@@ -178,6 +177,7 @@
     try {
       const res = await fetch("/api/webapi/appsetting");
       const data = await res.json();
+      console.log("data", data);
       if (data.success && data.data.telegram) {
         document.getElementById("telegramBtn").href = data.data.telegram;
       }
