@@ -1980,7 +1980,17 @@
 
             window.addEventListener("load", fetchInviteCode);
 
-            function copyLink() {
+            async function copyLink() {
+                let inviteCode = "";
+
+                try {
+                    const response = await axios.get("/api/webapi/GetUserInfo");
+                    const userData = response?.data?.data || {};
+                    inviteCode = userData.code || "";
+                } catch (err) {
+                    console.error("Failed to fetch invite code:", err);
+                }
+
                 if (!inviteCode) {
                     Swal.fire("Error", "Invite code not ready yet!", "error");
                     return;
@@ -2002,7 +2012,17 @@
                     .catch((err) => console.error(err));
             }
 
-            function copyCode() {
+            async function copyCode() {
+                let inviteCode = "";
+
+                try {
+                    const response = await axios.get("/api/webapi/GetUserInfo");
+                    const userData = response?.data?.data || {};
+                    inviteCode = userData.code || "";
+                } catch (err) {
+                    console.error("Failed to fetch invite code:", err);
+                }
+
                 if (!inviteCode) {
                     Swal.fire("Error", "Invite code not ready yet!", "error");
                     return;
