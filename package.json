@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "npx eslint .",
     "test": "babel-node test1.js",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --ignore src/views",
     "database": "nodemon --exec babel-node src/modal/CreateDatabase.js",
     "database:trx": "nodemon --exec babel-node schema/trx_hash.js",
     "database:activity": "nodemon --exec babel-node schema/activity.js",
