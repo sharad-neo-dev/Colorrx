@@ -25,96 +25,96 @@ const __dirname = path.dirname(__filename);
 let timeNow = Date.now();
 
 const adminPage = async (req, res) => {
-  return res.render("manage/index.ejs");
+  return res.render("member/manage/index.ejs");
 };
 
 const pop = async (req, res) => {
-  return res.render("manage/pop.ejs");
+  return res.render("member/manage/pop.ejs");
 };
 
 const usdt = async (req, res) => {
-  return res.render("manage/usdt.ejs");
+  return res.render("member/manage/usdt.ejs");
 };
 
 const banner = async (req, res) => {
-  return res.render("manage/banner.ejs");
+  return res.render("member/manage/banner.ejs");
 };
 
 const adminPage3 = async (req, res) => {
-  return res.render("manage/a-index-bet/index3.ejs");
+  return res.render("member/manage/a-index-bet/index3.ejs");
 };
 
 const adminPage5 = async (req, res) => {
-  return res.render("manage/a-index-bet/index5.ejs");
+  return res.render("member/manage/a-index-bet/index5.ejs");
 };
 
 const adminPage30 = async (req, res) => {
-  return res.render("manage/a-index-bet/index30.ejs");
+  return res.render("member/manage/a-index-bet/index30.ejs");
 };
 
 const adminPage5d = async (req, res) => {
-  return res.render("manage/5d.ejs");
+  return res.render("member/manage/5d.ejs");
 };
 
 const adminPageK3 = async (req, res) => {
-  return res.render("manage/k3.ejs");
+  return res.render("member/manage/k3.ejs");
 };
 
 const ctvProfilePage = async (req, res) => {
   var phone = req.params.phone;
-  return res.render("manage/profileCTV.ejs", { phone });
+  return res.render("member/manage/profileCTV.ejs", { phone });
 };
 
 const giftPage = async (req, res) => {
-  return res.render("manage/giftPage.ejs");
+  return res.render("member/manage/giftPage.ejs");
 };
 
 const membersPage = async (req, res) => {
-  return res.render("manage/members.ejs");
+  return res.render("member/manage/members.ejs");
 };
 
 const ctvPage = async (req, res) => {
-  return res.render("manage/ctv.ejs");
+  return res.render("member/manage/ctv.ejs");
 };
 
 const infoMember = async (req, res) => {
   let phone = req.params.id;
-  return res.render("manage/profileMember.ejs", { phone });
+  return res.render("member/manage/profileMember.ejs", { phone });
 };
 
 const statistical = async (req, res) => {
-  return res.render("manage/statistical.ejs");
+  return res.render("member/manage/statistical.ejs");
 };
 
 const rechargePage = async (req, res) => {
-  return res.render("manage/recharge.ejs");
+  return res.render("member/manage/recharge.ejs");
 };
 
 const rechargeRecord = async (req, res) => {
-  return res.render("manage/rechargeRecord.ejs");
+  return res.render("member/manage/rechargeRecord.ejs");
 };
 
 const withdraw = async (req, res) => {
-  return res.render("manage/withdraw.ejs");
+  return res.render("member/manage/withdraw.ejs");
 };
 
 const levelSetting = async (req, res) => {
-  return res.render("manage/levelSetting.ejs");
+  return res.render("member/manage/levelSetting.ejs");
 };
 
 const CreatedSalaryRecord = async (req, res) => {
-  return res.render("manage/CreatedSalaryRecord.ejs");
+  return res.render("member/manage/CreatedSalaryRecord.ejs");
 };
 
 const DailySalaryEligibility = async (req, res) => {
-  return res.render("manage/DailySalaryEligibility.ejs");
+  return res.render("member/manage/DailySalaryEligibility.ejs");
 };
 
 const withdrawRecord = async (req, res) => {
-  return res.render("manage/withdrawRecord.ejs");
+  return res.render("member/manage/withdrawRecord.ejs");
 };
 const settings = async (req, res) => {
-  return res.render("manage/settings.ejs");
+  return res.render("member/manage/settings.ejs");
 };
 
 // xác nhận admin
@@ -2881,7 +2881,7 @@ const deleteuser = async (req, res) => {
 };
 
 const createUserPage = async (req, res) => {
-  return res.render("manage/createUser.ejs");
+  return res.render("member/manage/createUser.ejs");
 };
 
 export const updateAdminFields = async (req, res) => {
@@ -3044,7 +3044,7 @@ export const updateAdminFields = async (req, res) => {
 };
 
 const dashboardPage = async (req, res) => {
-  return res.render("manage/dashboard.ejs");
+  return res.render("member/manage/dashboard.ejs");
 };
 
 export const adminMiddleware = (req, res, next) => {
